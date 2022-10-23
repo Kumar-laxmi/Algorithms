@@ -1,7 +1,5 @@
-<div align="center">
-<a href="https://github.com/Kumar-laxmi">
-[<img src="https://user-images.githubusercontent.com/91361382/155606516-df37c0f7-ecbb-40e0-a704-d2e779517a64.png"></a>](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2Ftopics%2Fdsalgo&psig=AOvVaw2MWcB1G2kC-xSPte9Ql8lm&ust=1666577814182000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKDr3aak9foCFQAAAAAdAAAAABAE)
-</div>
+![image](https://user-images.githubusercontent.com/76027425/197370206-ed1f416c-b4d1-44b8-a534-01ddb3c8f6d1.png)
+
 
 <h3 align="center"> A repository for all Algorithms </h3>
 
@@ -12,42 +10,25 @@
 </p>
 <br>
 
-This is a Community website under development. This community aims to create awareness among the students and working professionals about open source programs, hackathons, CTFs and Internship Programs to create a difference in society.
-We have study materials, blogs, posts regarding upcoming events and much more so that everyone has access to these opportunities.
 
-<br>
-<h3 align="center">JOIN US IN OUR MISSION OF CREATING THE WORLD'S LARGEST ALL-IN-ONE CODING COMMUNITY</h3>
-
-![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
-<br>
 <div align="center">
 <h2 align="center"><b>Programs we have been a part of<b></h2>
 
 | No. | Program Name                                                                        | Duration                     | Deployment                                                                |
 | --- | ----------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------- |
-| 1.  | <a href="https://gssoc.girlscript.tech/">GirlScript Summer of code (GSSoC) 2022</a> | 1st Mar 2022 - 31st May 2022 | <a href="https://techsquadcommunity.tech">TechSquad Community Website</a> |
+| 1.  | <a href="https://hacktoberfest.com/">Hacktoberfest</a> | 1st Oct 2022 - 31st Oct 2022 | <a href="https://github.com/Kumar-laxmi">Algorithm,</a> |
 
  </div>
 <br>
-<h2 align="center"><b>Connect with us !<b><img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="70px"> </h2>
-<p align="center"> 
-<a href="#"><img src="https://img.icons8.com/bubbles/500/000000/discord-logo.png" width="40px" height="40px"/></a>
-&nbsp;
-<a href="https://github.com/Tech-Squad-Community"><img src="https://img.icons8.com/bubbles/500/000000/github.png" width="40px" height="40px"/></a>
-&nbsp;
-<a href="mailto:techsquad.aot@gmail.com"><img src="https://img.icons8.com/clouds/500/000000/apple-mail.png" width="40px" height="40px"/></a>
-&nbsp;
-<a href="https://twitter.com/techsquadcomm"><img src="https://img.icons8.com/bubbles/500/000000/twitter.png" width="40px" height="40px"/></a>
-&nbsp;
-<a href="https://www.linkedin.com/company/tech-squad2084/"><img src="https://img.icons8.com/bubbles/500/000000/linkedin.png" width="40px" height="40px"/></a>
+
 
 <br>
 
 <h2 align="center"><b>Contributors 🫂</b></h2>
 
 <p align="center">
-<a href="https://github.com/Tech-Squad-Community/techsquad-community-website/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Tech-Squad-Community/techsquad-community-website" />
+<a href="https://github.com/Kumar-laxmi/Algorithms/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Kumar-laxmi/Algorithms" />
 </a>
 
 <br>
@@ -61,9 +42,9 @@ We have study materials, blogs, posts regarding upcoming events and much more so
 - Fork and clone the Repo by typing the following commands in the terminal
 
 ```
-$ git clone https://github.com/Tech-Squad-Community/techsquad-community-website.git
+$ git clone https://github.com/Kumar-laxmi/Algorithms.git
 
-$ cd techsquad-community-website
+$ cd Algorithms
 ```
 
 <!--
@@ -101,7 +82,7 @@ $ cd QuickLearn
 
 - Clone the Repository after forking 
 ```
-$ git clone https://github.com/<your-github-username>/techsquad-community-website.git
+$ git clone https://github.com/<your-github-username>/Algorithms.git
 
 $ cd techsquad-community-website
 ```
