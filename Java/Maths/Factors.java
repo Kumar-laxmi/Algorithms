@@ -29,4 +29,10 @@ public class Factors {
         Collections.sort(ans);
         return ans;
     }
+    
+    
+    public static void main(String[] args) {
+        System.out.println("Factors of 24 are:");
+        System.out.println(factors(24));
+    }
 }
