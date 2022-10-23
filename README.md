@@ -71,11 +71,11 @@ $ cd QuickLearn
 
 <hr>
 
-<img src="https://user-images.githubusercontent.com/91361382/155701708-44ab2dce-7bbf-4694-9c18-8a435695f636.jpg">
+<img width="1440" alt="Screenshot 2022-10-23 at 8 03 11 AM" src="https://user-images.githubusercontent.com/76027425/197370508-44d256b8-c9fc-46a6-825c-c2eb6cd87e15.png">
+
 
 <hr>
-
-<img src="https://user-images.githubusercontent.com/91361382/155702002-758b86ca-62db-4fe0-9b50-4651560b652c.jpg">
+<img width="1440" alt="Screenshot 2022-10-23 at 8 03 31 AM" src="https://user-images.githubusercontent.com/76027425/197370510-1e9c460c-980a-4289-b6ba-ca2a1bc64ea9.png">
 
 
 <hr>
