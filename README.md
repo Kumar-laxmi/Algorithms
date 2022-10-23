@@ -16,7 +16,7 @@
 
 | No. | Program Name                                                                        | Duration                     | Deployment                                                                |
 | --- | ----------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------- |
-| 1.  | <a href="https://hacktoberfest.com/">Hacktoberfest</a> | 1st Oct 2022 - 31st Oct 2022 | <a href="https://github.com/Kumar-laxmi">Algorithm,</a> |
+| 1.  | <a href="https://hacktoberfest.com/">Hacktoberfest</a> | 1st Oct 2022 - 31st Oct 2022 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
 
  </div>
 <br>
