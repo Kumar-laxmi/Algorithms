@@ -1,0 +1,20 @@
+name: PR Welcome
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-cool/pr-welcome@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          refuse-issue-label: 'bug'
+          need-creator-authority: 'write'
+          comment: |
+            HI @${{ github.event.pull_request.user.login }}. Thanks for your contribution. 😅 Wait for a while a have ☕️.
+          emoji: '+1, -1, heart'
+          pr-emoji: '+1, -1'
+          close: true
