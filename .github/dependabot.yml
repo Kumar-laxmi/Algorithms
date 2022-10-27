@@ -20,7 +20,4 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-  
-  - name: PR Welcome
-    uses: actions-cool/pr-welcome@v1.4.0
 
