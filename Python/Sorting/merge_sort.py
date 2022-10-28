@@ -28,15 +28,15 @@ def merge(arr, lt, mid, rt):
     return arr
 
 # Function that divides the array into half at each step and sorts them
-def mergeSort(arr, l, r):
-    if l<r:
-        mid = int(l + (r-l)/2)
+def mergeSort(arr, lt, rt):
+    if lt<rt:
+        mid = int(lt + (rt-lt)/2)
         # Sorts the left array
-        arr = mergeSort(arr, l, mid)
+        arr = mergeSort(arr, lt, mid)
         # Sorts the right array
-        arr = mergeSort(arr, mid+1, r)
+        arr = mergeSort(arr, mid+1, rt)
         # Merges the left and the right array
-        arr = merge(arr, l, mid, r)
+        arr = merge(arr, lt, mid, rt)
     return arr
 
 # Total number of elements in vector
