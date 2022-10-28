@@ -1,9 +1,10 @@
 # Function that performs the sorting operation
-def merge(arr, l, mid, r):
-    i, j = l, mid+1
+
+def merge(arr, lt, mid, rt):
+    i, j = lt, mid+1
     b = []
     # Compares the elements of the two arrays and sorts them
-    while i<=mid and j<=r:
+    while i<=mid and j<=rt:
         if arr[i]>arr[j]:
             b.append(arr[j])
             j+=1
@@ -11,7 +12,7 @@ def merge(arr, l, mid, r):
             b.append(arr[i])
             i+=1
     # If the 1st array is exhausted, then copies the remaining elements of the 2nd array to the 1st array
-    while j<=r:
+    while j<=rt:
         b.append(arr[j])
         j+=1
     
@@ -21,8 +22,8 @@ def merge(arr, l, mid, r):
         i+=1
 
     # Copies all the elements of the array 'b' to array 'arr'
-    for i in range(l, r+1):
-        arr[i] = b[i-l]
+    for i in range(lt, rt+1):
+        arr[i] = b[i-lt]
 
     return arr
 
