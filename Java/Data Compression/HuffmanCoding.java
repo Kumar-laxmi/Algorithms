@@ -2,25 +2,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
-// node class
-class HuffmanNode {
-
-  int data;
-  char c;
-
-  HuffmanNode left;
-  HuffmanNode right;
-}
-
-// compare 2 nodes
-class MyComparator implements Comparator<HuffmanNode> {
-
-  public int compare(HuffmanNode x, HuffmanNode y) {
-    return x.data - y.data;
-  }
-}
-
-class Huffman {
+class HuffmanCoding {
 
   // print huffman codes
   public static void printCode(HuffmanNode root, String s) {
@@ -49,7 +31,7 @@ class Huffman {
     // makes a min-priority queue(min-heap).
     PriorityQueue<HuffmanNode> q = new PriorityQueue<HuffmanNode>(
       n,
-      new MyComparator()
+      new Compare()
     );
 
     for (int i = 0; i < n; i++) {
@@ -107,5 +89,23 @@ class Huffman {
 
     // print the codes by traversing the tree
     printCode(root, "");
+  }
+}
+
+// node class
+class HuffmanNode {
+
+  int data;
+  char c;
+
+  HuffmanNode left;
+  HuffmanNode right;
+}
+
+// compare 2 nodes
+class Compare implements Comparator<HuffmanNode> {
+
+  public int compare(HuffmanNode x, HuffmanNode y) {
+    return x.data - y.data;
   }
 }
