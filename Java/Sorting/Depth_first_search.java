@@ -1,11 +1,11 @@
 import java.util.*;  
   
-class DFSTraversal {  
+class Depth_first_search {  
   private LinkedList<Integer> adj[]; /*adjacency list representation*/  
   private boolean visited[];  
   
   /* Creation of the graph */  
-  DFSTraversal(int V) /*'V' is the number of vertices in the graph*/  
+  Depth_first_search(int V) /*'V' is the number of vertices in the graph*/  
   {  
     adj = new LinkedList[V];  
     visited = new boolean[V];  
@@ -32,7 +32,7 @@ class DFSTraversal {
   }  
   
   public static void main(String args[]) {  
-    DFSTraversal graph = new DFSTraversal(8);  
+    Depth_first_search graph = new Depth_first_search(8);  
   
         graph.insertEdge(0, 1);    
         graph.insertEdge(0, 2);    
