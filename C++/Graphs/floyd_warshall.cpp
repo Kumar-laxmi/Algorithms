@@ -22,24 +22,23 @@ void floyd_warshall(int a[][7])
     }
     for (i = 0; i < 7; i++)
     {
-        cout<<"\nMINIMUM COST WITH RESPECT TO NODE:"<<i<<endl;
+        cout << "\nMINIMUM COST WITH RESPECT TO NODE:" << i << endl;
         for (j = 0; j < 7; j++)
         {
-            cout<<a[i][j]<<"\t";
+            cout << a[i][j] << "\t";
         }
- 
     }
 }
 int main()
 {
     int a[7][7];
-    cout<<"ENTER VALUES OF ADJACENCY MATRIX\n\n";
+    cout << "ENTER VALUES OF ADJACENCY MATRIX\n\n";
     for (int i = 0; i < 7; i++)
     {
-        cout<<"ENTER THE VALUES FOR "<<(i+1)<<" ROW"<<endl;
+        cout << "ENTER THE VALUES FOR " << (i + 1) << " ROW" << endl;
         for (int j = 0; j < 7; j++)
         {
-            cin>>a[i][j];
+            cin >> a[i][j];
         }
     }
     floyd_warshall(a);
