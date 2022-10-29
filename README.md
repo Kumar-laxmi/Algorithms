@@ -24,6 +24,38 @@
 
 <br>
 
+
+<h2 align="center"><b>Available Resources</b></h2>
+
+- The resources are categorized based on programming language. One folder for one programming language
+  - Each folder has different subfolders. The subfolder represents the category algorithm belongs to
+    - Each subfolder has different files. Filename represents the name of the algorithm
+  
+  <br>
+
+<div align="center">
+ 
+| No. | Algorithm Name                                                                        | Available languages                       | Category                                                                |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------- |
+| 1.  | Huffman Coding | C, C++, Python | Data Compression |
+| 2.  | Dijkstra | C, C++, Java, Python | Graphs |
+| 3.  | Floyd Warshall | C, C++, Java, Python | Graphs |
+| 4.  | Singly Linked List | C++, Python | Linked List |
+| 5.  | Factors | C, C++, Java, Python | Maths |
+| 6.  | Prime Number | C, C++, Java, Python | Maths |
+| 7.  | Binary Search | C, C++, Java, Python | Searching |
+| 8.  | Linear Search | C, C++, Java, Python | Searching |
+| 9.  | Bubble Sort | C, C++, Java, Python | Sorting |
+| 10.  | Heap Sort | C, C++, Java, Python | Sorting |
+| 11.  | Insertion Sort | C, C++, Java, Python | Sorting |
+| 12.  | Merge Sort | C, C++, Java, Python | Sorting |
+| 13.  | Selection Sort | C, C++, Java, Python | Sorting |
+| 14.  | AVL Tree | C++, Python | Trees |
+| 15.  | Decision Tree | Python | Machine Learning |
+
+ </div>
+
+<br>
 <h2 align="center"><b>Contributors 🫂</b></h2>
 
 <p align="center">
@@ -118,6 +150,7 @@ $ git push origin <branch-name>
 - In case of merge conflict  fetch and merge from the remote repository
 <img src ="https://docs.github.com/assets/images/help/repository/fetch-and-merge-button.png">
 
+Please don't forget to update the <a href="https://github.com/Kumar-laxmi/Algorithms#available-resources">Available Resources</a> section 
   
 
 #### Happy?? Star ⭐ this Repo. 🤩
