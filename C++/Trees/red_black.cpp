@@ -390,7 +390,6 @@ void RB_tree::display(node *p)
     {
          cout<<"\n\nRIGHT:\n"; display(p->right);
     }
-
      }
 }
 void RB_tree::search()
@@ -443,8 +442,7 @@ int main()
     RB_tree obj;
     cout<<"\n\t--------RED BLACK TREE---------" ;
     do
-    {
-               
+    {               
                 cout<<"\n 1. INSERT NODE";
                 cout<<"\n 2. DELETE NODE";
                 cout<<"\n 3. SEARCH FOR ELEMENT";
