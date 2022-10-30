@@ -1,451 +1,426 @@
-#include<iostream>
+// Implementing Red-Black Tree in C++
 
+#include <iostream>
 using namespace std;
 
-struct node
-{
-       int key;
-       node *parent;
-       char color;
-       node *left;
-       node *right;
+struct Node {
+  int data;
+  Node *parent;
+  Node *left;
+  Node *right;
+  int color;
 };
-class RBtree
-{
-      node *root;
-      node *q;
-   public :
-      RBtree()
-      {
-              q=NULL;
-              root=NULL;
+
+typedef Node *NodePtr;
+
+class RedBlackTree {
+   private:
+  NodePtr root;
+  NodePtr TNULL;
+
+  void initializeNULLNode(NodePtr node, NodePtr parent) {
+    node->data = 0;
+    node->parent = parent;
+    node->left = nullptr;
+    node->right = nullptr;
+    node->color = 0;
+  }
+
+  // Preorder
+  void preOrderHelper(NodePtr node) {
+    if (node != TNULL) {
+      cout << node->data << " ";
+      preOrderHelper(node->left);
+      preOrderHelper(node->right);
+    }
+  }
+
+  // Inorder
+  void inOrderHelper(NodePtr node) {
+    if (node != TNULL) {
+      inOrderHelper(node->left);
+      cout << node->data << " ";
+      inOrderHelper(node->right);
+    }
+  }
+
+  // Post order
+  void postOrderHelper(NodePtr node) {
+    if (node != TNULL) {
+      postOrderHelper(node->left);
+      postOrderHelper(node->right);
+      cout << node->data << " ";
+    }
+  }
+
+  NodePtr searchTreeHelper(NodePtr node, int key) {
+    if (node == TNULL || key == node->data) {
+      return node;
+    }
+
+    if (key < node->data) {
+      return searchTreeHelper(node->left, key);
+    }
+    return searchTreeHelper(node->right, key);
+  }
+
+  // For balancing the tree after deletion
+  void deleteFix(NodePtr x) {
+    NodePtr s;
+    while (x != root && x->color == 0) {
+      if (x == x->parent->left) {
+        s = x->parent->right;
+        if (s->color == 1) {
+          s->color = 0;
+          x->parent->color = 1;
+          leftRotate(x->parent);
+          s = x->parent->right;
+        }
+
+        if (s->left->color == 0 && s->right->color == 0) {
+          s->color = 1;
+          x = x->parent;
+        } else {
+          if (s->right->color == 0) {
+            s->left->color = 0;
+            s->color = 1;
+            rightRotate(s);
+            s = x->parent->right;
+          }
+
+          s->color = x->parent->color;
+          x->parent->color = 0;
+          s->right->color = 0;
+          leftRotate(x->parent);
+          x = root;
+        }
+      } else {
+        s = x->parent->left;
+        if (s->color == 1) {
+          s->color = 0;
+          x->parent->color = 1;
+          rightRotate(x->parent);
+          s = x->parent->left;
+        }
+
+        if (s->right->color == 0 && s->right->color == 0) {
+          s->color = 1;
+          x = x->parent;
+        } else {
+          if (s->left->color == 0) {
+            s->right->color = 0;
+            s->color = 1;
+            leftRotate(s);
+            s = x->parent->left;
+          }
+
+          s->color = x->parent->color;
+          x->parent->color = 0;
+          s->left->color = 0;
+          rightRotate(x->parent);
+          x = root;
+        }
       }
-      void insert();
-      void insertfix(node *);
-      void leftrotate(node *);
-      void rightrotate(node *);
-      void del();
-      node* successor(node *);
-      void delfix(node *);
-      void disp();
-      void display( node *);
-      void search();
+    }
+    x->color = 0;
+  }
+
+  void rbTransplant(NodePtr u, NodePtr v) {
+    if (u->parent == nullptr) {
+      root = v;
+    } else if (u == u->parent->left) {
+      u->parent->left = v;
+    } else {
+      u->parent->right = v;
+    }
+    v->parent = u->parent;
+  }
+
+  void deleteNodeHelper(NodePtr node, int key) {
+    NodePtr z = TNULL;
+    NodePtr x, y;
+    while (node != TNULL) {
+      if (node->data == key) {
+        z = node;
+      }
+
+      if (node->data <= key) {
+        node = node->right;
+      } else {
+        node = node->left;
+      }
+    }
+
+    if (z == TNULL) {
+      cout << "Key not found in the tree" << endl;
+      return;
+    }
+
+    y = z;
+    int y_original_color = y->color;
+    if (z->left == TNULL) {
+      x = z->right;
+      rbTransplant(z, z->right);
+    } else if (z->right == TNULL) {
+      x = z->left;
+      rbTransplant(z, z->left);
+    } else {
+      y = minimum(z->right);
+      y_original_color = y->color;
+      x = y->right;
+      if (y->parent == z) {
+        x->parent = y;
+      } else {
+        rbTransplant(y, y->right);
+        y->right = z->right;
+        y->right->parent = y;
+      }
+
+      rbTransplant(z, y);
+      y->left = z->left;
+      y->left->parent = y;
+      y->color = z->color;
+    }
+    delete z;
+    if (y_original_color == 0) {
+      deleteFix(x);
+    }
+  }
+
+  // For balancing the tree after insertion
+  void insertFix(NodePtr k) {
+    NodePtr u;
+    while (k->parent->color == 1) {
+      if (k->parent == k->parent->parent->right) {
+        u = k->parent->parent->left;
+        if (u->color == 1) {
+          u->color = 0;
+          k->parent->color = 0;
+          k->parent->parent->color = 1;
+          k = k->parent->parent;
+        } else {
+          if (k == k->parent->left) {
+            k = k->parent;
+            rightRotate(k);
+          }
+          k->parent->color = 0;
+          k->parent->parent->color = 1;
+          leftRotate(k->parent->parent);
+        }
+      } else {
+        u = k->parent->parent->right;
+
+        if (u->color == 1) {
+          u->color = 0;
+          k->parent->color = 0;
+          k->parent->parent->color = 1;
+          k = k->parent->parent;
+        } else {
+          if (k == k->parent->right) {
+            k = k->parent;
+            leftRotate(k);
+          }
+          k->parent->color = 0;
+          k->parent->parent->color = 1;
+          rightRotate(k->parent->parent);
+        }
+      }
+      if (k == root) {
+        break;
+      }
+    }
+    root->color = 0;
+  }
+
+  void printHelper(NodePtr root, string indent, bool last) {
+    if (root != TNULL) {
+      cout << indent;
+      if (last) {
+        cout << "R----";
+        indent += "   ";
+      } else {
+        cout << "L----";
+        indent += "|  ";
+      }
+
+      string sColor = root->color ? "RED" : "BLACK";
+      cout << root->data << "(" << sColor << ")" << endl;
+      printHelper(root->left, indent, false);
+      printHelper(root->right, indent, true);
+    }
+  }
+
+   public:
+  RedBlackTree() {
+    TNULL = new Node;
+    TNULL->color = 0;
+    TNULL->left = nullptr;
+    TNULL->right = nullptr;
+    root = TNULL;
+  }
+
+  void preorder() {
+    preOrderHelper(this->root);
+  }
+
+  void inorder() {
+    inOrderHelper(this->root);
+  }
+
+  void postorder() {
+    postOrderHelper(this->root);
+  }
+
+  NodePtr searchTree(int k) {
+    return searchTreeHelper(this->root, k);
+  }
+
+  NodePtr minimum(NodePtr node) {
+    while (node->left != TNULL) {
+      node = node->left;
+    }
+    return node;
+  }
+
+  NodePtr maximum(NodePtr node) {
+    while (node->right != TNULL) {
+      node = node->right;
+    }
+    return node;
+  }
+
+  NodePtr successor(NodePtr x) {
+    if (x->right != TNULL) {
+      return minimum(x->right);
+    }
+
+    NodePtr y = x->parent;
+    while (y != TNULL && x == y->right) {
+      x = y;
+      y = y->parent;
+    }
+    return y;
+  }
+
+  NodePtr predecessor(NodePtr x) {
+    if (x->left != TNULL) {
+      return maximum(x->left);
+    }
+
+    NodePtr y = x->parent;
+    while (y != TNULL && x == y->left) {
+      x = y;
+      y = y->parent;
+    }
+
+    return y;
+  }
+
+  void leftRotate(NodePtr x) {
+    NodePtr y = x->right;
+    x->right = y->left;
+    if (y->left != TNULL) {
+      y->left->parent = x;
+    }
+    y->parent = x->parent;
+    if (x->parent == nullptr) {
+      this->root = y;
+    } else if (x == x->parent->left) {
+      x->parent->left = y;
+    } else {
+      x->parent->right = y;
+    }
+    y->left = x;
+    x->parent = y;
+  }
+
+  void rightRotate(NodePtr x) {
+    NodePtr y = x->left;
+    x->left = y->right;
+    if (y->right != TNULL) {
+      y->right->parent = x;
+    }
+    y->parent = x->parent;
+    if (x->parent == nullptr) {
+      this->root = y;
+    } else if (x == x->parent->right) {
+      x->parent->right = y;
+    } else {
+      x->parent->left = y;
+    }
+    y->right = x;
+    x->parent = y;
+  }
+
+  // Inserting a node
+  void insert(int key) {
+    NodePtr node = new Node;
+    node->parent = nullptr;
+    node->data = key;
+    node->left = TNULL;
+    node->right = TNULL;
+    node->color = 1;
+
+    NodePtr y = nullptr;
+    NodePtr x = this->root;
+
+    while (x != TNULL) {
+      y = x;
+      if (node->data < x->data) {
+        x = x->left;
+      } else {
+        x = x->right;
+      }
+    }
+
+    node->parent = y;
+    if (y == nullptr) {
+      root = node;
+    } else if (node->data < y->data) {
+      y->left = node;
+    } else {
+      y->right = node;
+    }
+
+    if (node->parent == nullptr) {
+      node->color = 0;
+      return;
+    }
+
+    if (node->parent->parent == nullptr) {
+      return;
+    }
+
+    insertFix(node);
+  }
+
+  NodePtr getRoot() {
+    return this->root;
+  }
+
+  void deleteNode(int data) {
+    deleteNodeHelper(this->root, data);
+  }
+
+  void printTree() {
+    if (root) {
+      printHelper(this->root, "", true);
+    }
+  }
 };
-void RBtree::insert()
-{
-     int z,i=0;
-     cout<<"\nEnter key of the node to be inserted: ";
-     cin>>z;
-     node *p,*q;
-     node *t=new node;
-     t->key=z;
-     t->left=NULL;
-     t->right=NULL;
-     t->color='r';
-     p=root;
-     q=NULL;
-     if(root==NULL)
-     {
-           root=t;
-           t->parent=NULL;
-     }
-     else
-     {
-         while(p!=NULL)
-         {
-              q=p;
-              if(p->key<t->key)
-                  p=p->right;
-              else
-                  p=p->left;
-         }
-         t->parent=q;
-         if(q->key<t->key)
-              q->right=t;
-         else
-              q->left=t;
-     }
-     insertfix(t);
-}
-void RBtree::insertfix(node *t)
-{
-     node *u;
-     if(root==t)
-     {
-         t->color='b';
-         return;
-     }
-     while(t->parent!=NULL&&t->parent->color=='r')
-     {
-           node *g=t->parent->parent;
-           if(g->left==t->parent)
-           {
-                        if(g->right!=NULL)
-                        {
-                              u=g->right;
-                              if(u->color=='r')
-                              {
-                                   t->parent->color='b';
-                                   u->color='b';
-                                   g->color='r';
-                                   t=g;
-                              }
-                        }
-                        else
-                        {
-                            if(t->parent->right==t)
-                            {
-                                 t=t->parent;
-                                 leftrotate(t);
-                            }
-                            t->parent->color='b';
-                            g->color='r';
-                            rightrotate(g);
-                        }
-           }
-           else
-           {
-                        if(g->left!=NULL)
-                        {
-                             u=g->left;
-                             if(u->color=='r')
-                             {
-                                  t->parent->color='b';
-                                  u->color='b';
-                                  g->color='r';
-                                  t=g;
-                             }
-                        }
-                        else
-                        {
-                            if(t->parent->left==t)
-                            {
-                                   t=t->parent;
-                                   rightrotate(t);
-                            }
-                            t->parent->color='b';
-                            g->color='r';
-                            leftrotate(g);
-                        }
-           }
-           root->color='b';
-     }
-}
 
-void RBtree::del()
-{
-     if(root==NULL)
-     {
-           cout<<"\nEmpty Tree." ;
-           return ;
-     }
-     int x;
-     cout<<"\nEnter the key of the node to be deleted: ";
-     cin>>x;
-     node *p;
-     p=root;
-     node *y=NULL;
-     node *q=NULL;
-     int found=0;
-     while(p!=NULL&&found==0)
-     {
-           if(p->key==x)
-               found=1;
-           if(found==0)
-           {
-                 if(p->key<x)
-                    p=p->right;
-                 else
-                    p=p->left;
-           }
-     }
-     if(found==0)
-     {
-            cout<<"\nElement Not Found.";
-            return ;
-     }
-     else
-     {
-         cout<<"\nDeleted Element: "<<p->key;
-         cout<<"\nColour: ";
-         if(p->color=='b')
-     cout<<"Black\n";
-    else
-     cout<<"Red\n";
+int main() {
+  RedBlackTree bst;
+  bst.insert(55);
+  bst.insert(40);
+  bst.insert(65);
+  bst.insert(60);
+  bst.insert(75);
+  bst.insert(57);
 
-         if(p->parent!=NULL)
-               cout<<"\nParent: "<<p->parent->key;
-         else
-               cout<<"\nThere is no parent of the node.  ";
-         if(p->right!=NULL)
-               cout<<"\nRight Child: "<<p->right->key;
-         else
-               cout<<"\nThere is no right child of the node.  ";
-         if(p->left!=NULL)
-               cout<<"\nLeft Child: "<<p->left->key;
-         else
-               cout<<"\nThere is no left child of the node.  ";
-         cout<<"\nNode Deleted.";
-         if(p->left==NULL||p->right==NULL)
-              y=p;
-         else
-              y=successor(p);
-         if(y->left!=NULL)
-              q=y->left;
-         else
-         {
-              if(y->right!=NULL)
-                   q=y->right;
-              else
-                   q=NULL;
-         }
-         if(q!=NULL)
-              q->parent=y->parent;
-         if(y->parent==NULL)
-              root=q;
-         else
-         {
-             if(y==y->parent->left)
-                y->parent->left=q;
-             else
-                y->parent->right=q;
-         }
-         if(y!=p)
-         {
-             p->color=y->color;
-             p->key=y->key;
-         }
-         if(y->color=='b')
-             delfix(q);
-     }
-}
-
-void RBtree::delfix(node *p)
-{
-    node *s;
-    while(p!=root&&p->color=='b')
-    {
-          if(p->parent->left==p)
-          {
-                  s=p->parent->right;
-                  if(s->color=='r')
-                  {
-                         s->color='b';
-                         p->parent->color='r';
-                         leftrotate(p->parent);
-                         s=p->parent->right;
-                  }
-                  if(s->right->color=='b'&&s->left->color=='b')
-                  {
-                         s->color='r';
-                         p=p->parent;
-                  }
-                  else
-                  {
-                      if(s->right->color=='b')
-                      {
-                             s->left->color=='b';
-                             s->color='r';
-                             rightrotate(s);
-                             s=p->parent->right;
-                      }
-                      s->color=p->parent->color;
-                      p->parent->color='b';
-                      s->right->color='b';
-                      leftrotate(p->parent);
-                      p=root;
-                  }
-          }
-          else
-          {
-                  s=p->parent->left;
-                  if(s->color=='r')
-                  {
-                        s->color='b';
-                        p->parent->color='r';
-                        rightrotate(p->parent);
-                        s=p->parent->left;
-                  }
-                  if(s->left->color=='b'&&s->right->color=='b')
-                  {
-                        s->color='r';
-                        p=p->parent;
-                  }
-                  else
-                  {
-                        if(s->left->color=='b')
-                        {
-                              s->right->color='b';
-                              s->color='r';
-                              leftrotate(s);
-                              s=p->parent->left;
-                        }
-                        s->color=p->parent->color;
-                        p->parent->color='b';
-                        s->left->color='b';
-                        rightrotate(p->parent);
-                        p=root;
-                  }
-          }
-       p->color='b';
-       root->color='b';
-    }
-}
-
-void RBtree::leftrotate(node *p)
-{
-     if(p->right==NULL)
-           return ;
-     else
-     {
-           node *y=p->right;
-           if(y->left!=NULL)
-           {
-                  p->right=y->left;
-                  y->left->parent=p;
-           }
-           else
-                  p->right=NULL;
-           if(p->parent!=NULL)
-                y->parent=p->parent;
-           if(p->parent==NULL)
-                root=y;
-           else
-           {
-               if(p==p->parent->left)
-                       p->parent->left=y;
-               else
-                       p->parent->right=y;
-           }
-           y->left=p;
-           p->parent=y;
-     }
-}
-void RBtree::rightrotate(node *p)
-{
-     if(p->left==NULL)
-          return ;
-     else
-     {
-         node *y=p->left;
-         if(y->right!=NULL)
-         {
-                  p->left=y->right;
-                  y->right->parent=p;
-         }
-         else
-                 p->left=NULL;
-         if(p->parent!=NULL)
-                 y->parent=p->parent;
-         if(p->parent==NULL)
-               root=y;
-         else
-         {
-             if(p==p->parent->left)
-                   p->parent->left=y;
-             else
-                   p->parent->right=y;
-         }
-         y->right=p;
-         p->parent=y;
-     }
-}
-
-node* RBtree::successor(node *p)
-{
-      node *y=NULL;
-     if(p->left!=NULL)
-     {
-         y=p->left;
-         while(y->right!=NULL)
-              y=y->right;
-     }
-     else
-     {
-         y=p->right;
-         while(y->left!=NULL)
-              y=y->left;
-     }
-     return y;
-}
-
-void RBtree::disp()
-{
-     display(root);
-}
-void RBtree::display(node *p)
-{
-     if(root==NULL)
-     {
-          cout<<"\nEmpty Tree.";
-          return ;
-     }
-     if(p!=NULL)
-     {
-                cout<<"\n\t NODE: ";
-                cout<<"\n Key: "<<p->key;
-                cout<<"\n Colour: ";
-    if(p->color=='b')
-     cout<<"Black";
-    else
-     cout<<"Red";
-                if(p->parent!=NULL)
-                       cout<<"\n Parent: "<<p->parent->key;
-                else
-                       cout<<"\n There is no parent of the node.  ";
-                if(p->right!=NULL)
-                       cout<<"\n Right Child: "<<p->right->key;
-                else
-                       cout<<"\n There is no right child of the node.  ";
-                if(p->left!=NULL)
-                       cout<<"\n Left Child: "<<p->left->key;
-                else
-                       cout<<"\n There is no left child of the node.  ";
-                cout<<endl;
-    if(p->left)
-    {
-                 cout<<"\n\nLeft:\n";
-     display(p->left);
-    }
-
-    if(p->right)
-    {
-     cout<<"\n\nRight:\n";
-                 display(p->right);
-    }
-     }
-}
-
-int main()
-{
-    int ch,y=0;
-    RBtree obj;
-    do
-    {
-                cout<<"\n\t RED BLACK TREE " ;
-                cout<<"\n 1. Insert in the tree ";
-                cout<<"\n 2. Delete a node from the tree";
-                cout<<"\n 3. Search for an element in the tree";
-                cout<<"\n 4. Display the tree ";
-                cout<<"\n 5. Exit " ;
-                cout<<"\nEnter Your Choice: ";
-                cin>>ch;
-                switch(ch)
-                {
-                          case 1 : obj.insert();
-                                   cout<<"\nNODE INSERTED!!.\n";
-                                   break;
-                          case 2 : obj.del();
-                                   break;
-                          case 3 : obj.search();
-                                   break;
-                          case 4 : obj.disp();
-                                   break;
-                          case 5 : y=1;
-                                   break;
-                          default : cout<<"\nINVALID CHOICE!!.";
-                }
-                cout<<endl;
-    }while(y!=1);
-    return 1;
+  bst.printTree();
+  cout << endl
+     << "After deleting" << endl;
+  bst.deleteNode(40);
+  bst.printTree();
 }
