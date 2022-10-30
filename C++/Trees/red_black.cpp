@@ -466,7 +466,6 @@ void RBtree::search()
                 else
                        cout<<"\n There is no left child of the node.  ";
                 cout<<endl;
-
      }
 }
 int main()
@@ -499,7 +498,6 @@ int main()
                           default : cout<<"\nINVALID CHOICE!!.";
                 }
                 cout<<endl;
-
     }while(y!=1);
     return 1;
 }
