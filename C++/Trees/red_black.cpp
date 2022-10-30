@@ -413,7 +413,6 @@ void RBtree::display(node *p)
      cout<<"\n\nRight:\n";
                  display(p->right);
     }
-
      }
 }
 
