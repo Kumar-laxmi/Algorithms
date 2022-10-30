@@ -1,5 +1,3 @@
-// Implementing Red-Black Tree in C++
-
 #include <iostream>
 using namespace std;
 
@@ -26,7 +24,7 @@ class RedBlackTree {
     node->color = 0;
   }
 
-  // Preorder
+  
   void preOrderHelper(NodePtr node) {
     if (node != TNULL) {
       cout << node->data << " ";
@@ -35,7 +33,7 @@ class RedBlackTree {
     }
   }
 
-  // Inorder
+  
   void inOrderHelper(NodePtr node) {
     if (node != TNULL) {
       inOrderHelper(node->left);
@@ -44,7 +42,6 @@ class RedBlackTree {
     }
   }
 
-  // Post order
   void postOrderHelper(NodePtr node) {
     if (node != TNULL) {
       postOrderHelper(node->left);
@@ -64,7 +61,7 @@ class RedBlackTree {
     return searchTreeHelper(node->right, key);
   }
 
-  // For balancing the tree after deletion
+  
   void deleteFix(NodePtr x) {
     NodePtr s;
     while (x != root && x->color == 0) {
