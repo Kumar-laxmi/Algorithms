@@ -37,21 +37,21 @@
  
 | No. | Algorithm Name                                                                        | Available languages                       | Category                                                                |
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------- |
-| 1.  | Huffman Coding | C, C++, Python | Data Compression |
-| 2.  | Dijkstra | C, C++, Java, Python | Graphs |
-| 3.  | Floyd Warshall | C, C++, Java, Python | Graphs |
-| 4.  | Singly Linked List | C++, Python | Linked List |
-| 5.  | Factors | C, C++, Java, Python | Maths |
-| 6.  | Prime Number | C, C++, Java, Python | Maths |
-| 7.  | Binary Search | C, C++, Java, Python | Searching |
-| 8.  | Linear Search | C, C++, Java, Python | Searching |
-| 9.  | Bubble Sort | C, C++, Java, Python | Sorting |
-| 10.  | Heap Sort | C, C++, Java, Python | Sorting |
-| 11.  | Insertion Sort | C, C++, Java, Python | Sorting |
-| 12.  | Merge Sort | C, C++, Java, Python | Sorting |
-| 13.  | Selection Sort | C, C++, Java, Python | Sorting |
-| 14.  | AVL Tree | C++, Python | Trees |
-| 15.  | Decision Tree | Python | Machine Learning |
+| 1.  | Huffman Coding | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Data%20Compression/huffmanCoding.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Data%20Compression/huffmanCoding.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Data%20Compression/huffmanCoding.py) | Data Compression |
+| 2.  | Dijkstra | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Dijkstra.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Dijkstra.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Dijkstra.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Dijkstra.py) | Graphs |
+| 3.  | Floyd Warshall | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/floyd_warshall.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/floyd_warshall.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/floyd_warshall.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/floyd_warshall.py) | Graphs |
+| 4.  | Singly Linked List | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/SinglyLinkedList.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/SinglyLinkedList.py) | Linked List |
+| 5.  | Factors | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/factors.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/factors.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/factors.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/factors.py) | Maths |
+| 6.  | Prime Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/is_prime.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/is_prime.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/is_prime.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/is_prime.py) | Maths |
+| 7.  | Binary Search | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Searching/binary_search.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Searching/binary_search.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Searching/binary_search.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Searching/binary_search.py) | Searching |
+| 8.  | Linear Search | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Searching/linear_search.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Searching/linear_search.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Searching/linear_search.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Searching/linear_search.py) | Searching |
+| 9.  | Bubble Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/bubble_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/bubble_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/bubble_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/bubble_sort.py) | Sorting |
+| 10.  | Heap Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/heap_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/heap_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/heap_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/heap_sort.py) | Sorting |
+| 11.  | Insertion Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/insertion_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/insertion_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/insertion_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/insertion_sort.py) | Sorting |
+| 12.  | Merge Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/merge_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/merge_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/merge_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/merge_sort.py) | Sorting |
+| 13.  | Selection Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/selection_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/selection_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/selection_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/selection_sort.py) | Sorting |
+| 14.  | AVL Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) | Trees |
+| 15.  | Decision Tree | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Machine%20Learning/Decision%20Tree/decision_tree.py) | Machine Learning |
 
  </div>
 
