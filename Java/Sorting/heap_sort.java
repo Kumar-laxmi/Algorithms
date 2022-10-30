@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class HeapSort {
+public class heap_sort {
     public void heapify(int[] ar, int n, int i) {
         int max = i, leftChild = 2 * i + 1, rightChild=  2 * i + 2;
         // left child greater than root
