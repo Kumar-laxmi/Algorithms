@@ -16,7 +16,7 @@
 
 | No. | Program Name                                                                        | Duration                     | Deployment                                                                |
 | --- | ----------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------- |
-| 1.  | <a href="https://hacktoberfest.com/">Hacktoberfest - 2022</a> | 1st Oct 2022 - 31st Oct 2022 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
+| 1.  | <a href="https://hacktoberfest.com/">Hacktoberfest (2022)</a> | 1st Oct 2022 - 31st Oct 2022 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
 | 2.  | <a href="https://swoc.getsocialnow.co/">Social Winter of Code (2023) </a> | 1st Jan 2023 - 10th Apr 2023 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
 
  </div>
