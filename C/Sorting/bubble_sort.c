@@ -2,11 +2,12 @@
 
 int main()
 {
-    int a[20], n, i, j, temp, k, s;
+    int n, i, j, temp, k, s;
 
-    
     printf("ENTER THE SIZE OF ARRAY: ");
     scanf("%d", &n);
+    
+    int a[n];
 
     for (i = 0; i < n; i++)
     {
