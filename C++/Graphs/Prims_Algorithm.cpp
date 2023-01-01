@@ -80,7 +80,6 @@ void primsMST(int nodes, int starting_node, vector<pair<int, int>> adj[])
 
 int main()
 {
-
     int nodes, edges, u, v, weight, starting_node;
     cout << "Enter the number of nodes and number of edges in the graph"
          << "\n";
