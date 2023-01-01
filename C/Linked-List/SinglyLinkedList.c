@@ -36,6 +36,7 @@ void traverse()
 struct node *elementSearch(int s, int skey)
 {
     int key = 0;
+    int index = 0;
     struct node *ptr, *preptr; // preptr for before and after insert;
     if (start == NULL)
     {
@@ -52,12 +53,13 @@ struct node *elementSearch(int s, int skey)
             key = 1;
             break;
         }
+        index++;
         preptr = ptr;
         ptr = ptr->next;
     }
     if (key == 1)
     {
-        printf("\nElement found! at memory address %d\n", ptr);
+        printf("\nElement found! at index %d\n", index);
     }
     else
     {
