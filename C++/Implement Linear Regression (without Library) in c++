@@ -1,0 +1,51 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+class LinearRegression {
+public:
+  LinearRegression(vector<double> x, vector<double> y) {
+    this->x = x;
+    this->y = y;
+    this->n = x.size();
+    this->a = 0;
+    this->b = 0;
+  }
+
+  void fit() {
+    double sum_x = 0;
+    double sum_y = 0;
+    double sum_xy = 0;
+    double sum_xx = 0;
+    for (int i = 0; i < n; i++) {
+      sum_x += x[i];
+      sum_y += y[i];
+      sum_xy += x[i] * y[i];
+      sum_xx += x[i] * x[i];
+    }
+    this->a = (n * sum_xy - sum_x * sum_y) / (n * sum_xx - sum_x * sum_x);
+    this->b = (sum_y - a * sum_x) / n;
+  }
+
+  double predict(double x) {
+    return a * x + b;
+  }
+
+private:
+  vector<double> x;
+  vector<double> y;
+  int n;
+  double a;
+  double b;
+};
+
+int main() {
+  vector<double> x = {1, 2, 3, 4, 5};
+  vector<double> y = {1, 2, 3, 4, 5};
+  LinearRegression lr(x, y);
+  lr.fit();
+  cout << lr.predict(6) << endl;
+  return 0;
+}
