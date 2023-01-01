@@ -122,8 +122,8 @@ public class DoubleLinkedList<T> {
         return temp;
     }
 
-    // a private method for maintaining the list internally
-    private T remove(Node<T> node) {
+     // a private method for maintaining the list internally
+     private T remove(Node<T> node) {
         if (node.prev == null)
             return removeFirst();
         if (node.next == null)
@@ -140,6 +140,27 @@ public class DoubleLinkedList<T> {
         size--;
 
         return temp;
+    }
+
+     // remove a particular element
+     public boolean remove(Object obj) {
+        Node<T> trav = head;
+        if (obj == null) {
+            for (trav = head; trav != null; trav = trav.next) {
+                if (trav.data == null) {
+                    remove(trav);
+                    return true;
+                }
+            }
+        } else {
+            for (trav = head; trav != null; trav = trav.next) {
+                if (obj.equals(trav.data)) {
+                    remove(trav);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     // removes the element of a particular index
@@ -161,27 +182,7 @@ public class DoubleLinkedList<T> {
         return remove(trav);
     }
 
-    // remove a particular element
-    public boolean remove(Object obj) {
-        Node<T> trav = head;
-        if (obj == null) {
-            for (trav = head; trav != null; trav = trav.next) {
-                if (trav.data == null) {
-                    remove(trav);
-                    return true;
-                }
-            }
-        } else {
-            for (trav = head; trav != null; trav = trav.next) {
-                if (obj.equals(trav.data)) {
-                    remove(trav);
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
+   
     // returns the index of a particular element
     public int indexOf(Object obj) {
         int index = 0;
