@@ -1,6 +1,5 @@
 ![image](https://user-images.githubusercontent.com/76027425/197370206-ed1f416c-b4d1-44b8-a534-01ddb3c8f6d1.png)
 
-
 <h3 align="center"> A repository for all Algorithms </h3>
 
 <br>
@@ -10,28 +9,26 @@
 </p>
 <br>
 
-
 <div align="center">
 <h2 align="center"><b>Programs we have been a part of<b></h2>
 
-| No. | Program Name                                                                        | Duration                     | Deployment                                                                |
-| --- | ----------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------- |
-| 1.  | <a href="https://hacktoberfest.com/">Hacktoberfest (2022)</a> | 1st Oct 2022 - 31st Oct 2022 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
+| No. | Program Name                                                              | Duration                     | Deployment                                             |
+| --- | ------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------ |
+| 1.  | <a href="https://hacktoberfest.com/">Hacktoberfest (2022)</a>             | 1st Oct 2022 - 31st Oct 2022 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
 | 2.  | <a href="https://swoc.getsocialnow.co/">Social Winter of Code (2023) </a> | 1st Jan 2023 - 10th Apr 2023 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
 
  </div>
 <br>
 
-
 <br>
-
 
 <h2 align="center"><b>Available Resources</b></h2>
 
 - The resources are categorized based on programming language. One folder for one programming language
+
   - Each folder has different subfolders. The subfolder represents the category algorithm belongs to
     - Each subfolder has different files. Filename represents the name of the algorithm
-  
+
   <br>
 
 <div align="center">
@@ -41,7 +38,7 @@
 | 1.  | Huffman Coding | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Data%20Compression/huffmanCoding.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Data%20Compression/huffmanCoding.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Data%20Compression/huffmanCoding.py) | Data Compression |
 | 2.  | Dijkstra | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Dijkstra.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Dijkstra.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Dijkstra.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Dijkstra.py) | Graphs |
 | 3.  | Floyd Warshall | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/floyd_warshall.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/floyd_warshall.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/floyd_warshall.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/floyd_warshall.py) | Graphs |
-| 4.  | Singly Linked List | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/SinglyLinkedList.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/SinglyLinkedList.py) | Linked List |
+| 4.  | Singly Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/SinglyLinkedList.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/SinglyLinkedList.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/SinglyLinkedList.py) | Linked List |
 | 5.  | Factors | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/factors.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/factors.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/factors.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/factors.py) | Maths |
 | 6.  | Prime Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/is_prime.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/is_prime.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/is_prime.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/is_prime.py) | Maths |
 | 7.  | Binary Search | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Searching/binary_search.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Searching/binary_search.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Searching/binary_search.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Searching/binary_search.py) | Searching |
@@ -106,14 +103,13 @@ $ cd QuickLearn
 
 <img width="1440" alt="Screenshot 2022-10-23 at 8 03 11 AM" src="https://user-images.githubusercontent.com/76027425/197370508-44d256b8-c9fc-46a6-825c-c2eb6cd87e15.png">
 
-
 <hr>
 <img width="1440" alt="Screenshot 2022-10-23 at 8 03 31 AM" src="https://user-images.githubusercontent.com/76027425/197370510-1e9c460c-980a-4289-b6ba-ca2a1bc64ea9.png">
 
-
 <hr>
 
-- Clone the Repository after forking 
+- Clone the Repository after forking
+
 ```
 $ git clone https://github.com/<your-github-username>/Algorithms.git
 
@@ -121,7 +117,6 @@ $ cd techsquad-community-website
 ```
 
 - Make changes to the code(for ex- add an update route)
-
 
 - Create a Branch using:
 
@@ -148,10 +143,9 @@ $ git push origin <branch-name>
 ```
 
 - Navigate to the original repository and make a pull request
-- In case of merge conflict  fetch and merge from the remote repository
-<img src ="https://docs.github.com/assets/images/help/repository/fetch-and-merge-button.png">
+- In case of merge conflict fetch and merge from the remote repository
+  <img src ="https://docs.github.com/assets/images/help/repository/fetch-and-merge-button.png">
 
-Please don't forget to update the <a href="https://github.com/Kumar-laxmi/Algorithms#available-resources">Available Resources</a> section 
-  
+Please don't forget to update the <a href="https://github.com/Kumar-laxmi/Algorithms#available-resources">Available Resources</a> section
 
 #### Happy?? Star ⭐ this Repo. 🤩
