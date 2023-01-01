@@ -20,21 +20,21 @@ def partition(A, low, high):
 
 data= pd.read_csv("Stock data.csv")
 df = pd.DataFrame(data)
-l = ['Open','High','Low','Close']
+le = ['Open','High','Low','Close']
 T = []
-for i in range(len(l)):
-    A=df[l[i]].to_numpy()
+for i in range(len(le)):
+    A=df[le[i]].to_numpy()
     low = 0
     high = len(A)-1
     Start_time = time.perf_counter()
     # print(quicksort(A, low, high))
     End_time= time.perf_counter()
     t = End_time - Start_time
-    print("Time taken to sort ", l[i], "is: ", t)
+    print("Time taken to sort ", le[i], "is: ", t)
     T.append(t)
     print()
 
 print("Attribute \t time")
 print("===============================")
-for i in range(len(l)):
-    print(l[i],"\t", T[i])
+for i in range(len(le)):
+    print(le[i],"\t", T[i])
