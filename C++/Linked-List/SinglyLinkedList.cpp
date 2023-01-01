@@ -23,6 +23,7 @@ public:
     void insertNode(int);
     void deleteNode(int);
     void searchNode(int);
+    int size();
     void printList();
 };
 
@@ -88,7 +89,18 @@ void LinkedList::printList() {
     if (head == NULL) { cout << "Empty List" << endl; return; }
     while (p) { cout << p->data << " "; p = p->next; }
 }
-
+//size of linked list
+int LinkedList::size(){
+    Node *p=head;
+    int sz=0;
+    while(p!=NULL)
+    {
+        sz++;
+       p=p->next;
+    }
+    return sz;
+}
+        
 int main() {
     LinkedList list;
     int n, ele, c;
@@ -96,7 +108,7 @@ int main() {
 
     // Input code
     while (ch == 'y') {
-        cout << "\nChoose an operation :\n1. Insertion\n2. Deletion\n3. Search\n4. Print";
+        cout << "\nChoose an operation :\n1. Insertion\n2. Deletion\n3. Search\n4.Size \n5. Print";
         cout << "\n\tMAKE YOU CHOICE : ";
         cin >> c;
         switch (c) {
@@ -119,7 +131,10 @@ int main() {
             list.searchNode(ele);
             break;
 
-        case 4: // Print
+        case 4://size
+                cout<<"Size of the Linked List is :"<<list.size();
+                  break;
+        case 5: // Print
             cout << "\nList Elements : ";
             list.printList();
             break;
