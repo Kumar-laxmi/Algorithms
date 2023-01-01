@@ -1,3 +1,5 @@
+// Fractional knapsack program in C
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
@@ -25,34 +27,36 @@ scanf ("%d", &profit[i]);
 
     int cur_w;
     float tot_v;
-    int maxi;
+    int max;
     int used[10];
  
-    for (i = 0; i < n; ++i){
-        used[i] = 0;
-    }
+    for (i = 0; i < n; ++i)
+        used[i] = 0; 
  
     cur_w = W;
     while (cur_w > 0) { 
         
-        maxi = -1;
-        for (i = 0; i < n; ++i)
-            if ((used[i] == 0) &&
-                ((maxi == -1) || ((float)profit[i]/weight[i] > (float)profit[maxi]/weight[maxi])))
-                maxi = i;
+        max = -1;
+        for (i = 0; i < n; ++i){
+            if ((used[i] == 0) && ((max == -1) || ((float)profit[i]/weight[i] > (float)profit[max]/weight[max]))){
+                max = i;
+            }
+        }
  
-        used[maxi] = 1; 
-        cur_w -= weight[maxi]; 
-        tot_v += profit[maxi];
-        if (cur_w >= 0)
-            printf("Added item %d (%d$, %dKg) completely in the bag. Space left: %d.\n", maxi + 1, profit[maxi], weight[maxi], cur_w);
+        used[max] = 1; 
+        cur_w -= weight[max]; 
+        tot_v += profit[max];
+        if (cur_w >= 0){
+            printf("Added item %d (%d$, %dKg) completely in the bag. Space left: %d.\n", max + 1, profit[max], weight[max], cur_w);
+        }
         else {
-            printf("Added %d%% (%d$, %dKg) of item %d in the bag.\n", (int)((1 + (float)cur_w/weight[maxi]) * 100), profit[maxi], weight[maxi], maxi + 1);
-            tot_v -= profit[maxi];
-            tot_v += (1 + (float)cur_w/weight[maxi]) * profit[maxi];
+            printf("Added %d%% (%d$, %dKg) of item %d in the bag.\n", (int)((1 + (float)cur_w/weight[max]) * 100), profit[max], weight[max], max + 1);
+            tot_v -= profit[max];
+            tot_v += (1 + (float)cur_w/weight[max]) * profit[max];
         }
     }
  
     printf("Filled the bag with items worth %.2f$.\n", tot_v);
-    getch();
+
 }
+
