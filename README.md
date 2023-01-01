@@ -50,6 +50,7 @@
 | 13.  | Selection Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/selection_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/selection_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/selection_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/selection_sort.py) | Sorting |
 | 14.  | AVL Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) | Trees |
 | 15.  | Decision Tree | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Machine%20Learning/Decision%20Tree/decision_tree.py) | Machine Learning |
+| 16.  | Cyclic Sort | [Java](https://github.com/Kumar-laxmi/Algorithms/tree/main/Java/Sorting) | Sorting |
 
  </div>
 
