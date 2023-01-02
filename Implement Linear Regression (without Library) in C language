@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+// Structure to represent a data point (x, y)
+typedef struct DataPoint {
+    double x;
+    double y;
+} DataPoint;
+
+// Calculate the mean of an array of numbers
+double mean(double *values, int n) {
+    double sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += values[i];
+    }
+    return sum / n;
+}
+
+// Calculate the variance of an array of numbers
+double variance(double *values, int n) {
+    double meanValue = mean(values, n);
+    double sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += (values[i] - meanValue) * (values[i] - meanValue);
+    }
+    return sum / (n - 1);
+}
+
+// Calculate the covariance between two arrays of numbers
+double covariance(double *xValues, double *yValues, int n) {
+    double xMean = mean(xValues, n);
+    double yMean = mean(yValues, n);
+    double sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += (xValues[i] - xMean) * (yValues[i] - yMean);
+    }
+    return sum / (n - 1);
+}
+
+// Fit a linear regression model to a set of data points
+void linearRegression(DataPoint *data, int n, double *slope, double *intercept) {
+    double xValues[n];
+    double yValues[n];
+    for (int i = 0; i < n; i++) {
+        xValues[i] = data[i].x;
+        yValues[i] = data[i].y;
+    }
+    *slope = covariance(xValues, yValues, n) / variance(xValues, n);
+    *intercept = mean(yValues, n) - *slope * mean(xValues, n);
+}
+
+int main() {
+    // Example data points
+    DataPoint data[] = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}};
+    int n = sizeof(data) / sizeof(DataPoint);
+
+    double slope, intercept;
+    linearRegression(data, n, &slope, &intercept);
+
+    printf("Linear regression: y = %.2f x + %.2f\n", slope, intercept);
+    return 0;
+}
