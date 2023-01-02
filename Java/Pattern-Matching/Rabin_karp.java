@@ -2,7 +2,7 @@
 //Unlike Naive string matching algorithm, it does not travel through every character in the initial phase 
 //rather it filters the characters that do not match and then performs the comparison.
 // Rabin-Karp algorithm in Java
-public class Rabin_Karp {
+public class Rabin_karp {
   public final static int d = 10;
 
   static void search(String pattern, String txt, int q) {
