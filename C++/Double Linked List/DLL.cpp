@@ -104,7 +104,6 @@ void insert_at_pos(node *& head,int pos,int value){
 				n->prev=temp;
 				n->next=NULL;
 				return;
-
 			}
 			//creating new node
 			node * n=new node(value);
