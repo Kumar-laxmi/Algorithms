@@ -3,12 +3,11 @@
 // insert at Begininng
 // insert at End
 // insert at Position
-// Delete at Beginning
-// Delete at End
-// Delete at Position
+// Delte at Beginning
+// Delte at End
+// Delte at Position
 // Printing the Linked List
 // Reverse The linked list
-// All Operations work in a Menu Driven Program
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -27,7 +26,7 @@ public:
 					  // pointed to NULL
 		data = value; // value is assigned to the data
 		next = NULL;  // By default next pointer is pointed
-					  // to NULL
+					 // to NULL
 	}
 };
 
