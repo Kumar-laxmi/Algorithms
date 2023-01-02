@@ -27,7 +27,7 @@ public:
 					  // pointed to NULL
 		data = value; // value is assigned to the data
 		next = NULL;  // By default next pointer is pointed
-					 // to NULL
+					  // to NULL
 	}
 };
 
