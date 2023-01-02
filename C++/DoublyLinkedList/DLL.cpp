@@ -1,5 +1,5 @@
 // C++ program for the all Doubly Linked List Operation
-// It Includes
+// It Includes the following functions
 // insert at Begininng
 // insert at End
 // insert at Position
