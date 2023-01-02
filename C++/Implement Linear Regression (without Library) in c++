@@ -1,51 +1,64 @@
 #include <iostream>
-#include <vector>
 #include <cmath>
 
 using namespace std;
 
-class LinearRegression {
-public:
-  LinearRegression(vector<double> x, vector<double> y) {
-    this->x = x;
-    this->y = y;
-    this->n = x.size();
-    this->a = 0;
-    this->b = 0;
-  }
-
-  void fit() {
-    double sum_x = 0;
-    double sum_y = 0;
-    double sum_xy = 0;
-    double sum_xx = 0;
-    for (int i = 0; i < n; i++) {
-      sum_x += x[i];
-      sum_y += y[i];
-      sum_xy += x[i] * y[i];
-      sum_xx += x[i] * x[i];
-    }
-    this->a = (n * sum_xy - sum_x * sum_y) / (n * sum_xx - sum_x * sum_x);
-    this->b = (sum_y - a * sum_x) / n;
-  }
-
-  double predict(double x) {
-    return a * x + b;
-  }
-
-private:
-  vector<double> x;
-  vector<double> y;
-  int n;
-  double a;
-  double b;
+// Structure to represent a data point (x, y)
+struct DataPoint {
+    double x;
+    double y;
 };
 
+// Calculate the mean of an array of numbers
+double mean(double *values, int n) {
+    double sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += values[i];
+    }
+    return sum / n;
+}
+
+// Calculate the variance of an array of numbers
+double variance(double *values, int n) {
+    double meanValue = mean(values, n);
+    double sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += (values[i] - meanValue) * (values[i] - meanValue);
+    }
+    return sum / (n - 1);
+}
+
+// Calculate the covariance between two arrays of numbers
+double covariance(double *xValues, double *yValues, int n) {
+    double xMean = mean(xValues, n);
+    double yMean = mean(yValues, n);
+    double sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += (xValues[i] - xMean) * (yValues[i] - yMean);
+    }
+    return sum / (n - 1);
+}
+
+// Fit a linear regression model to a set of data points
+void linearRegression(DataPoint *data, int n, double &slope, double &intercept) {
+    double xValues[n];
+    double yValues[n];
+    for (int i = 0; i < n; i++) {
+        xValues[i] = data[i].x;
+        yValues[i] = data[i].y;
+    }
+    slope = covariance(xValues, yValues, n) / variance(xValues, n);
+    intercept = mean(yValues, n) - slope * mean(xValues, n);
+}
+
 int main() {
-  vector<double> x = {1, 2, 3, 4, 5};
-  vector<double> y = {1, 2, 3, 4, 5};
-  LinearRegression lr(x, y);
-  lr.fit();
-  cout << lr.predict(6) << endl;
-  return 0;
+    // Example data points
+    DataPoint data[] = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}};
+    int n = sizeof(data) / sizeof(DataPoint);
+
+    double slope, intercept;
+    linearRegression(data, n, slope, intercept);
+
+    cout << "Linear regression: y = " << slope << " x + " << intercept << endl;
+    return 0;
 }
