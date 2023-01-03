@@ -1,34 +1,79 @@
 #include <iostream>
-#include <vector>
 #include <algorithm>
+#include <cmath>
 
-using namespace std;
+const int BUCKET_SIZE = 10;
 
-void radix_sort(vector<int> &arr) {
-  int max_value = *max_element(arr.begin(), arr.end());
-  int max_digit = 0;
-  while (max_value > 0) {
-    max_value /= 10;
-    max_digit++;
-  }
-  for (int i = 0; i < max_digit; i++) {
-    vector<vector<int>> bucket(10);
-    for (int j = 0; j < arr.size(); j++) {
-      int digit = (arr[j] / (int)pow(10, i)) % 10;
-      bucket[digit].push_back(arr[j]);
-    }
-    arr.clear();
-    for (int j = 0; j < 10; j++) {
-      arr.insert(arr.end(), bucket[j].begin(), bucket[j].end());
-    }
-  }
+// A utility function to get the maximum value in the input array
+int getMax(int arr[], int n)
+{
+    int max = arr[0];
+    for (int i = 1; i < n; i++)
+        if (arr[i] > max)
+            max = arr[i];
+    return max;
 }
 
-int main() {
-  vector<int> arr = {170, 45, 75, 90, 802, 24, 2, 66};
-  radix_sort(arr);
-  for (int i = 0; i < arr.size(); i++) {
-    cout << arr[i] << endl;
-  }
-  return 0;
+// A utility function to get the number of digits in the maximum value of the input array
+int getMaxDigits(int arr[], int n)
+{
+    int max = getMax(arr, n);
+    int digits = 0;
+    while (max > 0)
+    {
+        max /= 10;
+        digits++;
+    }
+    return digits;
 }
+
+// A utility function to get the digit at the specified position for a given number
+int getDigit(int num, int pos)
+{
+    int divisor = pow(10, pos - 1);
+    return (num / divisor) % 10;
+}
+
+// A function to sort the input array using radix sort
+void radixSort(int arr[], int n)
+{
+    // Create an array of buckets for each digit (0-9)
+    int buckets[BUCKET_SIZE][n];
+    int counts[BUCKET_SIZE];
+
+    // Find the maximum number of digits in the input array
+    int maxDigits = getMaxDigits(arr, n);
+
+    // Loop through the digits from LSD to MSD
+    for (int pos = 1; pos <= maxDigits; pos++)
+    {
+        // Reset the counts of each bucket to 0
+        for (int i = 0; i < BUCKET_SIZE; i++)
+            counts[i] = 0;
+
+        // Distribute the elements of the input array into the buckets based on their digits
+        for (int i = 0; i < n; i++)
+        {
+            int digit = getDigit(arr[i], pos);
+            buckets[digit][counts[digit]] = arr[i];
+            counts[digit]++;
+        }
+
+        // Merge the elements of the buckets back into the input array
+        int k = 0;
+        for (int i = 0; i < BUCKET_SIZE; i++)
+            for (int j = 0; j < counts[i]; j++)
+                arr[k++] = buckets[i][j];
+    }
+}
+
+int main()
+{
+    int arr[] = {170, 45, 75, 90, 802, 24, 2, 66};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    radixSort(arr, n);
+
+    for (int i = 0; i < n; i++)
+        std::cout << arr[i] << " ";
+    std
