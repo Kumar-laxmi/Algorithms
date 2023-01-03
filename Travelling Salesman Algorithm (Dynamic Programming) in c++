@@ -1,0 +1,68 @@
+#include <iostream>
+#include <vector>
+#include <cstring>
+
+using namespace std;
+
+// the number of cities
+const int N = 10;
+
+// the distance between each pair of cities
+int distances[N][N] = {
+  {0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
+  {1, 0, 1, 2, 3, 4, 5, 6, 7, 8},
+  {2, 1, 0, 1, 2, 3, 4, 5, 6, 7},
+  {3, 2, 1, 0, 1, 2, 3, 4, 5, 6},
+  {4, 3, 2, 1, 0, 1, 2, 3, 4, 5},
+  {5, 4, 3, 2, 1, 0, 1, 2, 3, 4},
+  {6, 5, 4, 3, 2, 1, 0, 1, 2, 3},
+  {7, 6, 5, 4, 3, 2, 1, 0, 1, 2},
+  {8, 7, 6, 5, 4, 3, 2, 1, 0, 1},
+  {9, 8, 7, 6, 5, 4, 3, 2, 1, 0}
+};
+
+// the set of cities that have been visited so far
+int visited[N];
+
+// the number of cities visited so far
+int visitedCount = 0;
+
+// the current shortest distance
+int shortest = -1;
+
+// find the shortest path through all cities
+void findShortest(int current, int distance) {
+  // if all cities have been visited,
+  // check if the tour is complete and the distance is shorter than the current shortest distance
+  if (visitedCount == N) {
+    if (distances[current][0] != 0 && (shortest == -1 || distance + distances[current][0] < shortest)) {
+      shortest = distance + distances[current][0];
+    }
+    return;
+  }
+
+  // mark the current city as visited
+  visited[current] = 1;
+  visitedCount++;
+
+  // try all unvisited cities
+  for (int i = 0; i < N; i++) {
+    if (!visited[i] && distances[current][i] != 0) {
+      // visit the city and find the shortest path from there
+      findShortest(i, distance + distances[current][i]);
+    }
+  }
+
+  // mark the current city as unvisited
+  visited[current] = 0;
+  visitedCount--;
+}
+
+int main() {
+  // start at city 0
+  findShortest(0, 0);
+
+  cout << "Shortest path: " << shortest << endl;
+
+  return 0;
+}
