@@ -14,7 +14,7 @@ For example, consider the following set of items:
 Item	Value	Weight
 1	60	10
 2	100	20
-3	120	30
+3	120	30 
 Suppose the capacity of the knapsack is 50. In this case, 
 the optimal solution would be to take the items with values 
 100 and 60 (for a total value of 160), since these two items have 
