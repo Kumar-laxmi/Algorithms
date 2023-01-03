@@ -54,9 +54,6 @@
 | 17.  | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees) | Trees |
 | 18.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
 | 19.  | Decision Tree | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Machine%20Learning/Decision%20Tree/decision_tree.py) | Machine Learning |
-| 20.  | Fractional Knapsack | [C] | Greedy Approach |
-| 21.  | 0/1 Knapsack | [C], [C++] | Dynamic Programming |
-| 22.  | Karatsuba Algorithm | [C++] | Divide-and-Conquer |
 
  </div>
 
