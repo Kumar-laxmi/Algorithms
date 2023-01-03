@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+void radix_sort(vector<int> &arr) {
+  int max_value = *max_element(arr.begin(), arr.end());
+  int max_digit = 0;
+  while (max_value > 0) {
+    max_value /= 10;
+    max_digit++;
+  }
+  for (int i = 0; i < max_digit; i++) {
+    vector<vector<int>> bucket(10);
+    for (int j = 0; j < arr.size(); j++) {
+      int digit = (arr[j] / (int)pow(10, i)) % 10;
+      bucket[digit].push_back(arr[j]);
+    }
+    arr.clear();
+    for (int j = 0; j < 10; j++) {
+      arr.insert(arr.end(), bucket[j].begin(), bucket[j].end());
+    }
+  }
+}
+
+int main() {
+  vector<int> arr = {170, 45, 75, 90, 802, 24, 2, 66};
+  radix_sort(arr);
+  for (int i = 0; i < arr.size(); i++) {
+    cout << arr[i] << endl;
+  }
+  return 0;
+}
