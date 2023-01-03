@@ -2,18 +2,21 @@
   // AVL tree implementation in Java
 
 // Create node
-class Node {
-    int item, height;
-    Node left, right;
-  
-    Node(int d) {
-      item = d;
-      height = 1;
-    }
-  }
+
   
   // Tree class
-  class AVLTree {
+  public class avlTree {
+
+    class Node {
+        int item, height;
+        Node left, right;
+      
+        Node(int d) {
+          item = d;
+          height = 1;
+        }
+      }
+      
     Node root;
   
     int height(Node N) {
