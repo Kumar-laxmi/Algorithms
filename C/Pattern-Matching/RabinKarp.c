@@ -28,7 +28,7 @@ void search(char pattern[], char inputtext[], int q)
 
 // Calculating  the hash value of pattern first 
 	for (i = 0; i < lengthOfPattern; i++) {
-	hashForPattern = (d * p + pattern[i]) % q;
+	hashForPattern = (d * hashForPattern + pattern[i]) % q;
 		 hashForInputtxt = (d * hashForInputtxt + inputtext[i]) % q;
 	}
 	for (i = 0; i <= lengthOfInputtxt - lengthOfPattern; i++) {
