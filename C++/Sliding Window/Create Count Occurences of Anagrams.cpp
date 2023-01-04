@@ -1,5 +1,4 @@
-//User function template for C++
-//User function template for C++
+Question:- Given a word and a text, return the count of the occurrences of anagrams of the word in the text (For eg: anagrams of word for are for, ofr, rof etc.)
 class Solution{
 private:
     bool check(unordered_map<char,int> &mtar,unordered_map<char,int> &m){
