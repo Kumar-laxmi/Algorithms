@@ -55,7 +55,7 @@
 | 18.  | AVL Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) | Trees |
 | 19.  | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees) | Trees |
 | 20.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
-
+| 21.  | Rabin Karp | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/rabin_karp.cpp) | Pattern Matching |
 
  </div>
 
