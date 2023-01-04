@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Sieve_erastonetihis {
     public static void main(String[] args) {
         // If you have to find prime numbers till n 
