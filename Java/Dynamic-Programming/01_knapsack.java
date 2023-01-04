@@ -1,4 +1,3 @@
-import javax.swing.plaf.ColorUIResource;
 
 // ========================== Problem Statement ===========================
 
@@ -31,7 +30,7 @@ The 0/1 in the name refers to the fact that each item must either be
 included or excluded (as opposed to a fractional knapsack problem, 
 where you can include a fraction of an item).
 */
-public class zeroOneKnapsackDp {
+public class 01_knapsack {
 
     public static int knapsack(int[] values, int[] weights, int capacity) {
         int totalItems = values.length;
