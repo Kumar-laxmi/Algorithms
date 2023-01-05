@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+const int N = 3;
+
+int main()
+{
+    // Initialize two matrices to be multiplied
+    int A[N][N] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int B[N][N] = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
+
+    // Initialize an empty result matrix
+    int C[N][N] = {0};
+
+    // Multiply the two matrices and store the result in C
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            for (int k = 0; k < N; k++)
+            {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    // Print out the result matrix
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+// Output of this code
+30 24 18
+84 69 54
+138 114 90
