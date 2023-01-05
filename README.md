@@ -35,14 +35,14 @@
  
 | No. | Algorithm Name                                                                        | Available languages                       | Category                                                                |
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------- |
-| 1.  | Huffman Coding | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Data%20Compression/huffmanCoding.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Data%20Compression/huffmanCoding.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Data%20Compression/huffmanCoding.py) | Data Compression |
-| 2.  | Karatsuba Algorithm |  | Divide and Conquer |
-| 3.  | 0/1 Knapsack |  | Dynamic Programming |
-| 4.  | Bellman Ford |  | Graphs |
+| 1.  | Huffman Coding | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Data%20Compression/huffmanCoding.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Data%20Compression/huffmanCoding.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Data-Compression/Huffman.java),[Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Data%20Compression/huffmanCoding.py) | Data Compression |
+| 2.  | Karatsuba Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Divide-and-Conquer/karatsuba.cpp) | Divide and Conquer |
+| 3.  | 0/1 Knapsack | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/01_knapsack.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/01_knapsack.cpp) | Dynamic Programming |
+| 4.  | Bellman Ford | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Bellman_Form_Algorithm.cpp) | Graphs |
 | 5.  | Dijkstra | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Dijkstra.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Dijkstra.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Dijkstra.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Dijkstra.py) | Graphs |
 | 6.  | Floyd Warshall | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/floyd_warshall.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/floyd_warshall.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/floyd_warshall.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/floyd_warshall.py) | Graphs |
 | 7.  | Prim's Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Prims_Algorithm.cpp) | Graphs |
-| 8.  | Fractional Knapsack |  | Greedy Algorithm |
+| 8.  | Fractional Knapsack | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Greedy-Algorithm/fractional_knapsack.cpp) | Greedy Algorithm |
 | 9.  | Singly Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/SinglyLinkedList.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/SinglyLinkedList.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/SinglyLinkedList.py) | Linked List |
 | 10.  | Doubly Linked List | [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/DoubleLinkedList.java) | Linked List |
 | 11.  | Decision Tree | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Machine%20Learning/Decision%20Tree/decision_tree.py) | Machine Learning |
@@ -160,3 +160,4 @@ $ git push origin <branch-name>
 Please don't forget to update the <a href="https://github.com/Kumar-laxmi/Algorithms#available-resources">Available Resources</a> section
 
 #### Happy?? Star ⭐ this Repo. 🤩
+
