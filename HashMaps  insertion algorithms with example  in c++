@@ -1,0 +1,24 @@
+#include <unordered_map>
+#include <string>
+#include <iostream>
+
+int main() {
+    std::unordered_map<std::string, int> hash_map;
+
+    // Inserting elements into the hash map
+    hash_map["apple"] = 1;
+    hash_map["banana"] = 2;
+    hash_map["orange"] = 3;
+
+    // Printing the elements in the hash map
+    for (const auto& [key, value] : hash_map) {
+        std::cout << key << ": " << value << std::endl;
+    }
+
+    return 0;
+}
+
+// Output
+banana: 2
+orange: 3
+apple: 1
