@@ -2,8 +2,8 @@
 
 ## 🛠️ Issue (Number)
 
-<!-- Example: Closes #31 -->
-Closes #
+<!-- Example: #31 -->
+Issue no #
 
 ## 👨‍💻 Changes proposed
 
