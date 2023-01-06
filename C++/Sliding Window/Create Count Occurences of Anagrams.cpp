@@ -16,8 +16,7 @@ public:
 	    int k=pat.size();
 	    int n=txt.length();
 	    int start=0,end;
-	    int ans=0;
-	    
+	    int ans=0;	    
 	    unordered_map<char,int> mtar;
 	    for(int i=0;i<k;i++){
 	        mtar[pat[i]]++;
@@ -28,9 +27,7 @@ public:
 	        m[txt[i]]++;
 	    }
 	    if(check(mtar,m))
-	    ans++;
-	
-	    
+	    ans++;	    
 	        for(int i=end+1;i<n;i++){
 	        end=i;
 	        char newch=txt[i];
@@ -38,13 +35,8 @@ public:
 	        char oldch=txt[start++];
 	        m[oldch]--;
 	        if(check(mtar,m))
-	        ans++;
-	        
-	    }
-	    
-	    
-	    return ans;
-	    
+	        ans++;	        
+	    }	    
+	    return ans;	    
 	}
-
 };
