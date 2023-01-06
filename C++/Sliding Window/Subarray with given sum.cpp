@@ -13,29 +13,23 @@ class Solution
  if(s==0) return {-1} ; 
  
     while(j<n){
-        curr_sum+=arr[j] ; 
-        
-        if(curr_sum < s) j++;
-        
+        curr_sum+=arr[j] ;       
+        if(curr_sum < s) j++;       
         else if(curr_sum==s){
            return{i+1,j+1};
-        }
-        
+        }        
         else if(curr_sum > s){
             //remove calculation for i
             while(curr_sum>s){
                 curr_sum-=arr[i];
                 i++;
-            }
-          
+            }          
            if(curr_sum==s){
            return{i+1,j+1};
-        }
-        
+        }     
             j++;
         }
     }
-    return {-1} ; 
-    
+    return {-1} ;    
     }
 };
