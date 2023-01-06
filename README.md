@@ -62,6 +62,27 @@
 | 25.  | AVL Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/avlTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) | Trees |
 | 26.  | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/binarySearchTree.cpp) | Trees |
 | 27.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
+| 12.  | Binary Exponentiation | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Binary%20Exponentiation%20Algorithm.cpp) | Maths |
+| 13.  | Factors | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/factors.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/factors.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/factors.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/factors.py) | Maths |
+| 14.  | Prime Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/is_prime.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/is_prime.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/is_prime.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/is_prime.py) | Maths |
+| 15.  | Sieve Eratosthenes Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Sieve%20of%20Eratosthenes%20Algorithm.cpp) | Maths |
+| 16.  | Rabin Karp | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/rabin_karp.cpp) | Pattern Matching |
+| 17.  | Binary Search on 2D Matrix | [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Searching/binary_search_2d.java) | Searching |
+| 18.  | Binary Search | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Searching/binary_search.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Searching/binary_search.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Searching/binary_search.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Searching/binary_search.py) | Searching |
+| 19.  | Linear Search | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Searching/linear_search.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Searching/linear_search.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Searching/linear_search.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Searching/linear_search.py) | Searching |
+| 20.  | Sliding Window Problems | [C++](https://github.com/Kumar-laxmi/Algorithms/tree/main/C%2B%2B/Sliding%20Window) | Sliding Window |
+| 21.  | Bubble Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/bubble_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/bubble_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/bubble_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/bubble_sort.py) | Sorting |
+| 22.  | Counting Sort |  | Sorting |
+| 23.  | Cyclic Sort | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/cyclic_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/cyclic_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/cyclic_sort.py) | Sorting |
+| 24.  | Heap Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/heap_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/heap_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/heap_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/heap_sort.py) | Sorting |
+| 25.  | Insertion Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/insertion_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/insertion_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/insertion_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/insertion_sort.py) | Sorting |
+| 26.  | Merge Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/merge_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/merge_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/merge_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/merge_sort.py) | Sorting |
+| 27.  | Quick Sort | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/quick_sort.cpp) | Sorting |
+| 28.  | Selection Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/selection_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/selection_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/selection_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/selection_sort.py) | Sorting |
+| 29.  | AVL Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/avlTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) | Trees |
+| 30.  | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/binarySearchTree.cpp) | Trees |
+| 31.  | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c) | Trees |
+| 32.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
 
 
 
@@ -163,4 +184,3 @@ $ git push origin <branch-name>
 Please don't forget to update the <a href="https://github.com/Kumar-laxmi/Algorithms#available-resources">Available Resources</a> section
 
 #### Happy?? Star ⭐ this Repo. 🤩
-
