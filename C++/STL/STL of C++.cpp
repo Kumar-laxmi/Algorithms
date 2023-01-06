@@ -289,8 +289,8 @@ int main()
         // they are same
         if(p1.first>p2.first) return true;
         return false;
-
     }   // used below for sorting
+    
     sort(a,a+n, comp); // comp is the comparator  (custom sorting using STL comparator)
 
     // sort it according to second element                    {{2,1},{4,1},{1,2}};
