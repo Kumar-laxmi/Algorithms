@@ -9,25 +9,19 @@ public:
         int n = nums.size();
        long long int max_sum=0;
        long long int sum=0;
-        map<int,int>freq;
-        
-        while(j<n){
-            
+        map<int,int>freq;        
+        while(j<n){            
             //reaching window size 
             sum+=nums[j]; freq[nums[j]]++;
             if(j-i+1<k){   
                 j++;
-            }
-            
-            
+            }         
             //window size reach , find max_sum if freq size is equal to k 
           else  if(j-i+1 == k){
                 //see max_sum only if all distinct element in window
                 if(freq.size()==k){
-                max_sum=max(max_sum,sum);
-                  
-                }
-                
+                max_sum=max(max_sum,sum);              
+               }         
                 //now, move to next window by removing the calculation for i
                 freq[nums[i]]--; 
                 sum-=nums[i]; //remove calculation of i from sum as well
@@ -38,11 +32,8 @@ public:
                 //going to next window
                 i++;
                 j++;
-            }
-            
-            
+            }      
         }
-        
         return max_sum;
     }
 };
