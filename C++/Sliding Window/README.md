@@ -22,6 +22,6 @@ Sr  | [Problems]                                                                
 9  | Maximum of all subarrays of size k                                   | [Problem Link](https://practice.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1)                       
 10  | Maximum sum of subarray less than or equal to x                                   | [Problem Link](https://practice.geeksforgeeks.org/problems/maximum-sum-of-subarray-less-than-or-equal-to-x4033/1) 
 11  | Smallest window containing 0, 1 and 2                                   | [Problem Link](https://practice.geeksforgeeks.org/problems/d6e88f06b273a60ae83992314ac514f71841a27d/1)                           
-12 | Subarray with given sum.cpp                                | [Problem Link](https://practice.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1)                       
+12 | Subarray with given sum                               | [Problem Link](https://practice.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1)                       
 13  | Substrings of length k with k-1 distinct elements                                   | [Problem Link](https://practice.geeksforgeeks.org/problems/substrings-of-length-k-with-k-1-distinct-elements/1) 
 </details>
