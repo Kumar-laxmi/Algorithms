@@ -10,6 +10,7 @@ private:
         }
         return true;
     }
+	
 public:
 	int search(string pat, string txt) {
 	    // code here
