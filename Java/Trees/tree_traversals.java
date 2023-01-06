@@ -1,4 +1,14 @@
 class tree_traversals {
+  
+  class Node {
+  int item;
+  Node left, right;
+
+  public Node(int key) {
+  item = key;
+  left = right = null;
+  }
+}
   // Root of Binary Tree
   Node root;
 
@@ -58,14 +68,5 @@ class tree_traversals {
 
   System.out.println("\n\nPostorder traversal");
   tree.postorder(tree.root);
-  }
-}
-class Node {
-  int item;
-  Node left, right;
-
-  public Node(int key) {
-  item = key;
-  left = right = null;
   }
 }
