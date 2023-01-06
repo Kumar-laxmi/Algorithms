@@ -2,7 +2,7 @@
 
 import java.util.Arrays;
 
-class PGraph {
+class Prims {
 
 public void Prim(int G[][], int V) {
 
@@ -61,7 +61,7 @@ while (no_edge < V - 1) {
 }
 
 public static void main(String[] args) {
-PGraph g = new PGraph();
+Prims g = new Prims();
 
 // number of vertices in grapj
 int V = 5;
