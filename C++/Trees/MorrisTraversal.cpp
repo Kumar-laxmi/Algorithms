@@ -64,6 +64,41 @@ vector<int> inorderTraverse(node *root){
     return inorder;
 }
 
+
+//Preorder Traversal
+void preorder(node *p)
+{
+    if(p!=NULL)
+    {
+        printf("%d ",p->data);
+        preorder(p->left);
+        preorder(p->right);
+    }
+}
+
+//Inorder Traversal
+void inorderT(node *p)
+{
+    if(p!=NULL)
+    {
+        inorderT(p->left);
+        printf("%d ",p->data);
+        inorderT(p->right);
+    }
+}
+
+//Postorder Traversal
+void postorder(node *p)
+{
+    if(p!=NULL)
+    {
+        postorder(p->left);
+        postorder(p->right);
+        printf("%d ",p->data);
+    }
+}
+
+
 /*----Creating a structure-----*/
 struct node *newNode(int data) {
   struct node * node = (struct node*) malloc(sizeof(struct node));
@@ -82,11 +117,34 @@ int main() {
   root -> left -> right -> right = newNode(6);
 
   vector < int > inorder;
-  inorder = inorderTraverse(root);
+  int choice;
+  cout<<"Select the option given below:- "<<endl;
+  cout<<"1. Preorder"<<endl;
+  cout<<"2. Inorder"<<endl;
+  cout<<"3. Postorder"<<endl;
+  cout<<"4. Morris Traverse"<<endl;
+  cin>>choice;
 
-  cout << "The Morris inorder traverse is: ";
-  for (int i=0; i<inorder.size(); i++){
-    cout << inorder[i] << " ";
+  switch(choice)
+  {
+    case 1:
+      preorder(root);
+      break;
+    case 2:
+      inorderT(root);
+      break;
+    case 3:
+      postorder(root);
+      break;
+    case 4:
+      inorder = inorderTraverse(root);
+       cout << "The Morris inorder traverse is: ";
+       for (int i=0; i<inorder.size(); i++){
+        cout << inorder[i] << " ";
+      }
+      break;
+    default:
+      cout<<"Wrong Choice"<<endl;
   }
   return 0;
 }
