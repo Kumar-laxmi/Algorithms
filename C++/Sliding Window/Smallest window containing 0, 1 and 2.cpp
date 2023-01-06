@@ -13,8 +13,7 @@ class Solution {
         while(j<s.size()){
             mp[s[j]]++;
             if(mp.size()<3) j++;
-        else if(mp.size()==3){
-             
+        else if(mp.size()==3){   
              while(mp.size()==3){
                 min_size=min(min_size,j-i+1);
                 mp[s[i]]--;
@@ -23,7 +22,6 @@ class Solution {
              }
                 j++;
             }
-        
         }
         if(min_size==INT_MAX) return -1;
         else return min_size;
