@@ -78,7 +78,8 @@ int main() {
             }
         }
     }
-
+    
+    // Taking source at vertex 0
     if (!flag) {
         for (int i = 0; i < v; i++) cout << dist[i] << " ";
         cout << endl;
