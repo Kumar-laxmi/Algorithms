@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class WaveSort {
-    public static void waveSort(int[] arr) {
+    public static void wave_sort(int[] arr) {
         // Sorting the array in ascending order
         Arrays.sort(arr);
 
