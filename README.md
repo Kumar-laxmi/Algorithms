@@ -74,7 +74,7 @@
 
 
 
- </div>
+</div>
 
 <br>
 <h2 align="center"><b>Contributors 🫂</b></h2>
