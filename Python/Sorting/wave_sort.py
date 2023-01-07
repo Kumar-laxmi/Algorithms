@@ -5,7 +5,7 @@ def waveSort(arr):
         if arr[i] > arr[i-1]:
             arr[i],arr[i-1] = arr[i-1], arr[i]
     
-        if  (i <= (n - 2))and(arr[i] > arr[i+1]) :
+        if (i <= (n - 2))and(arr[i] > arr[i+1]) :
             arr[i],arr[i+1] = arr[i+1],arr[i]
         i+=2
     print(arr)
@@ -15,5 +15,5 @@ def main():
     waveSort(arr)
     
 
-if __name__ ==  "__main__":
+if __name__ == "__main__":
     main()
