@@ -71,7 +71,7 @@
 | 34.  | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c) | Trees |
 | 35.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
 | 36.  | Kadane's Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Array/Kadane.cpp) | Sub-Array |
-| 37.  | Kadane's Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Array/Kadane.cpp) | Sub-Array |
+
 
 
  </div>
