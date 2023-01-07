@@ -82,8 +82,6 @@ cost+=kmin;
 return nc;
 }
 
-OUTPUT:
 
-![output](https://user-images.githubusercontent.com/101787864/211157938-23f50d75-df6c-4fd3-97d5-0fc71c21abb3.jpg)
           
           
