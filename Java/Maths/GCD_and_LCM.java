@@ -44,7 +44,7 @@ O(log(min(a,b)) , where a and b are the numbers whose GCD and LCM are determined
 */ 
 
 import java.io.*;
-public class prog{
+public class GCD_and_LCM{
     // Recursion
 static int gcd(int a, int b){
         if (a == 0)  return b;
