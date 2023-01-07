@@ -1,4 +1,4 @@
-"""
+ """
 •GCD
 Greatest common divisor (GCD) of two or more numbers is greatest common factor number that divides them.
  •Example
@@ -41,7 +41,7 @@ GCD = 4
 LCM = 8
 •Time Complexity
 O(log(min(a,b)) , where a and b are the numbers whose GCD and LCM are determined. 
-"""  
+ """  
 #Recursion
 def gcd(a,b):
     if a == 0:
