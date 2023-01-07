@@ -63,7 +63,6 @@ double TSP(Graph& graph, vector<int>& path)
 
         // update minimum
         min_path_weight = min(min_path_weight, current_path_weight);
-
     } while (next_permutation(vertex_set.begin(), vertex_set.end()));
 
     return min_path_weight;
