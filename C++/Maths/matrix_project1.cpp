@@ -1,9 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
-void main()
-{
+void main(){
 	int t;
-	cout<<"Enter A Valid Operation Digit: ";
+	cout<<"  Press 1 For Matrix Addition "<<endl;
+	cout<<"  Press 2 For Matrix Subtraction "<<endl;
+	cout<<"  Press 3 For Matrix Multiplication "<<endl;
+	cout<<"  Press 4 For Transpose Matrix "<<endl;
+	cout<<"  Press 5 For Determinant Matrix "<<endl;
+	cout<<"  Press 6 For Adjoint Matrix "<<endl;
+	cout<<"  Press 7 For Inverse Matrix "<<endl<<endl;
+	cout<<"  Enter A Valid Operation Digit: ";
 	cin>>t;
 	switch(t){
 	       case 1:{
@@ -12,10 +18,8 @@ void main()
                         cout << "Enter Rows And Column of Matrix A  ";
                         cin >> a>> b;
                         cout<<"Enter elements of Matrix A "<<endl;
-                        for(i=0;i<a;i++)
-			{			
-                        for(j=0;j<b;j++)
-			{	
+                        for(i=0;i<a;i++){			
+                        for(j=0;j<b;j++){	
                          cout << "Enter Element A" << i + 1 << j + 1 << ": ";
                         cin>>arr1[i][j];
                     }
@@ -23,10 +27,8 @@ void main()
                  cout << "Enter Rows And Column of Matrix B  ";
                         cin >> c >>d; 
                         cout << "Enter elements of Matrix B " << endl;
-                        for( i=0;i<c;i++)
-			{		
-                        for(j=0;j<d;j++)
-			{		
+                        for( i=0;i<c;i++){		
+                        for(j=0;j<d;j++){		
                          cout << "Enter Element B" << i + 1 << j + 1 << ": ";
                         cin>>arr2[i][j];
                     }
@@ -57,10 +59,8 @@ void main()
                  cout << "Enter Rows And Column of Matrix B  ";
                          cin >> c >>d;
                          cout << "Enter Elements of Matrix B " << endl;
-                         for(i=0;i<c;i++)
-			 {		 
-                         for(j=0;j<d;j++)
-			 {		 
+                         for(i=0;i<c;i++){		 
+                         for(j=0;j<d;j++){		 
                           cout << "Enter Element B" << i + 1 << j + 1 << ": ";
                          cin>>arr2[i][j];
                      }
