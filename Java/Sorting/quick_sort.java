@@ -31,7 +31,7 @@ class quick_sort{
 		return (i + 1);
 	}
 
-    //function for quick sort
+    	//function for quick sort
 	void quickSort(int[] arr, int low, int high)
 	{
 		if (low < high) {
@@ -41,15 +41,6 @@ class quick_sort{
 			quickSort(arr, low, pivot - 1);
 			quickSort(arr, pivot + 1, high);
 		}
-	}
-
-    //function to print the array
-	void printArray(int[] arr, int size)
-	{
-		for (int i = 0; i < size; i++){
-			System.out.print(arr[i] + " ");
-		}
-		System.out.println();
 	}
 
 	public static void main(String[] args)
@@ -74,6 +65,8 @@ class quick_sort{
 		
 		//print the array after sorting
 		System.out.println("Sorted array: ");
-		sortArray.printArray(arr, n);
+		for (int i = 0; i < n; i++){
+			System.out.print(arr[i] + " ");
+		}
 	}
 }
