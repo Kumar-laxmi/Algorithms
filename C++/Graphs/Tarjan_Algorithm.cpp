@@ -25,7 +25,6 @@ private:
     int timer=1;
     void dfs(int node, int parent, vector<int>& vis, int tin[], int low[], 
             vector<int> adj[], vector<vector<int>>& ans){
-        
         vis[node] = 1;                      // mark node as visited
         tin[node] = low[node] = timer;      // put the time of insertion
         timer++;                            // increase timer value for next insertion elements
@@ -42,7 +41,7 @@ private:
             }
         }
     }
-public:
+   public:
     vector<vector<int>> findBridges(int n, vector<vector<int>>& connections){
         // making adjacency list
         vector<int> adj[n];
