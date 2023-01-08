@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
+void main(){
 	int t;
 	cout<<"  Press 1 For Matrix Addition "<<endl;
 	cout<<"  Press 2 For Matrix Subtraction "<<endl;
