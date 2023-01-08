@@ -2,14 +2,7 @@
 using namespace std;
 void main(){
 	int t;
-	cout<<"  Press 1 For Matrix Addition "<<endl;
-	cout<<"  Press 2 For Matrix Subtraction "<<endl;
-	cout<<"  Press 3 For Matrix Multiplication "<<endl;
-	cout<<"  Press 4 For Transpose Matrix "<<endl;
-	cout<<"  Press 5 For Determinant Matrix "<<endl;
-	cout<<"  Press 6 For Adjoint Matrix "<<endl;
-	cout<<"  Press 7 For Inverse Matrix "<<endl<<endl;
-	cout<<"  Enter A Valid Operation Digit: ";
+	cout<<"Enter A Valid Operation Digit: ";
 	cin>>t;
 	switch(t){
 	       case 1:{
