@@ -21,10 +21,8 @@ int main(){
                        
                         cout<<"Enter elements of Matrix A "<<endl;
                         for(i=0;i<a;i++){
-						
-                        for(j=0;j<b;j++){
-					
-                         cout << "Enter Element A" << i + 1 << j + 1 << ": ";
+			 for(j=0;j<b;j++){
+		        cout << "Enter Element A" << i + 1 << j + 1 << ": ";
                         cin>>arr1[i][j];
                     }
                 }
