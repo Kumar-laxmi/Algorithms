@@ -1,6 +1,5 @@
 def sieveOfErastosthenes(n, sieve):
     isPrime = [True]*(n+1)
-    isPrime
     p = 2
     while p*p <= n:
         if isPrime[p]:
