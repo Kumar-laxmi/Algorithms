@@ -1,7 +1,7 @@
 def sort(list1):
     
     for i in range(num-1):
-        minpos = i;
+        minpos = i
         for j in range(i,num):
             if list1[j] < list1[minpos]:
                 minpos = j
