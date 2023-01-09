@@ -19,7 +19,7 @@ def sieveOfErastosthenes(n, sieve):
                 isPrime[i] = False
                 i += p
         p += 1
-    # printing the result
+    # adding the result to list here
     for j in range(2, n + 1):
         if (isPrime[j]):
             sieve.append(j)
