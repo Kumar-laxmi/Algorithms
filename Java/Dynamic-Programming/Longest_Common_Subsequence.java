@@ -1,3 +1,25 @@
+//Approach 
+//        This code is a Java program that calculates the longest common subsequence (LCS) of two strings.
+//        The LCS is the longest sequence of characters that appear in the same order in both strings.
+//
+//        The main function of the code is in the class "Solution", which defines a function called "lcs"
+//        that takes four arguments: two integers "m" and "n" representing the lengths of the two strings, 
+//        and the two strings themselves "s1" and "s2". It uses a 2-D dp table called dp with size of m+1, n+1 
+//        and initialize them with -1.
+//
+//        The function implements a recursive approach with the help of dp array and base case as if the length of one of the strings is 0 the LCS is 0.
+//        If the current characters of both strings are same it will take 1+ LCS(m-1, n-1) and if not it will take the max of LCS(m-1, n) and LCS(m, n-1).
+//
+//        The main method of the class Longest_Common_Subsequence takes an integer as input (number of test cases),
+//        then reads two integers as the length of two strings, reads two strings as input and constructs an object of the Solution class.
+//        Then it calls the lcs method of the Solution class and prints the value returned by the method.
+//
+//        The code uses dynamic programming (DP) to solve the problem, by using a 2-D array to store the values of subproblems and avoid redundant computations.
+//        The array is filled row by row, with each cell corresponding to the LCS of a suffix of s1 and a suffix of s2.
+//
+//        In short, this code finds the longest common subsequence between two input strings 
+//        using dynamic programming with the help of a 2-D dp table. The time complexity of the program is O(mn)
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
