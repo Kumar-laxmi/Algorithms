@@ -46,7 +46,6 @@ def binaryToBST(root):
     # Create the temp array and store the inorder traveral of tree  
     arr = [] 
     storeInorder(root, arr) 
-      
     # Sort the array 
     arr.sort() 
   
