@@ -1,6 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+Approach: 
+-> Using Set from C++ STL to store values of Nodes of given Binary Tree in sorted way and then iterating through that set and 
+   generating the Nodes of BST with each iteration.
+-> All traversal in the following code has been done inorder.
+*/
+
 // Structure of Node 
 struct Node1 {
    int data;
