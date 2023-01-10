@@ -38,3 +38,9 @@ int main()
     printf("\n");
     return 0;
 }
+/*Analysis
+Time Complexity - Best Case - Ω(n*logn), n is for scanning a list and log n for number of passes
+                  Average Case - θ(n*log n)
+                  Worst case - O(n^2)
+Space Complexity - O(1), Inplace sorting
+*/
