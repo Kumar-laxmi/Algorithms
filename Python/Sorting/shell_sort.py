@@ -3,27 +3,27 @@ def shell_Sort(arr):
     # define the gap
     gap = n//2
 
-    while gap>0:  # loop will run until gap becomes 1
+    while gap > 0:  # loop will run until gap becomes 1
                   # gap = 1, shell sort becomes insertion sort  
-        j=gap
+        j = gap
         # Check the array from left to right
         
-        while j<n:
-            i=j-gap 
+        while j < n:
+            i = j-gap 
               
-            while i>=0:
+            while i >= 0:
                 # If value on right side is already greater than left side value
                 # We don't have to do swap else we will swap
-                if arr[i+gap]>arr[i]:
+                if arr[i+gap] > arr[i]:
   
                     break
                 else:
-                    arr[i+gap],arr[i]=arr[i],arr[i+gap]
+                    arr[i+gap],arr[i] = arr[i],arr[i+gap]
   
-                i=i-gap # To check left side also
-            j+=1
+                i = i-gap # To check left side also
+            j +=1
 
-        gap=gap//2 #reducing the gap by half 
+        gap = gap//2 #reducing the gap by half 
 
 #main function
 arr = [12, 34, 54, 2, 3, 7, 9]
