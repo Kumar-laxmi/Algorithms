@@ -68,12 +68,13 @@
 | 31.  | Merge Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/merge_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/merge_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/merge_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/merge_sort.py) | Sorting |
 | 32.  | Quick Sort | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/quick_sort.cpp) | Sorting |
 | 33.  | Selection Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/selection_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/selection_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/selection_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/selection_sort.py) | Sorting |
-| 34.  | Topological Sort | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/Topological_Sort.cpp) | Sorting |
-| 35.  | Wave Sort | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/wave_sort.py) | Sorting |
-| 36.  | AVL Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/avlTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) | Trees |
-| 37.  | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/binarySearchTree.cpp) | Trees |
-| 38.  | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/MorrisTraversal.cpp) | Trees |
-| 39.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
+| 34.  | Shell Sort | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/shell_sort.py) | Sorting |
+| 35.  | Topological Sort | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/Topological_Sort.cpp) | Sorting |
+| 36.  | Wave Sort | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/wave_sort.py) | Sorting |
+| 37.  | AVL Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/avlTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) | Trees |
+| 38.  | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/binarySearchTree.cpp) | Trees |
+| 39.  | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/MorrisTraversal.cpp) | Trees |
+| 40.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
 
 
 
