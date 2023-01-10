@@ -7,7 +7,10 @@ Example : Head --> Node1 --> Node2 --> Node3 --> ... --> LastNode
             |_______________________________________________|
 
 Functionalities :
-1. Insert Node : Insert a new node in the list
+1. Insert Node : Insert a new node in one of the following positions 👇
+    ▶ Begenning
+    ▶ After Nth Node
+    ▶ End
 2. Search Node : Perform a linear search on the list to find Nth Node.
 3. Delete Nth Node : Delete Nth Node from the list.
 
@@ -33,22 +36,99 @@ class LinkedList {
 
 public:
     LinkedList() { head = NULL; } // unparameterized constructor with head pointing to NULL
-    void insertNode(int); // Insert new node
+    void insertFront(int); // Insert node at front of list
+    void insertAfterPos(int, int); // Insert node after nth node in list
+    void insertEnd(int); // Insert node at end of list
     void deleteNode(int); // Delete nth node from list
     void searchNode(int); // Search a node by value
     void printList(); // Print whole list
 } list;
 
-void LinkedList::insertNode(int x) {
-    Node *newNode = new Node(x);
-    if(!head) {
-        head = newNode;
+// Function for choice of insertion position
+void insertionChoice() {
+    int c, ele, pos;
+    cout << "\nChoose Insertion Position :\n1. Front\n2. After Nth Node\n3. End\n\tMAKE YOUR CHOICE : ";
+    cin >> c;
+    
+    switch(c) {
+    case 1: // Front
+        cout << "Enter element to be inserted : ";
+        cin >> ele; // get element to be inserted
+        list->insertFront(ele); // function call
+        cout << "\n\tElement inserted successfully at front";
+        break;
+
+    case 2: // After Nth Node
+        cout << "Enter nth position : ";
+        cin >> pos; // get insertion position
+        cout << "Enter element to be inserted : ";
+        cin >> ele; // get element to be inserted
+        list->insertAfterPos(pos, ele); // function call
+        break;
+
+    case 3: // End
+        cout << "Enter element to be inserted : ";
+        cin >> ele; // get element to be inserted
+        list->insertEnd(ele); // function call
+
+    default:
+        cout << "\n\t*** INVALID INPUT ***";
+        break;
+    }
+}
+
+// Insert at front of list
+void LinkedList::insertFront(int ele) {
+    Node *newNode = new Node(ele); // newNode decleration by passing value to constructor
+    if(!head) { // if empty list (head pointing to NULL)
+        head = newNode; // head pointer points newNode
+        newNode->next = head; // newNode points back to head node
         return;
-    } // if empty list
-    Node *temp = head;
-    while (temp->next) temp = temp->next;
-    temp->next = newNode;
-    newNode = head;
+    }
+    Node *p = head; // pointer to traverse till end of list
+    newNode->next = head->next;
+    while(p) p = p->next; // traverse to end of list
+    p->next = newNode; // point last node back to newNode (new head)
+    cout << "\n\tElement inserted successfully at front";
+}
+
+// Insert after nth node
+void LinkedList::insertAfterPos(int pos, int ele) {
+    Node *newNode = new Node(ele); // newNode decleration by passing value to constructor
+    if(!head) { // if empty list (head pointing to NULL))
+        head = newNode; // head pointer points newNode
+        newNode->next = head; // newNode points back to head node
+        return;
+    }
+
+    Node *p = head; // traversal pointer
+    int len = 0; // list length counter
+    while(p) { ++len; p = p->next; } // find list length
+
+    // if postion more than list length
+    if(len < pos) { cout << "Index Out Of Range" << endl; return; }
+
+    p = head; // point to head node for traversal
+    while(pos-- > 1) p = p->next; // traverse to nth node / position
+    newNode->next = p->next; // point newNode's next to nth node's next
+    p->next = newNode; // point nth node's next to newNode
+    if(!newNode->next) newNode->next = head; // point newNode back to head node if insertion done after last node
+    cout << "\n\tElement inserted successfully";
+}
+
+// Insert at end of list
+void LinkedList::insertEnd(int ele) {
+    Node *newNode = new Node(ele); // newNode decleration by passing value to constructor
+    if(!head) { // if empty list (head pointing to NULL)
+        head = newNode; // make head point back to newNode
+        newNode->next = head; // make newNode point back to head
+        return;
+    }
+    Node *p = head; // pointer to traverse till end of list
+    while(p->next) p = p->next; // traverse to end of list
+    p->next = newNode; // point last node to newNode
+    newNode->next = head; // point newNode back to head node of list
+    cout << "\n\tElement inserted successfully at end";
 }
 
 // Deletion method
@@ -101,23 +181,20 @@ void LinkedList::printList() {
 // Main function
 int main() {
     // LinkedList list; // object decleration
-    int n, ele, c; // n : number of elements, ele : node value, c : menu choice
+    int ele, c; // choice varaible
     char ch = 'y';
 
     cout << "======= CIRCULAR LINKED LIST =======";
 
     // Input code
-    while (ch == 'y') {
+    while(ch == 'y') {
+        // main menu
         cout << "\nChoose an operation :\n1. Insertion\n2. Deletion\n3. Search\n4. Print";
-        cout << "\n\tMAKE YOU CHOICE : ";
-        cin >> c;
+        cout << "\n\tMAKE YOUR CHOICE : ";
+        cin >> c; // input menu choice
         switch(c) {
         case 1: // Insertion
-            cout << "\nINSERTION\nEnter no. of elements : ";
-            cin >> n; // input no. of elements to be inserted
-            cout << "\nEnter list elements : ";
-            for (int i = 0; i < n; i++) { cin >> ele; list.insertNode(ele); }
-            cout << "\n\tElements Inserted Successfully";
+            insertionChoice(); // function call for insertion operations
             break;
 
         case 2: // Deletion
@@ -146,17 +223,3 @@ int main() {
     }
     return 0;
 }
-
-/*
-
-Time Complexity Analysis
-========================
-▶ Insertion : O(n * listLength)
-▶ Deletion : O(listLength + pos)
-▶ Search : O(listLength)
-
-where,
-n ⇒ No. of elements to be inserted
-listLength ⇒ Current length of the list
-
-*/
