@@ -61,8 +61,7 @@ int main()
     while(test--)
     {
         char str[100];
-        gets(str);
-        gets(str);
+        scanf("%[^\n]%*c", str);
         printf("%d\n",Beautiful(str));
     }
     return 0;
