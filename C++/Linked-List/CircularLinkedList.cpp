@@ -40,15 +40,15 @@ public:
 } list;
 
 void LinkedList::insertNode(int x) {
-    Node *newNode = new Node(x);
-    if(!head) {
-        head = newNode;
+    Node *newNode = new Node(x); // newNode decleration by passing value to constructor
+    if(!head) { // if empty list (head pointing to NULL)
+        head = newNode; // point head pointer to newNode
         return;
-    } // if empty list
-    Node *temp = head;
-    while (temp->next) temp = temp->next;
-    temp->next = newNode;
-    newNode = head;
+    }
+    Node *p = head; // traversal pointer
+    while(p->next) p = p->next; // traverse to end
+    p->next = newNode; // point last node to newNode
+    newNode = head; // point newNode back to head node
 }
 
 // Deletion method
@@ -116,6 +116,7 @@ int main() {
             cout << "\nINSERTION\nEnter no. of elements : ";
             cin >> n; // input no. of elements to be inserted
             cout << "\nEnter list elements : ";
+            // input elements and insert into list
             for (int i = 0; i < n; i++) { cin >> ele; list.insertNode(ele); }
             cout << "\n\tElements Inserted Successfully";
             break;
