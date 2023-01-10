@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+#define MAX_SIZE 100
+
+char stack[MAX_SIZE];
+int top = -1;
+
+/* push function to push an operator or operand to the stack */
+void push(char item)
+{
+    if (top >= MAX_SIZE-1) {
+        printf("Stack Overflow!");
+        exit(1);
+    }
+    stack[++top] = item;
+}
+
+/* pop function to pop an operator or operand from the stack */
+char pop()
+{
+    if (top < 0) {
+        printf("Stack Underflow!");
+        exit(1);
+    }
+    return stack[top--];
+}
+
+/* function to get the precedence of an operator */
+int precedence(char item)
+{
+    if (item == '+' || item == '-') {
+        return 1;
+    } else if (item == '*' || item == '/') {
+        return 2;
+    } else if (item == '^') {
+        return 3;
+    } else {
+        return 0;
+    }
+}
+
+/* infix to postfix conversion function */
+void infix_to_postfix(char infix[], char postfix[], int size)
+{
+    int i, j;
+    char item;
+    char x;
+    push('(');
+    strcat(infix, ")");
+
+    for (i = 0, j = 0; i < size; i++) {
+        item = infix[i];
+        if (isalnum(item)) {
+            postfix[j] = item;
+            j++;
+        } else if (item == '(') {
+            push(item);
+        } else if (item == ')') {
+            x = pop();
+            while (x != '(') {
+                postfix[j] = x;
+                j++;
+                x = pop();
+            }
+        } else {
+            while (precedence(stack[top]) >= precedence(item)) {
+                postfix[j] = pop();
+                j++;
+            }
+            push(item);
+        }
+    }
+    postfix[j] = '\0';
+}
+
+int main()
+{
+    char infix[MAX_SIZE], postfix[MAX_SIZE];
+    printf("Enter an infix expression: ");
+    scanf("%s", infix);
+    infix_to_postfix(infix, postfix, strlen(infix));
+    printf("Postfix expression: %s\n", postfix);
+    return 0;
+}
