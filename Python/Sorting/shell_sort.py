@@ -21,5 +21,12 @@ def shell_Sort(arr):
   
                 i=i-gap # To check left side also
             j+=1
-            
+
         gap=gap//2
+
+#main function
+arr = [12, 34, 54, 2, 3, 7, 9]
+print("input array:",arr)
+  
+shell_Sort(arr)
+print("sorted array",arr)
