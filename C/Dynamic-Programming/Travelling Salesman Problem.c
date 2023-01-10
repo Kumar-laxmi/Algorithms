@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+//initialized two array-->cities a 2D array to store the distance between two cities and cities_visited a 1D array to store the cities that are already visited.
 int cities[10][10],cities_visited[10],n,cost=0;
 
 int main()
@@ -39,6 +40,7 @@ printf("\n\nMinimum cost is %d\n ",cost);
 return 0;
 }
 
+//min_cost function calculates the minimum cost required to visit a city.
 void min_cost(int city)
 {
 int i,ncity;
