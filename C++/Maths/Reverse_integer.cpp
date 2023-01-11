@@ -23,7 +23,6 @@ Ouput 2:
 -321
  Example Explanation
 If the given integer is negative like -123 the output is also negative -321.*/
-
 // C++ program to reverse digits
 // of a number
 #include <bits/stdc++.h>
@@ -68,5 +67,3 @@ int main()
     cout << "Reverse of Given Integer is " << reverseInt(n) << endl;
     return 0;
 }
- 
-
