@@ -28,30 +28,29 @@ References
 
 * Create a virtual environment and install the dependencies specified in requirements.txt
 * Navigate to the Linear_Regression folder in the terminal.
-* Understand the usage of the script using the command:
+* Understand the usage of the script:
 
 ```python
     python linear_regression.py -h
 ```
+![help_output](https://user-images.githubusercontent.com/107040862/211871781-65699b4f-5523-4250-ab71-ffc46760d14f.png)
 
 * For the demo version, run the script without any arguments:
+(Demo dataset is self-generated using the *random* module from *numpy* package)
 
 ```python
     python linear_regression.py
 ```
-
-(Demo dataset is self-generated using the *random* module from *numpy* package)
+![demo2](https://user-images.githubusercontent.com/107040862/211871932-d254aee8-2e50-402a-9448-5674c9ff0adb.png)
+![output_2d](https://user-images.githubusercontent.com/107040862/211872537-510225ee-9d10-4545-bbe2-0db93dac52e2.png)
 
 * To provide your own dataset (as a CSV file):
 
 ```python
     python linear_regression.py <PATH_TO_CSV_FILE> <TARGET_NAME>
 ```
+![demo3](https://user-images.githubusercontent.com/107040862/211872185-b31aa267-49b6-4240-84fb-dffb100ef7a7.png)
+![output_3d](https://user-images.githubusercontent.com/107040862/211872601-4951c306-db9a-4687-ac14-bd65e8912a4d.png)
 
-e.g.
-
-```python
-    python linear_regression.py demo_dataset.csv DV
-```
-
-(Path and target for demo version is specified explicitly to show usage)
+* Visualization can also be skipped:
+![demo4](https://user-images.githubusercontent.com/107040862/211872466-0f27d945-5222-41f1-accb-aa392b685f36.png)
