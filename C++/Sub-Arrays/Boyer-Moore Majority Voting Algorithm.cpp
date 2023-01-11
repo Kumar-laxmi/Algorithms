@@ -39,7 +39,6 @@
 using namespace std;
 
 class Solution {
-
 public:
     int findMajorityElement(vector<int>& nums) {
         int count= 0;       // 1st step 
