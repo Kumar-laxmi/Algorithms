@@ -1,4 +1,4 @@
-class mergeToSortedLL {
+class mergeTwoSortedLL {
     static class Node {
         int data;
         Node next;
