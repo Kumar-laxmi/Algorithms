@@ -72,8 +72,9 @@
 | 35.  | Wave Sort | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/wave_sort.py) | Sorting |
 | 36.  | AVL Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/avlTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) | Trees |
 | 37.  | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/binarySearchTree.cpp) | Trees |
-| 38.  | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/MorrisTraversal.cpp) | Trees |
-| 39.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
+| 38.  | Binary Tree to BST | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/BinaryTreeToBST.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/BinaryTreeToBST.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/BinaryTreeToBST.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/BinaryTreeToBST.py) | Trees |
+| 39.  | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/MorrisTraversal.cpp) | Trees |
+| 40.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
 
 
 
