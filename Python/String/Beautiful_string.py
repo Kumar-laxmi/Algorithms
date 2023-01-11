@@ -10,14 +10,16 @@
 # Time Complexity:- O(n) 
 
 
-def Beautiful(str):
+def Beautiful(str):         #Function call
+# Method to count minimum number of operations that should perform to make ‘STR’ beautiful.
+
     m = len(str)
     x1 = 0
     x2 = 0
     s1 = '0'
     s2 = '1'
     for i in range(m):
-        if str[i] == '1':
+        if str[i] == '1':                #if number of ones two and zero are equal in a substring
             if s1 == '0':
                 x1 += 1
             else:
@@ -35,8 +37,8 @@ def Beautiful(str):
             s2 = '0'
     return min(x1, x2)
 
-test = int(input("Enter total testcases: "))
+test = int(input("Enter total testcases: "))  #Main Function
 while test:
-    str = input()
-    print(Beautiful(str))
+    str = input()         # Initalise a string
+    print(Beautiful(str)) # For Test Cases
     test -= 1

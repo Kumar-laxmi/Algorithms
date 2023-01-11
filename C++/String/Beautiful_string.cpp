@@ -11,14 +11,15 @@ Time Complexity:- O(n)
 */
 #include<bits/stdc++.h>
 using namespace std;
+// Method to count minimum number of operations that should perform to make ‘STR’ beautiful.
 int Beautiful(string str) 
 {
-    int m = str.length();
+    int m = str.length();        //    iterating over array of all substrings
     int x1 = 0, x2 = 0;
     char s1 = '0', s2 = '1';
     for (int i = 0; i < m; i++) 
     {
-        if (str[i] == '1') 
+        if (str[i] == '1')      // if number of ones,two and zero are equal in a substring
         {
             if (s1 == '0') 
             {
@@ -52,16 +53,16 @@ int Beautiful(string str)
     }
     return min(x1, x2);
 }
-int main()
+int main()           //Main Function
 {
-    int test;
+    int test;                                    // For Test Cases
     cout<<"Enter total testcases: "<<endl;
     cin>>test;
     while(test--)
     {
-        string str;
+        string str;                             // Initalise a string
         cin>>str;
-        cout<<Beautiful(str)<<endl;
+        cout<<Beautiful(str)<<endl;             // Function call
     }
     return 0;
 }

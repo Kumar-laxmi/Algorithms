@@ -11,11 +11,12 @@ Time Complexity:- O(n)
 */
 import java.util.*;
 import java.io.*;
+// Method to count minimum number of operations that should perform to make ‘STR’ beautiful.
 public class Beautiful_Sorting {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String args[]) {                 //Main Function
+        Scanner sc = new Scanner(System.in);                //    iterating over array of all substrings
         int test;
-        System.out.println("Enter total testcases: \n");
+        System.out.println("Enter total testcases: \n");    // For Test Cases
         test = sc.nextInt();
         while(test-->0)
         {
@@ -24,14 +25,14 @@ public class Beautiful_Sorting {
             System.out.println(Beautiful(str));
         }
     }
-    public static int Beautiful(String str)
+    public static int Beautiful(String str)                 // Function call   
     {
-        int m = str.length();
+        int m = str.length();                       // Initalise a string
         int x1 = 0, x2 = 0;
         char s1 = '0', s2 = '1';
         for (int i = 0; i < m; i++) 
         {
-            if (str.charAt(i) == '1') 
+            if (str.charAt(i) == '1')              // if number of ones,two and zero are equal in a substring
             {
                 if (s1 == '0') 
                 {

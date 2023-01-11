@@ -11,18 +11,19 @@ Time Complexity:- O(n)
 */
 #include <stdio.h>
 #include <string.h>
+// Method to count minimum number of operations that should perform to make ‘STR’ beautiful.
 int Beautiful(char str[])
 {
-    int m = strlen(str);
+    int m = strlen(str);             //    iterating over array of all substrings
     int x1 = 0, x2 = 0;
     char s1 = '0', s2 = '1';
     for (int i = 0; i < m; i++) 
     {
-        if (str[i] == '1') 
+        if (str[i] == '1')          // if number of ones,two and zero are equal in a substring
         {
             if (s1 == '0') 
             {
-                x1++;
+                x1++;              
             }
             else {
                 x2++;
@@ -53,16 +54,16 @@ int Beautiful(char str[])
     if(x1<x2) return x1;
     else return x2;
 }
-int main()
+int main()    //Main Function
 {
     int test;
-    printf("Enter total testcases: \n");
+    printf("Enter total testcases: \n");         // For Test Cases
     scanf("%d",&test);
     while(test--)
     {
-        char str[100];
+        char str[100];                          // Initalise a string of size 100
         scanf("%[^\n]%*c", str);
-        printf("%d\n",Beautiful(str));
+        printf("%d\n",Beautiful(str));          // Function call
     }
     return 0;
 }
