@@ -87,5 +87,4 @@ int main(){
 	// print the subsequence
 	printSubseq(s1,s1.length()-1, s2.length()-1);
 	return 0;
-	
 }
