@@ -78,7 +78,6 @@ int main(){
 	cout<<"Maximum Profit at the end of each iteration-"<<endl;
     //iterate over each job
 	for(int i=0 ; i<n; i++){
-
         //find a free slot starting from the last of the job's deadline to the beginning of timeline
 		t=jobs[i].deadline-1; 
 		while(t>=0 && slots[t]){
@@ -91,11 +90,9 @@ int main(){
 		if(t>=0 && !slots[t]){
 			slots[t]= jobs[i].no;
 			maxprofit+=jobs[i].profit;
-			
 		}
         //print the total profit so far
 		cout<<maxprofit<<endl;
-		
 	}
 	cout<<"Total Profit "<<maxprofit<<endl;
     //print the computed schedule(sequence in which job has to be done)
@@ -104,7 +101,6 @@ int main(){
 		if(slots[i]){
 			cout<<slots[i]<<" ";
 		}
-	
 	}
 	return 0;
 }
