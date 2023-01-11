@@ -8,13 +8,13 @@ public:
     Node *next;
 };
 
-void MoveNode(Node **destRef, Node **sourceRef)
+void nodemove(Node **dest, Node **source)
 {
-    Node *newNode = *sourceRef;
+    Node *newNode = *source;
     assert(newNode != NULL);
-    *sourceRef = newNode->next;
-    newNode->next = *destRef;
-    *destRef = newNode;
+    *source = newNode->next;
+    newNode->next = *dest;
+    *dest = newNode;
 }
 
 Node *SortedMerge(Node *a, Node *b)
@@ -37,24 +37,24 @@ Node *SortedMerge(Node *a, Node *b)
             break;
         }
         if (a->data <= b->data)
-            MoveNode(&(tail->next), &a);
+            nodemove(&(tail->next), &a);
         else
-            MoveNode(&(tail->next), &b);
+            nodemove(&(tail->next), &b);
 
         tail = tail->next;
     }
     return (dummy.next);
 }
 
-void push(Node **head_ref, int new_data)
+void push(Node **head, int new_data)
 {
     Node *new_node = new Node();
 
     new_node->data = new_data;
 
-    new_node->next = (*head_ref);
+    new_node->next = (*head);
 
-    (*head_ref) = new_node;
+    (*head) = new_node;
 }
 
 void printList(Node *node)
