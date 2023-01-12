@@ -43,8 +43,6 @@ float PredLine::calcSlope(vector<int> feat1, vector<int> feat2) {
     for(int i = 0; i < f1Size; i++)
         slopeDenominator += sqrt(feat1[i] - line.xMean);
 
-    cout << endl << slopeNumerator << " " << slopeDenominator << endl;
-
     slope = slopeNumerator / slopeDenominator;
     return slope;
 }
