@@ -93,7 +93,7 @@ Output
 The array elements are 40 20 100 120 60 140 80 160 200 180
 The sorted array elements are 20 40 60 80 100 120 140 160 180 200
 
-Start time : 576
-End time : 578
+Start time : 570
+End time : 572
 Total time : 2      
  */
