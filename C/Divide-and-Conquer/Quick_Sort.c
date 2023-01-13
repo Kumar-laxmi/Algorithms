@@ -57,9 +57,9 @@ void quicksort(int a[],int low,int high)
 
 int main()
 {
-	int n,low,high;
-	int st,et,tt;
-	
+	int n,low,high , total_time ;
+	clock_t start_t , end_t ; 
+	double total_t ;
     	
 	   int a[] = {40,20,100,120,60,140,80,160,200,180};
 	n = sizeof(a)/sizeof(a[0]);
@@ -73,18 +73,21 @@ int main()
 	low = 0;
 	high = n-1;
 	
-	st = clock(); //st stands for Start time 
+	start_t = clock();  //clock() function has no parameter 
 	quicksort(a,low,high);
-	et = clock(); // et stands for end time
-	tt = et - st; // tt stands for total time (Time taken by the function)
+	end_t  = clock(); 
+	total_time = end_t - start_t;  //To return the number of clock ticks elapsed since the quick sort program was launched . 
+	total_t = (double)(end_t - start_t)/CLOCKS_PER_SEC;  //To return the number of ticks elapsed per second . 
 	
 	printf("\nThe sorted array elements are: ");
 	for(int i = 0;i < n;i++)
 		printf("%d ",a[i]);
 	
-	printf("\n\nStart time: %d\n",st);
-	printf("End time: %d\n",et);
-	printf("Total time taken: %d\n",tt);
+	printf("\n\nStart time: %ld\n",start_t);
+	printf("End time: %ld\n",end_t);
+	printf("Number of clock ticks elapsed: %d\n",total_time);
+	printf("Total time taken(in seconds): %f\n ",total_t);
+	
 	return 0;
 }
 
@@ -93,7 +96,8 @@ Output
 The array elements are 40 20 100 120 60 140 80 160 200 180
 The sorted array elements are 20 40 60 80 100 120 140 160 180 200
 
-Start time : 570
-End time : 572
-Total time : 2      
+Start time: 1046
+End time: 1049
+Number of clock ticks elapsed: 3
+Total time taken(in seconds): 0.000003
  */
