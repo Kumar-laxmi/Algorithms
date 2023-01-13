@@ -2,12 +2,16 @@
 using namespace std;
 long matChainOrder(int *p,int n)
 {
-    int m[n][n];//Solution Matrix to store the multiplication
+     /* m[i, j] = Minimum number of scalar
+    multiplications needed to compute the
+    matrix A[i]A[i+1]...A[j] = A[i..j] where
+    dimension of A[i] is p[i-1] x p[i] */
+    int m[n][n];//Solution Matrix to store the count of number of multiplications
     int i,j,k,l,q;
     for(i=1;i<n;i++)
     m[i][i]=0;//Initializing the diagnol elements to 0
 
-    for(l=2;l<n;l++)//l is the length of how many matrices to be multiplied
+    for(l=2;l<n;l++)//l is the chain length
     {
         for(i=1;i<n-l+1;i++)
         {
@@ -16,13 +20,14 @@ long matChainOrder(int *p,int n)
 
             for(k=i;k<=j-1;k++)//Finding the operations cost
             {
+                 // q = cost/scalar multiplications
                 q=m[i][k]+m[k+1][j]+p[i-1]*p[k]*p[j];//Number of operations
                 if(q<m[i][j])
                 m[i][j]=q;
             }
         }
     }
-    //Finding the minimum cost of matrix change of length n
+    //Finding the minimum cost of matrix change of length n or the minimum number of multiplications
     return m[1][n-1];
 }
 int main()
@@ -40,6 +45,6 @@ int main()
         cin>>p[i]>>p[i+1];
     }
 
-    cout<<matChainOrder(p,n+1);//A function for multiplication of matrices
+    cout<<matChainOrder(p,n+1);//Gives the minimum number of multiplications
     return 0;
 }
