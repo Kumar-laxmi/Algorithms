@@ -27,7 +27,6 @@ long matChainOrder(int *p,int n)
 }
 int main()
 {
-
     int n;// n is the number of matrixes
     cin>>n;
 
