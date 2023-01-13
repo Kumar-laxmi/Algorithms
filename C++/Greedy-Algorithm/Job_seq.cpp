@@ -5,7 +5,6 @@ using namespace std;
 bool compare(pair<int,int>a,pair<int,int>b)
 {
     return a.first>b.first;
-
 }
 int main()
 {
