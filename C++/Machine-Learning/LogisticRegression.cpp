@@ -1,6 +1,6 @@
 /*
 
-▶ Linear Regression is a machine learning algorithm that estimates the probability of an event occurring, based on a given dataset of independent variables. The output of dependent variable is between 0 and 1.
+▶ Logistic Regression is a machine learning algorithm that estimates the probability of an event occurring, based on a given dataset of independent variables. The output of dependent variable is between 0 and 1.
 
 ▶ The function used in Logistic Regression is Sigmoid Function :
     y = 1 / (1 + e^z)
