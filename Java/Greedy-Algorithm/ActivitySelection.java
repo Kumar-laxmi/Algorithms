@@ -3,7 +3,7 @@
 import java.io.*;
 import java.util.*;
 // Driver class
-class ActivitySelection{
+public class ActivitySelection{
     // Returns count of the maximum set of activities that
     // can
     // be done by a single person, one at a time.
