@@ -1,19 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
-int length(char str[])
-{
-    return strlen(str);
-}
-
-void piTable(char pattern[], int pi[])
+void piTable(char pattern[], int pi[], int len)
 {
     int i = 0;
     int j = 0;
-    int len = length(pattern);
     i = 1;
     j = 0;
     pi[0] = 0;
+
+    //the loop will iterate the pattern and find the longest prefix and suffix at every index
     while (i < len)
     {
         if (pattern[i] == pattern[j])
@@ -34,16 +30,22 @@ void piTable(char pattern[], int pi[])
     }
 }
 
+//kmp function to find if pattern exists or not
 bool kmp(char text[], char pattern[])
 {
+    //finding length of the text
     int t_len = strlen(text);
+    //finding length of the pattern
     int p_len = strlen(pattern);
+    //array in which we store the longest prefix and suffix at every index in pattern
     int pi[p_len];
-    piTable(pattern, pi);
+    //calling function to calculate pi table for pattern
+    piTable(pattern, pi, p_len);
 
     int i = 0;
     int j = 0;
 
+    //this loop will iterate over text and find the pattern in it the pi table is used to eliminate duplicate comparisons
     while (i < t_len)
     {
         if (text[i] == pattern[j])
@@ -61,6 +63,7 @@ bool kmp(char text[], char pattern[])
             i++;
         }
 
+        //if j reaches the end of the pattern which means pattern exists in the text
         if (j == p_len)
         {
             return true;
@@ -71,14 +74,18 @@ bool kmp(char text[], char pattern[])
 }
 
 int main()
-{
+{ 
+    //text in which we have to search the pattern
     char text[] = "aabacabadb";
-    char pattern[] = "bacak";
 
+    //pattern we need to search
+    char pattern[] = "bacab";
+
+    //if we get true from kmp() then pattern found else pattern not found
     if (kmp(text, pattern))
-        printf("Pattern Found in the Text\n");
+        printf("Pattern Found in the Text!\n");
     else
-        printf("Pattern does not found in Text\n");
+        printf("Pattern does not found in Text!\n");
 
     return 0;
 }
