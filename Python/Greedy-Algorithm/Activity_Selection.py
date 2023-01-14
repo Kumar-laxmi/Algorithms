@@ -29,8 +29,8 @@ if __name__ == '__main__':
     # Function call
     selected = MaxActivities(Activity, n)
     print("Following activities are selected :")
-    print(selected[0], end = "");
+    print(selected[0], end = "")
     for i in range (1, len(selected)):
         print(",", end = " ")
-        print(selected[i], end = "");
+        print(selected[i], end = "")
  
