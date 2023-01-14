@@ -17,7 +17,7 @@ int main()                // Main function
     char str[100],cc[100];    //Function to remove spaces and convert into camel case
     int flag=0,i=0,j=0;
     printf("Enter a sentence\n");  //String
-    gets(str);
+    scanf("%[^\n]%*c", str);
     printf("Original String = %s\n",str);
     while(str[i]!='\0')
     {
