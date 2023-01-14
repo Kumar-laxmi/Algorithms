@@ -2,31 +2,6 @@
 // when input activities may not be sorted.
 import java.io.*;
 import java.util.*;
-// A job has a start time, finish time and profit.
-class Activity {
-    int start, finish;
-    // Constructor
-    public Activity(int start, int finish)
-    {
-        this.start = start;
-        this.finish = finish;
-    }
-}
-// class to define user defined comparator
-class Compare {
-    // A utility function that is used for sorting
-    // activities according to finish time
-    static void compare(Activity arr[], int n)
-    {
-        Arrays.sort(arr, new Comparator<Activity>() {
-            @Override
-            public int compare(Activity s1, Activity s2)
-            {
-                return s1.finish - s2.finish;
-            }
-        });
-    }
-}
 // Driver class
 class ActivitySelection{
     // Returns count of the maximum set of activities that
@@ -72,6 +47,28 @@ class ActivitySelection{
         printMaxActivities(arr, n);
     }
 }
-
-
-
+// A job has a start time, finish time and profit.
+class Activity {
+    int start, finish;
+    // Constructor
+    public Activity(int start, int finish)
+    {
+        this.start = start;
+        this.finish = finish;
+    }
+}
+// class to define user defined comparator
+class Compare {
+    // A utility function that is used for sorting
+    // activities according to finish time
+    static void compare(Activity arr[], int n)
+    {
+        Arrays.sort(arr, new Comparator<Activity>() {
+            @Override
+            public int compare(Activity s1, Activity s2)
+            {
+                return s1.finish - s2.finish;
+            }
+        });
+    }
+}
