@@ -74,7 +74,7 @@
 | 37.  | Heap Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/heap_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/heap_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/heap_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/heap_sort.py) | Sorting |
 | 38.  | Insertion Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/insertion_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/insertion_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/insertion_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/insertion_sort.py) | Sorting |
 | 39.  | Merge Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/merge_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/merge_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/merge_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/merge_sort.py) | Sorting |
-| 40.  | Quick Sort | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/quick_sort.cpp) | Sorting |
+| 40.  | Quick Sort | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/quick_sort.cpp) , [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/Quick_Sort.c) | Sorting |
 | 41.  | Selection Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/selection_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/selection_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/selection_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/selection_sort.py) | Sorting |
 | 42.  | Topological Sort | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/Topological_Sort.cpp) | Sorting |
 | 43.  | Wave Sort | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/Wave_sort.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/wave_sort.py) | Sorting |
@@ -85,6 +85,7 @@
 | 48.  | Binary Tree to BST | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/BinaryTreeToBST.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/BinaryTreeToBST.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/BinaryTreeToBST.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/BinaryTreeToBST.py) | Trees |
 | 49.  | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/MorrisTraversal.cpp) | Trees |
 | 50.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
+
 
 
 
