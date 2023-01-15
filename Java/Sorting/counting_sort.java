@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class counting_sort {
     // We will be using counting sort.
     // Efficient for smaller range.
