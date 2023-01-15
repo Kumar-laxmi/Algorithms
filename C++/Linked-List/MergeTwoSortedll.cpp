@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// class for Link list node
 class Node
 {
 public:
@@ -8,6 +9,7 @@ public:
     Node *next;
 };
 
+// takes the node from the front of the source and move it to the front of the dest.
 void nodemove(Node **dest, Node **source)
 {
     Node *newNode = *source;
@@ -17,6 +19,7 @@ void nodemove(Node **dest, Node **source)
     *dest = newNode;
 }
 
+// merge two sorted linked list in one bigger soted list
 Node *SortedMerge(Node *a, Node *b)
 {
     Node dummy;
@@ -46,6 +49,7 @@ Node *SortedMerge(Node *a, Node *b)
     return (dummy.next);
 }
 
+// insert a node at the beginning of the linked list
 void push(Node **head, int new_data)
 {
     Node *new_node = new Node();
@@ -57,6 +61,7 @@ void push(Node **head, int new_data)
     (*head) = new_node;
 }
 
+// to print nodes in a given linked list
 void printList(Node *node)
 {
     while (node != NULL)
@@ -68,10 +73,12 @@ void printList(Node *node)
 
 int main()
 {
+    // empty linked list
     Node *res = NULL;
     Node *a = NULL;
     Node *b = NULL;
 
+    // create two linked list
     push(&a, 15);
     push(&a, 10);
     push(&a, 5);
@@ -80,6 +87,7 @@ int main()
     push(&b, 3);
     push(&b, 2);
 
+    // this will remove duplicates from linked list
     res = SortedMerge(a, b);
 
     cout << "Merged Linked List is: \n";

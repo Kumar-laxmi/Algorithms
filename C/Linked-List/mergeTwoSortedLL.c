@@ -12,6 +12,7 @@ struct Node
 void MoveNode(struct Node **destRef,
               struct Node **sourceRef);
 
+// takes two sorted linked list in increasing order and make new linked list by merging
 struct Node *SortedMerge(struct Node *a, struct Node *b)
 {
     struct Node dummy;
@@ -40,6 +41,7 @@ struct Node *SortedMerge(struct Node *a, struct Node *b)
     return (dummy.next);
 }
 
+// pull of the front node of the source and put it in dest
 void MoveNode(struct Node **destRef,
               struct Node **sourceRef)
 {
@@ -53,6 +55,7 @@ void MoveNode(struct Node **destRef,
     *destRef = newNode;
 }
 
+// Function to insert a node at the beginning of the linked list
 void push(struct Node **head_ref, int new_data)
 {
     struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
@@ -64,6 +67,7 @@ void push(struct Node **head_ref, int new_data)
     (*head_ref) = new_node;
 }
 
+// to print nodes in a given linked list
 void printList(struct Node *node)
 {
     while (node != NULL)
@@ -75,10 +79,12 @@ void printList(struct Node *node)
 
 int main()
 {
+    //  empty list
     struct Node *res = NULL;
     struct Node *a = NULL;
     struct Node *b = NULL;
 
+    // create two sorted linked lists
     push(&a, 15);
     push(&a, 10);
     push(&a, 5);
@@ -87,6 +93,7 @@ int main()
     push(&b, 3);
     push(&b, 2);
 
+    // Remove duplicates from linked list
     res = SortedMerge(a, b);
 
     printf("Merged Linked List is: \n");

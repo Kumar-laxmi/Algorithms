@@ -1,9 +1,11 @@
-class mergeTwoSortedLL {
+class MergeTwoSortedLL {
+    // Link list node
     static class Node {
         int data;
         Node next;
     };
 
+    // Function to create a new node
     static Node newNode(int key) {
         Node temp = new Node();
         temp.data = key;
@@ -11,27 +13,44 @@ class mergeTwoSortedLL {
         return temp;
     }
 
+    // Function to print the linked list
     static void printList(Node node) {
         while (node != null) {
-            System.out.printf("%d ",
-                    node.data);
+            System.out.printf("%d ", node.data);
             node = node.next;
         }
     }
 
+    // Function to merge two sorted linked lists
     static Node merge(Node h1, Node h2) {
-        if (h1 == null)
-            return h2;
-        if (h2 == null)
-            return h1;
+        // Initialize dummy node
+        Node dummy = newNode(0);
+        Node current = dummy;
 
-        if (h1.data < h2.data) {
-            h1.next = merge(h1.next, h2);
-            return h1;
-        } else {
-            h2.next = merge(h1, h2.next);
-            return h2;
+        // Iterate through both linked lists and add the
+        // smaller value to the current node
+        while (h1 != null && h2 != null) {
+            if (h1.data < h2.data) {
+                current.next = h1;
+                h1 = h1.next;
+            } else {
+                current.next = h2;
+                h2 = h2.next;
+            }
+            current = current.next;
         }
+
+        // Add remaining elements from h1
+        if (h1 != null) {
+            current.next = h1;
+        }
+
+        // Add remaining elements from h2
+        if (h2 != null) {
+            current.next = h2;
+        }
+
+        return dummy.next;
     }
 
     public static void main(String args[]) {
