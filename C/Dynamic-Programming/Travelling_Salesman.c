@@ -1,12 +1,15 @@
 #include<stdio.h>
 
+//creating a 2D array cities to store the cost of travelling from one city to another
+//cities_visited is a 1D array that store the cities already visited
+
 int cities[10][10],cities_visited[10],n,cost=0;
 
 int main()
 {
     int i,j;
 
-printf("Enter the number of Cities: ");
+printf("Enter the number of Cities: ");//asking user to input the number of cities
 scanf("%d",&n);
 
 printf("\nEnter the Cost Matrix\n");
@@ -31,6 +34,8 @@ for(j=0;j < n;j++)
 printf("\t%d",cities[i][j]);
 }
 
+//printing the possibe path and the minimum cost required
+    
 printf("\n\nThe Possible Path is:\n");
 min_cost(0); //passing 0 because starting vertex
 
@@ -38,6 +43,8 @@ printf("\n\nMinimum cost is %d\n ",cost);
 
 return 0;
 }
+
+//this function returns the minimum cost required to visit all the cities
 
 void min_cost(int city)
 {
@@ -48,7 +55,7 @@ cities_visited[city]=1;
 printf("%d--",city+1);
 ncity=least(city);
 
-if(ncity==9999)
+if(ncity==9999)//checking if there is a way to move from one city to another (here infinity==9999)
 {
 ncity=0;
 printf("%d",ncity+1);
@@ -59,6 +66,8 @@ return;
 
 min_cost(ncity);
 }
+
+//calculates the mimimum cost required to travel from one city to another
 
 int least(int c)
 {
