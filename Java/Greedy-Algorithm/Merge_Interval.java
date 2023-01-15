@@ -8,7 +8,7 @@ Repositary name : Algorithms
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Stack;
-public class MergeOverlappingIntervals {
+public class Merge_Interval {
 	// The main function that takes a set of intervals, merges
 	// overlapping intervals and prints the result
 	public static void mergeIntervals(Interval arr[])
@@ -62,7 +62,7 @@ public class MergeOverlappingIntervals {
 		mergeIntervals(arr);
 	}
 }
-class Interval
+public class Interval
 {
 	int start,end;
 	Interval(int start, int end)
