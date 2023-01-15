@@ -1,74 +1,51 @@
-// Java program for activity selection problem
-// when input activities may not be sorted.
 import java.io.*;
 import java.util.*;
 // Driver class
+// Java program for activity selection problem
+// when input activities may not be sorted.
 public class ActivitySelection{
-    // Returns count of the maximum set of activities that
-    // can
-    // be done by a single person, one at a time.
-    static void printMaxActivities(Activity arr[], int n)
-    {
-        // Sort jobs according to finish time
-        Compare obj = new Compare();
-        obj.compare(arr, n);
-        System.out.println(
-            "Following activities are selected :");
-        // The first activity always gets selected
-        int i = 0;
-        System.out.print("(" + arr[i].start + ", "
-                         + arr[i].finish + ")");
-        // Consider rest of the activities
-        for (int j = 1; j < n; j++) {
-            // If this activity has start time greater than
-            // or equal to the finish time of previously
-            // selected activity, then select it
-            if (arr[j].start >= arr[i].finish) {
-                System.out.print(", (" + arr[j].start + ", "
-                                 + arr[j].finish + ")");
-                i = j;
-            }
-        }
+    public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int n,i,j;
+    System.out.println("Enter no. of activities");
+    n=sc.nextInt();
+    int start[]=new int[n];
+    int finish[]=new int[n];
+    System.out.println("Enter THE START and FINISH time for activities:");
+    for(i=0;i<n;i++)
+    { 
+        start[i]=sc.nextInt();
+        finish[i]=sc.nextInt();
     }
-    // Driver code
-    public static void main(String[] args)
+    //Sorting the activites according to finish time
+    for(i=0;i<n-1;i++)
     {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the number of processes:");
-        int n=sc.nextInt();
-        System.out.println("Enter the start and finish time");
-        Activity arr[] = new Activity[n];
-        for(int i=0;i<n;i++){
-            int start=sc.nextInt();
-            int finish=sc.nextInt();
-            arr[i]= new Activity(start,finish);
-        }
-        // Function call
-        printMaxActivities(arr, n);
-    }
-}
-// A job has a start time, finish time and profit.
-class Activity {
-    int start, finish;
-    // Constructor
-    public Activity(int start, int finish)
-    {
-        this.start = start;
-        this.finish = finish;
-    }
-}
-// class to define user defined comparator
-class Compare {
-    // A utility function that is used for sorting
-    // activities according to finish time
-    static void compare(Activity arr[], int n)
-    {
-        Arrays.sort(arr, new Comparator<Activity>() {
-            @Override
-            public int compare(Activity s1, Activity s2)
+        for(j=i+1;j<n;j++)
+        {
+            if(finish[i]>finish[j])
             {
-                return s1.finish - s2.finish;
-            }
-        });
+                int temp=finish[i];//Swapping finish time
+                finish[i]=finish[j];
+                finish[j]=temp;
+                int temp1=start[i];//Swapping start time
+                start[i]=start[j];
+                start[j]=temp1;
+            }  
+        }
     }
+    System.out.println("FINAL-EXECUTION-CHART");
+    System.out.print("("+start[0]+" "+finish[0]+")");
+    int x=0;
+    for(i=1;i<n;i++)
+    {
+        // If this activity has start time greater than or
+        // equal to the finish time of previously selected
+        // activity, then select it
+        if(start[i]>=finish[x])
+        {
+            System.out.print("("+start[i]+" "+finish[i]+")");
+            x=i;
+        }
+    }
+  }
 }
