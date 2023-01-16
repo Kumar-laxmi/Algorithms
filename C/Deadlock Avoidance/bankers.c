@@ -12,9 +12,9 @@ void bank()
     int res,process,i,j;
     printf("Enter total number of processes: ");
     scanf("%d",&process);
-    printf("Enter total number of resouces: ");
+    printf("Enter total number of resources: ");
     scanf("%d",&res);
-    int allocation[process][res],max[process][res],available[res],reNeed[process][res];
+    int allocation[100][100],max[100][100],available[100],reNeed[100][100];
     printf("Enter allocation for processes: ");
     for(i=0;i<process;i++)
     {
@@ -55,7 +55,7 @@ void bank()
         printf("\n");
     }
     //Safety
-    int complete[process];
+    int complete[100];
     for(i=0;i<process;i++)
     {
         complete[i]=0;
