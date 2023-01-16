@@ -7,7 +7,7 @@
     4.If Finish[i]=true for all i, then the system is in safe state.
 */
 #include<stdio.h>
-void main()
+int main()
 {
     int res,process,i,j;
     printf("Enter total number of processes: ");
@@ -101,4 +101,5 @@ void main()
     {
         printf("No deadlock");
     }
+    return 0;
 }
