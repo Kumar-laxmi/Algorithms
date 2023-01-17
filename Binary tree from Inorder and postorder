@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+// Structure of a node in the tree
+struct Node {
+    int data;
+    Node *left, *right;
+};
+
+// Function to construct a binary tree from inorder and postorder traversals
+Node* buildTree(int in[], int post[], int n) {
+    static int pIndex = n-1;  // static variable to keep track of postorder traversal index
+    
+    if (pIndex < 0)  // base case, if pIndex is less than 0, return NULL
+        return NULL;
+    
+    Node* root = new Node();  // create a new node for the current root
+    root->data = post[pIndex--];  // assign the value of the last element in postorder traversal
+    
+    if (n == 1)  // if there is only one element, return the node
+        return root;
+    
+    int i;
+    for (i = 0; i < n; i++) {  // find the root element in the inorder traversal
+        if (in[i] == root->data)
+            break;
+    }
+    
+    // recursively construct the right subtree using elements in postorder traversal
+    // elements after root element in inorder traversal
+    root->right = buildTree(in+i+1, post, n-i-1);
+    
+    // recursively construct the left subtree using elements in postorder traversal
+    // elements before root element in inorder traversal
+    root->left = buildTree(in, post, i);
+    
+    return root;
+}
+
+// Function to print the inorder traversal of the tree
+void printInorder(Node* root) {
+    if (root == NULL)  // base case, if root is NULL, return
+        return;
+    printInorder(root->left);  // recursively print left subtree
+    cout << root->data << " ";  // print current root
+    printInorder(root->right);  // recursively print right subtree
+}
+
+int main() {
+    int in[] = { 4, 2, 5, 1, 3, 6 };
+    int post[] = { 4, 5, 2, 6, 3, 1 };
+    int n = sizeof(in)/sizeof(in[0]);
+    Node* root = buildTree(in, post, n);
+    cout << "Inorder traversal of the constructed tree: \n";
+    printInorder(root);
+    return 0;
+}
