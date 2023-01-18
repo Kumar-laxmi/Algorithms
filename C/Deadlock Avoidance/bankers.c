@@ -7,7 +7,58 @@
     4.If Finish[i]=true for all i, then the system is in safe state.
 */
 #include<stdio.h>
-void bank()
+void bank(int process,int res,int reNeed[100][100],int allocation[100][100],int available[100])
+{
+    
+    //Safety
+    int complete[100];
+    for(int i=0;i<process;i++)
+    {
+        complete[i]=0;
+    }
+    for(int i=0;i<process;i++)
+    {
+        int flag=0;
+        if(complete[i]==0)
+        {
+            for(int j=0;j<res;j++)
+            {
+                if(reNeed[i][j]>available[j])
+                {
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==0)
+            {
+                complete[i]=1;
+                for(int j=0;j<res;j++)
+                {
+                    available[j]+=allocation[i][j];
+                }
+                i=-1;
+            }
+        }
+    }
+    int flag=0;
+    for(int i=0;i<process;i++)
+    {
+        if(complete[i]==0)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==1)
+    {
+        printf("deadlock occured");
+    }
+    else
+    {
+        printf("No deadlock");
+    }
+}
+void main()
 {
     int res,process,i,j;
     printf("Enter total number of processes: ");
@@ -40,56 +91,6 @@ void bank()
     {
         scanf("%d",&available[i]);
     }
-    //Safety
-    int complete[100];
-    for(i=0;i<process;i++)
-    {
-        complete[i]=0;
-    }
-    for(i=0;i<process;i++)
-    {
-        int flag=0;
-        if(complete[i]==0)
-        {
-            for(j=0;j<res;j++)
-            {
-                if(reNeed[i][j]>available[j])
-                {
-                    flag=1;
-                    break;
-                }
-            }
-            if(flag==0)
-            {
-                complete[i]=1;
-                for(j=0;j<res;j++)
-                {
-                    available[j]+=allocation[i][j];
-                }
-                i=-1;
-            }
-        }
-    }
-    int flag=0;
-    for(i=0;i<process;i++)
-    {
-        if(complete[i]==0)
-        {
-            flag=1;
-            break;
-        }
-    }
-    if(flag==1)
-    {
-        printf("deadlock occured");
-    }
-    else
-    {
-        printf("No deadlock");
-    }
-}
-void main()
-{
-    bank();
+    bank(process,res,reNeed,allocation,available);
 }
 
