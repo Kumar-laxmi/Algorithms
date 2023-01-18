@@ -15,44 +15,30 @@ void bank()
     printf("Enter total number of resources: ");
     scanf("%d",&res);
     int allocation[100][100],max[100][100],available[100],reNeed[100][100];
-    printf("Enter allocation for processes: ");
+    
     for(i=0;i<process;i++)
     {
+        printf("Enter allocation for processes: ");
         for(j=0;j<res;j++)
         {
             scanf("%d",&allocation[i][j]);
         }
-    }
-    printf("Enter maximum for processes: ");
-    for(i=0;i<process;i++)
-    {
+        printf("Enter maximum for processes: ");
         for(j=0;j<res;j++)
         {
             scanf("%d",&max[i][j]);
         }
-    }
-
-    printf("Enter available for processes: ");
-    for(i=0;i<res;i++)
-    {
-        scanf("%d",&available[i]);
-    }
-
-    //Calculating remaining need
-    for(i=0;i<process;i++)
-    {
+        //Calculating reneed
         for(j=0;j<res;j++)
         {
             reNeed[i][j]=max[i][j]-allocation[i][j];
         }
+
     }
-    for(i=0;i<process;i++)
+    printf("Enter available for processes: ");
+    for(i=0;i<res;i++)
     {
-        for(j=0;j<res;j++)
-        {
-            printf("%d ",reNeed[i][j]);
-        }
-        printf("\n");
+        scanf("%d",&available[i]);
     }
     //Safety
     int complete[100];
