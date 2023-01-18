@@ -61,7 +61,7 @@
 | 24.  | Prime Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/is_prime.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/is_prime.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/is_prime.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/is_prime.py) | Maths |
 | 25.  | Reverse Integer | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Reverse_integer.cpp) | Maths |
 | 26.  | Sieve Eratosthenes Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/sieveOfEratosthenes.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Sieve%20of%20Eratosthenes%20Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Sieve_erastonetihis.java),[Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/sieve_of_eratosthenes.py) | Maths |
-| 27.  | Binary to Decimal and Decimal to Binary | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/binary_to_decimal_&_decimal_to_binary.c) |Maths |
+| 27.  | Binary to Decimal & Decimal to Binary | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/binary_to_decimal_&_decimal_to_binary.c) |Maths |
 | 28.  | Rabin Karp | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/rabin_karp.cpp) | Pattern Matching |
 | 29.  | BFS and DFS | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Searching/bfs.cpp) | Searching |
 | 30.  | Binary Search on 2D Matrix | [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Searching/binary_search_2d.java) | Searching |
