@@ -1,5 +1,26 @@
 /* C program to convert binary number to decimal and decimal to binary */
 
+/*Example 1) :- Convert 0111 to decimal 
+  Procedure :- Since binary is base 2 representation , starting from LSB , multiply 
+     each bit to power of 2 and add them .But for every bit , the power of 2 should increment . 
+  Answer :- 0 * (2^3) + 1 * (2^2) + 1 * (2^1) + 1 * (2^0) = 0 + 4 + 2 + 1 = 7 . 
+  Threfore , Decimal equivalent of 0111 is 7 . */
+
+/*Example 2 ) :- Convert 23 to binary 
+   Procedure :- Since  decimal  is base 10 representation 
+   2 | 23  --> Remainder 1
+      ---
+   2 | 11  --> Remainder 1
+      --- 
+   2 | 5   --> Remainder 1
+      ---
+   2 | 2   --> Remainder 0 
+      ---
+       1
+       
+   Answer :- Therefore , the binary equivalent of 23 is 10111 . 
+*/
+   
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
