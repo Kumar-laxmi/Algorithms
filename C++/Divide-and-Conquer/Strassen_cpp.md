@@ -26,9 +26,13 @@ Strassen matrix is the one which by using divide and conquer technique reduces t
 •PSEUDOCODE:
 
 1)Divide matrix A and matrix B in 4 sub-matrices of size N/2 x N/2 as shown in the above diagram.
+
 2)Calculate the 7 matrix multiplications recursively.
+
 3)Compute the submatrices of C.
+
 4)Combine these submatricies into new matrix C.
+
 
 •FORMULA'S FOR STRASSEN MULTIPLICATION:
 
@@ -39,7 +43,7 @@ In Strassen's matrix multiplication there are seven multiplication and four addi
 
 •CODE FOR STARSSEN MATRIX MULTIPLICATION:
 
-https://onlinegdb.com/KpKvt1QAl
+
 	
 •COMPLEXITY:
 
