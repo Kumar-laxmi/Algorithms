@@ -19,9 +19,13 @@ Strassen matrix is the one which by using divide and conquer technique reduces t
 •PROCEDURE:
 
 1)Divide a matrix of order of 2*2 recursively till we get the matrix of 2*2.
+
 2)Use the previous set of formulas to carry out 2*2 matrix multiplication.
+
 3)In this eight multiplication and four additions, subtraction are performed.
+
 4)Combine the result of two matrixes to find the final product or final matrix.
+
 
 •PSEUDOCODE:
 
@@ -43,20 +47,94 @@ In Strassen's matrix multiplication there are seven multiplication and four addi
 
 •CODE FOR STARSSEN MATRIX MULTIPLICATION:
 
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+void print(vector<vector<int> > matrix) {
+    
+for(int i = 0; i < matrix.size(); i++){
+    
+for(int j = 0; j < matrix[i].size(); j++){
+    
+cout << matrix[i][j] << ' ';
+
+}
+
+cout << endl;
+
+}
+
+}
+
+
+void multiply(vector<vector<int>> &A, vector<vector<int>> &B, vector<vector<int>> &C) {
+    
+int N = 4;
+
+for (int i = 0; i < N; i++) {
+    
+for (int j = 0; j < N; j++) {
+    
+C[i][j] = 0;
+
+for (int k = 0; k < N; k++) {
+    
+C[i][j] += A[i][k]*B[k][j];
+
+}
+
+}
+
+}
+
+}
+
+
+int main() 
+
+{
+
+
+vector<vector<int>> A = {{2, 2, 3, 1},{1, 4, 1, 2},{2, 3, 1, 1}, {1, 3, 1, 2}};
+
+
+vector<vector<int>> B = {{2, 1, 2, 1},{3, 1, 2, 1},{3, 2, 1, 1}, {1, 4, 3, 2}};
+
+
+vector<vector<int>> C(4, vector<int>(4));
+
+    
+multiply(A, B, C);
+
+
+print(C);
+
+return 0;
+
+}
 
 	
 •COMPLEXITY:
 
 1)Worst case time complexity: Θ(n^2.8074)
+
 2)Best case time complexity: Θ(1)
+
 3)Space complexity: Θ(logn)
+
 
 •APPLICATIONS:
 
 Generally, Strassen’s Method is not preferred for practical applications for the following reasons.
 
 1)The constants used in Strassen’s method are high and for a typical application Naive method works better.
+
 2)For Sparse matrices, there are better methods especially designed for them.
+
 3)The submatrices in recursion take extra space.
+
 
 
