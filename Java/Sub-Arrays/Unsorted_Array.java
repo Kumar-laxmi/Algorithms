@@ -8,7 +8,7 @@ Repositary name : Algorithms
 OUTPUT: The unsorted subarray which makes the given array
 sorted lies between indices 5 and 8. */
 import java.io.*;
-class Main
+class Unsorted_Array
 {
 	static void UnsortedArray(int arr[], int n)
 	{
@@ -31,7 +31,8 @@ class Main
 		break;
 	}
 	//Find the minimum and maximum values in the given array.
-	max = arr[a]; min = arr[a];
+	max = arr[a]; 
+	min = arr[a];
 	for(i = a + 1; i <= b; i++)
 	{
 		if(arr[i] > max)
