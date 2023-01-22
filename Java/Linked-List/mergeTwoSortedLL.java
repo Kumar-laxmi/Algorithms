@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class MergeTwoSortedLL {
+class mergeTwoSortedLL {
     // Link list node
     static class Node {
         int data;
