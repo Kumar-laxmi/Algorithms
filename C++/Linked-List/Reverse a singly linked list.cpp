@@ -6,8 +6,7 @@ struct Node
 {
     int value;
     struct Node *next;
-    Node(int val)
-    {
+    Node(int val){
         value = val;
         next = NULL;
     }
