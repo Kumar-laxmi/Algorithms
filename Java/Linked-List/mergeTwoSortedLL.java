@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class MergeTwoSortedLL {
     // Link list node
     static class Node {
@@ -54,13 +56,42 @@ class MergeTwoSortedLL {
     }
 
     public static void main(String args[]) {
-        Node head1 = newNode(1);
-        head1.next = newNode(3);
-        head1.next.next = newNode(5);
 
-        Node head2 = newNode(0);
-        head2.next = newNode(2);
-        head2.next.next = newNode(4);
+        Scanner scanner = new Scanner(System.in);
+        Node head1 = null;
+        Node head2 = null;
+        Node current = null;
+
+        System.out.println("Enter values for first linked list (press -1 to stop):");
+        while (true) {
+            int input = scanner.nextInt();
+            if (input == -1) {
+                break;
+            }
+            Node newNode = newNode(input);
+            if (head1 == null) {
+                head1 = newNode;
+                current = head1;
+            } else {
+                current.next = newNode;
+                current = newNode;
+            }
+        }
+        System.out.println("Enter values for first linked list (press -1 to stop):");
+        while (true) {
+            int input = scanner.nextInt();
+            if (input == -1) {
+                break;
+            }
+            Node newNode = newNode(input);
+            if (head2 == null) {
+                head2 = newNode;
+                current = head2;
+            } else {
+                current.next = newNode;
+                current = newNode;
+            }
+        }
 
         Node mergedhead = merge(head1, head2);
 

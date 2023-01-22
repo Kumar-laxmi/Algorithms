@@ -78,14 +78,30 @@ int main()
     Node *a = NULL;
     Node *b = NULL;
 
-    // create two linked list
-    push(&a, 15);
-    push(&a, 10);
-    push(&a, 5);
-
-    push(&b, 20);
-    push(&b, 3);
-    push(&b, 2);
+    // // create two linked list
+    cout << "Enter values for first linked list (press -1 to stop):" << endl;
+    cout << "Linked List 1:- ";
+    while (true)
+    {
+        int input;
+        cin >> input;
+        if (input == -1)
+        {
+            break;
+        }
+        push(&a, input);
+    }
+    cout << "Linked List 2:- ";
+    while (true)
+    {
+        int input;
+        cin >> input;
+        if (input == -1)
+        {
+            break;
+        }
+        push(&b, input);
+    }
 
     // this will remove duplicates from linked list
     res = SortedMerge(a, b);

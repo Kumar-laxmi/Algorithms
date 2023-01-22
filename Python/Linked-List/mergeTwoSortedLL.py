@@ -51,16 +51,18 @@ def merge(List_1, List_2):
     return head_ptr.next
 
 # create two linked lists and insert some values
+size_of_list1 = int(input("Enter the size of the first linked list: "))
 LL1 = LinkedList()
-LL1.insert(2)
-LL1.insert(4)
-LL1.insert(6)
-LL1.insert(8)
+for i in range(size_of_list1):
+    data = int(input("Enter a value for the first linked list: "))
+    LL1.insert(data)
+
+size_of_list2 = int(input("Enter the size of the second linked list: "))
 LL2 = LinkedList()
-LL2.insert(1)
-LL2.insert(3)
-LL2.insert(5)
-LL2.insert(7)
+for i in range(size_of_list2):
+    data = int(input("Enter a value for the second linked list: "))
+    LL2.insert(data)
+
 
 # merge the two linked lists
 LL3 = LinkedList()

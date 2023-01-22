@@ -85,13 +85,28 @@ int main()
     struct Node *b = NULL;
 
     // create two sorted linked lists
-    push(&a, 15);
-    push(&a, 10);
-    push(&a, 5);
-
-    push(&b, 20);
-    push(&b, 3);
-    push(&b, 2);
+    int input;
+    printf("Enter values for first linked list (press -1 to stop):\n");
+    printf("Linked list 1:\n");
+    while (1)
+    {
+        scanf("%d", &input);
+        if (input == -1)
+        {
+            break;
+        }
+        push(&a, input);
+    }
+    printf("Linked list 2:\n");
+    while (1)
+    {
+        scanf("%d", &input);
+        if (input == -1)
+        {
+            break;
+        }
+        push(&b, input);
+    }
 
     // Remove duplicates from linked list
     res = SortedMerge(a, b);
