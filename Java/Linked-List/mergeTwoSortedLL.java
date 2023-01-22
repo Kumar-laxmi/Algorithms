@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import java.util.Scanner;
 
 class MergeTwoSortedLL {
+=======
+class mergeTwoSortedLL {
+>>>>>>> 323a1508ef9188dd9f95f5af77ba2c7dd708ae37
     // Link list node
     static class Node {
         int data;
