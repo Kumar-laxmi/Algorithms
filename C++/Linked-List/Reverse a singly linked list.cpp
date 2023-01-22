@@ -6,8 +6,7 @@ using namespace std;
 
 struct Node
 
-{
-    
+{   
   int value;
     
   struct Node *next;
@@ -15,29 +14,23 @@ struct Node
   Node(int val)
     
   {
-        
     value = val;
         
     next = NULL;
     
   }
-
 };
-
 struct linkedlist
 
 {
     
-  Node *head;
-
-    
+  Node *head;    
   linkedlist()
     
   {
         
-    head = NULL;
-    
-  }
+    head = NULL;  
+}
 
     // reverse function---to reverse the given linked list
     
@@ -49,7 +42,6 @@ struct linkedlist
     // initializing current, previous and next node
         
     Node *c = head;
-        
     Node *p = NULL;
         
     Node *next = NULL;
@@ -64,38 +56,32 @@ struct linkedlist
       c->next = p;
             
       p = c;
-            
       c = next;
         
     }
         
-    head = p;
-    
+    head = p; 
   }
     
-  void print()
-    
+  void print()  
   {
         
     struct Node *t = head;
         
-    while (t != NULL)
-        
+    while (t != NULL)    
     {
             
       cout << t->value << " ";
             
       t = t->next;
-        
-    }
+}
     
   }
 
     
   void push(int value)
     
-  {
-        
+  {    
     Node *t = new Node(value);
         
     t->next = head;
@@ -108,11 +94,9 @@ struct linkedlist
 
 
 int main(){
-    
   linkedlist l;
     
   l.push(22);
-    
   l.push(88);
     
   l.push(45);
@@ -123,8 +107,7 @@ int main(){
 
     
   cout<<"The original list is: \n";
-    
-  l.print();
+   l.print();
 
     
   l.reverse_llist();
