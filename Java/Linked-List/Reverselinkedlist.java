@@ -1,4 +1,4 @@
-class Reverse_LList
+class Reverselinkedlist
 
 {
     
@@ -82,7 +82,7 @@ class Reverse_LList
     
   public static void main(String[] args) {
         
-    Reverse_LList ob = new Reverse_LList();
+    Reverselinkedlist ob = new Reverselinkedlist();
 
         
     //creating a linked list with 5 nodes
