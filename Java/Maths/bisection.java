@@ -1,5 +1,5 @@
 // Java program for implementation of Bisection Method for solving equations
-class Bisection{
+class bisection{
 	static final float EPSILON = (float)0.01;
 	// An example function whose solution is determined using
 	// Bisection Method. The function is x^3 - x^2 + 2
