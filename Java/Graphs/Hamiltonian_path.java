@@ -1,5 +1,5 @@
 import java.util.*;
-class Hamiltonian_path
+class Swoc
 {
     public static void main(String args[])throws IOException
     {
@@ -30,7 +30,7 @@ class Hamiltonian_path
     }
 }
 
-class Solution 
+class Hamiltonian_path 
 { 
     boolean check(int N, int M, ArrayList<ArrayList<Integer>> Edges) 
     { 
