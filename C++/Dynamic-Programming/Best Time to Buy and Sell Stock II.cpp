@@ -45,7 +45,6 @@ int maxProfit(vector<int> &prices)
 
 int main()
 {
-
     int n;
     cin >> n;
     vector<int> prices(n);
