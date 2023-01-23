@@ -21,7 +21,6 @@ using namespace std;
 
 int longestValidParentheses(string s)
 {
-
     int n = s.length(), longest = 0;
     stack<int> st;
     for (int i = 0; i < n; i++)
@@ -59,7 +58,6 @@ int longestValidParentheses(string s)
 }
 int main()
 {
-
     string str;
     cin >> str;
     cout << longestValidParentheses(str);

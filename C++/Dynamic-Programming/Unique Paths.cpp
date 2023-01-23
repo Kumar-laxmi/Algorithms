@@ -20,7 +20,6 @@ using namespace std;
 
 int f(vector<vector<int>> &temp, int m, int n)
 {
-
     if (m == 0 && n == 0)
     {
         return 1;
@@ -48,7 +47,6 @@ int uniquePaths(int m, int n)
 
 int main()
 {
-
     int m, n;
     cin >> m >> n;
     cout << uniquePaths(m, n);
