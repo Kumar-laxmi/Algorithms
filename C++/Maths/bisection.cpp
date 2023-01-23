@@ -20,15 +20,17 @@ int main()
         if(f(L) * f(M)  < 0)//root is b/w (L,M)
         {
             R = M;
+            cout<<"iteration "<<20-iterations<<": "<<M<<endl;
         }
         else//root is b/w (M,R) 
         {
             L = M;
+            cout<<"iteration "<<20-iterations<<": "<<M<<endl;
         }
         if(fabs(R-L) < threshold)
         {
             break;
         }
     }
-    cout<<M;
+    cout << "The value of root is : " << M;
 }
