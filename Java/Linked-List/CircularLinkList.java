@@ -1,4 +1,4 @@
-public class CreateList 
+public class CircularLinkList
 {   
     public class Node
     {  
@@ -27,7 +27,7 @@ public class CreateList
         }  
         else 
         {  
-            //tail will point to new node.  
+             
             tail.next = newNode;  
             //New node will become new tail.  
             tail = newNode;  
@@ -54,7 +54,7 @@ public class CreateList
     }  
   
     public static void main(String[] args) {  
-        CreateList cl = new CreateList();  
+        CircularLinkList cl = new CircularLinkList();  
         //Adds data to the list  
         cl.add(1);  
         cl.add(2);  
