@@ -32,3 +32,13 @@ Case 3:
 Enter a number to check if it is armstrong or not: 1634
 1634 is an Armstrong number
 """
+
+# Python program to check if the number is an Armstrong number or not using for loop
+num =input("enter a number:")
+sum=0
+for i in num:
+    sum+=int(i)**3
+    if num==sum:
+        print("yes")
+    else:
+        print('no')
