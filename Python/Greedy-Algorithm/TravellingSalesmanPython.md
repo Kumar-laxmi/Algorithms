@@ -81,6 +81,7 @@ When s = 1, we get the minimum value for d [4, 3]. Selecting path 4 to 3 (cost i
 1)Planning, logistics, and manufacturing microchips: Chip insertion problems naturally arise in the microchip industry. Those problems can be planned as traveling
 
   salesman problems.
+  
 2)DNA sequencing: Slight modification of the traveling salesman problem can be used in DNA sequencing. Here, the cities represent the DNA fragments, and the distance
 
   represents the similarity measure between two DNA fragments.
