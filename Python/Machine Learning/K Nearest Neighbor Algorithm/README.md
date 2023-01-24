@@ -8,9 +8,3 @@
 - KNN algorithm at the training phase just stores the dataset and when it gets new data, then it classifies that data into a category that is much similar to the new data.
 
 - Example: Suppose, we have an image of a creature that looks similar to cat and dog, but we want to know either it is a cat or dog. So for this identification, we can use the KNN algorithm, as it works on a similarity measure. Our KNN model will find the similar features of the new data set to the cats and dogs images and based on the most similar features it will put it in either cat or dog category.
-![image](https://user-images.githubusercontent.com/87495134/214305582-36d626b6-1210-4cf1-a7d9-183cfcbcaef5.png)
-
-## Why do we need a K-NN Algorithm?
-Suppose there are two categories, i.e., Category A and Category B, and we have a new data point x1, so this data point will lie in which of these categories. To solve this type of problem, we need a K-NN algorithm. With the help of K-NN, we can easily identify the category or class of a particular dataset. Consider the below diagram:
-![image](https://user-images.githubusercontent.com/87495134/214305703-2aef6cdc-ba60-4f46-b72c-652208981571.png)
-![image](https://user-images.githubusercontent.com/87495134/214305735-2f3e7034-8474-47df-ac57-ea95481110a2.png)
