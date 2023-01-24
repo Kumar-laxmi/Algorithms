@@ -50,4 +50,30 @@ When s = 1, we get the minimum value for d [4, 3]. Selecting path 4 to 3 (cost i
 ![image](https://user-images.githubusercontent.com/59620280/214215355-a850b9b8-b158-4795-8b09-02216f4b8b21.png)
 
 
+•PROGRAM
+
+     from sys import maxsize
+     from itertools, import permutations
+     V = 4
+     def tsp(graph, s):
+	            vertex = []
+	            for i in range(V):
+		             if i != s:
+			                    vertex.append(i)
+         min_cost = maxsize
+	            next_permutation=permutations(vertex)
+	            for i in next_permutation:
+		                   current_cost = 0
+		                   k = s
+		                   for j in i:
+			                          current_cost += graph[k][j]
+			                          k = j
+		current_cost += graph[k][s]
+		min_cost = min(min_cost, current_cost)
+		return min_cost
+     graph = [[0, 10, 15, 20], [10, 0, 35, 25], [15, 35, 0, 30], [20, 25, 30, 0]]
+		       s = 0
+     print(tsp(graph, s))
+
+
  
