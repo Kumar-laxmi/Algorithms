@@ -12,9 +12,9 @@ public class Hamiltonian_path
     public void findHamiltonianCycle(int[][] g)
     {
         V = g.length;
-        path = new int[V];
- 
-        Arrays.fill(path, -1);
+        path = new int[V]; //Path array is declared
+         
+        Arrays.fill(path, -1); //Used to fill the path array
         graph = g;        
         try
         {            
