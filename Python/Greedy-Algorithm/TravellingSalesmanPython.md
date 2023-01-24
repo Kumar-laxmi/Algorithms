@@ -87,3 +87,19 @@ When s = 1, we get the minimum value for d [4, 3]. Selecting path 4 to 3 (cost i
   represents the similarity measure between two DNA fragments.
 
 3)Astronomy: The Travelling Salesman Problem is applied by astronomers to minimize the time spent observing various sources.
+
+•COMPLEXITY
+
+1)Time Complexity: There are a total of 2N subproblems for each node. So the total number of subproblems would be N*2N. Each of the sub-problems requires linear time
+
+to solve. If the origin node is not specified, we have to run loops for N nodes.
+
+So the total time complexity for an optimal solution would be the Number of nodes * Number of subproblems * time to solve each sub-problem. The time complexity can be
+
+defined as O(N2 * 2^N).
+
+2)Space Complexity: The dynamic programming approach uses memory to store C(S, i), where S is a subset of the vertices set. There is a total of 2N subsets for each
+
+node.
+
+So, the space complexity is O(2^N).
