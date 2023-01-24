@@ -11,18 +11,43 @@
  
 •ALGORITHM : TRAVELLING SALESMAN PROBLEM
  
-C ({1}, 1) = 0  
+      C ({1}, 1) = 0  
 
-for s = 2 to n do
+      for s = 2 to n do
 
-   for all subsets S Є {1, 2, 3, … , n} of size s and containing 1
+      for all subsets S Є {1, 2, 3, … , n} of size s and containing 1
    
       C (S, 1) = ∞
       
-   for all j Є S and j ≠ 1
+      for all j Є S and j ≠ 1
    
       C (S, j) = min {C (S – {j}, i) + d(i, j) for i Є S and i ≠ j} 
       
-Return minj C ({1, 2, 3, …, n}, j) + d(j, i) 
+      Return minj C ({1, 2, 3, …, n}, j) + d(j, i) 
+      
+•EXAMPLE
+
+![image](https://user-images.githubusercontent.com/59620280/214214981-746cd44a-1315-447a-ab7f-9ac9c612ada3.png)
+
+The following table is prepared based on above diagram:
+
+           1	2	 3	 4
+         1 0	10	15	20
+         2 5	0	 9	 10
+         3	6	13	0	 12
+         4	8	8	 9	 0 
+         
+The minimum cost path is 35.
+
+Start from cost {1, {2, 3, 4}, 1}, we get the minimum value for d [1, 2]. When s = 3, select the path from 1 to 2 (cost is 10) then go backwards. When s = 2, we get
+
+the minimum value for d [4, 2]. Select the path from 2 to 4 (cost is 10) then go backwards.
+
+When s = 1, we get the minimum value for d [4, 3]. Selecting path 4 to 3 (cost is 9), then we shall go to then go to s = Φ step. We get the minimum value for d [3, 1]
+
+(cost is 6).   
+
+![image](https://user-images.githubusercontent.com/59620280/214215355-a850b9b8-b158-4795-8b09-02216f4b8b21.png)
+
 
  
