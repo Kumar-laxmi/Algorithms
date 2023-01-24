@@ -25,8 +25,7 @@ struct linkedlist
     // reverse function---to reverse the given linked list
     void reverse_llist()
     {
-
-        // initializing current, previous and next node
+// initializing current, previous and next node
         Node *c = head;
         Node *p = NULL;
         Node *next = NULL;
