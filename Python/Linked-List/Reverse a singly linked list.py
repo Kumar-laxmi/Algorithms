@@ -1,3 +1,4 @@
+Reversing a linked list using iterative approach
 #node of singly linked list
 
 class Node:
@@ -97,3 +98,5 @@ reverse(linked_list)
 print("The reversed linked list is: ")
 
 linked_list.show()
+
+Time Complexity of reversing a linked list is O(n)  
