@@ -1,6 +1,9 @@
 
 // hamiltonian_cycle Using Backtracking
-
+/*
+Given an undirected graph, find a cycle that visits 
+every vertex exactly once and returns to the starting vertex.
+*/
 
 #include <iostream>
 #include <vector>
