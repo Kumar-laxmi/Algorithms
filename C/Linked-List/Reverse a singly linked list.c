@@ -1,3 +1,5 @@
+Reversing a linked list using iterative approach
+
 #include<stdio.h>
 
 #include<stdlib.h>
@@ -26,11 +28,14 @@ void reverse(struct Node** head)
   struct Node* next=NULL;
     
   while(c!=NULL){
-        
+     
+   //stroring the next address of current node
     next=c->next;
-        
+     
+    //reversing the current node's ponter
     c->next=p;
-        
+    
+    //moving the pointer on position ahead
     p=c;
         
     c=next;
@@ -77,7 +82,7 @@ void show(struct Node* h){
 int main()
 
 {
-
+//empty list
   struct Node* h = NULL;
 
 
@@ -106,3 +111,4 @@ int main()
 
 }
 
+Time Complexity of reversing a linked list is O(n) 
