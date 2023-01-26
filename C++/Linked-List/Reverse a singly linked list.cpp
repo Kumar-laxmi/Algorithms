@@ -1,3 +1,5 @@
+Reversing a linked list using iterative approach
+
 #include <iostream>
 using namespace std;
 
@@ -32,13 +34,17 @@ struct linkedlist
 
         while (c != NULL)
         {
+            //stroring the next address of current node
             next = c->next;
+            //reversing the current node's pointer
             c->next = p;
+             //moving the pointer on position ahead
             p = c;
             c = next;
         }
         head = p;
     }
+    //Function to print the linkedlist
     void print()
     {
         struct Node *t = head;
@@ -48,7 +54,7 @@ struct linkedlist
             t = t->next;
         }
     }
-
+//push data into the linked list
     void push(int value)
     {
         Node *t = new Node(value);
@@ -58,6 +64,7 @@ struct linkedlist
 };
 
 int main(){
+    //empty linked list
     linkedlist l;
     l.push(22);
     l.push(88);
@@ -73,3 +80,5 @@ int main(){
     l.print();
     return 0;
 }
+
+Time Complexity of reversing a linked list is O(n) 
