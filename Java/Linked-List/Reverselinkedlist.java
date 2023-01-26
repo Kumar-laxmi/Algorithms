@@ -1,3 +1,5 @@
+Reversing a linked list using iterative approach
+
 class Reverselinkedlist
 
 {
@@ -41,11 +43,13 @@ class Reverselinkedlist
 
         
     while(c != null){
-            
+      
+         //stroring the next address of current node
       next=c.next;
-            
+      
+       //reversing the current node's pointer
       c.next=p;
-            
+      //moving the pointer on position ahead       
       p=c;
             
       c=next;
@@ -116,3 +120,4 @@ class Reverselinkedlist
 
 }
 
+Time Complexity of reversing a linked list is O(n) 
