@@ -18,7 +18,6 @@
 // Time Complexity :  O(V+E), where V = no. of nodes and E = no. of edges.
 // Space Complexity : O(2N)
 
-
 import java.util.*;
 
 class Solution{
@@ -31,7 +30,6 @@ class Solution{
                 indegree[it]++;
             }
         }
-
         Queue<Integer> q = new LinkedList<Integer>();
         ;
         for (int i = 0; i < V; i++) {
@@ -39,7 +37,6 @@ class Solution{
                 q.add(i);
             }
         }
-
         int topo[] = new int[V];
         int i = 0;
         while (!q.isEmpty()) {
@@ -56,7 +53,6 @@ class Solution{
                 }
             }
         }
-
         return topo;
     }
 }

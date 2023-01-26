@@ -32,7 +32,6 @@ vector<int> topoSort(int V, vector<int> adj[])
             indegree[it]++;
         }
     }
-
     queue<int> q;
     for (int i = 0; i < V; i++)
     {
@@ -57,13 +56,11 @@ vector<int> topoSort(int V, vector<int> adj[])
                 q.push(it);
         }
     }
-
     return topo;
 }
 
 int main()
 {
-
     // Here we are taking an example of 6 vertices..
     // You can modify it as you wish
     // V = 6;
@@ -71,7 +68,6 @@ int main()
     vector<int> adj[6] = {{}, {}, {3}, {1}, {0, 1}, {0, 2}};
     int V = 6;
     vector<int> ans = topoSort(V, adj);
-
     for (auto node : ans)
     {
         cout << node << " ";
