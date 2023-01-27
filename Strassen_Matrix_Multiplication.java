@@ -40,7 +40,7 @@ public class Strassen_Matrix_Multiplication {
 
             int[][] M1 = multiply(add(a11, a22), add(b11, b22));
 
-            // M2 = ( a2 + a4)x(b3+b4)
+            // M2 = ( a2 + a4)x(b3 + b4 )
             int[][] M2 = multiply(add(a21, a22), b11);
 
             // M3 = (a1-a4)x(b1+a4)
