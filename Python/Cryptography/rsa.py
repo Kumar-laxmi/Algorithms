@@ -66,7 +66,9 @@ def generate_keypair(p, q):
     elif p == q:
         raise ValueError('p and q cannot be equal')
 
-    #calculating phi using euler totient function
+    """calculating phi using euler totient function. We calculate 'n' which is the product of the primes 'p' and 'q'.
+     Then we find 'e' sych that the GCD of e and phi is 1. phi denotes the number of integers below 'n' which are coprime to 'n'.
+     For 'd', 'd' is the modular inverse of 'e' and phi"""
     n = p * q
     phi = (p-1) * (q-1)
     # "e" is the public key
@@ -80,13 +82,14 @@ def generate_keypair(p, q):
     d = mod_inv(e, phi)
     return ((e, n), (d, n))
 
-#code for encryption
+"""code for encryption. We encrypt the plaintext using the public key. We take the number representing the unicode of specified characters in the plaintext. 
+Then We use the formula [cipher = {(message)^(public key)} % n] to calculate the cipher text."""
 def encrypt(pk, plaintext):
     key, n = pk
     cipher = [(ord(char) ** key) % n for char in plaintext]
     return cipher
 
-#code for decryption
+"""code for decryption. Once ciher text is generated, We decrypt it using the private key. We use the formula [plaintext = {(ciphertext)^(private key)} % n]"""
 def decrypt(pk, ciphertext):
     key, n = pk
     plain = [chr((char ** key) % n) for char in ciphertext]
