@@ -94,9 +94,9 @@ int main()
 {
     char s[SIZE],pattern[SIZE];
     printf("Enter the string:");
-    scanf("%s",s); 
+    scanf("%50s",s); 
     printf("Enter the pattern:");
-   scanf("%s",pattern);
+   scanf("%50s",pattern);
     find(s,pattern);
     return 0;
 }
