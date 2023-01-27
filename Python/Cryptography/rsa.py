@@ -89,7 +89,8 @@ def encrypt(pk, plaintext):
     cipher = [(ord(char) ** key) % n for char in plaintext]
     return cipher
 
-"""code for decryption. Once ciher text is generated, We decrypt it using the private key. We use the formula [plaintext = {(ciphertext)^(private key)} % n]"""
+"""code for decryption. Once ciher text is generated, We decrypt it using the private key. We use the formula [plaintext = {(ciphertext)^(private key)} % n]. 
+After that the unicodeis converted back to the plaintext."""
 def decrypt(pk, ciphertext):
     key, n = pk
     plain = [chr((char ** key) % n) for char in ciphertext]
