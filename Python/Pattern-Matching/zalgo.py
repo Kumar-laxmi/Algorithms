@@ -78,7 +78,7 @@ def index(s, pattern):
  
 # Driver Code
 if __name__ == "__main__":
-    s = input("Enter the string:");
+    s = input("Enter the string:")
     pattern=input("Enter the pattern:")
     
     index(s, pattern)
