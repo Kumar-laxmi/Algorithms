@@ -28,20 +28,22 @@ Decryption: The ciphertext is decrypted by raising it to the power of d modulo n
 import random
 import math
 
-#Checking if two numbers are co prime using greatest common divisor
+"""Checking if two numbers are co prime using euclid's division theorem. 
+We calculate the remainder successively and update the values of a and b"""
 def gcd(a, b):
     while b != 0:
         a, b = b, a % b
     return a
 
-#Finding the modular inverse "x" of a number "a"
+"""Finding the modular inverse 'x' of a number 'a'. We find a number 'x' such that a times x is congruent to 1 modulo m"""
 def mod_inv(a, m):
     for x in range(1, m):
         if (a * x) % m == 1:
             return x
     return None
 
-#Checking if a number is Prime
+"""Checking if a number is Prime using the Sieve of Eratosthenes method. We take a number 'n' and divide it with every 
+prime number smaller than orequal to square root of n. if any prime divides it, its not a prime. Otherwise it is a prime"""
 def is_prime(n):
     flag = 0
     if(n > 1):
@@ -56,7 +58,8 @@ def is_prime(n):
     else:
 	    return False
 
-#generating public key and private key pair
+"""generating public key and private key pair. We take two numbers and check if thy both are different prime numbers.
+If they are both primes"""
 def generate_keypair(p, q):
     if not (is_prime(p) and is_prime(q)):
         raise ValueError('Both numbers must be prime.')
