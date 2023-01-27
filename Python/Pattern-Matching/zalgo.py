@@ -1,4 +1,4 @@
- """ =========================== Problem Statement ========================
+""" =========================== Problem Statement ========================
 
 The problem that the above code is solving is to find all occurrence of a pattern  in a string , which is common string searching problem using Z Algorithm
 
@@ -64,12 +64,12 @@ def index(s, pattern):
  
     # Create concatenated string "P#T"
     concat = pattern + "#" + s
-    l = len(concat)
+    k = len(concat)
    # Construct a array
-    a = [0] * l
+    a = [0] * k
     make_zarray(concat, a)
   # now looping through a array for matching condition
-    for i in range(l):
+    for i in range(k):
          # if a[i] (matched region) is equal to pattern
         # length we got the pattern
         if a[i] == len(pattern):
@@ -78,9 +78,7 @@ def index(s, pattern):
  
 # Driver Code
 if __name__ == "__main__":
-    s = input("Enter the string:");
+    s = input("Enter the string:")
     pattern=input("Enter the pattern:")
     
     index(s, pattern)
-
-
