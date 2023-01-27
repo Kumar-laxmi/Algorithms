@@ -21,27 +21,27 @@ The Z algorithm runs in  O(n) time. Characters are never compared at positions l
 def make_zarray(string, a):
     n = len(string)
  # Fills a array for given string
-    l, r, m = 0, 0, 0
+    L, r, m = 0, 0, 0
      # [L,R] make a window which matches
     # with prefix of s
-    #l=left and r=right
+    #L=left and r=right
     for i in range(1, n):
         if i > r:
          # if i>r nothing matches so we will calculate.
         # a[i] using naive way.
-            l, r = i, i
+            L, r = i, i
      
-            # r-l = 0 in starting, so it will start
+            # r-L = 0 in starting, so it will start
             # checking from 0'th index.
-            while r< n and string[r - l] == string[r]:
+            while r< n and string[r - L] == string[r]:
                 r += 1
-            a[i] = r - l
+            a[i] = r - L
             r -= 1
         else:
          # m = i-L so k corresponds to number which
             # matches in [l,r] interval.
             
-            m = i - l
+            m = i - L
  
             # if a[k] is less than remaining interval
             # then a[i] will be equal to a[k].
@@ -52,10 +52,10 @@ def make_zarray(string, a):
             else:
  
              # else start from r and check manually
-                l= i
-                while r< n and string[r - l] == string[r]:
+                L= i
+                while r< n and string[r - L] == string[r]:
                     r+= 1
-                a[i] = r - l
+                a[i] = r - L
                 r -= 1
     # prints all occurrences of pattern
 # in string using Z algo
@@ -78,7 +78,8 @@ def index(s, pattern):
  
 # Driver Code
 if __name__ == "__main__":
-    s = input("Enter the string:")
+    s = input("Enter the string:");
     pattern=input("Enter the pattern:")
     
     index(s, pattern)
+
