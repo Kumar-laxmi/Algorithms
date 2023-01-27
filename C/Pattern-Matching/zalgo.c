@@ -24,7 +24,7 @@ The Z algorithm runs in  O(n) time. Characters are never compared at positions l
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+#define SIZE 50
 void find(char s[],char pattern[]);
 void make_zarray(int a[],char s[])
 {
@@ -68,10 +68,10 @@ void make_zarray(int a[],char s[])
         }
     }
 }
-void find(char s[],char pattern[])
+void find(char *s,char *pattern)
 {
  // Create concatenated string "P#s with additional character"
-    char concat[100]="";
+    char concat[SIZE]="";
   char c2[]="#";
   strcat(concat,pattern);
   strcat(concat,c2);
@@ -92,12 +92,11 @@ void find(char s[],char pattern[])
 // Driver program
 int main()
 {
-    char s[100],pattern[100];
+    char s[SIZE],pattern[SIZE];
     printf("Enter the string:");
-    scanf("%s",s);
+    scanf("%s",s); 
     printf("Enter the pattern:");
-    scanf("%s",pattern);
+   scanf("%s",pattern);
     find(s,pattern);
     return 0;
 }
-
