@@ -52,7 +52,7 @@ def make_zarray(string, a):
             else:
  
              # else start from r and check manually
-                l= i
+                L= i
                 while r< n and string[r - L] == string[r]:
                     r+= 1
                 a[i] = r - L
@@ -62,7 +62,7 @@ def make_zarray(string, a):
 
 def index(s, pattern):
  
-    # Create concatenated string "P#T"
+    # Create concatenated string "P#s"
     concat = pattern + "#" + s
     k = len(concat)
    # Construct a array
@@ -78,7 +78,7 @@ def index(s, pattern):
  
 # Driver Code
 if __name__ == "__main__":
-    s = input("Enter the string:");
+    s = input("Enter the string:")
     pattern=input("Enter the pattern:")
     
     index(s, pattern)
