@@ -1,6 +1,20 @@
 import java.util.Scanner;
 
 public class Strassen_Matrix_Multiplication {
+
+
+
+    /* PROBLEM STATEMENT
+     Let A and B are two matrices then the resultant matrix C such that Matrix C = Matrix A * Matrix B 
+     */
+
+    /* APPROACH TAKEN
+     * Take three matrices to suppose A, B, C where C is the resultant matrix and A and B are Matrix which is to be multiplied using Strassen’s Method.
+     *  Divide A, B, C Matrix into four (n/2)×(n/2) matrices and take the first part of each as shown below
+     * Use the below formulas for solving part 1 of the matrix
+     * After Solving the first part, compute the second, third, and fourth, and as well as final output, a multiplied matrix is generated as a result as shown in the above image.
+     * Print the resultant matrix.
+     */
     public static int[][] multiply(int[][] A, int[][] B) {
         int n = A.length;
 
@@ -43,7 +57,7 @@ public class Strassen_Matrix_Multiplication {
             // M2 = ( a2 + a4)x(b3 + b4 )
             int[][] M2 = multiply(add(a21, a22), b11);
 
-            // M3 = (a1-a4)x( b1 + a4 )
+            // M3 = (a1- a4)x( b1 + a4 )
             int[][] M3 = multiply(a11, sub(b12, b22));
 
             // M4 = a1x(b2-b4)
@@ -126,23 +140,42 @@ public class Strassen_Matrix_Multiplication {
         System.out.println("*********Strassen Multiplication Algorithm*********");
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size of an matrix: ");
+        System.out.print("Enter the size of an matrix: ");
         int N = sc.nextInt();
 
-        int[][] A = { { 1, 2, 3, 4 },
-                      { 4, 3, 0, 1 },
-                      { 5, 6, 1, 1 },
-                      { 0, 2, 5, 6 } };
- 
-        
-        int[][] B = { { 1, 0, 5, 1 },
-                      { 1, 2, 0, 2 },
-                      { 0, 3, 2, 3 },
-                      { 1, 2, 1, 2 } };
+        int [][] A = new int[N][N];
+        System.out.println("Enter Matrix A: ");
+        for(int row = 0;row < N;row++){
+            for(int col=0;col<N;col++){
+                A[row][col] = sc.nextInt();
+            }
+        }
 
+        System.out.println("Matrix A ");
+        for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+                System.out.print(A[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("Enter Matrix B: ");
+        int [][] B = new int[N][N];
+        for(int row = 0;row < N;row++){
+            for(int col=0;col<N;col++){
+                B[row][col] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Matrix B");
+        for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+                System.out.print(B[i][j] + " ");
+            }
+            System.out.println();
+        }
         int[][] C = multiply(A, B);
 
-        System.out.println("\n Product of matrices A and B : ");
+        System.out.println("Product of matrices A and B : ");
 
         for(int i=0;i<N;i++){
             for(int j=0;j<N;j++){
