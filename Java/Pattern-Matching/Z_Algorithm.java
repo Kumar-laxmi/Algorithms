@@ -22,7 +22,7 @@ The Z algorithm runs in  O(n) time. Characters are never compared at positions l
 
 // =========================== CODE with Java ========================
 import java.util.*;
-class zalgo
+class Z_Algorithm
 {
  //  prints all occurrences of pattern in string s using Zalgorithm
     public static void index(String s,String pattern)
