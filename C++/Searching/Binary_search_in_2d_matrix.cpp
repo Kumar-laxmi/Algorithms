@@ -6,12 +6,12 @@ using namespace std;
 bool bSearch(vector<vector<int>> arr,int target){
     int r=arr.size();
     int c=arr[0].size();
-
+    //Initializing start and end index variables
     int s=0;
     int e=r*c -1;
     //Preventing integer overflow
     int mid=s+(e-s)/2;
-
+    //Loop for binary search
     while(s<=e){
         int element= arr[mid/c][mid%c];
 
@@ -22,7 +22,6 @@ bool bSearch(vector<vector<int>> arr,int target){
         else e=mid-1;
 
         mid=s+(e-s)/2;
-
     }
     return false;
 }
