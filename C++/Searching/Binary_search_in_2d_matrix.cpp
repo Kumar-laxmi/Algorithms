@@ -49,5 +49,3 @@ int main(){
     if(bSearch(arr,target)) cout<<"Element found !!"<<endl;
     else cout<<"Element not found !!"<<endl;
 }
-    
-
