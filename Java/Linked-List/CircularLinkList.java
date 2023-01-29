@@ -1,66 +1,61 @@
+import java.util.*;
 public class CircularLinkList
-{   
-    public class Node
-    {  
-        int data;  
-        Node next;  
-        public Node(int data) 
+{  
+        public static void main(String[] args) 
         {  
-            this.data = data;  
+            CircularLinkList Obj = new CircularLinkList();  //Object is created
+            Obj.add(11);  
+            Obj.add(22);  // Random input or insertion of four Numbers
+            Obj.add(33);  
+            Obj.add(44);  
+            Obj.print();  
         }  
-    }  
-  
-    public Node head = null;  
-    public Node tail = null;  
-  
-    public void add(int data)
-    {  
-        //Create new node  
-        Node newNode = new Node(data);  
+        public class Node
+        {  
+            int element;  
+            Node next;  
+            public Node(int element) 
+            {  
+                this.element = element;  //Current element is stored
+            }  
+        }  
           
-        if(head == null) 
+        public Node head = null;  
+        public Node tail = null;  
+          
+        public void add(int element)
         {  
-             //If list is empty, both head and tail would point to new node.  
-            head = newNode;  
-            tail = newNode;  
-            newNode.next = head;  
+            Node newEle = new Node(element);  
+            if(head == null) 
+            {  
+                head = newEle;  
+                tail = newEle;  
+                newEle.next = head;         //Address of first and last node is stored
+            }  
+            else 
+            {  
+                tail.next = newEle;  
+                tail = newEle;  
+                tail.next = head;  
+            }  
         }  
-        else 
-        {  
-             
-            tail.next = newNode;  
-            //New node will become new tail.  
-            tail = newNode;  
-            //Since, it is circular linked list tail will point to head.  
-            tail.next = head;  
+          
+        public void print() 
+        {  //print function
+            Node current = head;  
+            if(head == null) 
+            {  
+                System.out.println("List is empty");  
+            }  
+            else
+            {  
+                System.out.println("Nodes of the circular linked list: ");  
+                 do
+                 {  
+                    System.out.print(" "+ current.element);  
+                    current = current.next;  
+                    }while(current != head);  
+                System.out.println();  
+            }  
         }  
-    }  
-  
-    //Displays all the nodes in the list  
-    public void display() {  
-        Node current = head;  
-        if(head == null) {  
-            System.out.println("List is empty");  
-        }  
-        else {  
-            System.out.println("Nodes of the circular linked list: ");  
-             do{  
-                //Prints each node by incrementing pointer.  
-                System.out.print(" "+ current.data);  
-                current = current.next;  
-            }while(current != head);  
-            System.out.println();  
-        }  
-    }  
-  
-    public static void main(String[] args) {  
-        CircularLinkList cl = new CircularLinkList();  
-        //Adds data to the list  
-        cl.add(1);  
-        cl.add(2);  
-        cl.add(3);  
-        cl.add(4);  
-        //Displays all the nodes present in the list  
-        cl.display();  
-    }  
-}  
+    } 
