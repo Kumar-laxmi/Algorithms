@@ -1,34 +1,49 @@
-# Job Sequencing Problem (Greedy Algorithm)
+"""
+Job Sequencing Algorithm (Greedy Algorithm)
+    The greedy approach for job sequencing is a method for scheduling a set of jobs 
+    in a way that maximizes the total profit or minimizes the total completion time. 
+    The key idea behind this approach is to make locally optimal choices at each step 
+    with the hope of finding a globally optimal solution.
+    
+Input:
+  jobs: list of jobs, where each job is a tuple (id, deadline, profit)
+  schedule: a fixed schedule, represented as a list of time slots
+"""
 
 jobs = []
-num_of_jobs = int(input("Enter the number of jobs: "))
+number_of_jobs = int(input("Enter the number of jobs: "))
+schedule = []
 
-for i in range(num_of_jobs):
+for i in range(number_of_jobs):
+    default_schedule = int(0)
     job_id = int(input("Enter job id: "))
     job_deadline = int(input("Enter job deadline: "))
     job_profit = int(input("Enter job profit: "))
     jobs.append((job_id, job_deadline, job_profit))
+    schedule.append(default_schedule)
 
-# Sort jobs in descending order of profit
-jobs = sorted(jobs, key=lambda x: x[2], reverse=True)
+def job_sequencing(jobs, schedule):
+    """Here we are sorting the jobs in the decreasing order of their profit"""
+    jobs.sort(key=lambda x: x[2], reverse=True)
+    
+    """ Here we are initializing the empty schedule array with job schedule"""
+    job_schedule = [0] * len(schedule)
+    
+    """ Iteration for each job"""
+    for job in jobs:
+        id, deadline, profit = job
+        
+        """Iteration for schedule array in the reverse order"""
+        for i in range(deadline-1, -1, -1):
+            if job_schedule[i] == 0:
+                job_schedule[i] = id
+                break
+    
+    """ We will now calculate the total maximum profit that can be obtained"""
+    total_profit = sum([job[2] for i, job in enumerate(jobs) if job[0] in job_schedule])
+    
+    return job_schedule, total_profit
 
-# Initialize an array to keep track of the deadline of each job
-job_slots = [False] * num_of_jobs
-
-# Initialize a variable to keep track of the total profit
-total_profit = 0
-
-# Iterate through each job
-for job in jobs:
-    for i in range(min(job[1]-1, num_of_jobs-1), -1, -1):
-        if not job_slots[i]:
-            job_slots[i] = True
-            total_profit += job[2]
-            break
-
-print("Optimal Sequence of Jobs:")
-for i in range(num_of_jobs):
-    if job_slots[i]:
-        print(jobs[i][0])
-
-print("Maximum Profit: ", total_profit)
+job_schedule, total_profit = job_sequencing(jobs, schedule)
+print("Job Schedule:", job_schedule)
+print("Total Profit:", total_profit)
