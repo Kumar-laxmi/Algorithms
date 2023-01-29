@@ -123,7 +123,6 @@ string InfixToPostfix(string exp){
 
 
 string InfixToPrefix(string exp){
-
     reverse(exp.begin(), exp.end());
 
     for(int i=0; i<exp.length(); i++){
@@ -146,20 +145,14 @@ string PrefixToPostfix(string exp){
             stack<string> st;
  
     // reading from right to left
-    for (int i = exp.size() - 1; i >= 0; i--)
-    {
-        
-        if (checkOperator(exp[i]))
-        {  
+    for (int i = exp.size() - 1; i >= 0; i--){
+        if (checkOperator(exp[i])){
             string op1 = st.top();
             st.pop();
             string op2 = st.top();
             st.pop();
- 
-           
-            string temp = op1 + op2 + exp[i];
- 
-            
+
+            string temp = op1 + op2 + exp[i];            
             st.push(temp);
         }
         else {  
@@ -173,11 +166,8 @@ string PrefixToInfix(string exp){
        stack<string> st;
  
     // reading from right to left
-    for (int i = exp.size() - 1; i >= 0; i--)
-    { 
-        if (checkOperator(exp[i]))
-        {
-            
+    for (int i = exp.size() - 1; i >= 0; i--){
+        if (checkOperator(exp[i])){
             string op1 = st.top();
             st.pop();
             string op2 = st.top();
@@ -187,8 +177,7 @@ string PrefixToInfix(string exp){
             string temp = "(" + op1  + exp[i] + op2 + ")"; 
             st.push(temp);
         }
-        else {
-            
+        else {   
             string temp;
             temp+=exp[i];
             st.push(temp);
@@ -227,10 +216,8 @@ string PostfixToInfix(string exp)
 {
     stack<string> st;
  
-    for (int i=0; i<exp.size(); i++)
-    {
-        if (checkOperator(exp[i]))
-        {
+    for (int i=0; i<exp.size(); i++){
+        if (checkOperator(exp[i])){
           string op2 = st.top();
             st.pop();
             string op1 = st.top();
@@ -238,8 +225,7 @@ string PostfixToInfix(string exp)
             string temp = "(" + op1 + exp[i] + op2 + ")" ;
             st.push(temp);
         }
-        else
-        {
+        else{
             string temp;
             temp+=exp[i];
             st.push(temp);
