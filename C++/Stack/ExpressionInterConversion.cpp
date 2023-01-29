@@ -150,8 +150,7 @@ string PrefixToPostfix(string exp){
     {
         
         if (checkOperator(exp[i]))
-        {
-            
+        {  
             string op1 = st.top();
             st.pop();
             string op2 = st.top();
@@ -163,19 +162,11 @@ string PrefixToPostfix(string exp){
             
             st.push(temp);
         }
- 
-        
-        else {
- 
-           
-            st.push(string(1, exp[i]));
+        else {  
+           st.push(string(1, exp[i]));
         }
     }
- 
-    
     return st.top();
-
-
 }
 
 string PrefixToInfix(string exp){
@@ -183,8 +174,7 @@ string PrefixToInfix(string exp){
  
     // reading from right to left
     for (int i = exp.size() - 1; i >= 0; i--)
-    {
-        
+    { 
         if (checkOperator(exp[i]))
         {
             
@@ -194,13 +184,9 @@ string PrefixToInfix(string exp){
             st.pop();
  
            
-            string temp = "(" + op1  + exp[i] + op2 + ")";
- 
-            
+            string temp = "(" + op1  + exp[i] + op2 + ")"; 
             st.push(temp);
         }
- 
-        
         else {
             
             string temp;
@@ -211,7 +197,6 @@ string PrefixToInfix(string exp){
     string res = st.top();
     string infix = res.substr(1, res.length()-2);
     return infix;
-
 }
 
 string PostfixToPrefix(string exp)
@@ -220,8 +205,6 @@ string PostfixToPrefix(string exp)
  
     // reading from right to left
     for (int i = 0; i <exp.size(); i++) {
- 
-        
         if (checkOperator(exp[i])) {
             string op2 = st.top();
             st.pop();
