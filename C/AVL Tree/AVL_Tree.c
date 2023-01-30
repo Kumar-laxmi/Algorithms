@@ -7,6 +7,7 @@ struct Node {
   int data, height;
   struct Node * left, * right;
 };
+// function to get maximum of two integers
 int max(int num1, int num2) {
   return (num1 > num2) ? num1 : num2;
 }
@@ -21,7 +22,7 @@ struct Node * newNode(int ele) {
   new -> data = ele;
   new -> left = new -> right = NULL;
   new -> height = 1;
-  return new;
+  return (new);
 }
 
 struct Node * rightRotate(struct Node * n) {
@@ -49,6 +50,9 @@ struct Node * leftRotate(struct Node * n) {
 }
 
 int balFact(struct Node * n) {
+  if(n==NULL){
+    return 0;
+  }
   return height(n -> left) - height(n -> right);
 }
 
@@ -76,6 +80,8 @@ struct Node * insert(struct Node * n, int ele) {
     n -> right = rightRotate(n -> right);
     return leftRotate(n);
   }
+
+  return n;
 }
 
 struct Node * minValueNode(struct Node * n) {
@@ -156,13 +162,13 @@ int main() {
     switch (ch) {
     case 1:
       // insertion
-      printf("\nEnter the element f|| insertion : ");
+      printf("\nEnter the element for insertion : ");
       scanf("%d", & ele);
       root = insert(root, ele);
       break;
     case 2:
       // deletion
-      printf("\nEnter element f|| deletion : ");
+      printf("\nEnter element for deletion : ");
       scanf("%d", & ele);
       root = deleteNode(root, ele);
       break;
