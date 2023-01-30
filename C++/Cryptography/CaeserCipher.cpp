@@ -18,7 +18,7 @@ Steps
 #include<iostream> // input-output statements
 #include<map> // for alphabetic codes
 #include<vector> // for vector
-#include<algorithm> // for find() : find element in vector
+#include<algorithm> // for find() : find element in vector, transform() : convert to lowercase
 using namespace std;
 
 int main() {
