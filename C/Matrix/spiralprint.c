@@ -3,10 +3,11 @@
 
 // Spiral traversal of matrices / 2D arrays
 
-// The algorithm starts from the top left corner of the array, and traverses the first row from left to right. Once it traverses the whole row it does not need to revisit it, thus, it increments the top corner index.
-// Once complete, it traverses the rightmost column top to bottom. Again, once this completes, there is no need to revisit the rightmost column, thus, it decrements the right corner index.
-// Next, the algorithm traverses the bottommost row and decrements the bottom corner index afterward.
-// Lastly, the algorithm traverses the leftmost column, incrementing the left corner index once it’s done.
+// The algorithm starts from the top left corner of the array, and traverses the first row from left to right.
+// Once complete, it traverses the rightmost column top to bottom.
+// Next, the algorithm traverses the bottommost row.
+// Lastly, the algorithm traverses the leftmost column.
+// Now the algorithm continues again for inner elements which are left in similar manner
 
 void spiralPrint(int **matrix,int m,int n) {
     int i=0,j=0,num=1;
