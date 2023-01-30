@@ -43,102 +43,102 @@ Cache: | 30 | 50 | 40 | 10 |
 import java.util.HashSet;
 import java.util.Scanner;
 
-// A Doubly Linked List Node
-class Node {
-    int pageNo;
-    Node prev;
-    Node next;
-
-    Node(int pageNo) {
-        this.pageNo = pageNo;
-    }
-}
-
-// Creating LRU cache with appropriate methods
-class LRUCache {
-    private int frameSize; // Size of the Cache
-    private int pages; // To keep track of number of pages present in LRU cache
-    private HashSet<Integer> set; // To check if LRU cache contains the page number
-    private Node head; // Head for the Linked list
-    private Node tail; // Tail for the Linked list
-
-    LRUCache(int frameSize) {
-        this.frameSize = frameSize;
-        set = new HashSet<>();
-        head = new Node(0);
-        tail = new Node(0);
-        head.next = tail;
-        tail.prev = head;
-        head.prev = null;
-        tail.next = null;
-    }
-
-    // Method for adding a page number to the cache
-    public void addPage(int pageNo) {
-        if (set.contains(pageNo)) {
-            // Page Hit condition -> the page number is already present in the cache
-            System.out.println(pageNo + " -> Page Hit");
-            Node curr = head.next;
-            Node start = curr;
-            while (curr != tail) {
-                if (curr.pageNo == pageNo) {
-                    // Remove the page from the cache from its initial position and add it to
-                    // the staring of the list
-                    start = curr;
-                    curr.prev.next = curr.next;
-                    curr.next.prev = curr.prev;
-                    Node nextCurr = curr.next;
-                    curr.next = null;
-                    curr.prev = null;
-                    curr = nextCurr;
-                } else
-                    curr = curr.next;
-            }
-            start.next = head.next;
-            start.prev = head;
-            head.next = start;
-            start.next.prev = start;
-        } else {
-            // Page Miss condition -> the page number is not present in the cache
-            System.out.println(pageNo + " -> Page Miss");
-            set.add(pageNo);
-            // Add the new page number to the head of the List
-            Node pg = new Node(pageNo);
-            pg.next = head.next;
-            pg.prev = head;
-            head.next = pg;
-            pg.next.prev = pg;
-            if (pages == frameSize) {
-                // If there is no frames left for the new frame then remove the least recently
-                // used page(last page from the list)
-                Node rem = tail.prev;
-                rem.prev.next = tail;
-                tail.prev = rem.prev;
-                rem.next = null;
-                rem.prev = null;
-                set.remove(rem.pageNo);
-            } else
-                // If there are frames left then increase the number of pages in the cache
-                pages++;
-        }
-    }
-
-    public void displayCache() {
-        Node curr = head.next;
-        if (pages == 0) {
-            System.out.println("Empty cache");
-            return;
-        }
-        System.out.print("\tLRU Cache: | ");
-        while (curr != tail) {
-            System.out.print(curr.pageNo + " | ");
-            curr = curr.next;
-        }
-        System.out.println("\n");
-    }
-}
-
 public class LRUCacheDesign {
+
+    // A Doubly Linked List Node
+    private static class Node {
+        int pageNo;
+        Node prev;
+        Node next;
+
+        Node(int pageNo) {
+            this.pageNo = pageNo;
+        }
+    }
+
+    // Creating LRU cache with appropriate methods
+    private static class LRUCache {
+        private int frameSize; // Size of the Cache
+        private int pages; // To keep track of number of pages present in LRU cache
+        private HashSet<Integer> set; // To check if LRU cache contains the page number
+        private Node head; // Head for the Linked list
+        private Node tail; // Tail for the Linked list
+
+        LRUCache(int frameSize) {
+            this.frameSize = frameSize;
+            set = new HashSet<>();
+            head = new Node(0);
+            tail = new Node(0);
+            head.next = tail;
+            tail.prev = head;
+            head.prev = null;
+            tail.next = null;
+        }
+
+        // Method for adding a page number to the cache
+        public void addPage(int pageNo) {
+            if (set.contains(pageNo)) {
+                // Page Hit condition -> the page number is already present in the cache
+                System.out.println(pageNo + " -> Page Hit");
+                Node curr = head.next;
+                Node start = curr;
+                while (curr != tail) {
+                    if (curr.pageNo == pageNo) {
+                        // Remove the page from the cache from its initial position and add it to
+                        // the staring of the list
+                        start = curr;
+                        curr.prev.next = curr.next;
+                        curr.next.prev = curr.prev;
+                        Node nextCurr = curr.next;
+                        curr.next = null;
+                        curr.prev = null;
+                        curr = nextCurr;
+                    } else
+                        curr = curr.next;
+                }
+                start.next = head.next;
+                start.prev = head;
+                head.next = start;
+                start.next.prev = start;
+            } else {
+                // Page Miss condition -> the page number is not present in the cache
+                System.out.println(pageNo + " -> Page Miss");
+                set.add(pageNo);
+                // Add the new page number to the head of the List
+                Node pg = new Node(pageNo);
+                pg.next = head.next;
+                pg.prev = head;
+                head.next = pg;
+                pg.next.prev = pg;
+                if (pages == frameSize) {
+                    // If there is no frames left for the new frame then remove the least recently
+                    // used page(last page from the list)
+                    Node rem = tail.prev;
+                    rem.prev.next = tail;
+                    tail.prev = rem.prev;
+                    rem.next = null;
+                    rem.prev = null;
+                    set.remove(rem.pageNo);
+                } else
+                    // If there are frames left then increase the number of pages in the cache
+                    pages++;
+            }
+        }
+
+        public void displayCache() {
+            Node curr = head.next;
+            if (pages == 0) {
+                System.out.println("Empty cache");
+                return;
+            }
+            System.out.print("\tLRU Cache: | ");
+            while (curr != tail) {
+                System.out.print(curr.pageNo + " | ");
+                curr = curr.next;
+            }
+            System.out.println("\n");
+        }
+    }
 
     static int pageNo;
 
