@@ -29,7 +29,7 @@ bool bSearch(vector<vector<int>> arr,int target){
 
         if(target==element) return true;//If found return true
 
-        else if(target > element) s=mid+1;//Target is in the loew half of the matrix so starting index updates.
+        else if(target > element) s=mid+1;//Target is in the lower half of the matrix so starting index updates.
 
         else e=mid-1; // Target is in the upper half of the matrix so ending index updates.
 
