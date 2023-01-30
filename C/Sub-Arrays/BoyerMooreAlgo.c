@@ -1,5 +1,7 @@
 /*
-
+    Boyer Moore Voting Algorithm is a majority element problem where majority element is that element 
+    which occurs in total of n/2 times in the set of elements where n is the total number of elements 
+    given.
 */
 #include<stdio.h>
 int main(){
