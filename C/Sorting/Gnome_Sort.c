@@ -41,3 +41,14 @@ int main() {
     printf("\nTotal time taken(in seconds): %f\n ",total_t);
 	return 0;
 }
+
+/* Expected output
+Enter the number of elements : 5
+Enter the elements : 1 3 2 4 6
+
+The sorted array elements are : 1 2 3 4 6
+Start time : 702
+End time : 704
+Number of clock ticks elapsed : 2
+
+Total time taken(in seconds): 0.000002
