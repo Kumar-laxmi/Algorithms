@@ -12,7 +12,7 @@
 
 
 def binarySearch(arr,target,r,c):
-    s=0;
+    s=0
     e=r*c -1
     # Preventing integer overflow
     mid=s+(e-s)/2
