@@ -1,3 +1,8 @@
+/*Implementation of gnome sort in C 
+Best case : O(n)
+Average case : O(n^2)
+Worst case : O(n^2)
+*/
 #include  <stdio.h>  
 #include <stdlib.h>
 #include <time.h>
@@ -52,3 +57,4 @@ End time : 704
 Number of clock ticks elapsed : 2
 
 Total time taken(in seconds): 0.000002
+*/
