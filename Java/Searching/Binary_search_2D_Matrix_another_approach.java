@@ -11,7 +11,7 @@
         Space Complexity : O(1).
 */
 import java.util.*;
-class Binary_search_2D_Matrix
+class Binary_search_2D_Matrix_another_approach
 {
     boolean searchBinary(int[][] arr,int target){
         int row=arr.length;
@@ -36,7 +36,7 @@ class Binary_search_2D_Matrix
         return false;
     }
     public static void main(String[] args) {
-        Binary_search_2D_Matrix obj = new Binary_search_2D_Matrix();
+        Binary_search_2D_Matrix_another_approach obj = new Binary_search_2D_Matrix_another_approach();
         Scanner sc= new Scanner(System.in);
         //Dimension input from the user
         System.out.println("Enter the dimensions of the matrix: ");

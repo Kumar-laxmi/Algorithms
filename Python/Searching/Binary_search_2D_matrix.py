@@ -13,20 +13,20 @@
 
 def binarySearch(arr,target,r,c):
     s=0;
-    e=r*c -1;
+    e=r*c -1
     # Preventing integer overflow
-    mid=s+(e-s)/2;
+    mid=s+(e-s)/2
 
     while(s<=e):
-        e=arr[int(mid/c)][int(mid%c)];#[mid/c][mid%c] will give the middle index of the virtual 1D array 
+        e=arr[int(mid/c)][int(mid%c)]#[mid/c][mid%c] will give the middle index of the virtual 1D array 
 
         if(target==e):
             print("Element found")
             return
         elif(target>e): #Target is in the lower half of the matrix so starting index updates.
-            s=mid+1;
+            s=mid+1
         else:#Target is in the upper half of the matrix so ending index updates.
-            e=mid-1;
+            e=mid-1
     
     print("Element not found")
     return
