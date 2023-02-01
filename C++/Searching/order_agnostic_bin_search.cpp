@@ -6,6 +6,9 @@ using namespace std;
 // to check whether array is in increasing or decreasing order is by checking
 // 1st and last elements.
 
+// Time complexity is O(logn)
+// Space complexity is O(n)
+
 int orderAgnosticBinarySearch(vector<int> &A,int size,int element) {
     int l=0,mid,r=size-1;
     
@@ -15,7 +18,7 @@ int orderAgnosticBinarySearch(vector<int> &A,int size,int element) {
             mid = (l+r)/2;
             if (A[mid] > element) r = mid-1;
             else if (A[mid] < element) l = mid+1;
-            else return mid;
+            else return mid; // returning index of element if found
         }
         return -1;
     }
@@ -25,9 +28,9 @@ int orderAgnosticBinarySearch(vector<int> &A,int size,int element) {
         mid = (l+r)/2;
         if (A[mid] > element) l = mid+1;
         else if (A[mid] < element) r = mid-1;
-        else return mid;
+        else return mid; // returning index of element if found
     }
-    return -1;
+    return -1; // returning -1 if element not found
 }
 
 int main() {
