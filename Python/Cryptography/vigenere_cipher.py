@@ -14,6 +14,21 @@ Output:
  Cipher text: if you choose to encrypt then the output is a cipher text.
  plain text: if you gave the cipher text as input and the correct key then it gives back the correct plaintext/message
  wrong message: if you mistake the key or plain text then it gives some gibberish.
+
+Algorithm:
+
+1 The plaintext message and the keyword are both converted to uppercase.
+
+2 The alphabet is defined, usually as the 26 letters of the English alphabet in uppercase.
+
+3 For each letter in the plaintext message, the corresponding letter in the keyword is found.   
+ 
+4 The index of the plaintext letter in the alphabet is added to the index of the keyword letter 
+ in the alphabet (modulo 26) to get the index of the encrypted letter in the alphabet.
+ 
+5 The encrypted letter is the letter at the calculated index in the alphabet.
+ 
+6 This process is repeated for each letter in the plaintext message.
 """
 
 """Function to encrypt and decrypt"""
