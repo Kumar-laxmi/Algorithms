@@ -1,3 +1,12 @@
+"""
+Vigenère cipher uses a keyword to encrypt a message by replacing each letter of the message with a 
+letter that is shifted a certain number of places down the alphabet based on the corresponding letter 
+of the keyword. The same keyword is used for each letter of the message but shifted to a different 
+position for each letter of the message. This makes the Vigenère cipher much more secure than simple 
+substitution ciphers, such as the Caesar cipher.
+"""
+
+
 def vigenere_cipher(plaintext, key, encrypt=True):
     key = key.upper()
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
