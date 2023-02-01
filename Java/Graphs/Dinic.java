@@ -1,147 +1,102 @@
 
 import java.util.*;
 
-// An edge connects v1 to v2 with a capacity of cap, flow of flow.
-class Edge {
-	int v1, v2, cap, flow;
-	Edge rev;
-	Edge(int V1, int V2, int Cap, int Flow) {
-		v1 = V1;
-		v2 = V2;
-		cap = Cap;
-		flow = Flow;
-	}
-}
-
 public class Dinic {
 
-	// Queue for the top level BFS.
-	public ArrayDeque<Integer> q;
+  static class Edge {
+    int t, rev, cap, f;
 
-	// Stores the graph.
-	public ArrayList<Edge>[] adj;
-	public int n;
+    public Edge(int t, int rev, int cap) {
+      this.t = t;
+      this.rev = rev;
+      this.cap = cap;
+    }
+  }
 
-	// s = source, t = sink
-	public int s;
-	public int t;
+  public static List<Edge>[] createGraph(int nodes) {
+    List<Edge>[] graph = new List[nodes];
+    for (int i = 0; i < nodes; i++)
+      graph[i] = new ArrayList<>();
+    return graph;
+  }
 
+  public static void addEdge(List<Edge>[] graph, int s, int t, int cap) {
+    graph[s].add(new Edge(t, graph[t].size(), cap));
+    graph[t].add(new Edge(s, graph[s].size() - 1, 0));
+  }
 
-	// For BFS.
-	public boolean[] blocked;
-	public int[] dist;
+  static boolean dinicBfs(List<Edge>[] graph, int src, int dest, int[] dist) {
+    Arrays.fill(dist, -1);
+    dist[src] = 0;
+    int[] Q = new int[graph.length];
+    int sizeQ = 0;
+    Q[sizeQ++] = src;
+    for (int i = 0; i < sizeQ; i++) {
+      int u = Q[i];
+      for (Edge e : graph[u]) {
+        if (dist[e.t] < 0 && e.f < e.cap) {
+          dist[e.t] = dist[u] + 1;
+          Q[sizeQ++] = e.t;
+        }
+      }
+    }
+    return dist[dest] >= 0;
+  }
 
-	final public static int oo = (int)1E9;
+  static int dinicDfs(List<Edge>[] graph, int[] ptr, int[] dist, int dest, int u, int f) {
+    if (u == dest)
+      return f;
+    for (; ptr[u] < graph[u].size(); ++ptr[u]) {
+      Edge e = graph[u].get(ptr[u]);
+      if (dist[e.t] == dist[u] + 1 && e.f < e.cap) {
+        int df = dinicDfs(graph, ptr, dist, dest, e.t, Math.min(f, e.cap - e.f));
+        if (df > 0) {
+          e.f += df;
+          graph[e.t].get(e.rev).f -= df;
+          return df;
+        }
+      }
+    }
+    return 0;
+  }
 
-	// Constructor.
-	public Dinic (int N) {
+  public static int maxFlow(List<Edge>[] graph, int src, int dest) {
+    int flow = 0;
+    int[] dist = new int[graph.length];
+    while (dinicBfs(graph, src, dest, dist)) {
+      int[] ptr = new int[graph.length];
+      while (true) {
+        int df = dinicDfs(graph, ptr, dist, dest, src, Integer.MAX_VALUE);
+        if (df == 0)
+          break;
+        flow += df;
+      }
+    }
+    return flow;
+  }
 
-		// s is the source, t is the sink, add these as last two nodes.
-		n = N; s = n++; t = n++;
-
-		// Everything else is empty.
-		blocked = new boolean[n];
-		dist = new int[n];
-		q = new ArrayDeque<Integer>();
-		adj = new ArrayList[n];
-		for(int i = 0; i < n; ++i)
-			adj[i] = new ArrayList<Edge>();
+  // Usage example
+  public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+	System.out.println("Enter the number of nodes in the graph : ");
+	int node = input.nextInt();
+    List<Edge>[] graph = createGraph(node);
+	
+	System.out.println("Enter the number of edges in the graph : ");
+	int edges = input.nextInt();
+	
+	System.out.println("Enter the input for each edge in the form u , v, C where u = starting node , v = end node and C = capacity ");
+	int u , v, c;
+	for(int i =0 ; i < edges ; i ++){
+		u = input.nextInt();
+		v = input.nextInt();
+		c = input.nextInt();
+		
+		addEdge(graph, u,v,c);
 	}
-
-	// Just adds an edge and ALSO adds it going backwards.
-	public void add(int v1, int v2, int cap, int flow) {
-		Edge e = new Edge(v1, v2, cap, flow);
-		Edge rev = new Edge(v2, v1, 0, 0);
-		adj[v1].add(rev.rev = e);
-		adj[v2].add(e.rev = rev);
-	}
-
-	// Runs other level BFS.
-	public boolean bfs() {
-
-		// Set up BFS
-		q.clear();
-		Arrays.fill(dist, -1);
-		dist[t] = 0;
-		q.add(t);
-
-		// Go backwards from sink looking for source.
-		// We just care to mark distances left to the sink.
-		while(!q.isEmpty()) {
-			int node = q.poll();
-			if(node == s)
-				return true;
-			for(Edge e : adj[node]) {
-				if(e.rev.cap > e.rev.flow && dist[e.v2] == -1) {
-					dist[e.v2] = dist[node] + 1;
-					q.add(e.v2);
-				}
-			}
-		}
-
-		// Augmenting paths exist iff we made it back to the source.
-		return dist[s] != -1;
-	}
-
-	// Runs inner DFS in Dinic's, from node pos with a flow of min.
-	public int dfs(int pos, int min) {
-
-		// Made it to the sink, we're good, return this as our max flow for the augmenting path.
-		if(pos == t)
-			return min;
-		int flow = 0;
-
-		// Try each edge from here.
-		for(Edge e : adj[pos]) {
-			int cur = 0;
-
-			// If our destination isn't blocked and it's 1 closer to the sink and there's flow, we
-			// can go this way.
-			if(!blocked[e.v2] && dist[e.v2] == dist[pos]-1 && e.cap - e.flow > 0) {
-
-				// Recursively run dfs from here - limiting flow based on current and what's left on this edge.
-				cur = dfs(e.v2, Math.min(min-flow, e.cap - e.flow));
-
-				// Add the flow through this edge and subtract it from the reverse flow.
-				e.flow += cur;
-				e.rev.flow = -e.flow;
-
-				// Add to the total flow.
-				flow += cur;
-			}
-
-			// No more can go through, we're good.
-			if(flow == min)
-				return flow;
-		}
-
-		// mark if this node is now blocked.
-		blocked[pos] = flow != min;
-
-		// This is the flow
-		return flow;
-	}
-
-	public int flow() {
-		clear();
-		int ret = 0;
-
-		// Run a top level BFS.
-		while(bfs()) {
-
-			// Reset this.
-			Arrays.fill(blocked, false);
-
-			// Run multiple DFS's until there is no flow left to push through.
-			ret += dfs(s, oo);
-		}
-		return ret;
-	}
-
-	// Just resets flow through all edges to be 0.
-	public void clear() {
-		for(ArrayList<Edge> edges : adj)
-			for(Edge e : edges)
-				e.flow = 0;
-	}
+   
+    System.out.println("Maximum flow is : " , maxFlow(graph, 0, node-1));
+  }
 }
+
+

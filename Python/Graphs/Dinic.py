@@ -122,16 +122,32 @@ class Graph:
 		return total
 
 
-g = Graph(6)
-g.addEdge(0, 1, 16)
-g.addEdge(0, 2, 13)
-g.addEdge(1, 2, 10)
-g.addEdge(1, 3, 12)
-g.addEdge(2, 1, 4)
-g.addEdge(2, 4, 14)
-g.addEdge(3, 2, 9)
-g.addEdge(3, 5, 20)
-g.addEdge(4, 3, 7)
-g.addEdge(4, 5, 4)
-print("Maximum flow", g.DinicMaxflow(0, 5))
+print("Enter the number of nodes in the graph : ")
+n = int(input())
 
+
+g = Graph(n)
+
+print("Enter the number of edges in the graph : ")
+m =int(input())
+
+print("Enter the input for each edge in the form u , v, C where u = starting node , v = end node and C = capacity : ")
+for i in range (0,m) :
+	u = int(input())
+	v = int(input())
+	c = int(input())
+	g.addEdge(u,v,c)
+
+
+
+# g.addEdge(0, 1, 16)
+# g.addEdge(0, 2, 13)
+# g.addEdge(1, 2, 10)
+# g.addEdge(1, 3, 12)
+# g.addEdge(2, 1, 4)
+# g.addEdge(2, 4, 14)
+# g.addEdge(3, 2, 9)
+# g.addEdge(3, 5, 20)
+# g.addEdge(4, 3, 7)
+# g.addEdge(4, 5, 4)
+print("Maximum flow : ", g.DinicMaxflow(0, n-1))
