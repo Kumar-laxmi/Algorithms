@@ -95,14 +95,16 @@
 | 58.  | Rain Water Problem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Stack/Rain_Water.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Stack/Rain_Water.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Stack/Rain_Water.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Stack/Rain_Water.py) | Stacks |
 | 59.  | Beautiful String Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/String/Beautiful_string.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/String/Beautiful_string.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/String/Beautiful_Sorting.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/String/Beautiful_string.py) | Strings | 
 | 60.  | Boyer-Moore Majority Voting | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Arrays/Boyer-Moore%20Majority%20Voting%20Algorithm.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sub-Arrays/boyer_moore_majority_vote.py) | Sub-Arrays |
-| 61.  | Kadane's Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Arrays/Kadane.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sub-Arrays/KadanesAlgorithm.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sub-Arrays/Kadane_Algorithm.py)  | Sub-Arrays
+| 61.  | Kadane's Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Arrays/Kadane.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sub-Arrays/KadanesAlgorithm.java)  | Sub-Arrays
 | 62.  | AVL Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/avlTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) | Trees |
 | 63.  | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/binarySearchTree.cpp) | Trees |
 | 64.  | Binary Tree to BST | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/BinaryTreeToBST.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/BinaryTreeToBST.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/BinaryTreeToBST.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/BinaryTreeToBST.py) | Trees |
 | 65.  | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/MorrisTraversal.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/MorrisTraversal.py) | Trees |
 | 66.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
 | 67.  | Tree Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/tree_traversals.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/tree_traversals.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/tree_traversals.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/tree_traversals.py) | Trees |
-
+  
+  
+  
  </div>
 
 <br>
