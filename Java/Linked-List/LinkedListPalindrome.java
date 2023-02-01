@@ -30,7 +30,7 @@ For example- 1->2->2->1 is palindrome while 1->2->3 is not palindrome
 
 import java.util.*;
 
-class LinkedList
+class LinkedListPalindrome
 {
 	Node head;
 

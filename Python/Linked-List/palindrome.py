@@ -92,7 +92,7 @@ class Linkedlist:
         
 ll = Linkedlist()
 print("Enter no. of nodes in linked list")
-n =  int(input())
+n = int(input())
 lst=[]
 print("Enter value of each node")
 

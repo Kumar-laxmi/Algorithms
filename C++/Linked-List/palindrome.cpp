@@ -116,7 +116,6 @@ bool checkPalindrome() {
         return true;
     }
 int main(){
-    
     int n;
     cout<<"Enter no. of nodes in Linked List: ";
     cin>>n;
