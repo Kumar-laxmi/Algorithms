@@ -158,7 +158,6 @@ int Graph::DinicMaxflow(int s, int t)
         // while flow is not zero in graph from S to D
         while (int flow = sendFlow(s, INT_MAX, t, start))
         {
-
             // Add path flow to overall flow
             total += flow;
         }
@@ -174,7 +173,6 @@ int Graph::DinicMaxflow(int s, int t)
 // Driver Code
 int main()
 {
-
     cout << "Enter the number of nodes in the graph : " << endl;
     int n;
     cin >> n;
