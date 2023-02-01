@@ -22,7 +22,7 @@ def Triplet(A, arr_size, sum):
 		while (x < y):
 			if( A[i] + A[x] + A[y] == sum):
 				print("Triplet is", A[i],
-					', ', A[x], ', ', A[y]);
+					', ', A[x], ', ', A[y])
 				return True
 			elif (A[i] + A[x] + A[y] < sum):
 				x += 1
