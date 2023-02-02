@@ -1,6 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// In this program, we are trying to find the closures of a relation(symmetric, reflexive and transitive closure).
+// Closure of a relation is the smallest relation which contains original relation and follows the desired property.
+
+// The relation is represented using a n x n matrix where n represents size of set on which relation is defined.
+// For every pair (a,b) in relation, we set value at (a,b) indices to 1 in the matrix value else 0.
+// For reflexive closure, we need to make sure that all (a,a) pairs are present
+// So we set all values at (a,a) indices in matrix to 1.
+// For symmetric closure, we need to make sure that for every (a,b) pair we have (b,a) pair.
+// So we set all (b,a) indices to 1 where (a,b) indices is set to 1.
+// For transitive closure, we use Warshall algorithm.
+// Warshall algorithm first detects the transitive edges through first element then considering first 2 elements and so on upto the size of matrix.
+
 void displayRelation(vector<vector<int>> &relation,int n) {
     // Displaying relation
     int first=1;
