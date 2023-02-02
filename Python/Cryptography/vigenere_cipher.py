@@ -19,7 +19,7 @@ Algorithm:
 
 1 The plaintext message and the keyword are both converted to uppercase.
 
-2 The alphabet is defined, usually as the 26 letters of the English alphabet in uppercase.
+2 The alphabet is defined, usually as the 26 letters, all uppercase in English alphabet.
 
 3 For each letter in the plaintext message, the corresponding letter in the keyword is found.   
  
@@ -28,7 +28,7 @@ Algorithm:
  
 5 The encrypted letter is the letter at the calculated index in the alphabet.
  
-6 This process is repeated for each letter in the plaintext message.
+6 The above process is repeated for each of the letters in the plaintext.
 """
 
 """Function to encrypt and decrypt"""
