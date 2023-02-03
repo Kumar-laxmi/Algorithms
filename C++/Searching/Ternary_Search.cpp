@@ -22,7 +22,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class TernarySearch{
+class Ternary_Search{
  public:
        int Rec_ternarySearch(int,int,int,int arr[]);
        int Iter_ternarySearch(int,int,int,int arr[]);
@@ -31,13 +31,12 @@ class TernarySearch{
 // Recursive approach
 // time complexity : O(log3n)
 // space complexity : O(log3n)
-int TernarySearch::Rec_ternarySearch(int l, int r, int key, int ar[])
+int Ternary_Search::Rec_ternarySearch(int l, int r, int key, int ar[])
 {
 	if (r >= l) {
          	// Find the mid1 and mid2
 		int mid1 = l + (r - l) / 3;
 		int mid2 = r - (r - l) / 3;
-
 		// Check if key is present at any mid
 		if (ar[mid1] == key) {
 			return mid1;
@@ -45,7 +44,6 @@ int TernarySearch::Rec_ternarySearch(int l, int r, int key, int ar[])
 		if (ar[mid2] == key) {
 			return mid2;
 		}
-
 		// Since key is not present at mid, check in which region it is present
 		// then repeat the Search operation in that region
 		if (key < ar[mid1]) {
@@ -69,7 +67,7 @@ int TernarySearch::Rec_ternarySearch(int l, int r, int key, int ar[])
 // Iterrative Approach
 // time complexity : O(log3n)
 // space complexity : O(1)  
-int TernarySearch::Iter_ternarySearch(int l, int r, int key, int ar[])
+int Ternary_Search::Iter_ternarySearch(int l, int r, int key, int ar[])
 {
     while (r >= l) {
         // Find the mid1 and mid2
@@ -108,7 +106,7 @@ int TernarySearch::Iter_ternarySearch(int l, int r, int key, int ar[])
 // Driver code
 int main()
 {
-  TernarySearch ts;
+  Ternary_Search ts;
 	int l, r, p, key;
 	// since ternary Search can only be applied in sorted array
 	int ar[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
