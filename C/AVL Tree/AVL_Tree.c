@@ -92,10 +92,12 @@ struct Node * minValueNode(struct Node * n) {
 
 // deletion method
 struct Node * deleteNode(struct Node * n, int ele) {
-  if (!n) 
-  {return n;}
-  if (ele < n -> data){ n -> left = deleteNode(n -> left, ele);}
+  if (n==NULL) return n;
+  // element in left subtree
+  if (ele < n -> data) {n -> left = deleteNode(n -> left, ele);}
+  // element in right subtree
   else if (ele > n -> data) {n -> right = deleteNode(n -> right, ele);}
+  // element = root Node
   else {
     // Node with no children || 1 child
     if (!n -> left || !n -> right) {
