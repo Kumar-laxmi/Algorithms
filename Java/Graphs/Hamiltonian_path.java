@@ -99,3 +99,5 @@ public class Hamiltonian_path
         hc.findHamiltonianCycle(graph);        
     }    
 }
+
+//T(n) = O(2^n*n^2)
