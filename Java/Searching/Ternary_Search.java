@@ -21,7 +21,7 @@
    
 */
 
-class TernarySearch
+class Ternary_Search
 {
   // Recursive approach
   // time complexity : O(log3n)
