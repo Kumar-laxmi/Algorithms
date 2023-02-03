@@ -17,7 +17,7 @@ for reference visit : https://www.geeksforgeeks.org/advanced-c-boost-library/
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Fibonacci {
+public class BinetFormula {
 
     // Fibonacci number calculation using Binet formula
     static BigInteger binet_formula_fib(int n)
