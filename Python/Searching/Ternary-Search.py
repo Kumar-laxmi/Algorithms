@@ -20,10 +20,10 @@
 #For more reference visit: https:	//www.geeksforgeeks.org/ternary-search/
 
 import math as mt
-def ternary_search(l, r, key, arr):
-    while l <= r:
-        mid1 = l + (r - l) // 3
-        mid2 = r - (r - l) // 3
+def ternary_search(left, right, key, arr):
+    while left <= right:
+        mid1 = left + (right - left) // 3
+        mid2 = right - (right - left) // 3
  
         # Check if x is present at mid1
         if (arr[mid1] == key):
@@ -35,12 +35,12 @@ def ternary_search(l, r, key, arr):
  
         # Since key is not present at mid, check in which region it is present
         if (key < arr[mid1]):
-            r = mid1 - 1
+            right = mid1 - 1
         elif (key > arr[mid2]):
-            l = mid2 + 1
+            left = mid2 + 1
         else:
-            l = mid1 + 1
-            r = mid2 - 1
+            left = mid1 + 1
+            right = mid2 - 1
  
     # Key not found
     return -1
@@ -48,8 +48,6 @@ def ternary_search(l, r, key, arr):
 # Driver code
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 key = 5
-l=0
-r=9
 result = ternary_search(0, len(arr) - 1, key, arr)
 if result == -1:
     print("Element not found")
