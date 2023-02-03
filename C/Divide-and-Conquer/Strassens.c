@@ -20,11 +20,12 @@ r = p5 + p4 - p2 + p6
 s = p1 + p2 
 t = p3 + p4 
 u = p5 + p1 - p3 - p7
-*/
+
 
 Matrix A = [ a , b]     Matrix B = [e , f]       Matrix C = [r , s]  
            [ c , d]                [g , h]                  [t , u]
-
+       
+*/      
 
 #include<stdio.h>
 int main(){
