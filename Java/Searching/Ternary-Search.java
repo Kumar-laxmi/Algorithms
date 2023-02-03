@@ -21,9 +21,8 @@
    
 */
 
-class Main
+class TernarySearch
 {
-
   // Recursive approach
   // time complexity : O(log3n)
   // space complexity : O(log3n)
@@ -31,7 +30,6 @@ class Main
   {
     if (r >= l)
       {
-
 	// Find the mid1 and mid2
 	int mid1 = l + (r - l) / 3;
 	int mid2 = r - (r - l) / 3;
@@ -50,24 +48,20 @@ class Main
 	// then repeat the Search operation in that region
 	if (key < ar[mid1])
 	  {
-
 	    // The key lies in [l,mid1]
 	    return Rec_ternarySearch (l, mid1 - 1, key, ar);
 	  }
 	else if (key > ar[mid2])
 	  {
-
 	    // The key lies in between [mid2,r]
 	    return Rec_ternarySearch (mid2 + 1, r, key, ar);
 	  }
 	else
 	  {
-
 	    // The key lies in between [mid1,mid2]
 	    return Rec_ternarySearch (mid1 + 1, mid2 - 1, key, ar);
 	  }
       }
-
     // Key not found
     return -1;
   }
@@ -79,7 +73,6 @@ class Main
   {
     while (r >= l)
       {
-
 	// Find the mid1 and mid2
 	int mid1 = l + (r - l) / 3;
 	int mid2 = r - (r - l) / 3;
@@ -101,25 +94,21 @@ class Main
 
 	if (key < ar[mid1])
 	  {
-
 	    // The key lies in between l and mid1
 	    r = mid1 - 1;
 	  }
 	else if (key > ar[mid2])
 	  {
-
 	    // The key lies in between mid2 and r
 	    l = mid2 + 1;
 	  }
 	else
 	  {
-
 	    // The key lies in between mid1 and mid2
 	    l = mid1 + 1;
 	    r = mid2 - 1;
 	  }
       }
-
     // Key not found
     return -1;
   }
@@ -128,7 +117,6 @@ class Main
   public static void main (String args[])
   {
     int l, r, p, key;
-
     // since ternary Search can only be applied in sorted array
     int ar[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     // Starting index and ending index
@@ -136,13 +124,10 @@ class Main
     r = 9;
     // Checking for 5 in the array
     key = 5;
-
     // Search the key using ternarySearch - recursive approach
     p = Rec_ternarySearch (l, r, key, ar);
-
     // Print the result
     System.out.println ("Index of " + key + " is " + p);
-
     // Checking for 50 in the array
     key = 50;
     // Search the key using ternarySearch - iterative approach
@@ -150,7 +135,6 @@ class Main
     // Print the result
     System.out.println ("Index of " + key + " is " + p);
   }
-
 }
 
 /*
