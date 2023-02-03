@@ -48,6 +48,8 @@ def ternary_search(l, r, key, arr):
 # Driver code
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 key = 5
+l=0
+r=9
 result = ternary_search(0, len(arr) - 1, key, arr)
 if result == -1:
     print("Element not found")
