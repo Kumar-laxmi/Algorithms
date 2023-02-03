@@ -73,7 +73,6 @@ int Ternary_Search::Iter_ternarySearch(int l, int r, int key, int ar[])
         // Find the mid1 and mid2
         int mid1 = l + (r - l) / 3;
         int mid2 = r - (r - l) / 3;
- 
         // Check if key is present at any mid
         if (ar[mid1] == key) {
             return mid1;
@@ -86,7 +85,6 @@ int Ternary_Search::Iter_ternarySearch(int l, int r, int key, int ar[])
         // then repeat the Search operation
         // in that region
         if (key < ar[mid1]) {
- 
             // The key lies in between l and mid1
             r = mid1 - 1;
         }
