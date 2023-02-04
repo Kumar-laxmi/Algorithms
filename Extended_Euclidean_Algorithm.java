@@ -73,7 +73,7 @@
 
 //Importing Scanner Class to get input from the user.
 import java.util.Scanner;
-public class Modular_Multiplicative_Inverse
+public class Extended_Euclidean_Algorithm
 {
     // Declaring variables as global and static so that we can use anywhere else in the program.
     static int t1=0;
