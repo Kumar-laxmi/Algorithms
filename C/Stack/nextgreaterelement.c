@@ -1,9 +1,9 @@
 // Approach for solving 
-# Initialize the stack with a dummy element with a value of -1.
-# For each element in the input array, pop elements from the stack while they are smaller than the current element. The popped elements are paired with the current element as they are the next greater elements.
-# Push the current element into the stack.
-# Repeat steps 2 and 3 for all elements in the input array.
-# After all elements are processed, the elements remaining in the stack have no next greater elements, so they are paired with -1.
+// Initialize the stack with a dummy element with a value of -1.
+// For each element in the input array, pop elements from the stack while they are smaller than the current element. The popped elements are paired with the current element as they are the next greater elements.
+// Push the current element into the stack.
+// Repeat steps 2 and 3 for all elements in the input array.
+// After all elements are processed, the elements remaining in the stack have no next greater elements, so they are paired with -1.
 
 
 
@@ -88,13 +88,18 @@ void printNextBigElement(int *array, int size) {
     }
 }
 int main() {
-	
-    int i;
-    int array[MAX_SIZE];
-     for(int i = 0; i <MAX_SIZE ; ++i) {
-     scanf("%d", &array[i]);
+int array[1000];   // array
+  int i,n; // loop var
+   printf("\nArray size input\n");
+  scanf("%d",&n);
+   printf("\nArray element\n");
+  for(i=0;i<n;i++)
+  {
+      scanf("%d",&array[i]);
   }
-    printNextBigElement(array, sizeof(array));
+ 
+    printf("\nNext Bigger Element Mapping\n");
+    printNextBigElement(array, n);
  
     return 0;
 }
