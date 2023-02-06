@@ -1,3 +1,12 @@
+// Approach for solving 
+# Initialize the stack with a dummy element with a value of -1.
+# For each element in the input array, pop elements from the stack while they are smaller than the current element. The popped elements are paired with the current element as they are the next greater elements.
+# Push the current element into the stack.
+# Repeat steps 2 and 3 for all elements in the input array.
+# After all elements are processed, the elements remaining in the stack have no next greater elements, so they are paired with -1.
+
+
+
 #include <stdio.h>
 #include <string.h>
   
