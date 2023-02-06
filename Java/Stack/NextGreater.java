@@ -10,7 +10,7 @@ The process repeats for all elements in the array.
 The result is stored in the "nxtGre" array, and finally, it's printed out.
  */
 
-package Java_practice.Stack;
+//package Java_practice.Stack;
 import java.util.*;
 public class NextGreater {
     public static void main(String[] args) {
