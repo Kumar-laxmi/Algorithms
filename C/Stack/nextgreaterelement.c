@@ -82,10 +82,10 @@ int main() {
 	
     int i;
     int array[MAX_SIZE];
-     for(int i = 0; i < 5; ++i) {
+     for(int i = 0; i <MAX_SIZE ; ++i) {
      scanf("%d", &array[i]);
   }
-    printNextBigElement(array, 6);
+    printNextBigElement(array, sizeof(array));
  
     return 0;
 }
