@@ -26,29 +26,7 @@ import java.io.*;
 
 //Main class
 class Longest_Common_Subsequence{
-	public static void main (String[] args) {
 
-		Scanner sc=new Scanner(System.in);
-		int test=sc.nextInt();
-		while(test-- > 0){
-		    int p=sc.nextInt();             // Take size of both the strings as input
-		    int q=sc.nextInt();
-		    
-		    String s1=sc.next();            // Take both the string as input
-	        String s2=sc.next();
-		    
-		    Solution obj = new Solution();
-		    
-		    System.out.println(obj.lcs(p, q, s1, s2));
-		}
-        sc.close();
-	}
-}
- 
-
-
-class Solution
-{
     public static int lcs(int m,int n,String s1,String s2,int dp[][]){
         if(m==0 || n==0){
             return 0;
@@ -74,4 +52,22 @@ class Solution
         return lcs(x ,y ,s1,s2 ,dp );
     }
     
+	public static void main (String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		int test=sc.nextInt();
+		while(test-- > 0){
+		    int p=sc.nextInt();             // Take size of both the strings as input
+		    int q=sc.nextInt();
+		    
+		    String s1=sc.next();            // Take both the string as input
+	           String s2=sc.next();
+		    
+		    Solution obj = new Solution();
+		    
+		    System.out.println(obj.lcs(p, q, s1, s2));
+		}
+        sc.close();
+	}
 }
+ 
