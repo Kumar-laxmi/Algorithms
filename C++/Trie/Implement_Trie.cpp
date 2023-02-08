@@ -78,15 +78,21 @@ class Trie
 
 int main()
 {
+    int n;
+    cin>>n;
+    string keys[n];
+    
     // Input keys (use only 'a' through 'z' and lower case)
-    string keys[] = {"the", "a", "there", "answer", "any", "by", "bye", "their"};
-    int n = sizeof(keys)/sizeof(keys[0]);
+    for(int i = 0; i < n; i++) {
+        cin>>keys[i];
+    }
  
     Trie *t = new Trie();
  
     // Construct trie
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) {
         t -> insert(keys[i]);
+    }
  
     // Output based on the result
     char output[][32] = {"Not present in trie", "Present in trie"};
