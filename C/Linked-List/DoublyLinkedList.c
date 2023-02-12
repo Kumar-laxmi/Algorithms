@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+// Structure of a Doubly Linked List
 struct node {
 	int data;
 	struct node *prev;
@@ -11,14 +11,15 @@ struct node {
 };
 struct node* head = NULL;
 
+// Traversal of a Doubly Linked List
 void traversal()
 {
-	// List is empty
+	// if head of linked list is NULL or the linked list is empty
 	if (head == NULL) {
 		printf("\nList is empty\n");
 		return;
 	}
-	// Else print the Data
+	// Otherwise print the data by traversing the linked list
 	struct node* temp;
 	temp = head;
 	while (temp != NULL) {
@@ -27,7 +28,7 @@ void traversal()
 	}
 }
 
-
+// Function to insert an element at the front of the Doubly Linked list
 void insertAtFront()
 {
 	int data;
@@ -43,7 +44,7 @@ void insertAtFront()
 	head = temp;
 }
 
-
+// Function to insert an element at the end of the Doubly Linked list
 void insertAtEnd()
 {
 	int data;
@@ -73,7 +74,7 @@ void insertAtEnd()
 	}
 }
 
-
+// Function to insert an element at a given index of the Doubly Linked list
 void insertAtPosition()
 {
 	int data, pos, i = 1;
@@ -110,6 +111,7 @@ void insertAtPosition()
 	}
 }
 
+// Function to delete  front element of the Doubly Linked list
 void deleteFirst()
 {
 	struct node* temp;
@@ -124,7 +126,7 @@ void deleteFirst()
 	}
 }
 
-
+// Function to delete last element of the Doubly Linked list
 void deleteEnd()
 {
 	struct node* temp;
@@ -141,6 +143,7 @@ void deleteEnd()
 	}
 }
 
+// Function to delete  an element of a given index of  the Doubly Linked list
 void deletePosition()
 {
 	int pos, i = 1;
@@ -184,7 +187,15 @@ int main()
 {
 	int choice;
 	while (1) {
-
+//                 Choose t1 to traverse and print the list
+// 		   Choose t2 to insert an element at the front
+// 		Choose t3 to insert an element at the end
+// 		Choose t4 to insert an element at a given position
+// 		Choose t5 to delete the first element
+// 		Choose t6 to delete the last element
+// 		Choose t7 to delete an element of a given position
+// 		Choose t8 to exit the program
+		
 		printf("\n\t1 To see list\n");
 		printf("\t2 For insertion at"
 			" starting\n");
