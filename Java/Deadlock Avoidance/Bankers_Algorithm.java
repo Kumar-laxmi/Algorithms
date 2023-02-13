@@ -328,7 +328,10 @@ public class Bankers_Algorithm
                 {
                     System.out.println("P" + safesequence[i]);
                 }
-                System.out.print("P" + safesequence[i] + " --> ");
+                else
+                {
+                   System.out.print("P" + safesequence[i] + " --> ");
+                }
             }
         }
         // The second variety of banker's algo.
