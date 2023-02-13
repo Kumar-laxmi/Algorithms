@@ -1,3 +1,6 @@
+//The time complexity of Cocktail sort is O(n^2) in the worst case and O(n) in the best case
+//The space complexity of Cocktail sort is O(1)
+
 #include <iostream>
 using namespace std;
 
