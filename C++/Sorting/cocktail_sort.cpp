@@ -2,68 +2,61 @@
 //The space complexity of Cocktail sort is O(1)
 
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
-// Function to perform Cocktail Sort
-void cocktailSort(int arr[], int n)
-{
-    bool swapped = true;
+// Function to perform Cocktail sort
+void cocktailSort(vector<int> &arr) {
+    // Set the flag to true
+    bool flag = true;
     int start = 0;
-    int end = n - 1;
+    int end = arr.size() - 1;
 
-    while (swapped) {
-        // reset the swapped flag on entering the loop, because it might be true from a previous iteration.
-        swapped = false;
+    while (flag) {
+        // Reset the flag to false
+        flag = false;
 
-        // traverse the array from left to right
-        for (int i = start; i < end; ++i) {
-            if (arr[i] > arr[i + 1]) {
-                // swap if the element found is greater than the next element
-                int temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
-                swapped = true;
+        // Move the end pointer to the left
+        for (int i = end; i > start; i--) {
+            // Swap elements if they are out of order
+            if (arr[i] < arr[i - 1]) {
+                swap(arr[i], arr[i - 1]);
+                flag = true;
             }
         }
 
-        // if nothing moved, then array is sorted.
-        if (!swapped)
-            break;
-
-        // otherwise, reset the swapped flag so that it can be used in the next stage
-        swapped = false;
-
-        // move the end point back by one, because the last element is in its rightful spot
-        --end;
-
-        // from right to left, doing the same comparison as in the previous stage
-        for (int i = end - 1; i >= start; --i) {
+        // Move the start pointer to the right
+        for (int i = start; i < end; i++) {
+            // Swap elements if they are out of order
             if (arr[i] > arr[i + 1]) {
-                int temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
-                swapped = true;
+                swap(arr[i], arr[i + 1]);
+                flag = true;
             }
         }
-
-        // move the starting point forward by one, because the first element is in its rightful spot
-        ++start;
     }
 }
 
+// The main function starts from here
 
-// here's the main function to test the implementation
-int main()
-{
-    int arr[] = {5, 1, 4, 2, 8, 0};
-    int n = sizeof(arr) / sizeof(arr[0]);
+int main() {
+    int n;
+    cout << "Enter the number of elements: ";
+    cin >> n;
 
-    cocktailSort(arr, n);
+    vector<int> arr(n);
+    cout << "Enter the elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
 
-    cout << "Sorted array: \n";
-    for (int i = 0; i < n; i++)
+    cocktailSort(arr);
+
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
+    }
+    cout << endl;
 
     return 0;
 }
-
