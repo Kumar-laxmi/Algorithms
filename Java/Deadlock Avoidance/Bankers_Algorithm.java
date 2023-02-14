@@ -45,8 +45,13 @@
                     available[0][i]-=temp[i];
                     allocation[process_no][i]+=temp[i];
 
-    4) Then we have to check that if we allocate this additional resources to that process then we will be in safe state
+    4) Then we have to check that if we allocate these additional resources to that process then we will be in a safe state
        by using the safety algorithm above.
+       
+ ------------------------------------------------- Complexities ----------------------------------------------------------
+ 
+    Time Complexity  :- BigO(n*n*m)
+    Space Complexity :- BigO(n*m)
 
  -------------------------------------------------- Drawbacks ------------------------------------------------------------
 
@@ -55,7 +60,7 @@
 
     2) The algorithm does no longer allows the processes to exchange its maximum needs while processing its tasks.
 
-    3) Each process has to know their maximum resource requirement before starting for the system.
+    3) Each process has to know their maximum resource requirement before starting the system.
 
 */
 
@@ -160,7 +165,7 @@ public class Bankers_Algorithm
 
         // Giving the choice to the user about if they know about any of these values we can allocate the resources.
         System.out.println("If you know available resources value then please enter 1 or if you know the total resources value" +
-                "then enter 2");
+                " then enter 2");
 
         // Reading the choice of the user.
         int response = sc.nextInt();
