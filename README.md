@@ -123,6 +123,7 @@
 | 86.  | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/MorrisTraversal.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/MorrisTraversal.py) | Trees |
 | 87.  | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) | Trees |
 | 88.  | Tree Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/tree_traversals.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/tree_traversals.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/tree_traversals.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/tree_traversals.py) | Trees |
+| 89.  | Trie | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/Trie.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/Trie.java) | Trees | 
 
  </div>
 
