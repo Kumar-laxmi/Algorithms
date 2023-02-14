@@ -31,18 +31,7 @@ import java.io.*;
                  String s1=sc.next();            // Take both the string as input
                  String s2=sc.next();
 
-                 Solution obj = new Solution();
-
-                 System.out.println(obj.lcs(p, q, s1, s2));
-             }
-             sc.close();
-         }
-     }
-// } Driver Code Ends
-
-     class Solution
-     {
-         public static int lcss(int m,int n,String s1,String s2,int dp[][]){
+                   public static int lcss(int m,int n,String s1,String s2,int dp[][]){
              if(m==0 || n==0){
                  return 0;
              }
@@ -68,4 +57,9 @@ import java.io.*;
              return lcss(x ,y ,s1,s2 ,dp );
          }
 
+                 System.out.println(lcs(p, q, s1, s2));
+             }
+             sc.close();
+         }
      }
+ 
