@@ -5,7 +5,7 @@ No_of_city = int(input("Enter no. of city to enter:"))
 Citys = []
 Loc = []
 for i in range(No_of_city):
-    city = input()
+    city = input(f"Enter {i+1} City Name : ")
     Citys.append(city)
 
 for i in range(No_of_city):
@@ -24,8 +24,7 @@ for i in range(No_of_city):
         nm1=geodesic(Loc[i], Loc[j]).miles
         lst.append(nm1)
     G.append(lst)
-for i in G:
-    print(i)
+
 
 
 INF = 9999999
