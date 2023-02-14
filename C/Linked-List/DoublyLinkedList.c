@@ -119,7 +119,7 @@ void deleteFirst()
 		printf("\nList is empty\n");
 	else {
 		temp = head;
-		start = head->next;
+		head = temp->next;
 		if (head != NULL)
 			head->prev = NULL;
 		free(temp);
