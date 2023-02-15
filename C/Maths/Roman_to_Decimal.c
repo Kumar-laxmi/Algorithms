@@ -58,9 +58,9 @@ int romanToDecimal(char str[])
 }
 int main()
 {
-    char str[20];
+    char str[100];
     printf("Enter a Roman numeral: ");
-    scanf("%s", str);
+    fgets(str, sizeof(str), stdin);
     printf("Decimal equivalent: %d\n", romanToDecimal(str));
     return 0;
 }
