@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 class splayTree {
     class Node {
-        int key;
-        Node left, right;
+        int key;                                     // Key value for the node
+        Node left, right;                           // Left and right child nodes of the node
 
         public Node(int key) {
             this.key = key;
@@ -16,11 +16,14 @@ class splayTree {
     public SplayTree() {
         root = null;
     }
-
+        // for searching the node
     public Node search(int key) {
         return search(root, key);
     }
-
+          /**
+     * Splay the node with the given key to the root of the tree.
+     * If the key is not in the tree, splay the last accessed node to the root.
+     */
     private Node search(Node root, int key) {
         if (root == null || root.key == key) {
             return root;
@@ -32,7 +35,7 @@ class splayTree {
             return search(root.right, key);
         }
     }
-
+    // inserting
     public void insert(int key) {
         root = insert(root, key);
     }
@@ -60,7 +63,7 @@ class splayTree {
 
         return root;
     }
-
+    // deleting
     public void delete(int key) {
         root = delete(root, key);
     }
@@ -113,7 +116,7 @@ class splayTree {
 
                 return root;
             }
-    
+  
             if (key > root.right.key) {
                 root.right.right = splay(root.right.right, key);
                 root = leftRotate(root);
@@ -126,14 +129,18 @@ class splayTree {
     
             return root.right == null ? root : leftRotate(root);
         }
-    
+    /**
+     * Rotate the given node to the left.
+     */
         private Node leftRotate(Node x) {
             Node y = x.right;
             x.right = y.left;
             y.left = x;
             return y;
         }
-    
+      /**
+     * Rotate the given node to the right.
+     */
         private Node rightRotate(Node x) {
             Node y = x.left;
             x.left = y.right;
