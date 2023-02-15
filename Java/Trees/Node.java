@@ -31,7 +31,7 @@ class Node
 	}
 }
     // function to create a new Node
-class Symmetric_Tree 
+class 
 {
 	Node root;
 	// Returns true if trees with roots as childL and childR are mirror image of each other
