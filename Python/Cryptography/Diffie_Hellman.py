@@ -38,7 +38,7 @@ def diffie_hellman():
     alice_shared_secret = power(Public_Bob, Private_Alice, P)
     bob_shared_secret = power(Public_Alice, Private_Bob, P)
     
-    print("Generated Secret Key are" ,  alice_shared_secret , "&" ,  bob_shared_secret)
+    print("Generated Secret Key are" ,alice_shared_secret , "&" ,bob_shared_secret)
 
     # Verify that the shared secrets are the same
     if alice_shared_secret == bob_shared_secret:
