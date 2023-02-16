@@ -37,9 +37,9 @@ int main()
     int count = 0;             // count is a variable which stores the number of elements that have been printed.
     int total = nrows * mcols; // total is a variable which stores the total number of elements in the matrix.
 
+    cout << "Spiral traversal of the given matrix will be:" << endl;
     while (count < total)
     {
-
         // Printing starting row:
         for (int index = startingCol; count < total && index <= endingCol; index++)
         {
