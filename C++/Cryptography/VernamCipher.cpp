@@ -2,6 +2,8 @@
 
 👉 In cryptography, the Vernam Cipher encypts the alphabetic text. It's a substitution technique to convert the plain text into cipher text.
 
+👉 It's also called ONE TIME PAD Cipher Algorithm.
+
 Steps
 =====
 ⇒ Generate a random key from 26 alphabetic characters.

@@ -18,11 +18,7 @@ Steps
 #include<iostream> // input-output statements
 #include<map> // for alphabetic codes
 #include<vector> // for vector
-<<<<<<< HEAD
 #include<algorithm> // for find() : find element in vector, transform() : to convert to lowercase
-=======
-#include<algorithm> // for find() : find element in vector, transform() : convert to lowercase
->>>>>>> 75e207afb115498865c9a7f31a44aeab0376bcaa
 using namespace std;
 
 int main() {
