@@ -3,11 +3,6 @@
 // Construct a Binary Tree Node
 public class Node 
 {
-	int key;
-	Node left, right;
-	Node(int item)
-	{
-		key = item;
-		left = right = null;
-	}
+    int key;
+    Node left, right;
 }

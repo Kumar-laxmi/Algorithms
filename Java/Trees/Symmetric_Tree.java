@@ -19,11 +19,6 @@ OUTPUT: Symmetric
 3 3
 OUTPUT: Not symmetric */
 import java.util.*;
-class Node 
-{
-    int key;
-    Node left, right;
-}
 public class Symmetric_Tree 
 {
     // Function to create a new node
