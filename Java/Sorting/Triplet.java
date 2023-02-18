@@ -9,76 +9,53 @@ EXAMPLES:
 1] Input: array = { 7, 10, 6, 14, 4, 9 }, sum = 25;
 Output: Triplet is 4, 7, 14 */
 // Java program to find a triplet
-class Triplet 
+import java.util.*;
+public class Triplet 
 {
-	// returns true if there is triplet with sum equal
-	// to 'sum' present in A[]. Also, prints the triplet
-	boolean Trip (int A[], int arr_size, int sum)
+    // function that prints triplets
+    public static boolean findTriplet(int A[], int arr_size, int sum) 
 	{
-		int x, y;
-		// Sort the elements
-		quickSort(A, 0, arr_size - 1);
-		//Fixed the first element and find all other element
-		for (int i = 0; i < arr_size - 2; i++) 
-		{
-            // for other two elements, start two index variables from two corners of the array and move them toward each other
-			x = i + 1; // index of the first element in the
-			y = arr_size - 1; // index of the last element
-			while (x < y) 
-			{
-				if (A[i] + A[x] + A[y] == sum) 
-				{
-					System.out.print("Triplet is " + A[i] + ", " + A[x] + ", " + A[y]);
-					return true;
-				}
-				else if (A[i] + A[x] + A[y] < sum)
-					x++;
-				else
-					y--;
-			}
-		}
-		// No triplet was found
-		return false;
-	}
-	int partition(int A[], int si, int ei)
-	{
-		int x = A[ei];
-		int i = (si - 1);
-		int j;
-		for (j = si; j <= ei - 1; j++) 
-		{
-			if (A[j] <= x) 
-			{
-				i++;
-				int temp = A[i];
-				A[i] = A[j];
-				A[j] = temp;
-			}
-		}
-		int temp = A[i + 1];
-		A[i + 1] = A[ei];
-		A[ei] = temp;
-		return (i + 1);
-	}
-	// Implementation of Quick Sort
-	void quickSort(int A[], int si, int ei)
-	{
-		int pi;
-		// Partitioning index
-		if (si < ei) 
-		{
-			pi = partition(A, si, ei);
-			quickSort(A, si, pi - 1);
-			quickSort(A, pi + 1, ei);
-		}
-	}
-	// Main Function
-	public static void main(String[] args)
-	{
-		Triplet triplet = new Triplet();
-		int A[] = { 1, 4, 45, 6, 10, 8 };
-		int sum = 22;
-		int arr_size = A.length;
-		triplet.Trip(A, arr_size, sum);
-	}
+        int x, y;
+        // Sort the elements of the array in ascending order
+        Arrays.sort(A);
+        // Fix the first element of the triplet and find all other possible elements
+        for (int i = 0; i < arr_size - 2; i++) {
+            // For the other two elements, start two index variables from two ends of the array and move them toward each other
+            x = i + 1; // index of the first element of the remaining elements
+            y = arr_size - 1; // index of the last element
+            while (x < y) {
+                // If the triplet's sum equals the given sum, print it and return true
+                if (A[i] + A[x] + A[y] == sum) {
+                    System.out.println("Triplet is " + A[i] + ", " + A[x] + ", " + A[y]);
+                    return true;
+                }
+                // If the triplet's sum is less than the given sum, move the left pointer to the right
+                else if (A[i] + A[x] + A[y] < sum)
+                    x++;
+                // If the triplet's sum is greater than the given sum, move the right pointer to the left
+                else
+                    y--;
+            }
+        }
+        // If no triplet is found, return false
+        return false;
+    }
+    // Main function
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int n = sc.nextInt();
+        int[] A = new int[n];
+        System.out.println("Enter " + n + " integers in the array:");
+        for (int i = 0; i < n; i++) {
+            A[i] = sc.nextInt();
+        }
+        System.out.print("Enter the sum value: ");
+        int sum = sc.nextInt();
+        int arr_size = A.length;
+        boolean found = findTriplet(A, arr_size, sum);
+        if (!found) {
+            System.out.println("No triplet found with the given sum.");
+        }
+    }
 }
