@@ -20,7 +20,7 @@ OUTPUT: Symmetric
 OUTPUT: Not symmetric */
 // Java program to check is binary tree is symmetric or not
 // Construct a Binary Tree Node
-class Node 
+public class Node 
 {
 	int key;
 	Node left, right;
@@ -31,7 +31,7 @@ class Node
 	}
 }
     // function to create a new Node
-public class Symmetric_Tree 
+class Symmetric_Tree 
 {
 	Node root;
 	// Returns true if trees with roots as childL and childR are mirror image of each other
