@@ -9,41 +9,56 @@ EXAMPLES:
 1] Input: array = { 7, 10, 6, 14, 4, 9 }, sum = 25;
 Output: Triplet is 4, 7, 14 */
 // C++ program to find a triplet
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
 using namespace std;
-// function that  prints triplets
+// function that prints triplets
 bool Triplet(int A[], int arr_size, int sum)
 {
-	int x, y;
-	// Sort the elements
-	sort(A, A + arr_size);
-	//Fixed the first element and find all other element
-	for (int i = 0; i < arr_size - 2; i++) 
-	{
-		// for other two elements, start two index variables from two corners of the array and move them toward each other
-		x = i + 1; // index of the first element of the remaining elements
-		y = arr_size - 1; // index of last element
-		while (x < y) {
-			if (A[i] + A[x] + A[y] == sum) 
-			{
-				printf("Triplet is %d, %d, %d", A[i], A[x],A[y]);
-				return true;
-			}
-			else if (A[i] + A[x] + A[y] < sum)
-				x++;
-			else
-				y--;
-		}
-	}
-	// No triplet was found
-	return false;
+    int x, y;
+    // Sort the elements of the array in ascending order
+    sort(A, A + arr_size);
+    // Fix the first element of the triplet and find all other possible elements
+    for (int i = 0; i < arr_size - 2; i++) 
+    {
+        // For the other two elements, start two index variables from two ends of the array and move them toward each other
+        x = i + 1; // index of the first element of the remaining elements
+        y = arr_size - 1; // index of the last element
+        while (x < y) 
+		{
+            // If the triplet's sum equals the given sum, print it and return true
+            if (A[i] + A[x] + A[y] == sum) 
+            {
+                cout << "Triplet is " << A[i] << ", " << A[x] << ", " << A[y] << endl;
+                return true;
+            }
+            // If the triplet's sum is less than the given sum, move the left pointer to the right
+            else if (A[i] + A[x] + A[y] < sum)
+                x++;
+            // If the triplet's sum is greater than the given sum, move the right pointer to the left
+            else
+                y--;
+        }
+    }
+    // If no triplet is found, return false
+    return false;
 }
 // Main function
 int main()
 {
-	int A[] = { 7, 10, 6, 14, 4, 9 };
-	int sum = 25;
-	int arr_size = sizeof(A) / sizeof(A[0]);
-	Triplet(A, arr_size, sum);
-	return 0;
+    int n;
+    cout << "Enter the size of the array: ";
+    cin >> n;
+    int A[n];
+    cout << "Enter " << n << " integers in the array:" << endl;
+    for (int i = 0; i < n; i++)
+	{
+        cin >> A[i];
+    }
+    int sum;
+    cout << "Enter the sum value: ";
+    cin >> sum;
+    int arr_size = sizeof(A) / sizeof(A[0]);
+    Triplet(A, arr_size, sum);
+    return 0;
 }
