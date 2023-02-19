@@ -12,7 +12,7 @@ Formally, for a subarray nums[i], nums[i + 1], ..., nums[j], there does not exis
 Python: 3.10.8
 External packages: None
 
-Author: Sitam Meur (github.com/stiwari-ds)
+Author: Sitam Meur (github.com/sitamgithub-MSIT)
 """
 
 import sys
