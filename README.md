@@ -38,7 +38,7 @@
 | 1.  | Spiral Print Matrix | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/arrays/spiralprint.c), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/arrays/Spiral_Print_Algorithm.py) | Arrays |
 | 2.  | Caesar Cipher | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Cryptography/CaesarCipher.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/CaeserCipher.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/CaesarCipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/CaesarCipher.py) | Cryptography |
 | 3.  | Diffie - Hellman Algorithm |  | Cryptography |
-| 4.  | Railfence Cipher | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/railfenceCipher.py) | Cryptography |
+| 4.  | Railfence Cipher | [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/Rail_Fence_Cipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/railfenceCipher.py) | Cryptography |
 | 5.  | RSA | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/rsa.py) | Cryptography |
 | 6.  | SHA - 256 |  | Cryptography |
 | 7.  | Vignere Cipher | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/vigenere_cipher.py) | Cryptography |
