@@ -91,15 +91,15 @@ struct Node * minValueNode(struct Node * n) {
 }
 
 // deletion method
-struct Node * deleteNode(struct Node * n, int ele) {
+struct Node * deleteNode(struct Node * n, int element) {
   if (!n)
   {return n;}
   // element in left subtree
-  if (ele < n -> data) {
-    n->left = deleteNode(n -> left, ele);
+  if (element < n -> data) {
+    n->left = deleteNode(n -> left, element);
   }
   // element in right subtree
-  else if (ele > n -> data) {n -> right = deleteNode(n -> right, ele);}
+  else if (element > n -> data) {n -> right = deleteNode(n -> right, element);}
   // element = root Node
   else {
     // Node with no children || 1 child
@@ -157,7 +157,7 @@ void preorderTraversal(struct Node * n) {
 
 int main() {
   struct Node * root = NULL;
-  int ch, ele;
+  int ch, element;
   while (1) {
     printf("\nChoose an operation :\n1. INSERTION\n2. DELETETION\n3. PREORDER TRAVERSAL\n4. Exit Program");
     printf("\nMAKE YOUR CHOICE : ");
@@ -166,14 +166,14 @@ int main() {
     case 1:
       // insertion
       printf("\nEnter the element for insertion : ");
-      scanf("%d", & ele);
-      root = insert(root, ele);
+      scanf("%d", & element);
+      root = insert(root, element);
       break;
     case 2:
       // deletion
       printf("\nEnter element for deletion : ");
-      scanf("%d", & ele);
-      root = deleteNode(root, ele);
+      scanf("%d", & element);
+      root = deleteNode(root, element);
       break;
 
     case 3:
