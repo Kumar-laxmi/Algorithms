@@ -39,7 +39,7 @@ int main() {
     map<char, int> alphaCode; // for integer codes for alphabets
     vector<int> addedCode; // for added alphabetic codes
 
-    // input plain text
+    // input plain text 
     cout << "\nEnter Plain Text : ";
     getline(cin, plainTxt);
 
