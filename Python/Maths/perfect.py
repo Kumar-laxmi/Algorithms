@@ -3,7 +3,7 @@
 # take user input 
 num = int(input("Enter a number : "))
 
-# initialize variable for loop and to store sum 
+# initialize variable to store sum 
 sum = 0
 
 # iterate from 1 to N and if the number is a factor of N then add it to sum
