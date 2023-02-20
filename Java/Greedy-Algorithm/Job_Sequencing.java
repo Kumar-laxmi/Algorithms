@@ -13,7 +13,8 @@ class Job_Sequencing {
     // Input function to take input from user
     void input() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter nnumber of jobs: ");
+        //taking user input
+        System.out.println("Enter number of jobs: ");
         n = sc.nextInt();
         a = new String[n];
         b = new int[n];
@@ -96,7 +97,7 @@ class Job_Sequencing {
         int max = c[0];
         for (int i = 0; i < n; i++) {
             if (c[i] > max) {
-                max = c[i];
+                max = c[i];  // storing the maximum deadline
             }
         }
 
@@ -110,8 +111,11 @@ class Job_Sequencing {
             p = p - 1;
             if (a1[p] == null) {
                 a1[p] = a[i];
-                profit += b[i];
-            } else {
+                profit += b[i];  //If a slot is found, mark that slot with the job ID, and add its profit to the answer
+            } 
+            
+             //else go to next job and calculate profit
+            else {
                 while (p != -1) {
                     if (a1[p] == null) {
                         a1[p] = a[i];
@@ -127,9 +131,10 @@ class Job_Sequencing {
             System.out.print("    " + a1[i]);
         }
         System.out.println();
-        System.out.print("Profit Earned " + profit);
+        System.out.print("Profit Earned " + profit);  // Printing the maximised profit
     }
 
+    //driver code
     public static void main(String args[]) {
         Job_Sequencing ob = new Job_Sequencing();
         ob.input();
