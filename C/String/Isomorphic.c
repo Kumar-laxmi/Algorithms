@@ -11,7 +11,8 @@ bool isIsomorphic(char s[], char t[])
     char s_to_t[256] = {0};
     char t_to_s[256] = {0};
     // Iterate through each character in the strings and compare their corresponding mappings
-    for (int i = 0; s[i] != '\0'; i++) {
+    for (int i = 0; s[i] != '\0'; i++) 
+    {
         // If there is a mismatch in either of the arrays, the strings are not isomorphic
         if (s_to_t[s[i]] && s_to_t[s[i]] != t[i]) 
         {
@@ -32,13 +33,15 @@ int main()
 {
     char s[MAX_LEN], t[MAX_LEN];
     printf("Enter the first string: ");
-    scanf("%s", s);
+    scanf("%99s", s); // ensure that at most 99 characters are read, to leave room for the null terminator
     printf("Enter the second string: ");
-    scanf("%s", t);
+    scanf("%99s", t); // ensure that at most 99 characters are read, to leave room for the null terminator
     // Check if the strings are isomorphic and print the result
-    if (isIsomorphic(s, t)) {
+    if (isIsomorphic(s, t)) 
+    {
         printf("The strings are isomorphic.\n");
-    } else {
+    } else 
+    {
         printf("The strings are not isomorphic.\n");
     }
     return 0;
