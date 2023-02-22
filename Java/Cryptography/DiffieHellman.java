@@ -1,3 +1,11 @@
+// Time complexity:
+
+// Generating a random private key: O(n)
+// Calculating the public key: O(n^3) using the naive algorithm, or O(n^2) using fast modular exponentiation algorithms such as the binary method or Montgomery ladder.
+// Calculating the shared secret: O(n^3) using the naive algorithm, or O(n^2) using fast modular exponentiation algorithms.
+// Space complexity:
+
+// Storing the prime, primitive root, private key, and public key each require O(n) bits of memory.
 import java.math.BigInteger;
 import java.security.SecureRandom;
 
