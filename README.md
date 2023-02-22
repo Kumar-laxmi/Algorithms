@@ -35,7 +35,7 @@
  
 | No. | Algorithm Name                                                                        | Available languages                       | Category                                                                |
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------- |
-| 1.  | Spiral Print Matrix | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/arrays/spiralprint.c), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/arrays/Spiral_Print_Algorithm.py) | Arrays |
+| 1.  | Spiral Print Matrix | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/arrays/spiralprint.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/arrays/spiralPrint.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/arrays/Spiral_Print_Algorithm.py) | Arrays |
 | 2.  | Caesar Cipher | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Cryptography/CaesarCipher.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/CaeserCipher.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/CaesarCipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/CaesarCipher.py) | Cryptography |
 | 3.  | Diffie - Hellman Algorithm |  | Cryptography |
 | 4.  | Railfence Cipher | [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/Rail_Fence_Cipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/railfenceCipher.py) | Cryptography |
