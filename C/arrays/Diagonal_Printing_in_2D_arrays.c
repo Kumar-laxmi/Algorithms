@@ -20,10 +20,64 @@
  */
 #include<stdio.h>
 #include <stdbool.h>
+// Declaring the  global variables so that we can use anywhere in the functions 
+int row;
+int column;
+// Function to print in diagnol pattern.
+diagonalprint(int mat[row][column])
+{
+	// A boolean variable to switch directions
+	bool isUp = true;
+	// Setting the value of i and j to zero, since it is changed in the for loops.
+	int i=0,j=0,k;
+	for (k = 0; k < row*column;) 
+	{	
+		// If isUp = true then iterate from downward to upward
+        if (isUp) 
+		{
+        	// Loop for printing the values from downward to upward
+            for (; i >= 0 && j < column; j++, i--) 
+			{
+                printf("%d ",mat[i][j]);
+                k++;
+            }
+			// Set i and j according to isUp value (ie, according to direction)
+            if (i < 0 && j <= row - 1)
+            {
+            	i = 0;
+			}
+            if (j == row)
+            {
+            	i = i + 2;
+				j--;
+			}
+        }
+        // if isUp is false then traverse upwards to downwards
+        else 
+		{
+        	// Loop for printing the values from upward to downward
+            for (; j >= 0 && i < column; i++, j--)
+			{
+                printf("%d ",mat[i][j]);
+                k++;
+            }
+			// Set i and j according to isUp value (ie, according to direction)
+            if (j < 0 && i <= row - 1)
+            {
+            	j = 0;
+			}
+            if (i == row)
+            {
+                j = j + 2;
+				i--;
+			}
+        }
+        // Changing the value of isUp according to the direction.
+        isUp = !isUp;
+    }
+}
 int main()
 {
-	// Declaring the number of rows and columns
-	int row,column;
 	// Reading the number of rows from the user
 	printf("Enter row value = ");
 	scanf("%d",&row);
@@ -33,7 +87,7 @@ int main()
 	// Declaring the matrix of size rows and columns
 	int matrix[row][column];
 	// Declaring the iterating variables and putting their value to 0
-	int i=0,j=0,k=0;
+	int i=0,j=0;
 	// Reading the matrix values from the user
 	for(i=0;i<row;i++)
 	{
@@ -54,55 +108,5 @@ int main()
 		printf("\n");
 	}
 	printf("Printing matrix in diagnol form,\n");
-	// A boolean variable to switch directions
-	bool isUp = true;
-	// Setting the value of i and j to zero, since it is changed in the for loops.
-	i=0;
-	j=0;
-	// Loop to print in diagnol pattern of 2D arrays
-	for (k = 0; k < row*column;) 
-	{
-		// If isUp = true then iterate from downward to upward
-        if (isUp) 
-		{
-        	// Loop for printing the values from downward to upward
-            for (; i >= 0 && j < column; j++, i--) 
-			{
-                printf("%d ",matrix[i][j]);
-                k++;
-            }
-			// Set i and j according to isUp value (ie, according to direction)
-            if (i < 0 && j <= row - 1)
-            {
-            	i = 0;
-			}
-            if (j == row)
-            {
-            	i = i + 2;
-				j--;
-			}
-        }
-        // if isUp is false then traverse upwards to downwards
-        else 
-		{
-        	// Loop for printing the values from upward to downward
-            for (; j >= 0 && i < column; i++, j--)
-			{
-                printf("%d ",matrix[i][j]);
-                k++;
-            }
-			// Set i and j according to isUp value (ie, according to direction)
-            if (j < 0 && i <= row - 1)
-            {
-            	j = 0;
-			}
-            if (i == row)
-            {
-                j = j + 2;
-				i--;
-			}
-        }
-        // Changing the value of isUp according to the direction.
-        isUp = !isUp;
-    }
+	diagonalprint(matrix);
 }
