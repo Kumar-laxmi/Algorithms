@@ -20,10 +20,65 @@
  */
 #include<bits/stdc++.h>
 using namespace std;
+// Declaring the  global variables so that we can use anywhere in the functions 
+int row;
+int column;
+// Function to print in diagnol pattern.
+diagonalprint (int mat[100][100])
+{
+    // Declaring the iterating variables and putting their value to 0
+    int i=0,j=0;
+    // A boolean variable to switch directions
+    bool isUp = true;
+    // Loop to print in diagnol pattern of 2D arrays
+    for (int k = 0; k < row*column;) 
+    {	
+        // If isUp = true then iterate from downward to upward
+        if (isUp) 
+	 {
+        	// Loop for printing the values from downward to upward
+                 for (; i >= 0 && j < column; j++, i--) 
+		{
+                cout << mat[i][j] << " ";
+                k++;
+                }
+            // Set i and j according to isUp value (ie, according to direction)
+            if (i < 0 && j <= row - 1)
+            {
+            	i = 0;	
+	    }
+            if (j == row)
+            {
+            	i = i + 2;
+		j--;	
+	     }
+        }
+        // if isUp is false then traverse upwards to downwards
+        else 
+	{
+            // Loop for printing the values from upward to downward
+            for (; j >= 0 && i < column; i++, j--)
+	     {
+                cout << mat[i][j] << " ";
+                k++;
+            }
+            // Set i and j according to isUp value (ie, according to direction)
+            if (j < 0 && i <= row - 1)
+            {
+            	j = 0;
+	    }
+            if (i == row)
+            {
+            	j = j + 2;
+		i--;	
+	    }
+         }
+        // Changing the value of isUp according to the direction. 
+        isUp = !isUp;
+    }
+}
 int main()
 {
-	// Declaring the number of rows and columns
-	int row,column;
 	// Reading the number of rows from the user
 	cout<<"Enter number of rows = ";
 	cin>>row;
@@ -31,75 +86,27 @@ int main()
 	cout<<"Enter number of columns = ";
 	cin>>column;
 	// Declaring the matrix of size rows and columns
-	int matrix[row][column];
-	// A boolean variable to switch directions
-	bool isUp = true;
+	int matrix[100][100];
 	// Reading the matrix values from the user
 	for(int i=0;i<row;i++)
 	{
-		for(int j=0;j<column;j++)
-		{
-			cout<<"Enter matrix elements = ";
-			cin>>matrix[i][j];
-		}
+	   for(int j=0;j<column;j++)
+	   {
+	        cout<<"Enter matrix elements = ";
+		cin>>matrix[i][j];
+	    }
 	}
 	// Printing the matrix
 	cout<<"The matrix is,\n";
 	for(int i=0;i<row;i++)
 	{
-		for(int j=0;j<column;j++)
-		{
-			cout<<matrix[i][j]<<" ";
-		}
-		cout<<"\n";
+	    for(int j=0;j<column;j++)
+	    {
+		cout<<matrix[i][j]<<" ";
+	    }
+	    cout<<"\n";
 	}
 	cout<<"Printing the matrix in diagnol form,\n";
-	// Declaring the iterating variables and putting their value to 0
-	int i=0,j=0;
-	// Loop to print in diagnol pattern of 2D arrays
-	 for (int k = 0; k < row*column;) 
-	 {
-        // If isUp = true then iterate from downward to upward
-        if (isUp) 
-		{
-        	// Loop for printing the values from downward to upward
-            for (; i >= 0 && j < column; j++, i--) 
-			{
-                cout << matrix[i][j] << " ";
-                k++;
-            }
-            // Set i and j according to isUp value (ie, according to direction)
-            if (i < 0 && j <= row - 1)
-            {
-            	i = 0;	
-			}
-            if (j == row)
-            {
-            	i = i + 2;
-				j--;	
-			}
-        }
-        // if isUp is false then traverse upwards to downwards
-        else 
-		{
-        	// Loop for printing the values from upward to downward
-            for (; j >= 0 && i < column; i++, j--)
-			{
-                cout << matrix[i][j] << " ";
-                k++;
-            }
-            // Set i and j according to isUp value (ie, according to direction)
-            if (j < 0 && i <= row - 1)
-            {
-            	j = 0;
-			}
-            if (i == row)
-            {
-            	j = j + 2;
-				i--;	
-			}
-        }
-        // Changing the value of isUp according to the direction. 
-        isUp = !isUp;
-    }
+	// Calling the void diagonal print function to print in diagonal pattern.
+	diagonalprint(matrix);
 }
