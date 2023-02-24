@@ -352,17 +352,17 @@ public class BinaryTree {
 
 		BinaryTree theTree = new BinaryTree();
 
-		theTree.addNode(50, "Boss");
+		theTree.addNode(10, "SWOC");
 
-		theTree.addNode(25, "Vice President");
+		theTree.addNode(20, "WOC");
 
-		theTree.addNode(15, "Office Manager");
+		theTree.addNode(30, "Hacktoberfest");
 
-		theTree.addNode(30, "Secretary");
+		theTree.addNode(40, "Hackathon");
 
-		theTree.addNode(75, "Sales Manager");
+		theTree.addNode(50, "Internships");
 
-		theTree.addNode(85, "Salesman 1");
+		theTree.addNode(60, "GSOC");
 
 		// Different ways to traverse binary trees
 
@@ -374,15 +374,15 @@ public class BinaryTree {
 
 		// Find the node with key 75
 
-		System.out.println("\nNode with the key 75");
+		System.out.println("\nNode with the key 10");
 
-		System.out.println(theTree.findNode(75));
+		System.out.println(theTree.findNode(10));
 
-		System.out.println("Remove Key 25");
+		System.out.println("Remove Key 40");
 
-		theTree.remove(25);
+		theTree.remove(40);
 
-		System.out.println(theTree.findNode(25));
+		System.out.println(theTree.findNode(40));
 
 		theTree.inOrderTraverseTree(theTree.root);
 
