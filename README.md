@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/76027425/197370206-ed1f416c-b4d1-44b8-a534-01ddb3c8f6d1.png)
+![algorithm_logo](https://user-images.githubusercontent.com/76027425/221352647-d4a66542-7b16-46c2-93a7-fd7a4612ac15.png)
 
 <h3 align="center"> A repository for all Algorithms </h3>
 
