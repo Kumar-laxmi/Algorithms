@@ -44,7 +44,7 @@
 | 4.  | Railfence Cipher | [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/Rail_Fence_Cipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/railfenceCipher.py) | Cryptography |
 | 5.  | RSA | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/rsa.py) | Cryptography |
 | 6.  | SHA - 256 |  | Cryptography |
-| 7.  | Vernam Cipher |  | Cryptography |
+| 7.  | Vernam Cipher | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/VernamCipher.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/VernamCipher.py) | Cryptography |
 | 8.  | Vignere Cipher | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/vigenere_cipher.py) | Cryptography |
 | 9.  | Huffman Coding | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Data%20Compression/huffmanCoding.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Data%20Compression/huffmanCoding.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Data-Compression/Huffman.java),[Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Data%20Compression/huffmanCoding.py) | Data Compression |
 | 10. | Banker's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Deadlock%20Avoidance/bankers.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Deadlock%20Avoidance/BankerAlgorithm.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Deadlock%20Avoidance/bankers_algorithm.py) | Deadlock Avoidance |
