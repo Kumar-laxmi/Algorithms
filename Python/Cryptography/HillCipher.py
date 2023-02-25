@@ -36,8 +36,8 @@ def hillCipherEncryption():
         for j in range(2):
             for k in range(1):
                 temp[i] = 0
-                for l in range(2):
-                    temp[j] = (keyMtx[j][l] * plainTxtMtxArr[l][k]) % 26
+                for x in range(2):
+                    temp[j] = (keyMtx[j][x] * plainTxtMtxArr[x][k]) % 26
 
                 cipherTxtMtxArr.append(temp)
                 temp.clear()
