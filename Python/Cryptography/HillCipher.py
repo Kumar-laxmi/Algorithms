@@ -64,9 +64,10 @@ def main():
 
     # generate plain text vector (2x1 mtx.)
     for i in range(0, len(plainTxt), 2):
-        if plainTxt[i] != ' ' and plainTxt[i + 1] != ' ':
-            temp.append(ord(plainTxt[i]) % 65)
-            temp.append(ord(plainTxt[i + 1]) % 65)
+        if i != len(plainTxt) - 1:
+            if plainTxt[i] != ' ' and plainTxt[i + 1] != ' ':
+                temp.append(ord(plainTxt[i]) % 65)
+                temp.append(ord(plainTxt[i + 1]) % 65)
         
         elif plainTxt[i] != ' ':
             temp.append(ord(plainTxt[i]) % 65)
