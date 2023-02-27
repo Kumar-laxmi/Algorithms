@@ -23,7 +23,7 @@ typedef pair<int, int> pi;
 class Queue{
     int count;//storing the count of no of elements in queue and act as a key for priority
     priority_queue<pair<int,int> > p;
-    public:
+      public:
     	Queue():count(0){}//initialising count to 0
     	
     	//function to insert element in queue
