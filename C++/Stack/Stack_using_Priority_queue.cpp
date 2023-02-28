@@ -18,7 +18,7 @@ so in queue -> [(2,3) (1,2) (4,1)]
 #include<queue>
 using namespace std;
 
-typedef pair<int, int> pi;
+typedef pair<int, int> pr;
 
 class Queue{
     int count;//storing the count of no of elements in queue and act as a key for priority
@@ -30,7 +30,7 @@ class Queue{
     	//function to insert element in queue
     	void push(int data){
     		count++;
-			p.push(pi(count,data));
+			p.push(pr(count,data));
 		}
 		//function to delete element from queue
     	void pop(){
@@ -48,7 +48,7 @@ class Queue{
 			    return INT_MAX;
 	        } 
     		else{
-    			pi t =p.top();
+    			pr t =p.top();
 				return t.second;
 			} 
 		}
