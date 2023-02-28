@@ -2,7 +2,7 @@
 
 👉 KMP stands for Knuth Morris Pratt Algorithm.
 
-👉 A pattern matching algorithm which checks the occurence of a pattern in a given test string.
+👉 A pattern matching algorithm which checks the occurrence of a pattern in a given test string.
 
 👉 Time Complexity : O(n), n = length of test string
     Space Complexity : O(m), m = length of pattern string
