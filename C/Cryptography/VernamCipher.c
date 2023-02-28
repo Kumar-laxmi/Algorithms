@@ -15,7 +15,7 @@
  ------------------------------------------------ Vernam Cipher ----------------------------------------------------------
 
     The Vernam cipher is a substitution cipher where each plain text character is encrypted using its own key.
-    This key — or key stream — is randomly generated or is taken from a one-time pad, e.g. a page of a book.
+    This key â€” or key stream â€” is randomly generated or is taken from a one-time pad, e.g. a page of a book.
     The key must be equal in length to the plain text message. The fact that each character of the message is encrypted
     using a different key prevents any useful information being revealed through a frequency analysis of the cipher text.
 
@@ -70,10 +70,10 @@ int main()
 	}
 	// Reading the text message from the user.
 	printf("Enter text message = ");
-	gets(message);
+	fgets(message);
 	// Reading the key from the user.
 	printf("Enter the key = ");
-	gets(key);
+	fgets(key);
 	// The encryption starts here
 	for (i=0; key[i]!='\0'; i++) 
 	{
