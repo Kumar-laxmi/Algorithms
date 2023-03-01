@@ -7,10 +7,6 @@ Time complexity using single key exchange - O (n^3).
 Space Complexity - O (n)
 """
 
-
-
-
-
 def power(base, exponent, modulus):
     result = 1
     while exponent > 0:
@@ -33,19 +29,31 @@ def diffie_hellman():
     # Public_Bob = "G^Private_Bob mod P"
     Public_Alice = power(G, Private_Alice, P)
     Public_Bob = power(G, Private_Bob, P)
-    
+
     print("\nPublic keys of Alice and Bob : " , Public_Alice ,"&", Public_Bob)
 
     # Generate secret key
     alice_shared_secret = power(Public_Bob, Private_Alice, P)
     bob_shared_secret = power(Public_Alice, Private_Bob, P)
-    
+
     print("Generated Secret Key are" ,alice_shared_secret , "&" ,bob_shared_secret)
 
-    # Verify that the shared secrets are the same
     if alice_shared_secret == bob_shared_secret:
-        print("Shared secret:", alice_shared_secret)
+        print("Shared secret:", bob_shared_secret)
+
+        # Encryption using XOR encrpytion algorithm
+        message = input("Enter a message to encrypt: ")
+        encryption = message.encode()
+        encrypted_message = bytes([encryption[i] ^ (alice_shared_secret >> (i % 16) * 8) % 256 for i in range(len(encryption))])
+        print("Encrypted message is:", encrypted_message.hex())
+
+        decrypted_message = bytes([encrypted_message[i] ^ (alice_shared_secret >> (i % 16) * 8) % 256 for i in range(len(encrypted_message))])
+        decoded_message = decrypted_message.decode()
+        print("Decrypted message is:", decoded_message)
     else:
-        print("Error: Shared secrets do not match")
+        print("Shared secrets do not match.")
 
 diffie_hellman()
+
+
+
