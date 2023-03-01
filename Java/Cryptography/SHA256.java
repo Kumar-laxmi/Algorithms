@@ -1,4 +1,4 @@
-"""
+/*
 Definition:
     SHA-256 (Secure Hash Algorithm 256) is a widely-used cryptographic hashing 
     algorithm that produces a fixed-size 256-bit (32-byte) hash value. The 
@@ -22,7 +22,7 @@ Output:
     Verification: If the user wanted to verify a hash and has given the necessary inputs, the code 
     will either say the hash is verified in case of successful verification or it will say that 
     the hash does not match, indicating the hash or message for this hash is invalid.
-"""
+*/
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
