@@ -2,7 +2,7 @@
 
 ▶ In cryptography, the Caesar cipher is one of the simplest and best known encryption techniques. 
 
-▶It is a type of substitution cipher where each letter in the plaintext is replaced with a letter representing a certain number of digits in the alphabet. 
+▶ It is a type of substitution cipher where each letter in the plaintext is replaced with a letter representing a certain number of digits in the alphabet. 
 
 Steps
 =====
@@ -18,7 +18,7 @@ Steps
 #include<iostream> // input-output statements
 #include<map> // for alphabetic codes
 #include<vector> // for vector
-#include<algorithm> // for find() : find element in vector, transform() : convert to lowercase
+#include<algorithm> // for find() : find element in vector, transform() : to convert to lowercase
 using namespace std;
 
 int main() {
