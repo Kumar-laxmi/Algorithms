@@ -1,5 +1,5 @@
 //Program to implement Red-Black Tree.
-
+import java.util.Scanner;
 public class RedBlackTree{
 	static class Node{
 		int data;    //data value.
@@ -357,43 +357,70 @@ public class RedBlackTree{
 	
 	//main function to run the program.
 	public static void main(String [] args){
-		add(10);
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter data to add");
+		int data1 = input.nextInt();
+		add(data1);
 		display();
 
-		add(5);
+		System.out.println("Enter data to add");
+		int data2 = input.nextInt();
+		add(data2);
 		display();
 
-		add(30);
+		System.out.println("Enter data to add");
+		int data3 = input.nextInt();
+		add(data3);
 		display();
 
-		add(1);
+		System.out.println("Enter data to add");
+		int data4 = input.nextInt();
+		add(data4);
 		display();
 
-		add(7);
+		System.out.println("Enter data to add");
+		int data5 = input.nextInt();
+		add(data5);
 		display();
 
-		add(20);
+		System.out.println("Enter data to add");
+		int data6 = input.nextInt();
+		add(data6);
 		display();
 
-		add(38);
+		System.out.println("Enter data to add");
+		int data7 = input.nextInt();
+		add(data7);
 		display();
 
-		add(35);
+		System.out.println("Enter data to add");
+		int data8 = input.nextInt();
+		add(data8);
 		display();
 
-		add(8);
+		System.out.println("Enter data to add");
+		int data9 = input.nextInt();
+		add(data9);
 		display();
 	
-		remove(20);
+		System.out.println("Enter data to remove");
+		int data_rm1 = input.nextInt();
+		remove(data_rm1);
 		display();
 
-		remove(30);
+		System.out.println("Enter data to remove");
+		int data_rm2 = input.nextInt();
+		remove(data_rm2);
 		display();
 
-		remove(35);
+		System.out.println("Enter data to remove");
+		int data_rm3 = input.nextInt();
+		remove(data_rm3);
 		display();
 
-		remove(1);
+		System.out.println("Enter data to remove");
+		int data_rm4 = input.nextInt();
+		remove(data_rm4);
 		display();
 	}
 }
