@@ -8,6 +8,34 @@ public class BinaryTree {
 
 	Node root;
 
+	class Node {
+
+	int key;
+	String name;
+
+	Node leftChild;
+	Node rightChild;
+
+	Node(int key, String name) {
+
+		this.key = key;
+		this.name = name;
+
+	}
+
+	public String toString() {
+
+		return name + " has the key " + key;
+
+		/*
+		 * return name + " has the key " + key + "\nLeft Child: " + leftChild +
+		 * "\nRight Child: " + rightChild + "\n";
+		 */
+
+	}
+
+}
+
 	public void addNode(int key, String name) {
 
 		// Create a new Node and initialize it
@@ -168,7 +196,7 @@ public class BinaryTree {
 
 	}
 
-	public boolean remove(int key) {
+	public boolean remove_node(int key) {
 
 		// Start at the top of the tree
 
@@ -380,7 +408,7 @@ public class BinaryTree {
 
 		System.out.println("Remove Key 40");
 
-		theTree.remove(40);
+		theTree.remove_node(40);
 
 		System.out.println(theTree.findNode(40));
 
@@ -389,30 +417,30 @@ public class BinaryTree {
 	}
 }
 
-class Node {
+// class Node {
 
-	int key;
-	String name;
+// 	int key;
+// 	String name;
 
-	Node leftChild;
-	Node rightChild;
+// 	Node leftChild;
+// 	Node rightChild;
 
-	Node(int key, String name) {
+// 	Node(int key, String name) {
 
-		this.key = key;
-		this.name = name;
+// 		this.key = key;
+// 		this.name = name;
 
-	}
+// 	}
 
-	public String toString() {
+// 	public String toString() {
 
-		return name + " has the key " + key;
+// 		return name + " has the key " + key;
 
-		/*
-		 * return name + " has the key " + key + "\nLeft Child: " + leftChild +
-		 * "\nRight Child: " + rightChild + "\n";
-		 */
+// 		/*
+// 		 * return name + " has the key " + key + "\nLeft Child: " + leftChild +
+// 		 * "\nRight Child: " + rightChild + "\n";
+// 		 */
 
-	}
+// 	}
 
-}
+// }
