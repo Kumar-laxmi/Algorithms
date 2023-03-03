@@ -195,21 +195,7 @@ public class RedBlackTree{
 			return;
 		}
 	}
-				
-		
-	//function to find the next greater element than the given node.
-	private static Node findNext(Node node){
-		Node next = node.right;
-		if(next.data==-1){
-			return node;
-		}
-		while(next.left.data!=-1){
-			next = next.left;
-		}
-		return next;
-	}
-	
-	
+
 	//function to balance the tree IN CASE OF INSERTION>
 	public static void balance(Node node){
 		System.out.println("Balancing Node : " + node.data);
@@ -270,6 +256,22 @@ public class RedBlackTree{
 			}
 		}
 	}
+				
+		
+	//function to find the next greater element than the given node.
+	private static Node findNext(Node node){
+		Node next = node.right;
+		if(next.data==-1){
+			return node;
+		}
+		while(next.left.data!=-1){
+			next = next.left;
+		}
+		return next;
+	}
+	
+	
+	
 	
 	//function to perform Left Rotation.
 	private static void leftRotate(Node node){
