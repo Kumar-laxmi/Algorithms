@@ -30,7 +30,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.Arrays;
  
-public class OMP{
+public class Optimal_Merge_Pattern{
     // Function to find minimum no of moves
     static int minmoves(int size, int file[])
     {
