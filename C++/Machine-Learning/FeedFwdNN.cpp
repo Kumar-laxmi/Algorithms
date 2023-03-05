@@ -7,7 +7,7 @@
 STEPS
 =====
 ⇒ Input details of all nodes.
-⇒ Find feed value of each node by adding its bias value to sum of product of edgeweight and nodal value.
+⇒ Find feed value of each node by adding its bias value to sum of product of edge-weight and nodal value.
 ⇒ Pass the feed value into sigmoid function to get the final nodal value.
 ⇒ Repeat this process until last node of the neural network (NN).
 ⇒ Classify the result based on the maximum nodal value out of all nodes in the output layer.
