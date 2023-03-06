@@ -2,15 +2,14 @@
 Github username : atul1510
 Repositary name : Algorithms*/
 import java.util.Scanner;
-// Node class
-class Node 
+// Main class
+public class linklist_length 
+{
+   public static class Node 
 {
     int data;
     Node next;
 }
-// Main class
-public class linklist_length 
-{
     // Function to find the length of a singly linked list
     public static int findLength(Node head) 
     {
