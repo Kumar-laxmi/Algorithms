@@ -17,7 +17,7 @@
     Example:
 
             1) A client (for example a browser) sends its public key to the server and requests some data.
-            2) The server encrypts the data using the client’s public key and sends the encrypted data.
+            2) The server encrypts the data using the clientâ€™s public key and sends the encrypted data.
             3) The client receives this data and decrypts it.
 
  ------------------------------------------------ RSA Algorithm -----------------------------------------------------------
@@ -98,7 +98,7 @@ void main()
     // Reading the message from the user.
     printf("Enter message = ");
     fflush(stdin);
-    scanf("%s", msg);
+    fegts("%s", msg);
     for (i = 0; msg[i] != NULL; i++)
     {
     	m[i] = msg[i];
