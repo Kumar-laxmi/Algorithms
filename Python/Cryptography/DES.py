@@ -1,26 +1,26 @@
 """
 Algorithm:
-    Key generation: The 64-bit encryption key is provided as input to the algorithm. 
-    The key is first passed through a permutation function to obtain a 56-bit key, 
-    and then it is divided into two halves, each containing 28 bits. Each half is 
+    The algorithm requires a 64-bit encryption key as its input for key generation. 
+    Initially, the key undergoes a permutation function that yields a 56-bit key.    
+    and then it is divided into two halves, each containing 28-bits. Each half is 
     separately subjected to a series of shifts and permutations, generating 16 subkeys, each 48 bits long.
 
-    Initial permutation: The 64-bit plaintext is permuted according to a fixed permutation 
+    Initial permutation: The 64-bit plaintext is now permuted according to the fixed permutation 
     table. This step is designed to add confusion to the plaintext.
 
     Feistel rounds: The permuted plaintext is divided into two halves, each containing 
-    32 bits. These halves are then subjected to a series of 16 rounds, each consisting 
+    The 32-bit input is split into two halves, which are then processed through 16 rounds, with each round comprising    
     of the following operations:
 
-    a. Expansion: The 32-bit right half is expanded to 48 bits using a fixed permutation table.
-
+    Expansion involves taking the 32-bit right half and transforming it into a 48-bit value using a fixed permutation table.
+    
     b. XOR: The expanded right half is XORed with the 48-bit subkey generated during the key generation step.
 
-    c. Substitution: The XOR output is divided into eight 6-bit blocks, which are then substituted 
-    using eight different S-boxes, each of which maps a 6-bit input to a 4-bit output.
-
-    d. Permutation: The output of the S-boxes is then permuted using another fixed permutation table.
-
+    c. Substitution: The XOR output is divided into eight 6-bit blocks, which are then substituted.
+    A collection of eight separate S-boxes is utilized in this procedure, wherein each of these maps 
+    a 6-bit input into a 4-bit output.     
+    After the S-boxes have generated their output, a fixed permutation table is used to permute the resulting values.
+    
     e. XOR: The permuted output of the S-boxes is XORed with the left half of the plaintext.
 
     f. Swap: The left and right halves of the plaintext are swapped before the next round.
@@ -29,7 +29,7 @@ Algorithm:
     permutation table to produce the final ciphertext.
 
 Input:
-    1. Asks the user if they want to encrypt or decrypt.
+    1. The user is prompted to indicate whether they wish to perform encryption or decryption.
     2. If user chooses to encrypt the code asks the user to input a string to encrypt.
     3. If the user chooses to decrypt, the code asks the user for the key in hexadecimal format. 
        Then it asks the user to enter the key(IV) in hexadecimal format. 
@@ -41,9 +41,11 @@ Output:
 """
 
 # Import necessary modules
-from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.primitives import padding
-from cryptography.hazmat.backends import default_backend
+import cryptography.hazmat.primitives.ciphers.Cipher
+import cryptography.hazmat.primitives.ciphers.algorithms
+import cryptography.hazmat.primitives.ciphers.modes
+import cryptography.hazmat.primitives.padding
+import cryptography.hazmat.backends.default_backend
 import os
 
 # Define a function to generate a random key
@@ -80,17 +82,17 @@ def decrypt(key, iv, ciphertext):
     return unpadded_text
 
 # Get the user's choice of whether to encrypt or decrypt
-choice = input("Enter 'e' to encrypt or 'd' to decrypt: ")
+choice = input("Enter the input     'e' to encrypt or 'd' to decrypt: ")
 
 if choice == 'e':
-    # Generate a random key and IV
+    # Generate a random key and IV using the the random function from os library
     key = generate_key()
     iv = os.urandom(8)
     # Get the plaintext from the user
     plaintext = input("Enter a plaintext to encrypt: ").encode()
     # Encrypt the plaintext using 3DES
     ciphertext = encrypt(key, iv, plaintext)
-    # Print the key, IV, and ciphertext in hexadecimal format
+    # Display the key, the IV, and the ciphertext in a hexadecimal format.
     print("Key (hexadecimal):", key.hex())
     print("IV (hexadecimal):", iv.hex())
     print("Ciphertext (hexadecimal):", ciphertext.hex())
