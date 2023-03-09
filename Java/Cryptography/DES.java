@@ -47,7 +47,7 @@ import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
-public class TripleDESExample {
+public class DES {
 
     // Set the encryption algorithm constant and key algorithm constant
     private static final String KEY_ALGORITHM = "DESede";
