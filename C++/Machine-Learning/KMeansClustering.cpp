@@ -63,7 +63,6 @@ void clusteringAlgo(Coordinate *coord, int n)
     {
         if (find(initCluster.begin(), initCluster.end(), coord[i].coordName) == initCluster.end())
         {
-
             // find distance of ith point from the k clusters
             for (int j = 0; j < k; j++)
             {
