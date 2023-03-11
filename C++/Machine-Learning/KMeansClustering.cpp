@@ -2,7 +2,7 @@
 
 👉 K-Means Clustering is an unsupervised learning algorithm that is used to solve the clustering problems in machine learning or data science.
 
-👉 It groups the unlabeled dataset intp different clusters.
+👉 It groups the unlabeled dataset into different clusters.
 
 STEPS
 =====
