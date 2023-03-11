@@ -1,7 +1,21 @@
+/*
+
+👉 K-Means Clustering is an unsupervised learning algorithm that is used to solve the clustering problems in machine learning or data science.
+
+👉 It groups the unlabeled dataset intp different clusters.
+
+STEPS
+=====
+⇒ Initialize first k clusters.
+⇒ Find distance of each data point from these k clusters, using Manhattan Distance Formula
+⇒ Assign each point to the respective cluster based on their shortest distance from the cluster points.
+
+*/
+
 #include <iostream>  // basic input output streams
 #include <vector>    // dynamic array
 #include <algorithm> // find() -> find occurence of an element in a data structure
-#include <string.h>
+                     // *min_element() -> find minimum element in a data structure
 #include <map>
 
 using namespace std;
@@ -124,9 +138,8 @@ void showClusters()
 // main function definition
 int main()
 {
-    int n;      // number of data points
-    int p1, p2; // data point
-    char ch;    // choice holding variable
+    int n;   // number of data points
+    char ch; // choice holding variable
 
     cout << "\n\t=== K MEANS CLUSTER ===";
 
