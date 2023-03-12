@@ -37,11 +37,11 @@ public class LinearRegression {
     public double getSlope() {
         return slope;
     }
-    //Rturns the intercept of the regression line.
+    //Returns the intercept of the regression line.
     public double getIntercept() {
         return intercept;
     }
-    //returns the predicted value of y for a given value of x, using the equation y = slope * x + intercept.
+    //Returns the predicted value of y for a given value of x, using the equation y = slope * x + intercept.
     public double predict(double x) {
         return slope * x + intercept;
     }
