@@ -85,7 +85,7 @@
 | 45.  | Singly Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/SinglyLinkedList.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/SinglyLinkedList.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/SinglyLinkedList.py) | Linked List |
 | 46.  | Decision Tree | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Machine%20Learning/Decision%20Tree/decision_tree.py) | Machine Learning |
 | 47.  | Feed-Forward Neural Network | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/FeedFwdNN.cpp) | Machine Learning |
-| 48.  | K-Means Clusters |  | Machine Learning |
+| 48.  | K-Means Clusters | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/%20K-nearest-neighbour-algo.cpp) | Machine Learning |
 | 49.  | K-Nearest Neighbours | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Machine%20Learning/KNN.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/%20K-nearest-neighbour-algo.cpp) | Machine Learning |
 | 50.  | Linear Regression | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Machine%20Learning/linearregression.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/linearReg.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/tree/main/Python/Machine%20Learning/Linear-Regression) | Machine Learning |
 | 51.  | Logistic Regression | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/LogisticRegression.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/tree/main/Python/Machine%20Learning/Logistic-Regression) | Machine Learning |
