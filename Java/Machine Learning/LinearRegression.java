@@ -1,8 +1,11 @@
+/*Linear regression is a statistical method for modeling the relationship between a dependent variable 
+and one or more independent variables . The goal of linear regression is to find the line  that best fits the observed data points.
+*/
 import java.util.Scanner;
 
 public class LinearRegression {
-    private double slope;
-    private double intercept;
+    private double slope; //slope of the regression line, which represents the change in y for a one-unit increase in x.
+    private double intercept; //the intercept  represents the value of y when x is zero
 
     public LinearRegression(double[] x, double[] y) {
         if (x.length != y.length) {
@@ -26,19 +29,19 @@ public class LinearRegression {
         if (denominator == 0) {
             throw new IllegalArgumentException("The x-values must be distinct");
         }
-
+         //The formula for slope and intercept , to view in "mathematical" way please view my pull request for the same
         this.slope = (n * xySum - xSum * ySum) / denominator;
         this.intercept = (ySum - this.slope * xSum) / n;
     }
-
+    //Returns  the slope of the regression line.
     public double getSlope() {
         return slope;
     }
-
+    //Rturns the intercept of the regression line.
     public double getIntercept() {
         return intercept;
     }
-
+    //returns the predicted value of y for a given value of x, using the equation y = slope * x + intercept.
     public double predict(double x) {
         return slope * x + intercept;
     }
