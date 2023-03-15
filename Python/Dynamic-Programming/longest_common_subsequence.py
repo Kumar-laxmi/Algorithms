@@ -36,10 +36,10 @@ def compute_lengths(first_string: str, second_string: str) -> list:
         second_string (str): Second string for computing LCS
 
     Returns:
-        list: m x n table storing lengths of LCS for subproblems
+        list: m+1 x n+1 table storing lengths of LCS for subproblems
     """
     m, n = len(first_string), len(second_string)
-    dp_table = [[0] * n] * m  # m x n matrix
+    dp_table = [[0 for j in range(n + 1)] for i in range(m + 1)]  # m+1 x n+1 matrix
 
     for i in range(m + 1):
         for j in range(n + 1):
@@ -68,7 +68,7 @@ def build_lcs(first_string: str, second_string: str, dp_table: list) -> str:
     Args:
         first_string (str): First string for computing LCS
         second_string (str): Second string for computing LCS
-        dp_table (list): m x n table storing lengths of LCS for subproblems
+        dp_table (list): m+1 x n+1 table storing lengths of LCS for subproblems
 
     Returns:
         str: longest common subsequence for the two strings
