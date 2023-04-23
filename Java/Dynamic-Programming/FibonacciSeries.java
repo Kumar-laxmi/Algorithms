@@ -49,4 +49,4 @@ class FibonacciSeries {
         fib(n, dp);
         sc.close();
     }
-}
+} 
