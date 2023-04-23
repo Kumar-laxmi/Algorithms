@@ -21,7 +21,7 @@ label:
     if (dp.find(n - 2) != dp.end())
     {
         f1 = (dp.find(n - 2))->second;
-    }
+    } 
     if (dp.find(n - 3) != dp.end())
     {
         f2 = (dp.find(n - 3))->second;
