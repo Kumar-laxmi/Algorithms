@@ -1,5 +1,5 @@
-#include<iostream>
-#include <stdio.h>
+#include <iostream>
+
 #include <math.h>
 using namespace std;
 
@@ -20,14 +20,21 @@ void Sort(int a[], int n)
 	}
 
 	for (int i = 0; i < n; i++)
-		cout<<a[i]<<" ";
-	cout<<"\n";
+		cout << a[i] << " ";
+	cout << "\n";
 }
 
 int main()
 {
-	int arr[] = {45, 55, 20, 3, 5};
-	int n = sizeof(arr) / sizeof(arr[0]);
+	// Inputing array from user
+	int n;
+	cin >> n;
+	int arr[n];
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+	}
 	Sort(arr, n);
+
 	return 0;
 }
