@@ -123,7 +123,7 @@ int main()
 {
 
     int n;
-    cout << "Enter the length of list : ";
+    cout << "Enter the length of list  : ";
     cin >> n;
     Node *head = new Node();
     for (int i = 0; i < n; i++)
