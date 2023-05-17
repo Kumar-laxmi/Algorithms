@@ -85,6 +85,7 @@ Node *swapNodeInPair(Node *head, int k)
     value of reached nodes.
 */
     // t.c:- O(n) & auxilary-space:- O(1)
+    //As we are traversing complete list without using any extra space
     int n = getLength(head);
     int i = 0;
     Node *ptr1 = head;
