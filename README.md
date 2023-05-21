@@ -217,7 +217,7 @@ $ cd QuickLearn
 ```
 $ git clone https://github.com/<your-github-username>/Algorithms.git
 
-$ cd techsquad-community-website
+$ cd algorithms
 ```
 
 - Make changes to the code(for ex- add an update route)
