@@ -88,3 +88,4 @@ lerna-debug.log
 .DS_Store
 Thumbs.db
 .vscode/settings.json
+*.exe
