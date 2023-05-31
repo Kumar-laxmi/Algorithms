@@ -13,6 +13,36 @@
 <br>
 
 <div align="center">
+<img src="https://forthebadge.com/images/badges/open-source.svg" />
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" /><br>   
+<img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />   
+</div> 
+
+<br>
+
+<div align="center">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Kumar-laxmi/Algorithms?label=Repo%20Size&logo=github&logoColor=white&style=plastic">
+   <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/Kumar-laxmi/Algorithms?style=plastic">
+   
+   [![GitHub issues](https://img.shields.io/github/issues/Kumar-laxmi/Algorithms?style=plastic&color=critical)](https://github.com/Kumar-laxmi/Algorithms/issues)
+   [![GitHub pull requests](https://img.shields.io/github/issues-pr/Kumar-laxmi/Algorithms?style=plastic)](https://github.com/Kumar-laxmi/Algorithms/pulls)
+   [![GitHub](https://img.shields.io/github/license/Kumar-laxmi/Algorithms?style=plastic)](https://github.com/Kumar-laxmi/Algorithms/blob/master/LICENSE)
+   [![GitHub forks](https://img.shields.io/github/forks/Kumar-laxmi/Algorithms?color=ff69b4&style=plastic)](https://github.com/Kumar-laxmi/Algorithms/forks)
+   [![GitHub Repo stars](https://img.shields.io/github/stars/Kumar-laxmi/Algorithms?style=social)](https://github.com/Kumar-laxmi/Algorithms/stargazers)
+</div><br>  
+
+<h2 align="center"><b>Tech Stacks<b></h2><br>
+<div align="center">
+<img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
+   <img src="https://img.shields.io/badge/C++-D0271D?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
+   <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" />
+   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=black" /><br>
+  <img src="https://img.shields.io/badge/Algorithms-00BCB4?style=for-the-badge&logo=thealgorithms&logoColor=black" /><br>
+</div><br>
+
+<div align="center">
 <h2 align="center"><b>Programs we have been a part of<b></h2>
 
 | No. | Program Name                                                              | Duration                     | Deployment                                             |
