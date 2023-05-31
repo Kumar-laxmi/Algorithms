@@ -65,6 +65,54 @@ vector<int> inorderTraverse(node *root){
 }
 
 
+/*-----Morris Preorder Traversal-------*/
+
+/*Case 1 : When there is no left node =>remain same like inorder traversal ,first root is printed then move to left
+
+ Case 2 : The approach of preorder is root left right, so before moving to left ,insert root then move left 
+ and if thread already exists remove thread , as we have already visited left subtree now move to right  */
+
+vector<int> preorderTraversal(node* root) {
+
+       vector<int>preorder;
+       node* current=root;
+
+        while(current != NULL){
+          // case 1
+            if(current->left == NULL){
+                preorder.push_back(current->data);
+                current=current->right;
+            }
+            else{
+              // case 2
+                node* previous=current->left;
+                while(previous->right && previous->right!=current){
+                    previous=previous->right;
+                }
+
+                 if(previous->right == NULL){
+                    previous->right=current; //create thread
+                    preorder.push_back(current->data);  //insert root first 
+                    current=current->left;
+                }
+                else{
+                    //if previous->right==current--->  if thread already exists
+                    previous->right=NULL; //remove thread
+                    current=current->right;
+                }
+            }
+        }
+          return preorder;
+    }
+
+
+
+
+
+
+
+
+
 //Preorder Traversal
 void preorder(node *p)
 {
@@ -117,12 +165,14 @@ int main() {
   root -> left -> right -> right = newNode(6);
 
   vector < int > inorder;
+  vector<int>preorder_traversal;
   int choice;
   cout<<"Select the option given below:- "<<endl;
   cout<<"1. Preorder"<<endl;
   cout<<"2. Inorder"<<endl;
   cout<<"3. Postorder"<<endl;
   cout<<"4. Morris Traverse"<<endl;
+  cout<<"5. Morris Preorder Traversal"<<endl;
   cin>>choice;
 
   switch(choice)
@@ -141,6 +191,13 @@ int main() {
        cout << "The Morris inorder traverse is: ";
        for (int i=0; i<inorder.size(); i++){
         cout << inorder[i] << " ";
+      }
+      break;
+      case 5:
+        preorder_traversal = preorderTraversal(root);
+        cout << "The Morris Preorder traverse is: ";
+       for (int i=0; i<preorder_traversal.size(); i++){
+        cout << preorder_traversal[i] << " ";
       }
       break;
     default:
