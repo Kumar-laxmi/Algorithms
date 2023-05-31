@@ -2,7 +2,7 @@
 
 The problem differs from the problem of finding the shortest common substring. Unlike substrings, subsequences are not required to occupy consecutive positions within the original string.*/
 
-class Main
+class Shortest_Common_Supersequence_Problem
 {
     // Function to find the length of the shortest common supersequence of
     // sequences `X[0…m-1]` and `Y[0…n-1]`
