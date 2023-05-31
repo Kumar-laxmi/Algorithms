@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class interpolationSearch {
     public static int interpolationSearch(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
