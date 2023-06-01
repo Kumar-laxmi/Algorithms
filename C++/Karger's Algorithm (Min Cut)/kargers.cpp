@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
-#include <cstdlib>
+#include <random>
 
 using namespace std;
 
@@ -32,9 +32,14 @@ int findMinCut(vector<Edge>& edges, int vertices) {
 
     int remainingVertices = vertices;
 
+    // Create a random number generator
+    random_device rd;
+    mt19937 rng(rd());
+
     // Keep contracting vertices until only 2 vertices are left
     while (remainingVertices > 2) {
-        int randomEdge = rand() % edges.size();
+        uniform_int_distribution<int> dist(0, edges.size() - 1);
+        int randomEdge = dist(rng);
 
         int rootSrc = findRoot(parent, edges[randomEdge].src);
         int rootDest = findRoot(parent, edges[randomEdge].dest);
@@ -59,9 +64,6 @@ int findMinCut(vector<Edge>& edges, int vertices) {
 }
 
 int main() {
-    // Seed the random number generator
-    srand(time(0));
-
     int vertices = 4;
     int edgesCount = 5;
 
