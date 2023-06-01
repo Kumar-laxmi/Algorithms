@@ -48,8 +48,7 @@ int minDiff(int a[], int n){
             if (a[i-1] <= j){                                   //      if a[i-1] is less than or equal to j then we have two options either to include a[i-1] or not
                 int x = a[i-1]+dp[i-1][j-a[i-1]];
                 int y = dp[i-1][j];
-                dp[i][j] = x > y ? x : y;                       //      we choose the maximum of both options
-                
+                dp[i][j] = x > y ? x : y;                       //      we choose the maximum of both options   
             }
             else{
                 dp[i][j]=dp[i-1][j];                            //      if a[i-1] is greater than j then we have only one option that is not to include a[i-1]
@@ -68,7 +67,6 @@ int minDiff(int a[], int n){
     return x;
     
     
-
 }
 
 int main()
