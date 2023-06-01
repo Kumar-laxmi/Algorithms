@@ -58,7 +58,6 @@ int minDiff(int a[], int n){
     
     
     
-    
     int x = (sum1-2*dp[n][sum1/2]);                             //      x stores the difference between sum of subset of a[0...n-1] and 
                                                                 //      sum of subset of a[0...n-1] such that sum of subset is less than or equal to sum1/2
     
