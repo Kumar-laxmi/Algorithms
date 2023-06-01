@@ -84,7 +84,7 @@ int main()
  
     printf("\nEnter the starting vertex for traversal : ");
     scanf("%d",&startingNode);
-    printf("\nBFS Traversal from % d: \n ",startingNode);
+    printf("\nDFS Traversal from % d: \n ",startingNode);
     dfs(adjList,visited,startingNode);
     return 0;
 }
