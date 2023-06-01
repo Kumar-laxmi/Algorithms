@@ -177,7 +177,6 @@ vector<vector<int>> strassen_matrix_multiplication(vector<vector<int>> &matrix1,
 }
 
 int main(void) {
-
     /*
     
         Input format:
