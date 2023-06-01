@@ -9,11 +9,11 @@ class Vertex:
 class DirectionalGraph:
 
     def __init__(self):
-        self.adj = {}
+        self.adjacent = {}
 
     def has_vertex(self, v):
         try:
-            self.adj[v]
+            self.adjacent[v]
             return True
         except KeyError:
             return False
@@ -21,54 +21,34 @@ class DirectionalGraph:
     def add_vertex(self, v):
         if self.has_vertex(v):
             return False
-        self.adj[v] = {}
+        self.adjacent[v] = {}
         return True
 
     def add_vertices(self, arr):
-        for v in arr:
-            self.add_vertex(v)
+        for v0 in arr:
+            self.add_vertex(v0)
         return True
 
-    def has_edge(self, start, end):
-        if self.has_vertex(start) and self.has_vertex(end):
-            try:
-                return self.adj[start][end] is True
-            except KeyError:
-                return False
-        return False
 
     def add_edge(self, start, end):
         if self.has_vertex(start) and self.has_vertex(end):
-            self.adj[start][end] = True
+            self.adjacent[start][end] = True
             return True
         return False
 
-    def remove_edge(self, start, end):
-        if self.has_edge(start, end):
-            del self.adj[start][end]
-            return True
-        return False
-
-    def remove_vertex(self, v):
-        if self.has_vertex(v):
-            for vertex in self.adj.keys():
-                self.remove_edge(vertex, v)
-            del self.adj[v]
-            return True
-        return False
 
 time = 0
 
 
-def dfs_visit(G, s, parent, stack):
+def dfs_ret(G, s, parent, stack):
     global time
     time += 1
     s.d = time
 
-    for v in G.adj[s]:
+    for v in G.adjacent[s]:
         if v not in parent:
             parent[v] = s
-            dfs_visit(G, v, parent, stack)
+            dfs_ret(G, v, parent, stack)
 
     time += 1
     s.f = time
@@ -79,10 +59,10 @@ def dfs(G, stack):
     parent = {}
     stack = []
 
-    for vertex in list(G.adj.keys()):
+    for vertex in list(G.adjacent.keys()):
         if vertex not in parent:
             parent[vertex] = None
-            dfs_visit(G, vertex, parent, stack)
+            dfs_ret(G, vertex, parent, stack)
 
     return stack
 
@@ -94,19 +74,23 @@ def dfs_single_visit(adj_list, v, visited, stack):
     stack.append(v)
 
 
-def kosaraju(G):
+
+
+
+
+def Kosaraju(G):
     stack = dfs(G, [])
 
-    rev_adj = {vertex: {} for vertex in G.adj.keys()}
+    rev_adj = {vertex: {} for vertex in G.adjacent.keys()}
 
-    for vertex in G.adj.keys():
-        for u in G.adj[vertex]:
+    for vertex in G.adjacent.keys():
+        for u in G.adjacent[vertex]:
             rev_adj[u][vertex] = True
     visited = {}
     components = []
     i = 0
 
-    while stack != []:
+    while stack:
         v = stack.pop()
         if v in visited:
             continue
@@ -118,19 +102,6 @@ def kosaraju(G):
         i += 1
 
     return components
-def print_stack(stk):
-    for i in stk:
-        print(i.value, i.f)
-
-
-def print_adjacency_list(adj):
-    for v in adj.keys():
-        print(v.value, " -> ", end=" ")
-        for u in adj[v]:
-            print(u.value, end=" ")
-        print()
-
-
 
 G = DirectionalGraph()
 
@@ -162,11 +133,11 @@ G.add_edge(i, j)
 G.add_edge(j, g)
 G.add_edge(j, k)
 
-y = kosaraju(G)
+y = Kosaraju(G)
 
 for j in range(len(y)):
-    if y[j] != []:
-        print("Strongly connected Component:", j + 1, " ", end=" ")
+    if y[j]:
+        print("Strongly connected Component:", j + 1, "=> ", end=" ")
         for v in y[j]:
             print(v.value, end=" ")
         print()
