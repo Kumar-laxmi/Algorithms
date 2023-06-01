@@ -1,6 +1,8 @@
+# Karger's Algorithm (Min Cut)
+
 Karger's algorithm is a randomized algorithm used to find the minimum cut in a graph. The minimum cut of a graph is defined as the smallest number of edges that, if removed, would divide the graph into two disconnected components. Karger's algorithm is based on the concept of contraction, where two randomly chosen vertices are merged into a single vertex, reducing the size of the graph. The algorithm repeats this contraction step until only two vertices (representing the two sides of the cut) remain.
 
-Here is a high-level overview of Karger's algorithm:
+### Here is a high-level overview of Karger's algorithm:
 
 1. Start with an undirected graph.
 2. Repeat steps 3-4 until there are only two vertices left.
