@@ -73,8 +73,7 @@ vector<int> inorderTraverse(node *root){
  and if thread already exists remove thread , as we have already visited left subtree now move to right  */
 
 vector<int> preorderTraversal(node* root) {
-
-       vector<int>preorder;
+      vector<int>preorder;
        node* current=root;
 
         while(current != NULL){
