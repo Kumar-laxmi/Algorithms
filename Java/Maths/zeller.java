@@ -1,8 +1,9 @@
 // Java program to  Find the Day
 // for a Date
 import java.util.*;
+import java.io.*;
  
-public class ZellerAlgorithm {
+public class Zeller {
     // Print Day for a Date
     public static void Zellercongruence(int day, int month, int year) {
         if (month == 1){
