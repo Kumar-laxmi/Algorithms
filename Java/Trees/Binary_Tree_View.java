@@ -1,20 +1,20 @@
 import java.util.*;
 import java.util.Scanner;
 
-class Node {
-    int key;
-    Node left, right;
-    int level;
-
-    // Constructor
-    Node(int k) {
-        key = k;
-        left = right = null;
-    }
-}
-
-class BinaryTreeView {
+class Binary_Tree_View {
     static Scanner scanner = new Scanner(System.in);
+
+    static class Node {
+        int key;
+        Node left, right;
+        int level;
+
+        // Constructor
+        Node(int k) {
+            key = k;
+            left = right = null;
+        }
+    }
 
     static Node insert(Node root) {
         System.out.print("Enter value to be entered: ");
