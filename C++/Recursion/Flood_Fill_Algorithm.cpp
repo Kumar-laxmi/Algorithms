@@ -24,8 +24,7 @@ public:
             if(nx >= 0 && nx < n && ny >= 0 && ny < m){
                 if(image[ny][nx]==starter && !vis[ny][nx]) dfs(nx, ny, image, vis, nc, starter);
             }
-        }
-        
+        }        
     }
     
     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
