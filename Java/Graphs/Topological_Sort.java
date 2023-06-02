@@ -1,127 +1,86 @@
-/*Given a Directed Acyclic Graph (DAG), print it in topological order using topological sort algorithm. If the graph has more than one topological ordering, output any of them. Assume valid Directed Acyclic Graph (DAG). */
+// A Java program to print topological sorting of a DAG
+//import java.io.*;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
- 
-// A class to store a graph edge
-class Edge
-{
-    int source, dest;
- 
-    public Edge(int source, int dest)
-    {
-        this.source = source;
-        this.dest = dest;
-    }
-}
- 
-// A class to represent a graph object
-class Graph
-{
-    // A list of lists to represent an adjacency list
-    List<List<Integer>> adjList = null;
- 
-    // Constructor
-    Graph(List<Edge> edges, int n)
-    {
-        // allocate memory
-        adjList = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            adjList.add(new ArrayList<>());
-        }
- 
-        // add edges to the directed graph
-        for (Edge edge: edges)
-        {
-            int src = edge.source;
-            int dest = edge.dest;
- 
-            // add an edge from source to destination
-            adjList.get(src).add(dest);
-        }
-    }
-}
- 
+// This class represents a directed graph using adjacency
+// list representation
 class Topological_Sort
 {
-    // Perform DFS on the graph and set the departure time of all
-    // vertices of the graph
-    static int DFS(Graph graph, int v, boolean[] discovered,
-                   int[] departure, int time)
-    {
-        // mark the current node as discovered
-        discovered[v] = true;
- 
-        // set the arrival time of vertex `v`
-        time++;
- 
-        // do for every edge (v, u)
-        for (int u: graph.adjList.get(v))
-        {
-            // if `u` is not yet discovered
-            if (!discovered[u]) {
-                time = DFS(graph, u, discovered, departure, time);
-            }
-        }
- 
-        // ready to backtrack
-        // set departure time of vertex `v`
-        departure[time] = v;
-        time++;
- 
-        return time;
-    }
- 
-    // Function to perform a topological sort on a given DAG
-    public static void doTopologicalSort(Graph graph, int n)
-    {
-        // departure[] stores the vertex number using departure time as an index
-        int[] departure = new int[2*n];
-        Arrays.fill(departure, -1);
- 
-        /* If we had done it the other way around, i.e., fill the array
-           with departure time using vertex number as an index, we would
-           need to sort it later */
- 
-        // to keep track of whether a vertex is discovered or not
-        boolean[] discovered = new boolean[n];
-        int time = 0;
- 
-        // perform DFS on all undiscovered vertices
-        for (int i = 0; i < n; i++)
-        {
-            if (!discovered[i]) {
-                time = DFS(graph, i, discovered, departure, time);
-            }
-        }
- 
-        // Print the vertices in order of their decreasing
-        // departure time in DFS, i.e., in topological order
-        for (int i = 2*n - 1; i >= 0; i--)
-        {
-            if (departure[i] != -1) {
-                System.out.print(departure[i] + " ");
-            }
-        }
-    }
- 
-    public static void main(String[] args)
-    {
-        // List of graph edges as per the above diagram
-        List<Edge> edges = Arrays.asList(
-                new Edge(0, 6), new Edge(1, 2), new Edge(1, 4),
-                new Edge(1, 6), new Edge(3, 0), new Edge(3, 4),
-                new Edge(5, 1), new Edge(7, 0), new Edge(7, 1)
-        );
- 
-        // total number of nodes in the graph (labelled from 0 to 7)
-        int n = 8;
- 
-        // build a graph from the given edges
-        Graph graph = new Graph(edges, n);
- 
-        // perform topological sort
-        doTopologicalSort(graph, n);
-    }
+	private int V; // No. of vertices
+	private LinkedList<Integer> adj[]; // Adjacency List
+
+	//Constructor
+	Topological_Sort(int v)
+	{
+		V = v;
+		adj = new LinkedList[v];
+		for (int i=0; i<v; ++i)
+			adj[i] = new LinkedList();
+	}
+
+	// Function to add an edge into the graph
+	void addEdge(int v,int w) { adj[v].add(w); }
+
+	// A recursive function used by topologicalSort
+	void topologicalSortUtil(int v, boolean visited[],
+							Stack stack)
+	{
+		// Mark the current node as visited.
+		visited[v] = true;
+		Integer i;
+
+		// Recur for all the vertices adjacent to this
+		// vertex
+		Iterator<Integer> it = adj[v].iterator();
+		while (it.hasNext())
+		{
+			i = it.next();
+			if (!visited[i])
+				topologicalSortUtil(i, visited, stack);
+		}
+
+		// Push current vertex to stack which stores result
+		stack.push(new Integer(v));
+	}
+
+	// The function to do Topological Sort. It uses
+	// recursive topologicalSortUtil()
+	void topologicalSort()
+	{
+		Stack stack = new Stack();
+
+		// Mark all the vertices as not visited
+		boolean visited[] = new boolean[V];
+		for (int i = 0; i < V; i++)
+			visited[i] = false;
+
+		// Call the recursive helper function to store
+		// Topological Sort starting from all vertices
+		// one by one
+		for (int i = 0; i < V; i++)
+			if (visited[i] == false)
+				topologicalSortUtil(i, visited, stack);
+
+		// Print contents of stack
+		while (stack.empty()==false)
+			System.out.print(stack.pop() + " ");
+	}
+
+	// Driver method
+	public static void main(String args[])
+	{
+		// Create a graph given in the above diagram
+		Topological_Sort g = new Topological_Sort(6);
+		g.addEdge(5, 2);
+		g.addEdge(5, 0);
+		g.addEdge(4, 0);
+		g.addEdge(4, 1);
+		g.addEdge(2, 3);
+		g.addEdge(3, 1);
+
+		System.out.println("Following is a Topological " +
+						"sort of the given graph");
+		g.topologicalSort();
+	}
 }
+// This code is contributed by Aakash Hasija
