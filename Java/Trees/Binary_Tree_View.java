@@ -13,18 +13,7 @@ class Node {
     }
 }
 
-class Pair<T, U> {
-    public T first;
-    public U second;
-
-    public Pair(T first, U second) {
-        this.first = first;
-        this.second = second;
-    }
-}
-
-
-class Main {
+class BinaryTreeView {
     static Scanner scanner = new Scanner(System.in);
 
     static Node insert(Node root) {
@@ -49,7 +38,17 @@ class Main {
         }
     }
 
-  static List<Integer> leftView(Node root) {
+    static class Pair<T, U> {
+        public T first;
+        public U second;
+
+        public Pair(T first, U second) {
+            this.first = first;
+            this.second = second;
+        }
+    }
+
+    static List<Integer> leftView(Node root) {
         List<Integer> res = new ArrayList<>();
         if (root == null)
             return res;
