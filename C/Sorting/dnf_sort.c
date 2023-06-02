@@ -6,16 +6,21 @@ void dnfSort(int arr[],int n){
     int mid = 0;
     int e = n-1;
     while(mid<=e){
-        if(arr[mid] == 0){
+        // shifting all the zeros to the front
+        if(arr[mid] == 0){  
             t1=arr[mid];
             arr[mid]=arr[s];
             arr[s]=t1;
             s++;
             mid++;
         }
+        
+        // when the array encounters 1, the position dosen't change
         else if(arr[mid] == 1){ 
             mid++;
         }
+        
+        // shifting all 2s to the end
         else if(arr[mid] == 2){
             t2=arr[mid];
             arr[mid]=arr[e];
