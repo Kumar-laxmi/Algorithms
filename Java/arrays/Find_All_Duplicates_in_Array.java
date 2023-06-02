@@ -25,7 +25,7 @@ Constraints:
 Solution: */
 
 import java.util.AbstractList;
-class Solution {
+class Find_All_Duplicates_in_Array {
     private List<Integer> res;
     public List<Integer> findDuplicates(int[] nums) {
         return new AbstractList<Integer>() {
