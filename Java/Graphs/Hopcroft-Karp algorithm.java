@@ -18,6 +18,7 @@ class HopcroftKarp {
         }
         match = new int[n + m + 1];
         dist = new int[n + m + 1];
+        Arrays.fill(dist, INF);
     }
 
     public void addEdge(int u, int v) {
