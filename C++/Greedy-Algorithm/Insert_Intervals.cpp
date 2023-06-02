@@ -1,7 +1,7 @@
 /*
 Name: Aryaman Singh
 Repository name: Algorithms
-
+S
 Problem Statement: Given a sorted array of non-overlapping intervals where intervals[i]=[starti,endi] and a new interval=[start,end], insert the new interval 
 into the array while maintaining the sort order and ensuring that there are no overlapping intervals. Return the updated array after the insertion.
 
