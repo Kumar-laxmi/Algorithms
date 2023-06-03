@@ -18,14 +18,10 @@
 
 
 
-
-
-
 #include <iostream>
 #include <string>
 #include <vector>
-#include <cstdlib>
-#include <ctime>
+#include <random>
 #include <algorithm>
 
 using namespace std;
@@ -41,28 +37,27 @@ const string GENES = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP"
 const string TARGET = "My name is Diwakar Singh";
 
 // Function to generate random numbers in given range
-int random_num(int start, int end)
+int random_num(default_random_engine& rng, int start, int end)
 {
-    int range = (end - start) + 1;
-    int random_int = start + (rand() % range);
-    return random_int;
+    uniform_int_distribution<int> distribution(start, end);
+    return distribution(rng);
 }
 
 // Create random genes for mutation
-char mutated_genes()
+char mutated_genes(default_random_engine& rng)
 {
     int len = GENES.size();
-    int r = random_num(0, len - 1);
+    int r = random_num(rng, 0, len - 1);
     return GENES[r];
 }
 
 // create chromosome or string of genes
-string create_gnome()
+string create_gnome(default_random_engine& rng)
 {
     int len = TARGET.size();
     string gnome = "";
     for (int i = 0; i < len; i++)
-        gnome += mutated_genes();
+        gnome += mutated_genes(rng);
     return gnome;
 }
 
@@ -74,7 +69,7 @@ public:
     int fitness;
 
     Individual(string chromosome);
-    Individual mate(Individual parent2);
+    Individual mate(Individual parent2, default_random_engine& rng);
     int cal_fitness();
 };
 
@@ -84,21 +79,21 @@ Individual::Individual(string chromosome)
     fitness = cal_fitness();
 }
 
-Individual Individual::mate(Individual par2)
+Individual Individual::mate(Individual par2, default_random_engine& rng)
 {
     string child_chromosome = "";
 
     int len = chromosome.size();
     for (int i = 0; i < len; i++)
     {
-        float p = static_cast<float>(random_num(0, 100)) / 100;
+        float p = static_cast<float>(random_num(rng, 0, 100)) / 100;
 
         if (p < 0.45)
             child_chromosome += chromosome[i];
         else if (p < 0.90)
             child_chromosome += par2.chromosome[i];
         else
-            child_chromosome += mutated_genes();
+            child_chromosome += mutated_genes(rng);
     }
 
     return Individual(child_chromosome);
@@ -116,15 +111,15 @@ int Individual::cal_fitness()
     return fitness;
 }
 
-bool operator<(const Individual &ind1, const Individual &ind2)
+bool operator<(const Individual& ind1, const Individual& ind2)
 {
     return ind1.fitness < ind2.fitness;
 }
 
 int main()
 {
-    srand(static_cast<unsigned>(time(0)));
-
+    random_device rd;
+    default_random_engine rng(rd());
     int generation = 0;
     vector<Individual> population;
     bool found = false;
@@ -132,7 +127,7 @@ int main()
     // create initial population
     for (int i = 0; i < POPULATION_SIZE; i++)
     {
-        string gnome = create_gnome();
+        string gnome = create_gnome(rng);
         population.push_back(Individual(gnome));
     }
 
@@ -156,11 +151,11 @@ int main()
         for (int i = 0; i < s; i++)
         {
             int len = population.size();
-            int r = random_num(0, 50);
+            int r = random_num(rng, 0, 50);
             Individual parent1 = population[r];
-            r = random_num(0, 50);
+            r = random_num(rng, 0, 50);
             Individual parent2 = population[r];
-            Individual offspring = parent1.mate(parent2);
+            Individual offspring = parent1.mate(parent2, rng);
             new_generation.push_back(offspring);
         }
 
@@ -179,3 +174,6 @@ int main()
 
     return 0;
 }
+
+
+
