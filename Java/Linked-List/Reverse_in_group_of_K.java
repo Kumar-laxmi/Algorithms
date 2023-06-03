@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main {
+class Reverse_in_group_of_K {
     static class Node {
         int data;
         Node next;
