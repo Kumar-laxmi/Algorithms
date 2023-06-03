@@ -99,4 +99,4 @@ def solveNQ():
 if __name__ == '__main__':
 	solveNQ()
 
-# This code is contributed by Divyanshu Mehta
+
