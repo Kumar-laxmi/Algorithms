@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PascalTriangle {
+public class Pascal_Triangle {
     public static long factorial(int n) {
         long result = 1;
         for (int c = 1; c <= n; c++) {
