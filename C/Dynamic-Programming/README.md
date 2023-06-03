@@ -96,3 +96,28 @@ So in this way we get all of the possible ways.
 
 **Time Complexity** : O(sum*N)
 **Space Complexity** : O(sum)
+
+# FIBONACCI NUMBER PROBLEM
+
+## Examples
+
+Example 1:
+Input: n = 10
+Output: The Fibonacci number at position 10 is 55
+
+Example 2:
+Input: n = 1
+Output: The Fibonacci number at position 1 is 1
+
+## Problem Statement
+
+Write a function fibonacci(n) that takes in an integer n and returns the nth Fibonacci number using dynamic programming.
+
+Note: The fibonacci sequence starts in following fashion
+- 1, 1, 2, 3, ...
+
+## Constraints
+0 < n <= 30
+
+**Time Complexity** : O(n)
+**Space Complexity** : O(n)
