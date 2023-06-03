@@ -1,3 +1,26 @@
+// Approach-
+  
+//   Here's a step-by-step explanation of how the algorithm works:
+
+// 1.Initialize the population: The initial population is created with a fixed number of individuals (POPULATION_SIZE). Each individual is represented by a chromosome, which is a randomly generated string of characters from the valid genes (GENES).
+
+// 2.Evaluate fitness: Calculate the fitness of each individual in the population. The fitness is determined by counting the number of characters in the chromosome that differ from the corresponding characters in the target string.
+
+// 3.Selection: Sort the population based on the fitness scores in ascending order. The fittest individuals (lowest fitness scores) are selected to proceed to the next generation. This process is known as elitism, where the top 10% of the population is preserved.
+
+//4. Crossover and mutation: From the remaining individuals, perform the mating process to produce offspring for the new generation. Two parents are randomly selected and a crossover point is chosen. The offspring inherits a portion of genes from each parent, mimicking biological reproduction. Additionally, there is a chance for random mutations, where some genes in the offspring's chromosome are randomly altered to maintain diversity.
+
+//5. Repeat steps 2-4: Continue evaluating fitness, selecting fittest individuals, and generating new offspring until a suitable individual with a fitness score of 0 (an exact match to the target string) is found.
+
+//6. Termination: Once an individual with a fitness score of 0 is found, the algorithm terminates, and the target string has been successfully generated.
+
+// The algorithm uses natural selection and genetic operations (crossover and mutation) to iteratively improve the population and converge towards the target string.
+
+
+
+
+
+
 #include <iostream>
 #include <string>
 #include <vector>
