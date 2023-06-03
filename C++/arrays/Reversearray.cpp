@@ -1,3 +1,19 @@
+/* 
+
+Problem - Reverse the array
+
+Examples:-
+
+Input : 1, 2, 3, 4, 5
+Output :5, 4, 3, 2, 1
+
+Input : 10, 20, 30, 40
+Output : 40, 30, 20, 10
+
+Time Complexity - O(n)
+Space Comlexity - O(1)
+*/
+
 // Using C++ STL(vector);
 #include<iostream>
 #include<vector>
