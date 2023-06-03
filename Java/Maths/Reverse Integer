@@ -1,0 +1,28 @@
+/*
+  This JAVA code takes an integer from the user and returns the reverse of it.
+  -author~ Akhil Agrawal
+  Github :- @swastik-akhil
+
+*/
+
+import java.util.Scanner;
+
+public class ReverseInteger {
+    public static String reverse(int num) {
+        String strNum = String.valueOf(num);
+        StringBuilder reversed = new StringBuilder(strNum).reverse();
+
+        return reversed.toString();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int number = scanner.nextInt();
+        scanner.close();
+
+        String reversedNumber = reverse(number);
+        System.out.println("Original number: " + number);
+        System.out.println("Reversed number: " + reversedNumber);
+    }
+}
