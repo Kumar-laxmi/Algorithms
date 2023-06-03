@@ -11,24 +11,45 @@ As it was told to notuse the ml-libraries , I have made solution without the lib
 The K-Nearest Neighbors (KNN) algorithm works as follows:
 
 
-1)Euclidean Distance Calculation: The algorithm starts by calculating the Euclidean distance between the test instance and each instance in the training set. The Euclidean distance measures the similarity between two instances.
+1)Euclidean Distance Calculation: The algorithm starts by calculating the Euclidean distance between the test 
+instance and each instance in the training set. The Euclidean distance measures the similarity between two instances.
 
-2)Finding the Nearest Neighbors: Based on the calculated distances, the K nearest neighbors are selected. The value of K is a hyperparameter that needs to be predefined.
+2)Finding the Nearest Neighbors: Based on the calculated distances, the K nearest neighbors are selected. 
+The value of K is a hyperparameter that needs to be predefined.
 
-3)Class Label Prediction: For classification tasks, the algorithm predicts the class label of the test instance based on the majority voting of the class labels of its K nearest neighbors. The class with the highest count among the neighbors is chosen as the predicted class label.
+3)Class Label Prediction: For classification tasks, the algorithm predicts the class label of the test
+ instance based on the majority voting of the class labels of its K nearest neighbors. The class with the highest count among the neighbors is chosen as the predicted class label.
 
-4)Algorithm Evaluation: To evaluate the performance of the KNN algorithm, various metrics such as accuracy, precision, recall, or F1 score can be used. These metrics compare the predicted class labels with the true class labels of the test instances.
+4)Algorithm Evaluation: To evaluate the performance of the KNN algorithm, various metrics such as accuracy, 
+precision, recall, or F1 score can be used. These metrics compare the predicted class labels with the true 
+class labels of the test instances.
 
-##Example
+For a bigger dataset I used Iris dataset to evaluate KNN in python 
 
-train_set = [[2.0, 1.8, 'A'], [1.0, 2.0, 'A'], [4.0, 2.5, 'B'], [3.5, 2.8, 'B']]
-test_instance = [2.5, 2.0]
+##This is the dataset explaination :
+
+# Load your own dataset or use the Iris dataset
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load the dataset (replace with your own dataset loading steps)
+iris = load_iris()
+X = iris.data  # Features
+y = iris.target  # Target variable
+
+# Split the dataset into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Perform KNN classification (replace or modify the KNN algorithm implementation according to your needs)
 k = 3
 
-neighbors = get_neighbors(train_set, test_instance, k)
-predicted_class = predict_classification(neighbors)
+# Your KNN algorithm implementation goes here
 
-print("Predicted Class:", predicted_class)
+# Evaluate the performance of the classifier
+y_pred = []
+# Your prediction and evaluation code goes here
 
-In this example, the train_set contains the training instances, each with its features and corresponding class label. The test_instance represents the instance for which we want to make a prediction. The value of k determines the number of nearest neighbors to consider.
-The script will calculate the Euclidean distance between instances, find the nearest neighbors, and predict the class label of the test instance based on majority voting. The predicted class label will be printed as the output.
+# Calculate the accuracy of the classifier
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
