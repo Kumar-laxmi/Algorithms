@@ -1,17 +1,16 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Pair{
-    int profit , weight;
-
-    public Pair(int profit , int weight){
-        this.profit = profit;
-        this.weight = weight;
-    }
-}
 
 public class FractionalKnapsack {
+    static class Pair{
+        int profit , weight;
 
+        public Pair(int profit , int weight){
+            this.profit = profit;
+            this.weight = weight;
+        }
+    }
     static double getMaximumProfit(Pair[] pairs , int capacity){
         double maxProfit = 0f;
 
@@ -52,7 +51,6 @@ public class FractionalKnapsack {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
         //getting input for total number of items
         System.out.print("Enter number of items : ");
         int n = scan.nextInt();
@@ -66,7 +64,7 @@ public class FractionalKnapsack {
             int profit = scan.nextInt();
             int weight = scan.nextInt();
 
-            items[i] = new Pair(profit , weight);
+            items[i] = new Pair(profit, weight);
         }
 
         System.out.print("Enter capacity of bag : ");
