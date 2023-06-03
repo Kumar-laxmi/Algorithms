@@ -45,12 +45,11 @@ int main(){
     return 0;
 }
 
-////////////////////using simple array;
+//using simple array;
 #include <iostream>
 using namespace std;
 int main() {
-   
- // TAKING INPUT 
+// TAKING INPUT 
    int n ;
    cin >> n ; 
    int arr[ n ] ;
