@@ -1,0 +1,37 @@
+/*
+  This C code takes an integer from the user and returns the reverse of it.
+  -author~ Akhil Agrawal
+  Github :- @swastik-akhil
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void reverse(char *str) {
+    int length = strlen(str);
+    int i, j;
+
+    for (i = 0, j = length - 1; i < j; i++, j--) {
+        char temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+    }
+}
+
+int main() {
+    int num;
+    char strNum[20];
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    sprintf(strNum, "%05d", num);
+
+    reverse(strNum);
+
+    printf("Reversed number: %s\n", strNum);
+
+    return 0;
+}
