@@ -1,144 +1,113 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct DisjointSet {
-    int* parent;
-    int* rank;
-    int size;
+// Structure to represent an edge in the graph
+struct Edge {
+    int src, dest;
 };
 
-struct DisjointSet* createSet(int size) {
-    struct DisjointSet* ds = (struct DisjointSet*)malloc(sizeof(struct DisjointSet));
-    ds->size = size;
-    ds->parent = (int*)malloc(size * sizeof(int));
-    ds->rank = (int*)malloc(size * sizeof(int));
+// Structure to represent a graph
+struct Graph {
+    int V, E;
+    struct Edge* edges;
+};
 
-    // Initialize each element as a separate set
-    for (int i = 0; i < size; ++i) {
-        ds->parent[i] = i;
-        ds->rank[i] = 0;
-    }
+// Structure to represent a subset for union-find
+struct Subset {
+    int parent;
+    int rank;
+};
 
-    return ds;
+// Function to create a graph
+struct Graph* createGraph(int V, int E) {
+    struct Graph* graph = (struct Graph*)malloc(sizeof(struct Graph));
+    graph->V = V;
+    graph->E = E;
+    graph->edges = (struct Edge*)malloc(E * sizeof(struct Edge));
+    return graph;
 }
 
-int find(struct DisjointSet* ds, int x) {
-    if (ds->parent[x] != x) {
-        // Path compression: make the found root the parent of 'x' to flatten the tree
-        ds->parent[x] = find(ds, ds->parent[x]);
+// Function to find the parent of a node in a subset
+int find(struct Subset subsets[], int i) {
+    if (subsets[i].parent != i) {
+        subsets[i].parent = find(subsets, subsets[i].parent);
     }
-    return ds->parent[x];
+    return subsets[i].parent;
 }
 
-void unite(struct DisjointSet* ds, int x, int y) {
-    int rootX = find(ds, x);
-    int rootY = find(ds, y);
+// Function to perform union of two subsets
+void unionSets(struct Subset subsets[], int x, int y) {
+    int xroot = find(subsets, x);
+    int yroot = find(subsets, y);
 
-    if (rootX == rootY) {
-        // 'x' and 'y' already belong to the same set
-        return;
-    }
-
-    // Union by rank: attach the smaller rank tree under the root of the larger rank tree
-    if (ds->rank[rootX] < ds->rank[rootY]) {
-        ds->parent[rootX] = rootY;
-    } else if (ds->rank[rootX] > ds->rank[rootY]) {
-        ds->parent[rootY] = rootX;
+    if (subsets[xroot].rank < subsets[yroot].rank) {
+        subsets[xroot].parent = yroot;
+    } else if (subsets[xroot].rank > subsets[yroot].rank) {
+        subsets[yroot].parent = xroot;
     } else {
-        ds->parent[rootY] = rootX;
-        ds->rank[rootX]++;
+        subsets[yroot].parent = xroot;
+        subsets[xroot].rank++;
     }
+}
+
+// Function to find the number of connected components
+int countComponents(struct Graph* graph) {
+    int V = graph->V;
+    struct Edge* edges = graph->edges;
+
+    // Create V subsets with single elements
+    struct Subset* subsets = (struct Subset*)malloc(V * sizeof(struct Subset));
+    for (int v = 0; v < V; v++) {
+        subsets[v].parent = v;
+        subsets[v].rank = 0;
+    }
+
+    // Iterate through all edges of the graph, perform union-find
+    for (int e = 0; e < graph->E; e++) {
+        int x = find(subsets, edges[e].src);
+        int y = find(subsets, edges[e].dest);
+        if (x != y) {
+            unionSets(subsets, x, y);
+        }
+    }
+
+    // Count the number of unique parents in subsets
+    int count = 0;
+    for (int v = 0; v < V; v++) {
+        if (subsets[v].parent == v) {
+            count++;
+        }
+    }
+
+    free(subsets);
+    return count;
 }
 
 int main() {
-    int size = 10;
-    struct DisjointSet* ds = createSet(size);
+    // Example graph
+    int V = 6;  // Number of vertices
+    int E = 4;  // Number of edges
 
-    unite(ds, 0, 1);
-    unite(ds, 2, 3);
-    unite(ds, 4, 5);
-    unite(ds, 6, 7);
+    struct Graph* graph = createGraph(V, E);
 
-    printf("%d\n", find(ds, 1)); // Output: 0 (both 0 and 1 are in the same set)
-    printf("%d\n", find(ds, 3)); // Output: 2 (both 2 and 3 are in the same set)
-    printf("%d\n", find(ds, 4)); // Output: 4 (each number is its own set)
-    printf("%d\n", find(ds, 7)); // Output: 6 (each number is its own set)
+    // Add edges to the graph
+    graph->edges[0].src = 0;
+    graph->edges[0].dest = 1;
 
-    free(ds->parent);
-    free(ds->rank);
-    free(ds);
+    graph->edges[1].src = 2;
+    graph->edges[1].dest = 3;
 
-    return 0;
-}
-#include <stdio.h>
-#include <stdlib.h>
+    graph->edges[2].src = 4;
+    graph->edges[2].dest = 5;
 
-struct DisjointSet {
-    int* parent;
-    int* rank;
-    int size;
-};
+    graph->edges[3].src = 3;
+    graph->edges[3].dest = 4;
 
-struct DisjointSet* createSet(int size) {
-    struct DisjointSet* ds = (struct DisjointSet*)malloc(sizeof(struct DisjointSet));
-    ds->size = size;
-    ds->parent = (int*)malloc(size * sizeof(int));
-    ds->rank = (int*)malloc(size * sizeof(int));
+    int components = countComponents(graph);
+    printf("Number of connected components: %d\n", components);
 
-    // Initialize each element as a separate set
-    for (int i = 0; i < size; ++i) {
-        ds->parent[i] = i;
-        ds->rank[i] = 0;
-    }
-
-    return ds;
-}
-
-int find(struct DisjointSet* ds, int x) {
-    if (ds->parent[x] != x) {
-        // Path compression: make the found root the parent of 'x' to flatten the tree
-        ds->parent[x] = find(ds, ds->parent[x]);
-    }
-    return ds->parent[x];
-}
-
-void unite(struct DisjointSet* ds, int x, int y) {
-    int rootX = find(ds, x);
-    int rootY = find(ds, y);
-
-    if (rootX == rootY) {
-        // 'x' and 'y' already belong to the same set
-        return;
-    }
-
-    // Union by rank: attach the smaller rank tree under the root of the larger rank tree
-    if (ds->rank[rootX] < ds->rank[rootY]) {
-        ds->parent[rootX] = rootY;
-    } else if (ds->rank[rootX] > ds->rank[rootY]) {
-        ds->parent[rootY] = rootX;
-    } else {
-        ds->parent[rootY] = rootX;
-        ds->rank[rootX]++;
-    }
-}
-
-int main() {
-    int size = 10;
-    struct DisjointSet* ds = createSet(size);
-
-    unite(ds, 0, 1);
-    unite(ds, 2, 3);
-    unite(ds, 4, 5);
-    unite(ds, 6, 7);
-
-    printf("%d\n", find(ds, 1)); // Output: 0 (both 0 and 1 are in the same set)
-    printf("%d\n", find(ds, 3)); // Output: 2 (both 2 and 3 are in the same set)
-    printf("%d\n", find(ds, 4)); // Output: 4 (each number is its own set)
-    printf("%d\n", find(ds, 7)); // Output: 6 (each number is its own set)
-
-    free(ds->parent);
-    free(ds->rank);
-    free(ds);
+    free(graph->edges);
+    free(graph);
 
     return 0;
 }

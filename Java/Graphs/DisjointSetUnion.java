@@ -1,74 +1,92 @@
-public class DSU{
-     
-    // Declaring two arrays to hold
-    // information about the parent and 
-    // rank of each node. 
-    private int parent[];
-    private int rank[];
-    
-    // Constructor
-    DSU(int n){
-        
-        // Defining size of the arrays.
-        parent=new int[n];
-        rank=new int[n];
-        
-        // Initializing their values 
-        // by is and 0s.
-        for(int i=0;i<n;i++)
-        {
-            parent[i]=i;
-            rank[i]=0;
-        }
+import java.util.*;
+class dsu{
+ 
+// Stores the parent of each vertex
+static int []parent = new int[1000000];
+ 
+// Function to find the topmost
+// parent of vertex a
+static int root(int a)
+{
+   
+    // If current vertex is
+    // the topmost vertex
+    if (a == parent[a])
+    {
+        return a;
     }
-    
-    // Find function
-    public int find(int node){
-        
-        // If the node is the parent of 
-        // itself then it is the leader 
-        // of the tree. 
-        if(node==parent[node]) return node;
-        
-        //Else, finding parent and also 
-        // compressing the paths.
-        return parent[node]=find(parent[node]);
+ 
+    // Otherwise, set topmost vertex of
+    // its parent as its topmost vertex
+    return parent[a] = root(parent[a]);
+}
+ 
+// Function to connect the component
+// having vertex a with the component
+// having vertex b
+static void connect(int a, int b)
+{
+   
+    // Connect edges
+    a = root(a);
+    b = root(b);
+ 
+    if (a != b) {
+        parent[b] = a;
     }
-    
-    // Union function 
-    public void union(int u,int v){
-        
-        // Make u as a leader 
-        // of its tree.
-        u=find(u);
-        
-        // Make v as a leader 
-        // of its tree.
-        v=find(v);
-        
-        // If u and v are not equal,
-        // because if they are equal then
-        // it means they are already in 
-        // same tree and it does not make 
-        // sense to perform union operation.
-        if(u!=v)
-        {
-            // Checking tree with 
-            // smaller depth/height.
-            if(rank[u]<rank[v])
-            {
-                int temp=u;
-                u=v;
-                v=temp;
-            }
-            // Attaching lower rank tree
-            // to the higher one. 
-            parent[v]=u;
-            
-            // If now ranks are equal
-            // increasing rank of u. 
-            if(rank[u]==rank[v])
-                rank[u]++;
-        }
+}
+ 
+// Function to find unique top most parents
+static void connectedComponents(int n)
+{
+    HashSet<Integer> s = new HashSet<Integer>();
+ 
+    // Traverse all vertices
+    for (int i = 0; i < n; i++)
+    {
+ 
+        // Insert all topmost
+        // vertices obtained
+        s.add(parent[i]);
     }
- }
+ 
+    // Print count of connected components
+    System.out.println(s.size());
+}
+ 
+// Function to print answer
+static void printAnswer(int N,int [][] edges)
+{
+ 
+    // Setting parent to itself
+    for (int i = 0; i <= N; i++)
+    {
+        parent[i] = i;
+    }
+ 
+    // Traverse all edges
+    for (int i = 0; i < edges.length; i++)
+    {
+        connect(edges[i][0], edges[i][1]);
+    }
+ 
+    // Print answer
+    connectedComponents(N);
+}
+ 
+// Driver Code
+public static void main(String[] args)
+{
+   
+    // Given N
+    int N = 8;
+ 
+    // Given edges
+   int [][]edges = {{ 1, 0 }, { 0, 2 },
+                    { 5, 3 }, { 3, 4 },
+                    { 6, 7 }};
+ 
+    // Function call
+    printAnswer(N, edges);
+}
+}
