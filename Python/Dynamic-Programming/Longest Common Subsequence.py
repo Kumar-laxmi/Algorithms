@@ -1,9 +1,9 @@
 ## Explanation
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #In this code, the longest_common_subsequence function takes two strings, s1 and s2, as input and returns the longest common subsequence between them.It uses dynamic programming to fill a 2D array (dp) where dp[i][j] represents the length of the LCS between s1[:i] and s2[:j].It then constructs the LCS string by backtracking through the dp array. Finally, it returns the LCS.
 
 ## Code
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def longest_common_subsequence(s1, s2):
     m = len(s1)
     n = len(s2)
