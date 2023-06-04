@@ -133,6 +133,21 @@ public class TarjanAlgorithm {
         graph.addEdge(1, 2);
         graph.addEdge(2, 4);
 
+            /*
+     *     0 <--> 1 <---> 2
+     *            ↑       ↑
+     *            |       |
+     *            |       |
+     *            ↓       ↓
+     *            3       4
+     *
+     *    In this graph there are 4 bridges [1,0] , [2,1] , [4,2] , [3,1]
+     *
+     *    Assuming that the graph is bi-directional and connected.
+     *
+     */
+
+
         Edge[] bridges = graph.findBridges();
 
         System.out.println(bridges.length + " bridges found!");

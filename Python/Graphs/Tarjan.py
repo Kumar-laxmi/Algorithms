@@ -1,3 +1,20 @@
+#'I will use Tarjan's Algorithm to find the bridges
+ #  So, what is a bridge -> A bridge of a connected graph is a graph edge whose removal disconnects the graph
+#   So if we remove the bridge then the graph will be converted into multiple components.
+
+   #e.g. 1 ←-----→ 3 ←----→ 4
+    #    ↑       ↗          ↑
+   #     |     ↗            |
+   #     |   ↗              |
+  #      ↓ ↙                ↓
+ #       2                  5
+
+  # In the above bidirectional graph, if we remove edge 3-4 then the graph will be broken into two different components so, we can say 3-4 is a bridge.
+# T.c.=> O(V+E)
+# Auxiliary Space: O(V)
+
+
+
 from collections import defaultdict
 
 class Graph:
@@ -69,6 +86,21 @@ if __name__ == '__main__':
     graph.addEdge(1, 3)
     graph.addEdge(1, 2)
     graph.addEdge(2, 4)
+
+    
+    #     0 <--> 1 <---> 2
+     #            |       |
+     #            ↑       ↑
+     #            |       |
+     #            ↓       ↓
+     #            3       4
+     #
+     #    In this graph there are 4 bridges [1,0] , [2,1] , [4,2] , [3,1]
+     #
+     #    Assuming that the graph is bi-directional and connected.
+     #
+     #
+
 
     bridges = graph.findBridges()
 
