@@ -62,14 +62,13 @@ int fibMonaccianSearch(int arr[], int x, int n)
 /* driver function */
 int main(void)
 {
-	int arr[]
-		= { 10, 22, 35, 40, 45, 50, 80, 82, 85, 90, 100,235};
+	int arr[] = { 10, 22, 35, 40, 45, 50, 80, 82, 85, 90, 100,235};
 	int n = sizeof(arr) / sizeof(arr[0]);
 	int x = 235;
 	int ind = fibMonaccianSearch(arr, x, n);
-if(ind>=0)
-	printf("Found at index: %d",ind);
-else
-	printf("%d isn't present in the array",x);
+	if(ind>=0)
+		printf("Found at index: %d",ind);
+	else
+		printf("%d isn't present in the array",x);
 	return 0;
 }
