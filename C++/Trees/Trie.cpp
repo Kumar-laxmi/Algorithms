@@ -74,6 +74,34 @@ class Trie
     
         return curr -> isEndOfWord;
     }
+//Recursive call function for deletaion of word
+    void deleteRec(string word,TrieNode*root)
+    {
+        TrieNode *curr = root;
+
+        if(word.length()==0)
+        {
+            root->isEndOfWord=false;
+            return;
+        }
+            int index = word[0] - 'a';
+            if (!curr -> children[index])
+             {
+                return ;
+            }
+            else
+            {
+               curr = curr -> children[index];
+            }
+    
+            deleteRec(word.substr(1),curr);
+    }
+    //function for deleting the word that is present in trie
+    void deleteword(string word)
+    {
+        deleteRec(word,root);
+    }
+    
 };
 
 int main()
@@ -102,6 +130,12 @@ int main()
     cout<<"these"<<" -> "<<output[t -> search("these")]<<endl;
     cout<<"their"<<" -> "<<output[t -> search("their")]<<endl;
     cout<<"thaw"<<" -> "<<output[t -> search("thaw")]<<endl;
+
+    //delete word from Tries
+    t->deleteword("the");
+
+    // After delete  Search for key
+    cout<<" Afer deletaion the"<<" -> "<<output[t -> search("the")]<<endl;
 
     return 0;
 }
