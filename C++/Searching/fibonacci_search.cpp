@@ -63,15 +63,14 @@ int fibMonaccianSearch(int array[], int x, int n)
 // Driver Code
 int main()
 {
-    int array[]
-        = { 8,5,7,3,88,61,99,2,675,23,34,97};
+    int array[] = { 8,5,7,3,88,61,99,2,675,23,34,97};
     int n = sizeof(array) / sizeof(array[0]);
     int x = 7;
-      int ind = fibMonaccianSearch(array, x, n);
-  if(ind>=0)
-    cout << "Found at index: " << ind;
-  else
-    cout << x << " isn't present in the array";
+    int ind = fibMonaccianSearch(array, x, n);
+    if(ind>=0)
+        cout << "Found at index: " << ind;
+    else
+        cout << x << " isn't present in the array";
 
     return 0;
 }
