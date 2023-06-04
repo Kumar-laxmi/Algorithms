@@ -1,3 +1,20 @@
+/* I will use Tarjan's Algorithm to find the bridges
+   So, what is a bridge -> A bridge of a connected graph is a graph edge whose removal disconnects the graph
+   So if we remove the bridge then the graph will be converted into multiple components.
+
+   e.g. 1 ←-----→ 3 ←----→ 4
+        ↑       ↗          ↑
+        |     ↗            |
+        |   ↗              |
+        ↓ ↙                ↓
+        2                  5
+
+   In the above bidirectional graph, if we remove edge 3-4 then the graph will be broken into two different components so, we can say 3-4 is a bridge.
+
+   T.c.=> O(V+E)
+   Auxiliary Space: O(V)
+
+*/
 import java.util.ArrayList;
 import java.util.List;
 
