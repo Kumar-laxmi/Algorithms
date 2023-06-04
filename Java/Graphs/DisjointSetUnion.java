@@ -1,5 +1,5 @@
 import java.util.*;
-class dsu{
+class DisjoinSetUnion{
  
 // Stores the parent of each vertex
 static int []parent = new int[1000000];

@@ -1,10 +1,8 @@
- 
 #include <bits/stdc++.h>
 using namespace std;
  
 // Stores the parent of each vertex
 int parent[1000000];
- 
 // Function to find the topmost
 // parent of vertex a
 int root(int a)
@@ -19,7 +17,6 @@ int root(int a)
     // its parent as its topmost vertex
     return parent[a] = root(parent[a]);
 }
- 
 // Function to connect the component
 // having vertex a with the component
 // having vertex b
@@ -33,7 +30,6 @@ void connect(int a, int b)
         parent[b] = a;
     }
 }
- 
 // Function to find unique top most parents
 void connectedComponents(int n)
 {
@@ -46,43 +42,34 @@ void connectedComponents(int n)
         // vertices obtained
         s.insert(root(parent[i]));
     }
- 
     // Print count of connected components
     cout << s.size() << '\n';
 }
- 
 // Function to print answer
 void printAnswer(int N,
                  vector<vector<int> > edges)
 {
- 
     // Setting parent to itself
     for (int i = 0; i <= N; i++) {
         parent[i] = i;
     }
- 
-    // Traverse all edges
+     // Traverse all edges
     for (int i = 0; i < edges.size(); i++) {
         connect(edges[i][0], edges[i][1]);
-    }
- 
+    } 
     // Print answer
     connectedComponents(N);
 }
- 
-// Driver Code
+ // Driver Code
 int main()
 {
     // Given N
     int N = 8;
- 
-    // Given edges
+     // Given edges
     vector<vector<int> > edges = {
         { 1, 0 }, { 0, 2 }, { 5, 3 }, { 3, 4 }, { 6, 7 }
     };
- 
-    // Function call
+     // Function call
     printAnswer(N, edges);
- 
-    return 0;
+     return 0;
 }
