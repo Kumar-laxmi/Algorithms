@@ -69,15 +69,13 @@ class fibonacci_search {
 	// driver code
 	public static void main(String[] args)
 	{
-		int array[] = { 10, 22, 35, 40, 45, 50,
-					80, 82, 85, 90, 100,235};
+		int array[] = { 10, 22, 35, 40, 45, 50, 80, 82, 85, 90, 100,235};
 		int n = 12;
 		int x = 235;
-	int ind = fibMonaccianSearch(array, x, n);
+		int ind = fibMonaccianSearch(array, x, n);
 		if(ind>=0)
-		System.out.print("Found at index: "
-						+ind);
-	else
-		System.out.print(x+" isn't present in the array");
+			System.out.print("Found at index: " + ind);
+		else
+			System.out.print(x+" isn't present in the array");
 	}
 }
