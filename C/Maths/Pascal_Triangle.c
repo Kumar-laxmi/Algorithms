@@ -1,3 +1,16 @@
+/*
+    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1
+
+Each number in the triangle is the sum of the two numbers directly above it.
+
+we take number of rows as input
+And we know that to find any element at particular position (i.e at ith row and cth column) we can use the combination formula nCr.
+  nCr=factorial(n)/(factorial(r)*factorial(n-r))
+*/
 #include <stdio.h>
  
 long factorial(int n)
