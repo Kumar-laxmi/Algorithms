@@ -18,7 +18,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Edge {
+public class Edge {
     int u;
     int v;
 
@@ -28,7 +28,7 @@ class Edge {
     }
 }
 
-class DFSData {
+public class DFSData {
     int node;
     int parent;
 
@@ -38,7 +38,7 @@ class DFSData {
     }
 }
 
-class Graph {
+public class Graph {
     List<Edge> edges;
     int numEdges;
     List<Integer>[] adjList;
