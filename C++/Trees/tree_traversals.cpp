@@ -47,6 +47,37 @@ void preorder_traversal (Tree *root)
     preorder_traversal(root -> right);
 }
 
+void levelorder_traversal(Tree *root)
+{
+    queue<Tree *> q;
+    q.push(root);
+    q.push(NULL);
+    while (!q.empty())
+    {
+        Tree *f = q.front();
+        q.pop();
+        if (f != NULL)
+        {
+            cout << f->data << " ";
+            if (f->left)
+            {
+                q.push(f->left);
+            }
+            if (f->right)
+            {
+                q.push(f->right);
+            }
+        }
+        else
+        {
+            if (!q.empty())
+            {
+                q.push(NULL);
+            }
+        }
+    }
+}
+
 int main() 
 {
     Tree *root = new Tree(17);
@@ -61,5 +92,7 @@ int main()
     preorder_traversal(root);
     cout << "\nPostorder Traversal is: ";
     postorder_traversal(root);
+    cout << "\nLevelorder Traversal is: ";
+    levelorder_traversal(root);
     return 0;
 }
