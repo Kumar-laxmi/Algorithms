@@ -39,7 +39,6 @@ void postfixToprfix ()
   for (i = 0; i < MAX; i++)
     stack[i] = '\0';
   printf ("Prefix expression is: ");
-
   for (i = n - 1; i >= 0; i--)
     {
       if (isOperator (str[i]))
