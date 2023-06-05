@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class spiralMatrix {
+public class spiralPrint {
     public static void main(String args[]) {
         Scanner s = new Scanner(System.in);
         System.out.print("Enter number of rows : "); // Take the input of number of rows and columns
