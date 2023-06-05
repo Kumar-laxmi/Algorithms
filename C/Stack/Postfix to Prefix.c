@@ -34,7 +34,7 @@ void postfixToprfix ()
   char c[20];
   char a, b, op;
   printf ("Enter the postfix expression\n");
-  scanf ("%s", str);
+  scanf("%s", str);
   n = strlen (str);
   for (i = 0; i < MAX; i++)
     stack[i] = '\0';
