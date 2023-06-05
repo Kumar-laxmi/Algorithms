@@ -5,7 +5,7 @@
  Sol: The problem to sort the linked can be done via folowing methods
 
     Method 1)  One of the brute force solution is to convert the linked list into an array, sort the array using a standard sorting algorithm, and then rebuild the linked list using the sorted values. This approach may be simpler to implement but requires additional memory to store the array.
-    Time Complexity - O(nO(n logn) , Space Complexity - O(n)
+    Time Complexity - O(n logn) , Space Complexity - O(n)
 
     Method 2) Quick Sort can be applied to a linked list by selecting a pivot, partitioning the list into smaller and greater elements, and recursively sorting the partitions. The main challenge lies in rearranging the nodes during the partitioning step, as random access is not available. Despite this, Quick Sort remains an efficient sorting algorithm for linked lists with an average Time complexity of O(n log n) but in worst case O(n^2) and a Space complexity of O(log n).
 
