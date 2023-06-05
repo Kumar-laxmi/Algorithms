@@ -1,74 +1,96 @@
 #include<stdio.h>
 #include<string.h>
+#include<math.h>
 #include<stdlib.h>
-#define MAX 20
-char str[MAX], stack[MAX];
-int top = -1;
-void push (char c)
+#define BLANK ' '
+#define TAB '\t'
+#define MAX 50
+char *pop();
+char postfix[MAX];
+char stack[MAX][MAX];
+void push(char *str);
+int isempty();
+int white_space(char symbol);
+void postfix_to_prefix();
+int top;
+int main()
 {
-  stack[++top] = c;
+        top = -1;
+        printf("Enter postfix expression : ");
+        gets(postfix);
+        postfix_to_prefix();
+        return 0;
 }
-char pop ()
+void postfix_to_prefix()
 {
-  return stack[top--];
+        unsigned int i;
+        char operand1[MAX], operand2[MAX];
+        char symbol;
+        char temp[2];
+        char strin[MAX];
+        for(i=0;i<strlen(postfix);i++)
+        {
+                symbol=postfix[i];
+                temp[0]=symbol;
+                temp[1]='\0';
+                if(!white_space(symbol))
+                {
+                        switch(symbol)
+                        {
+                        case '+':
+                        case '-':
+                        case '*':
+                        case '/':
+                        case '%':
+                        case '^':
+                                strcpy(operand1,pop());
+                                strcpy(operand2,pop());
+                                strcpy(strin,temp);
+                                strcat(strin,operand2);
+                                strcat(strin,operand1);
+                                push(strin);
+                                break;
+                        default: /*if an operand comes*/
+                             push(temp);
+                        }
+                }
+        }
+        printf("\nPrefix Expression :: ");
+        puts(stack[0]);
 }
-int checkIfOperand (char ch)
+void push(char *str)
 {
-  return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
+        if(top > MAX)
+        {
+                printf("\nStack overflow\n");
+                exit(1);
+        }
+        else
+        {
+                top=top+1;
+                strcpy( stack[top], str);
+        }
+char *pop()
+{
+        if(top == -1 )
+        {
+                printf("\nStack underflow \n");
+                exit(2);
+        }
+        else
+                return (stack[top--]);
 }
-int isOperator (char x)
+int isempty()
 {
-  switch (x)
-    {
-    case '+':
-    case '-':
-    case '/':
-    case '*':
-      return 1;
-    }
-  return 0;
+        if(top==-1)
+                return 1;
+        else
+                return 0;
 }
-void postfixToprfix ()
+int white_space(char symbol)
 {
-  int n, i, j = 0;
-  char c[20];
-  char a, b, op;
-  printf ("Enter the postfix expression\n");
-  scanf("%s", str);
-  n = strlen (str);
-  for (i = 0; i < MAX; i++)
-    stack[i] = '\0';
-  printf ("Prefix expression is: ");
-  for (i = n - 1; i >= 0; i--)
-    {
-      if (isOperator (str[i]))
-	{
-	  push (str[i]);
-	}
-      else
-	{
-	  c[j++] = str[i];
-	  while ((top != -1) && (stack[top] == '#'))
-	    {
-	      a = pop ();
-	      c[j++] = pop ();
-	    }
-	  push ('#');
-	}
-    }
-  c[j] = '\0';
-  i = 0;
-  j = strlen (c) - 1;
-  char d[20];
-  while (c[i] != '\0')
-    {
-      d[j--] = c[i++];
-    }
-  printf ("%s\n", d);
-}
-int main ()
-{
-  postfixToprfix ();
-
-  return 0;
+        if( symbol == BLANK || symbol == TAB || symbol == '\0')
+                return 1;
+        else
+                return 0;
 }
