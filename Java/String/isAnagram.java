@@ -17,6 +17,7 @@ Output: false
 
 
 // /*  <--------- Code ----------->  */
+
 class Solution{
     public boolean isAnagram(String s, String t){
         boolean b = true;
