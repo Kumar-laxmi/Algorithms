@@ -7,7 +7,8 @@
 STEPS
 =====
 ⇒ Find probabilities of each classification from the classifying feature.
-⇒
+⇒ Find conditial probabilities of each value in test data w.r.t each classification.
+⇒ Compare the probabilities of each classification and classify the test data to the classification with maximum probability.
 
 */
 
@@ -73,7 +74,7 @@ void naiveClassifier()
     int numClassifxn; // number of classifications
     // finding unique classifying features
     int count;                 // store count of classification match while finding conditional probabilities
-    int maxProbilty = INT_MIN; // maximum probability
+    int maxProbilty = 0; // maximum probability
     double probilty;           // store calculated probability
     string classifiedRes;      // store classified result of Naive Bayes Classifier
 
