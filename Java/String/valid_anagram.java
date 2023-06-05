@@ -16,10 +16,9 @@ Output: false
 
 
 
-/*  <--------- Code ----------->  */
-
-class Solution {
-    public boolean isAnagram(String s, String t) {
+// /*  <--------- Code ----------->  */
+class Solution{
+    public boolean isAnagram(String s, String t){
         boolean b = true;
         // Calculate length of string s
         int len = s.length();   
