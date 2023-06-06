@@ -1,28 +1,18 @@
-/*
-The Hopcroft-Karp algorithm is a graph algorithm used for finding the maximum cardinality matching in a bipartite graph. It falls under the category of graph algorithms, specifically matching algorithms.
-
-Matching algorithms are used to find pairs of elements from different sets that satisfy certain criteria or constraints. In the case of bipartite graphs, a matching refers to a set of edges that do not share any common vertices, and the maximum cardinality matching is the largest possible matching in terms of the number of edges.
-
-The Hopcroft-Karp algorithm efficiently computes the maximum cardinality matching in a bipartite graph with a time complexity of O(sqrt(V) * E), where V is the number of vertices and E is the number of edges in the graph.
-*/
-
 #include <iostream>
 #include <vector>
 #include <queue>
 #include <limits>
-
 using namespace std;
 
-const int INF = numeric_limits<int>::max();
-
 class HopcroftKarp {
+private:
     int n, m;
     vector<vector<int>> graph;
     vector<int> match;
     vector<int> dist;
 
 public:
-    HopcroftKarp(int n, int m) : n(n), m(m), graph(n), match(m), dist(n) {}
+    HopcroftKarp(int n, int m) : n(n), m(m), graph(n + 1), match(n + m + 1), dist(n + m + 1) {}
 
     void addEdge(int u, int v) {
         graph[u].push_back(v);
@@ -30,25 +20,23 @@ public:
 
     bool bfs() {
         queue<int> q;
-        for (int u = 0; u < n; ++u) {
+        for (int u = 1; u <= n; ++u) {
             if (match[u] == -1) {
                 dist[u] = 0;
                 q.push(u);
             }
             else {
-                dist[u] = INF;
+                dist[u] = numeric_limits<int>::max();
             }
         }
-
-        dist[-1] = INF;
+        dist[0] = numeric_limits<int>::max();
 
         while (!q.empty()) {
             int u = q.front();
             q.pop();
-
-            if (dist[u] < dist[-1]) {
+            if (dist[u] < dist[0]) {
                 for (int v : graph[u]) {
-                    if (dist[match[v]] == INF) {
+                    if (dist[match[v]] == numeric_limits<int>::max()) {
                         dist[match[v]] = dist[u] + 1;
                         q.push(match[v]);
                     }
@@ -56,54 +44,59 @@ public:
             }
         }
 
-        return dist[-1] != INF;
+        return dist[0] != numeric_limits<int>::max();
     }
 
     bool dfs(int u) {
-        if (u == -1)
-            return true;
-
-        for (int v : graph[u]) {
-            if (dist[match[v]] == dist[u] + 1 && dfs(match[v])) {
-                match[u] = v;
-                match[v] = u;
-                return true;
+        if (u != 0) {
+            for (int v : graph[u]) {
+                if (dist[match[v]] == dist[u] + 1 && dfs(match[v])) {
+                    match[u] = v;
+                    match[v] = u;
+                    return true;
+                }
             }
+            dist[u] = numeric_limits<int>::max();
+            return false;
         }
-
-        dist[u] = INF;
-        return false;
+        return true;
     }
 
     int maxMatching() {
         int matching = 0;
-
         while (bfs()) {
-            for (int u = 0; u < n; ++u) {
+            for (int u = 1; u <= n; ++u) {
                 if (match[u] == -1 && dfs(u)) {
-                    matching++;
+                    ++matching;
                 }
             }
         }
-
         return matching;
     }
 };
 
 int main() {
-    int n, m, e;
-    cin >> n >> m >> e;
+    int n, m, edges;
+    cout << "Enter the number of vertices on the left side of the bipartite graph: ";
+    cin >> n;
+    cout << "Enter the number of vertices on the right side of the bipartite graph: ";
+    cin >> m;
+    cout << "Enter the number of edges: ";
+    cin >> edges;
 
     HopcroftKarp hk(n, m);
 
-    for (int i = 0; i < e; ++i) {
+    cout << "Enter the edges in the format (u v):\n";
+    for (int i = 0; i < edges; ++i) {
         int u, v;
         cin >> u >> v;
         hk.addEdge(u, v);
     }
 
     int maxMatching = hk.maxMatching();
-    cout << "Maximum Matching: " << maxMatching << endl;
+
+    cout << "Maximum Cardinality Matching: " << maxMatching << endl;
 
     return 0;
 }
+
