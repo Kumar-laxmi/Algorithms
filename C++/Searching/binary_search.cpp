@@ -20,6 +20,7 @@ int main()
     int n;
     cin >> n;
     vector<int> v(n);
+    //Enter sorted array - binary search always works on sorted array 
     for(int i=0; i<n; i++){
         cin >> v[i];
     }

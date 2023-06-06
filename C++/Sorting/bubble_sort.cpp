@@ -16,13 +16,14 @@ int main()
     cout << "UNSORTED ARRAY: " << endl;
     for (int j = 0; j < n; j++)
     {
-        cout << array[j] << endl;
+        cout << array[j] << " ";
     }
+    cout << endl;
 
     int temp;
     for (int i = 0; i <= n - 1; i++)
     {
-        for (int j = 0; j < n - 1; j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
 
             if (array[j] > array[j + 1])
@@ -37,7 +38,8 @@ int main()
     cout << "SORTED ARRAY: " << endl;
     for (int i = 0; i < n; i++)
     {
-        cout << array[i] << endl;
+        cout << array[i] << " ";
     }
+    cout << endl;
     return 0;
 }
