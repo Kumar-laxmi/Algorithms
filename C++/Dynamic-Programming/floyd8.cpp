@@ -9,9 +9,9 @@ void floydWarshall(int **arr,int num)
             for(int j=0;j<num;j++)
             {
                 if(i==j)
-                    arr[i][j]=0;
+                    arr[i][j]=0; //shortest distance to itself
                 else
-                    arr[i][j]=min(arr[i][j],arr[i][k]+arr[k][j]);
+                    arr[i][j]=min(arr[i][j],arr[i][k]+arr[k][j]); //calculating shortest distance to all other nodes
             }
         }
     }
@@ -20,7 +20,7 @@ void floydWarshall(int **arr,int num)
     {
         for(int j=0;j<num;j++)
         {
-            cout<<i<<"--->"<<j<<" "<<arr[i][j]<<endl;
+            cout<<i<<"--->"<<j<<" "<<arr[i][j]<<endl; //printing the output
         }
         cout<<endl;
     }
@@ -29,7 +29,7 @@ int main()
 {
     int num;
     cout<<"\nEnter the number of nodes"<<endl;
-    cin>>num;
+    cin>>num;     //input of number of nodes in the graph
     int *arr[num];
     for(int i=0;i<num;i++)
     {
@@ -38,9 +38,9 @@ int main()
     cout<<"\nPopulate adjacency matrix, For infinity use '-2.1'"<<endl;
     double temp;
     int infi=500;
-    for(int i=0;i<num;i++)
+    for(int i=0;i<num;i++)   //input of the adjacency matrix for the graph
     {
-        for(int j=0;j<num;j++)
+        for(int j=0;j<num;j++)  
         {
             cin>>temp;
             if(temp==-2.1)
@@ -49,6 +49,6 @@ int main()
             arr[i][j]=temp;
         }
     }
-    floydWarshall(arr,num);
+    floydWarshall(arr,num); 
     return 0;
 }
