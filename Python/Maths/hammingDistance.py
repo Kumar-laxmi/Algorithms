@@ -12,7 +12,7 @@ res = x ^ y  #taking xor of the two values to get different bits
 
     #counting number of 1 present in the res 
 while res>0:
-    count += res & 1;
+    count += res & 1
     res >>= 1
 
 print(count) 
