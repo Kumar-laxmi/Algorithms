@@ -32,7 +32,6 @@ Space Complexity: O(n), where n is the size of the array.
 using namespace std;
 
 int main() {
-
     //Size of the input array
     int n;
     cin >> n;
@@ -54,7 +53,6 @@ int main() {
 
     // Process the queries
     while (q--) {
-
         //range (start and end index)
         int s, e; 
         cin >> s >> e;
@@ -89,7 +87,6 @@ int main() {
 
     // Deallocate the dynamically allocated array
     delete[] arr;
-
 }
 
 /*
