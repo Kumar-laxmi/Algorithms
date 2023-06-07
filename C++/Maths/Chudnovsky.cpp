@@ -12,7 +12,6 @@ struct PQT
 
 class Chudnovsky
 {
-
     mpz_class A, B, C, D, E, C3_24;  
     int DIGITS, PREC, N;             
     double DIGITS_PER_TERM;       
