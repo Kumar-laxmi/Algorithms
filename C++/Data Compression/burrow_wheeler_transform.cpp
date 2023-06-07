@@ -83,7 +83,6 @@ string bwt(string s){
 
 // finds the index of the nth occurrence of a character ch in the input string
 int findNthOccurrenceIndex(string& str, char ch, int n){ 
-    
     // create a vector to store the number of occurrences up to each index 
     vector<int> occurrences(str.size());
     for (int i = 0; i < str.size(); i++){
