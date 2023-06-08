@@ -9,7 +9,7 @@ The code uses the following functions:
 
 * `purpose_function()`: This function returns the value of the objective function at the given point `x`.
 * `random_number()`: This function returns a random number between the given lower and upper bounds.
-* `hill_climbing()`: This function implements the Hill Climbing algorithm.
+* `Hill_climbing()`: This function implements the Hill Climbing algorithm.
 * `main()`: This function sets the seed for random number generation and then runs the Hill Climbing algorithm.
 """
 
@@ -34,7 +34,7 @@ def random_number(lower, upper):
   return ((float)random() / RAND_MAX) * (upper - lower) + lower
 
 # This function implements the Hill Climbing algorithm for finding the maximum of a function.
-def hill_climbing(lower_bound, upper_bound, step, max_iter):
+def Hill_climbing(lower_bound, upper_bound, step, max_iter):
   # Initialize the current best solution.
   current_answer = random_number(lower_bound, upper_bound)
   current_val = purpose_function(current_answer)
@@ -63,7 +63,7 @@ def main():
   random.seed(time())
 
   # Run the Hill Climbing algorithm.
-  hill_climbing(LOWER_LIMIT, UPPER_LIMIT, STEP_SIZE, MAX_ITERATIONS)
+  Hill_climbing(LOWER_LIMIT, UPPER_LIMIT, STEP_SIZE, MAX_ITERATIONS)
 
 if __name__ == "__main__":
   main()

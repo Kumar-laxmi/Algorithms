@@ -24,7 +24,7 @@ double randomNumber(double lower, double upper) {
 }
 
 // This function implements the Hill Climbing algorithm for finding the maximum of a function.
-void hillClimbing(double lowerLimit, double upperLimit, double stepSize, int maxIterations) {
+void Hill_Climbing(double lowerLimit, double upperLimit, double stepSize, int maxIterations) {
   // Initialize the current best solution.
   double currentAnswer = randomNumber(lowerLimit, upperLimit);
   double currentValue = purposeFunction(currentAnswer);
@@ -56,5 +56,5 @@ void main() {
   srand(time(NULL));
 
   // Run the Hill Climbing algorithm.
-  hillClimbing(LOWER_LIMIT, UPPER_LIMIT, STEP_SIZE, MAX_ITERATIONS);
+  Hill_Climbing(LOWER_LIMIT, UPPER_LIMIT, STEP_SIZE, MAX_ITERATIONS);
 }

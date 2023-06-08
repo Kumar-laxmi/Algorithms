@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class HillClimbing {
+public class Hill_Climbing {
 
     // Define the search space boundaries.
     private static final double LOWER_LIMIT = -10;
@@ -25,7 +25,7 @@ public class HillClimbing {
     }
 
     // This function implements the Hill Climbing algorithm for finding the maximum of a function.
-    public static void hillClimbing(double lowerLimit, double upperLimit, double stepSize, int maxIterations) {
+    public static void hill_Climbing(double lowerLimit, double upperLimit, double stepSize, int maxIterations) {
         // Initialize the current best solution.
         double currentAnswer = randomNumber(lowerLimit, upperLimit);
         double currentValue = purposeFunction(currentAnswer);
@@ -57,6 +57,6 @@ public class HillClimbing {
         new Random().setSeed(System.currentTimeMillis());
 
         // Run the Hill Climbing algorithm.
-        hillClimbing(LOWER_LIMIT, UPPER_LIMIT, STEP_SIZE, MAX_ITERATIONS);
+        hill_Climbing(LOWER_LIMIT, UPPER_LIMIT, STEP_SIZE, MAX_ITERATIONS);
     }
 }

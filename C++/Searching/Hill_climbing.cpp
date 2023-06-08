@@ -28,7 +28,7 @@ double random_number(double lower, double upper) {
 }
 
 // Define the Hill Climbing algorithm.
-void Hill__climbing(double lower_bound, double upper_bound, double step, int max_iter) {
+void Hill_climbing(double lower_bound, double upper_bound, double step, int max_iter) {
     // This function implements the Hill Climbing algorithm for finding the maximum of a function.
 
     // Initialize the current best solution.
@@ -61,7 +61,7 @@ int main() {
     std::srand(std::time(NULL));
 
     // Run the Hill Climbing algorithm.
-    Hill__climbing(lower_limit, upper_limit, step, max_iter);
+    Hill_climbing(lower_limit, upper_limit, step, max_iter);
 
     return 0;
 }
