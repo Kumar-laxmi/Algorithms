@@ -11,7 +11,7 @@
 
 #Function to find the smallest no that will produce respective remainder.
 def findMinX(num, rem, k):
-	x = 1; # Initialize result
+	x = 1 # Initialize result
 
 	
 	while(True):
