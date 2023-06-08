@@ -40,14 +40,12 @@ void connectedComponents(int n)
  
         // Insert all topmost
         // vertices obtained
-        s.insert(root(parent[i]));
-    }
+        s.insert(root(parent[i]));}
     // Print count of connected components
     cout << s.size() << '\n';
 }
 // Function to print answer
-void printAnswer(int N,
-                 vector<vector<int> > edges)
+void printAnswer(int N,vector<vector<int> > edges)
 {
     // Setting parent to itself
     for (int i = 0; i <= N; i++) {
@@ -66,9 +64,7 @@ int main()
     // Given N
     int N = 8;
      // Given edges
-    vector<vector<int> > edges = {
-        { 1, 0 }, { 0, 2 }, { 5, 3 }, { 3, 4 }, { 6, 7 }
-    };
+    vector<vector<int> > edges = {{ 1, 0 }, { 0, 2 }, { 5, 3 }, { 3, 4 }, { 6, 7 }    };
      // Function call
     printAnswer(N, edges);
      return 0;
