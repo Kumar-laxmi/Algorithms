@@ -155,6 +155,15 @@
 | 114. | Tree Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/tree_traversals.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/tree_traversals.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/tree_traversals.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/tree_traversals.py) | Trees |
 | 115. | Trie | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/Trie.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/Trie.java) | Trees | 
 
+| 114. | Hill climbing | [C](https://github.com/
+Kumar-laxmi/Algorithms/blob/main/C/Searching/
+Hill_climbing.c), [C++](https://github.com/
+Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Searching/
+Hill_climbing.cpp), [Java](https://github.com/
+Kumar-laxmi/Algorithms/blob/main/Java/Searching/
+Hill_climbing.java), [Python](https://github.com/
+Kumar-laxmi/Algorithms/blob/main/Python/Searching/
+Hill_climbing.py) | Searching |
  </div>
 
 <br>
