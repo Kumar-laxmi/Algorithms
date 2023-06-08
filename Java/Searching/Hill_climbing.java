@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Hill_Climbing {
+public class Hill_climbing {
 
     // Define the search space boundaries.
     private static final double LOWER_LIMIT = -10;
