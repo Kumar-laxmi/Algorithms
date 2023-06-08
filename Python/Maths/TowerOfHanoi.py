@@ -35,10 +35,10 @@ def process(n, src, helper, dest):
         print("Transfer disk" , n , "from" , src , "to" , dest)
         return 
     process(n-1,src,dest,helper)
-    #moving the top (n-1) discs from A to B
+    #moving the top (n-1) disks from A to B
     print("Transfer disk" , n , "from" , src , "to" , dest)
-    #moving the remaining one disc from A to C
+    #moving the remaining one disk from A to C
     process(n-1,helper,src,dest)
-    #now moving the (n-1) discs on B to C
+    #now moving the (n-1) disks on B to C
 
 display()
