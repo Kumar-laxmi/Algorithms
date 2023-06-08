@@ -20,23 +20,23 @@ def findMinX(num, rem, k):
 		# x % num[j] is rem[j]
 		# or not (for all j from
 		# 0 to k-1)
-		j = 0;
+		j = 0
 		while(j < k):
 			if (x % num[j] != rem[j]):
-				break;
-			j += 1;
+				break
+			j += 1
 
 		# If all remainders
 		# matched, we found x
 		if (j == k):
-			return x;
+			return x
 
 		# Else try next number
-		x += 1;
+		x += 1
 
 # Driver Code
-num = [3, 4, 5];
-rem = [2, 3, 1];
-k = len(num);
-print("x is", findMinX(num, rem, k));
+num = [3, 4, 5]
+rem = [2, 3, 1]
+k = len(num)
+print("x is", findMinX(num, rem, k))
 
