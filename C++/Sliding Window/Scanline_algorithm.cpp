@@ -32,7 +32,6 @@ Space Complexity: O(n), where n is the size of the array.
 using namespace std;
 
 int main() {
-
     //Size of the input array
     cout << "Enter the size of the array" << endl;
     int n;
@@ -62,12 +61,14 @@ int main() {
     while (q--) {
 
         cout << "Query " << queryCnt << ":" << endl;
+
         //range (start and end index)
         cout <<"Enter the starting index of the range" << endl;
-        int s, e; 
+        int s; 
         cin >> s;
 
         cout << "Enter the ending index of the range" << endl;
+        int e;
         cin >> e;
 
         //value to be added in the given range
@@ -104,7 +105,6 @@ int main() {
 
     // Deallocate the dynamically allocated array
     delete[] arr;
-
 }
 
 /*
