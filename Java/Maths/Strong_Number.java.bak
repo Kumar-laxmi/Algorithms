@@ -13,6 +13,7 @@ EXAMPLE :
 Input:  145
 Output: "It is a Strong Number"
 */
+
 import java.util.Scanner;
 public class Main {
   public static void main(String[] args){
@@ -21,6 +22,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         n=in.nextInt();
         int copy=n;
+        
         while (n>0)
         {
             int rem = n%10;
