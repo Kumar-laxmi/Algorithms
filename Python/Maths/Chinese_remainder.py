@@ -35,8 +35,19 @@ def findMinX(num, rem, k):
 		x += 1
 
 # Driver Code
-num = [3, 4, 5]
-rem = [2, 3, 1]
+#num = [3, 4, 5]
+num=[]
+n=int(input("Number of elements in  num array:"))
+for i in range(0,n):
+   l=int(input())
+   num.append(l)
+
+#rem = [2, 3, 1]
+rem=[]
+m=int(input("Number of elements in rem array:"))
+for i in range(0,m):
+   t=int(input())
+   rem.append(t)
+
 k = len(num)
 print("x is", findMinX(num, rem, k))
-

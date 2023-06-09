@@ -13,34 +13,50 @@ using namespace std;
 int findMinX(int num[], int rem[], int k)
 {
     int x = 1; // Initialize result
-  
-    
+
     while (true)
     {
-        // Check if remainder of x % num[j] is 
+        // Check if remainder of x % num[j] is
         // rem[j] or not (for all j from 0 to k-1)
         int j;
-        for (j=0; j<k; j++ )
-            if (x%num[j] != rem[j])
-               break;
-  
+        for (j = 0; j < k; j++)
+        {
+            if (x % num[j] != rem[j])
+                break;
+        }
+
         // If all remainders matched, we found x
         if (j == k)
             return x;
-  
-        // Else try next number
+
+        // Else try the next number
         x++;
     }
-  
+
     return x;
 }
-  
+
 // Driver method
-int main(void)
+int main()
 {
-    int num[] = {3, 4, 5};
-    int rem[] = {2, 3, 1};
-    int k = sizeof(num)/sizeof(num[0]);
-    cout << "x is " << findMinX(num, rem, k);
+    int num[100];
+    int rem[100];
+    int n = 0;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+    cout << "Enter elements of num array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> num[i];
+    }
+
+    cout << "Enter elements of rem array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> rem[i];
+    }
+
+    int k = n;
+    cout << "x is " << findMinX(num, rem, k) << endl;
     return 0;
 }

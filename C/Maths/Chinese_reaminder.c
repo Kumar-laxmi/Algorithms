@@ -39,9 +39,24 @@ long long findMinX(int num[], int rem[], int k)
 
 int main()
 {
-    int num[] = { 3, 4, 5 };
-    int rem[] = { 2, 3, 1 };
-    int k = sizeof(num) / sizeof(num[0]);
+    int num[100];
+    int rem[100];
+    int k;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &k);
+
+    printf("Enter elements of num array: ");
+    for (int i = 0; i < k; i++)
+    {
+        scanf("%d", &num[i]);
+    }
+
+    printf("Enter elements of rem array: ");
+    for (int i = 0; i < k; i++)
+    {
+        scanf("%d", &rem[i]);
+    }
 
     printf("x is %lld\n", findMinX(num, rem, k));
 
