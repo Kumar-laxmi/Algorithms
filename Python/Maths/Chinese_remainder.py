@@ -38,8 +38,8 @@ def findMinX(num, rem, k):
 num=[]
 n=int(input("Number of elements in  num array:"))
 for i in range(0,n):
-   l=int(input())
-   num.append(l)
+   g=int(input())
+   num.append(g)
 
 #rem = [2, 3, 1]
 rem=[]
