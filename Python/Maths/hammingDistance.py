@@ -6,8 +6,8 @@
             1 0 1
             1 1 0
 '''
-x = input("Enter the value of X: "); #taking inputs
-y = input("Enter the value of Y: ");
+x = input("Enter the value of X: ") #taking inputs
+y = input("Enter the value of Y: ")
 
 count= 0
 res = int(x) ^ int(y)  #taking xor of the two values to get different bits
