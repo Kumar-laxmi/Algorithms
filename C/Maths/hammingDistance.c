@@ -9,7 +9,12 @@ int main(){
             1 0 1
             1 1 0
     */
-    int x = 9, y =14, count=0; // taking two values as test cases
+    int x = 0, y =0, count=0; // taking two values as test cases
+    printf("Enter the value of X: ");
+    scanf("%d",&x);
+
+    printf("Enter the value of Y: ");
+    scanf("%d",&y);
 
     int res = x ^ y ; // taking xor of the two values to get different bits
 
@@ -18,6 +23,6 @@ int main(){
         count += res & 1;
         res >>= 1;
     }
-    printf("%d",count);// printing the value of bits
+    printf("The result is : %d",count);// printing the value of bits
     return 0;
 }

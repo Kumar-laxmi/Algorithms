@@ -9,8 +9,11 @@ int main(){
             1 0 1
             1 1 0
     */
-    int x = 9, y =14, count=0; // taking two values as test cases
-
+    int x = 0, y =0, count=0; // taking two values as test cases
+    cout << "Enter value of X: ";
+    cin >> x;
+    cout << "Enter value of Y: ";
+    cin >> y;
     int res = x ^ y ; // taking xor of the two values to get different bits
 
     // counting number of 1 present in the res 
@@ -18,6 +21,6 @@ int main(){
         count += res & 1;
         res >>= 1;
     }
-    cout << count; // printing the value of bits
+    cout << "The result is: " << count; // printing the value of bits
     return 0;
 }
