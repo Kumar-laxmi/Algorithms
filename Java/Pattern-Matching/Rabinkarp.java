@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class RabinKarp {
+public class Rabinkarp {
     private static final int PRIME = 101;
 
     public List<Integer> search(String text, String pattern) {
@@ -59,7 +59,7 @@ public class RabinKarp {
     }
 
     public static void main(String[] args) {
-        RabinKarp rk = new RabinKarp();
+        Rabinkarp rk = new Rabinkarp();
 
         Scanner scanner = new Scanner(System.in);
 
