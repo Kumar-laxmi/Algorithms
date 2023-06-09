@@ -1,7 +1,8 @@
 /*
 
 =============================Problem Statement=============================
-We are given an array and n queries, in each query we are provided with the range (start and end index) along with the value which needs to be added in the given range in array.
+We are given an array and n queries, in each query we are provided with the range (start and end index) along with the value which needs to be added in the given range
+in array.
 
 Example:
 
@@ -109,6 +110,7 @@ int main() {
 
 /*
 
-Summary: The code basically updates the array based on the queries by using a dummy array to track the changes at specific positions. By calculating the prefix sum of the dummy array and adding it to the original array, the final output is obtained.
+Summary: The code basically updates the array based on the queries by using a dummy array to track the changes at specific positions. By calculating the prefix sum of the 
+dummy array and adding it to the original array, the final output is obtained.
 
 */ 
