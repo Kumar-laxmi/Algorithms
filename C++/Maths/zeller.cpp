@@ -1,9 +1,17 @@
+/*
+C++ program to Find the Day
+for a Given Random Date
+Give input as instructed
+date (press spacebar)--> month (press spacebar)--> year 
 
-// C++ program to Find the Day
-// for a Date
-#include <cmath>
-#include <cstring>
-#include <iostream>
+
+    // Example :-
+        Input   :- 9 6 2023 
+        Output  :- Friday
+    
+*/
+
+#include <bits/stdc++.h>
 using namespace std;
 
 int Zellercongruence(int day, int month, int year) {
@@ -49,6 +57,17 @@ int Zellercongruence(int day, int month, int year) {
 
 // Driver code
 int main() {
-    Zellercongruence(11, 11, 2022); // date (dd/mm/yyyy)
+    int date,month,year;
+    
+    // give input as date --> month --> year 
+    
+    cin>>date;
+    cin>>month;
+    cin>>year;
+    Zellercongruence(date,month,year); // date (dd/mm/yyyy)
+    
+    // Example  :- 9 6 2023 
+    //  output  :- Friday
+    
     return 0;
 }
