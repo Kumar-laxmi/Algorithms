@@ -29,31 +29,45 @@
 
 
 # Size of the input array
+print("Enter the size of the array")
 n = int(input())
 
 # Read input values into the array
+print("Enter the array elements")
 arr = list(map(int, input().split()))
 
 # Create a dummy list of size n+1 initialized with 0
 dummy_array = [0] * (n + 1)
 
 # Number of queries
+print("Enter the number of queries")
 q = int(input())
+
+queryCnt = 1
 
 # Process the queries
 for _ in range(q):
+
+    print("Query", queryCnt)
+
     # Range (start and end index)
-	s = int(input())
-	e = int(input())
+    print("Enter the starting index of the range")
+    s = int(input())
+
+    print("Enter the ending index of the range")
+    e = int(input())
 
     # Value to be added in the given range
-	val = int(input())
+    print("Enter the value to be added in the given range")
+    val = int(input())
 
     # Add the value to the starting position 's' in the dummy array
-	dummy_array[s] += val
+    dummy_array[s] += val
 
     # Subtract the value from the next position after the ending position 'e' in the dummy array
-	dummy_array[e + 1] -= val
+    dummy_array[e + 1] -= val
+
+    queryCnt+=1
 
 # Compute cumulative sum of the dummy array
 for i in range(1, n + 1):
@@ -64,6 +78,7 @@ for i in range(n):
     arr[i] += dummy_array[i]
 
 # Print the updated array
+print("Output:")
 for num in arr:
     print(num, end=' ')
 

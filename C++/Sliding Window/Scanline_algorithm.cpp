@@ -34,6 +34,7 @@ using namespace std;
 int main() {
 
     //Size of the input array
+    cout << "Enter the size of the array" << endl;
     int n;
     cin >> n;
 
@@ -41,6 +42,8 @@ int main() {
     int* arr = new int[n];
 
     // Read input values into the array
+    cout << "Enter the array elements" << endl;
+
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
@@ -49,17 +52,26 @@ int main() {
     vector<int> dummyArray(n + 1, 0);
 
     //Number of queries
+    cout << "Enter the number of queries" << endl;
     int q;
     cin >> q;
+
+    int queryCnt = 1;
 
     // Process the queries
     while (q--) {
 
+        cout << "Query " << queryCnt << ":" << endl;
         //range (start and end index)
+        cout <<"Enter the starting index of the range" << endl;
         int s, e; 
-        cin >> s >> e;
+        cin >> s;
+
+        cout << "Enter the ending index of the range" << endl;
+        cin >> e;
 
         //value to be added in the given range
+        cout <<"Enter the value to be added in the given range" << endl;
         int val; 
         cin >> val;
 
@@ -68,6 +80,8 @@ int main() {
 
         // Subtract the value from the next position after ending position 'e' in dummy array
         dummyArray[e + 1] -= val;
+
+        queryCnt++;
     }
 
     // Compute cumulative sum of the dummy array
@@ -81,6 +95,7 @@ int main() {
     }
 
     // Print the updated array
+    cout << "Output:" << endl;
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
