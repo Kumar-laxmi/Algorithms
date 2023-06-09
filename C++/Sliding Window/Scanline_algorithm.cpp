@@ -60,7 +60,6 @@ int main() {
 
     // Process the queries
     while (q--) {
-
         cout << "Query " << queryCnt << ":" << endl;
 
         //range (start and end index)
