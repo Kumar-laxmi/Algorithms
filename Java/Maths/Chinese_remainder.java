@@ -37,10 +37,27 @@ public class Chinese_remainder {
     // Driver method
     public static void main(String args[])
     {
-        int num[] = {3, 4, 5};
-        int rem[] = {2, 3, 1};
-        int k = num.length;
-        System.out.println("x is " + findMinX(num, rem, k));
+        int num[] = new int[100];
+            int rem[] = new int[100];
+            Scanner sc = new Scanner(System.in);
+    
+            System.out.println("Enter the number of elements:");
+            int n = sc.nextInt();
+    
+            // values of num array
+            System.out.println("Enter the elements of num array:");
+            for (int i = 0; i < n; i++) {
+                num[i] = sc.nextInt();
+            }
+    
+            // values for rem array.
+            System.out.println("Enter the elements of rem array:");
+            for (int i = 0; i < n; i++) {
+                rem[i] = sc.nextInt();
+            }
+    
+            int k = n;
+            System.out.println("x is " + findMinX(num, rem, k));
     }
 }
     
