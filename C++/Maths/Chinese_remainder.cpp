@@ -38,9 +38,24 @@ int findMinX(int num[], int rem[], int k)
 // Driver method
 int main(void)
 {
-    int num[] = {3, 4, 5};
-    int rem[] = {2, 3, 1};
-    int k = sizeof(num)/sizeof(num[0]);
-    cout << "x is " << findMinX(num, rem, k);
+     int num[100];
+    int rem[100];
+    int n = 0;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+    cout << "Enter elements of num array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> num[i];
+    }
+
+    cout << "Enter elements of rem array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> rem[i];
+    }
+
+    int k = n;
+    cout << "x is " << findMinX(num, rem, k) << endl;
     return 0;
 }
