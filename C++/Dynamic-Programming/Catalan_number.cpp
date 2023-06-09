@@ -19,7 +19,6 @@ using namespace std;
 
 unsigned long int catalan(unsigned int n)
 {
-
     unsigned long int catalan[n + 1];
 
     catalan[0] = catalan[1] = 1;
