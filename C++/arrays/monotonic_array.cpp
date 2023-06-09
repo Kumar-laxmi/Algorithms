@@ -42,3 +42,5 @@ int main(){
         cout<<"the array is not monotonic";
     }
 }
+// MONOTONIC ARRAY IN C++
+// This Program Tells if an array is monotonic or not
