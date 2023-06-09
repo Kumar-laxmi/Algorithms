@@ -14,8 +14,7 @@ using namespace std;
             }
             else{
                 break;
-            }
-            
+            }        
         }
         if(s==n-1||e==0){
             return true;
@@ -42,5 +41,4 @@ int main(){
     else{
         cout<<"the array is not monotonic";
     }
-
 }
