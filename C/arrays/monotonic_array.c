@@ -40,3 +40,5 @@ int main() {
 
     return 0;
 }
+// MONOTONIC ARRAY IN C
+// This Program Tells if an array is monotonic or not.
