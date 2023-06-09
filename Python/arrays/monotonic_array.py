@@ -30,3 +30,5 @@ def main():
         print("The array is not monotonic")
         
 main()
+# MONOTONIC ARRAY IN python
+# This Program Tells if an array is monotonic or not.
