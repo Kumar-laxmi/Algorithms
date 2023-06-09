@@ -14,7 +14,7 @@ Input:  145
 Output: "It is a Strong Number"
 */
 import java.util.Scanner;
-public class Number {
+public class Strong_Number {
   public static void main(String[] args){
         int n,factorial=1,sum=0;
         System.out.println("Enter Number");
