@@ -21,8 +21,18 @@
     * Explanation: 342 + 465 = 807.
  */
 import java.util.*;
-public class Question
+public class Add2LinkedList
 {
+    static class Node 
+   {
+       int data;
+       Node next;
+       Node(int d)
+       {
+           data = d;
+           next = null;
+       }
+   }
     public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter the size of the first list : ");
@@ -49,8 +59,7 @@ public class Question
                 tail.next = new Node(val);
                 tail = tail.next;
             }
-            Solution g = new Solution();
-            Node res = g.addTwoLists(first, second);
+            Node res = addTwoLists(first, second);
             printList(res);
     }
     static void printList(Node n)
@@ -63,18 +72,6 @@ public class Question
         }
         System.out.println();
     }
-}
-class Node 
-{
-    int data;
-    Node next;
-    Node(int d)
-    {
-        data = d;
-        next = null;
-    }
-}
-class Solution{
     //Function to add two numbers represented by linked list.
     static Node addTwoLists(Node first, Node second){
         // code here
