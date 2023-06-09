@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+mono Main{ 
     public static boolean isMonotonic(List<Integer> nums) {
         int n = nums.size();
     int s = 0, e = n - 1;
