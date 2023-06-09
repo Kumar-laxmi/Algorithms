@@ -16,7 +16,7 @@ public class EdmondsKarpAlgorithm {
         Queue<Integer> queue = new LinkedList<>();
 
         queue.add(source);
-        visited[source] = true;
+        visited[source] = true; 
         parent[source] = -1; 
 
         while (!queue.isEmpty()) {
