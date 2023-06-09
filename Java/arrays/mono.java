@@ -38,3 +38,5 @@ mono Main{
             }
     }
 }
+// MONOTONIC ARRAY IN Java
+// This Program Tells if an array is monotonic or not.
