@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class GreyWolfOptimization {
+public class grey_wolf {
     private static final int NUM_VARIABLES = 2;
     private static final int OPTIMIZATION_MODE = 1; // 1 for maximization, -1 for minimization
     private static final int PARTICLE_SIZE = 10;
