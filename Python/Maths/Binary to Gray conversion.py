@@ -20,12 +20,12 @@ Topic: Binary to gray conversion and vice-versa:
 #User-defined function to convert given binary code into gray code and display it
 def binarytoGray(binary):
     #Initializing matrice
-    rows,cols=(len(binary),2);
-    matrice=[[0 for i in range(cols)] for j in range(rows)]; 
+    rows,cols=(len(binary),2)
+    matrice=[[0 for i in range(cols)] for j in range(rows)] 
 
     #Assigning the initial values
-    matrice[0][0]=binary[0];
-    matrice[0][1]=binary[0]; #MSB of Gray code is same as that of given Binary code
+    matrice[0][0]=binary[0]
+    matrice[0][1]=binary[0] #MSB of Gray code is same as that of given Binary code
 
     for i in range(1, len(binary)):
         matrice[i][0]=binary[i]
@@ -36,33 +36,33 @@ def binarytoGray(binary):
     #Printing the Answer
     print("Binary  Gray")
     for i in matrice:
-	    print('\t'.join(map(str,i)));
+	    print('\t'.join(map(str,i)))
 
 #User-Defined function to convert given Gray code into Binary code and display it
 def graytoBinary(gray):
     #Initializing matrice
-    rows,cols=(len(gray),2);
-    matrice=[[0 for i in range(cols)] for j in range(rows)];
+    rows,cols=(len(gray),2)
+    matrice=[[0 for i in range(cols)] for j in range(rows)]
 
     #Assigning the initial values
-    matrice[0][0]=gray[0];
-    matrice[0][1]=gray[0];#MSB of Binary code is same as that of given Gray code
+    matrice[0][0]=gray[0]
+    matrice[0][1]=gray[0]#MSB of Binary code is same as that of given Gray code
 
     for i in range(1,len(gray)):
         matrice[i][0]=gray[i]
         # if the current character is '0' 
         # we copy the previous character of the binary code
         if(gray[i] == '0'):
-             matrice[i][1]=matrice[i-1][1];
+             matrice[i][1]=matrice[i-1][1]
         # else we copy the flipped value of the previous binary code character
         # i.e if its '0' we take '1' and vice-versa
         else:
-            matrice[i][1]='1' if matrice[i-1][1] == '0' else '0';
+            matrice[i][1]='1' if matrice[i-1][1] == '0' else '0'
     
     #Printing the Answer
     print("Gray Binary")
     for i in matrice:
-            print('\t'.join(map(str,i)));
+            print('\t'.join(map(str,i)))
 
   
 binary = "11001" #Given Binary code

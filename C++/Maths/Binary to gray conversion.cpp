@@ -54,7 +54,6 @@ void binarytogray(string bin)
         }
         cout<<"\n";
     }
-
 }
 
 //Function to convert the given gray code string into binary and store it in a 2d Matrice
@@ -89,9 +88,7 @@ void graytobinary(string gray)
             cout<<(char)matrice[i][j]<<"         ";
         }
         cout<<"\n"; 
-
     }
-
 }
 int main()
 {
