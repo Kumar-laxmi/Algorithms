@@ -13,6 +13,7 @@ bool isSafe(int v, bool graph[V][V], int color[], int c)
     }
     return true;
 }
+
 bool giveColor(bool graph[V][V], int m, int color[],int v)
 {
     if (v == V)          // for all vertices, color is assigned return true

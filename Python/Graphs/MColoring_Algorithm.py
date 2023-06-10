@@ -12,7 +12,7 @@ def MColoring(graph, m, i, color):
     # if current index reached end
     if (i == 4):   
  
-        
+    
         if (isSafe(graph, color)):
  
       
