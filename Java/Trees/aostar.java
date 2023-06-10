@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class aostar {
 public static Map<String, Integer>
 	Cost(Map<String, Integer> H,
 		Map<String, List<String> > condition, int weight)
