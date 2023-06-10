@@ -11,11 +11,11 @@ def calcMinRun(n):
     e.g. 1=>1, ..., 63=>63, 64=>32, 65=>33,
     ..., 127=>64, 128=>32, ...
     """
-    r = 0
+    right = 0
     while n >= MIN_MERGE:
-        r |= n & 1
+        right |= n & 1
         n >>= 1
-    return n + r
+    return n + right
  
  
 # This function sorts array from left index to
@@ -29,18 +29,18 @@ def insertionSort(arr, left, right):
  
  
 # Merge function merges the sorted runs
-def merge(arr, l, m, r):
+def merge(arr, left, mid, right):
  
     # original array is broken in two parts
     # left and right array
-    len1, len2 = m - l + 1, r - m
+    len1, len2 = mid - left + 1, right - mid
     left, right = [], []
     for i in range(0, len1):
-        left.append(arr[l + i])
+        left.append(arr[left + i])
     for i in range(0, len2):
-        right.append(arr[m + 1 + i])
+        right.append(arr[mid + 1 + i])
  
-    i, j, k = 0, 0, l
+    i, j, k = 0, 0, left
  
     # after comparing, we merge those two array
     # in larger sub array
