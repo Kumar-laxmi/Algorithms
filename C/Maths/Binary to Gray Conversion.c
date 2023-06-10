@@ -74,10 +74,10 @@ void graytobinary(string gray)
         // we copy the previous character of the binary code
         if(gray[i]=='0') 
             matrice[i][1]=(matrice[i-1][1]);
-        // else we copy the flipped value of the previous gray code character
+        // else we copy the flipped value of the previous binary code character
         // i.e if its '0' we take '1' and vice-versa
         else
-            matrice[i][1]=(gray[i-1]=='0')?('1'):('0');
+            matrice[i][1]=(matrice[i-1][1]=='0')?('1'):('0');
     }
 
     //Printing the answer:

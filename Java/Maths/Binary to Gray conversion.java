@@ -75,7 +75,7 @@ class BinarytoGray{
             // else we copy the flipped value of the previous gray code character
             // i.e if its '0' we take '1' and vice-versa
             else
-                matrice[i][1]=(gray.charAt(i-1)=='0')?'1':'0';
+                matrice[i][1]=(matrice[i-1][1]=='0')?'1':'0';
         }
         //Printing the answer:
         System.out.println("Gray      Binary");
@@ -91,8 +91,8 @@ class BinarytoGray{
     public static void main(String as[]) throws IOException
     {
         BinarytoGray obj=new BinarytoGray();// Object of the Class to call the user-defined methods
-        String bin="10101";//Given Binary Code
-        String gray="11010";//Given Gray Code
+        String bin="11001";//Given Binary Code
+        String gray="10101";//Given Gray Code
 
         System.out.println("Binary to Gray Conversion:");
         obj.binarytogray(bin);//Calling the user-defined the method to convert given Binary code into Gray code

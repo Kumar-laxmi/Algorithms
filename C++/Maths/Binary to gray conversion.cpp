@@ -74,10 +74,10 @@ void graytobinary(string gray)
         // we copy the previous character of the binary code
         if(gray[i]=='0') 
             matrice[i][1]=(matrice[i-1][1]);
-        // else we copy the flipped value of the previous gray code character
+        // else we copy the flipped value of the previous binary code character
         // i.e if its '0' we take '1' and vice-versa
         else
-            matrice[i][1]=(gray[i-1]=='0')?('1'):('0');
+            matrice[i][1]=(matrice[i-1][1]=='0')?('1'):('0');
     }
 
     //Printing the answer:
@@ -95,8 +95,8 @@ void graytobinary(string gray)
 }
 int main()
 {
-    string bin="1101"; //Given Binary code string 
-    string gray="1011";//Given Gray code string
+    string bin="11001"; //Given Binary code string 
+    string gray="10101";//Given Gray code string
     cout<<"Binary to Gray Conversion:\n";
     binarytogray(bin); //calling the user-defined function to convert given Binarycode into Graycode and display it
     cout<<"\n";
