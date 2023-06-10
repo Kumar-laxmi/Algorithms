@@ -107,7 +107,7 @@ public class ColumnarTranspositionCipher {
     }
 
     public static void main(String[] args) {
-        String msg = "Geeks for Geeks";
+        String msg = "Open Source is Fun";
 
         setPermutationOrder();
 
