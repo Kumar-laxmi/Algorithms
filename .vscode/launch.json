@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MColoring_Algo",
+            "request": "launch",
+            "mainClass": "Java.Graphs.MColoring_Algo",
+            "projectName": "Algorithms_7cbb2ab8"
+        },
+        {
+            "type": "java",
+            "name": "mColoringSolution",
+            "request": "launch",
+            "mainClass": "Java.Graphs.mColoringSolution",
+            "projectName": "Algorithms_7cbb2ab8"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug",
+            "program": "${workspaceFolder}/<executable file>",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
