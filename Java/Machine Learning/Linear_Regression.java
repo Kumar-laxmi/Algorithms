@@ -1,45 +1,87 @@
-import org.apache.commons.math3.stat.regression.OLSMultipleLinearRegression;
-// This line imports the 'OLSMultipleLinearRegression' class from the Apache Commons Math library, which provides functionality for multiple linear regression.
-
 public class Linear_Regression {
-    public static void main(String[] args) {
-        // These lines define a Java class named Linear_Regression and its main method, where the execution of the program starts.
+    private double[] slopes; // Array to store the slopes of the regression line for each variable
+    private double intercept; // Intercept of the regression line
 
-        OLSMultipleLinearRegression regression = new OLSMultipleLinearRegression();
-        //This line creates an instance of the OLSMultipleLinearRegression class, which represents the linear regression model.
+    public void train(double[][] x, double[] y) {
+        // Calculate the means of each variable in x and y
+        double[] xMeans = calculateMeans(x); // Calculate the means of each variable in x
+        double yMean = calculateMean(y); // Calculate the mean of y
 
-        //This code defines a 2D array x that represents the input data matrix for the independent variables. Each row represents a data point, 
-        //and each column represents a different independent variable. In this case, we have four data points with two independent variables each.
-        double[][] x = {
-            {1.0, 2.0}, // First data point with two independent variables
-            {2.0, 3.0}, // Second data point with two independent variables
-            {3.0, 4.0}, // Third data point with two independent variables
-            {4.0, 5.0}  // Fourth data point with two independent variables
-        };
-
-        // Define the output vector (dependent variable)
-        double[] y = {3.0, 5.0, 7.0, 9.0}; //This line defines a 1D array y that represents the output vector,which contains the dependent variable values corresponding to each data point.
-
-        // Fit the regression model with the data
-        regression.newSampleData(y, x); //This line fits the regression model using the newSampleData() method of the OLSMultipleLinearRegression class. It takes the output vector y and the input data matrix x as arguments to train the model.
-
-        // Get the estimated parameters (intercept and slopes)
-        double[] beta = regression.estimateRegressionParameters(); //This line retrieves the estimated parameters of the regression model, which include the intercept and slopes for each independent variable. The estimateRegressionParameters() method is called on the regression instance.
-
-        // Print the estimated parameters
-        double intercept = beta[0]; // Extract the intercept from the estimated parameters
-        double slope1 = beta[1];    // Extract the slope for the first independent variable
-        double slope2 = beta[2];    // Extract the slope for the second independent variable
+        // Calculate the slopes (beta1) and intercept (beta0) of the regression line
+        slopes = new double[x[0].length]; // Initialize the slopes array with the length of variables in x
+        double[] numerators = new double[x[0].length]; // Array to store the numerators of the slopes calculation
+        double[] denominators = new double[x[0].length]; // Array to store the denominators of the slopes calculation
         
-        // These lines print the values of the intercept and slopes to the console.
+        // Iterate over each variable in x
+        for (int i = 0; i < x[0].length; i++) {
+            // Iterate over each data point in x and y
+            for (int j = 0; j < x.length; j++) {
+                numerators[i] += (x[j][i] - xMeans[i]) * (y[j] - yMean); // Calculate the numerator of the slope
+                denominators[i] += Math.pow((x[j][i] - xMeans[i]), 2); // Calculate the denominator of the slope
+            }
+            slopes[i] = numerators[i] / denominators[i]; // Calculate the slope (beta1) for the current variable
+        }
+        
+        intercept = yMean - dotProduct(xMeans, slopes); // Calculate the intercept (beta0) of the regression line
+    }
 
-        System.out.println("Intercept: " + intercept);
-        System.out.println("Slope 1: " + slope1);
-        System.out.println("Slope 2: " + slope2);
+    public double predict(double[] x) {
+        // Predict the value of y for a given set of x values using the regression line equation
+        return dotProduct(x, slopes) + intercept; // Calculate the predicted y value
+    }
 
-        // Predict values using the regression model
-        double[] newX = {5.0, 6.0}; //This line defines a new array newX that represents new input values for prediction. In this case, we have two independent variables with values 5.0 and 6.0.
-        double predictedY = regression.predict(newX); //This line predicts the value of the dependent variable (y) for the new input values (newX) using the predict() method of the OLSMultipleLinearRegression class.
-        System.out.println("Predicted Y for newX: " + predictedY); //This line prints the predicted value of the dependent variable for the new input values to the console.
+    private double calculateMean(double[] values) {
+        // Calculate the mean of an array of values
+        double sum = 0.0;
+        for (double value : values) {
+            sum += value;
+        }
+        return sum / values.length; // Return the mean
+    }
+
+    private double[] calculateMeans(double[][] values) {
+        // Calculate the means of each variable in a 2D array of values
+        double[] means = new double[values[0].length]; // Array to store the means
+        
+        // Iterate over each variable in the 2D array
+        for (int i = 0; i < values[0].length; i++) {
+            double sum = 0.0;
+            
+            // Iterate over each data point for the current variable
+            for (double[] row : values) {
+                sum += row[i]; // Add the value to the sum
+            }
+            means[i] = sum / values.length; // Calculate the mean for the current variable
+        }
+        return means; // Return the array of means
+    }
+
+    private double dotProduct(double[] a, double[] b) {
+        // Calculate the dot product of two arrays
+        double result = 0.0;
+        
+        // Iterate over the elements of the arrays and calculate the dot product
+        for (int i = 0; i < a.length; i++) {
+            result += a[i] * b[i]; // Multiply the corresponding elements and add to the result
+        }
+        return result; // Return the dot product
+    }
+
+    public static void main(String[] args) {
+        // Example usage
+        double[][] x = {
+            {1.0, 2.0},
+            {2.0, 3.0},
+            {3.0, 4.0},
+            {4.0, 5.0}
+        };
+        double[] y = {3.0, 5.0, 7.0, 9.0};
+
+        Linear_Regression regression = new Linear_Regression(); // Create an instance of Linear_Regression
+        regression.train(x, y); // Train the regression model using the input data
+
+        double[] newX = {5.0, 6.0};
+        double predictedY = regression.predict(newX); // Make a prediction for the new input values
+        System.out.println("Predicted Y for newX: " + predictedY); // Print the predicted value of y
     }
 }
