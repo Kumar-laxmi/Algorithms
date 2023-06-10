@@ -1,4 +1,3 @@
-
 /*
 Author: Abdul Kadir
 Github username: AK3847
@@ -21,21 +20,21 @@ Topic: Binary to gray conversion and vice-versa:
 */
 
 //-----------------CODE------------------
-#include<bits/stdc++.h>
-using namespace std;
-
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 //Function to convert given binary string to gray code stored in a 2d matrice
-void binarytogray(string bin)
+void binarytogray(char bin[],int n)
 {
     // Initializing a 2d matrice with one column for given binary code and 
     // another column for converted gray code
-    char matrice[bin.size()][2]; 
+    char matrice[n][2]; 
     
     //Assigning the initial values
     matrice[0][0]=(bin[0]); 
     matrice[0][1]=(bin[0]); //MSB of Gray code is same as that of given Binary code
 
-    for(int i=1;i<bin.size();i++)
+    for(int i=1;i<n;i++)
     {
         //taking the XOR of current index character of binary code with the previous index character of binary code
         char xr=(bin[i]==bin[i-1])?'0':'1'; 
@@ -45,29 +44,29 @@ void binarytogray(string bin)
     }
 
     //Printing the answer:
-    cout<<"Binary  "<<"Gray"<<"\n";
-    for(int i=0;i<bin.size();i++)
+    printf("Binary   Gray \n");
+    for(int i=0;i<n;i++)
     {
         for(int j=0;j<2;j++)
         {
-            cout<<matrice[i][j]<<"         ";
+            printf("%c         ",matrice[i][j]);
         }
-        cout<<"\n";
+        printf("\n");
     }
 
 }
 
 //Function to convert the given gray code string into binary and store it in a 2d Matrice
-void graytobinary(string gray)
+void graytobinary(char gray[],int n)
 {
     // Initializing a 2d matrice with one column for given gray code and 
     // another column for converted binary code
-    char matrice[gray.size()][2];
+    char matrice[n][2];
 
     //Assigning the initial values
     matrice[0][0]=(gray[0]);
     matrice[0][1]=(gray[0]); //MSB of binary code is same as that of given Gray code
-    for(int i=1;i<gray.size();i++)
+    for(int i=1;i<n;i++)
     {
         matrice[i][0]=gray[i];
         // if the current character is '0' 
@@ -81,26 +80,28 @@ void graytobinary(string gray)
     }
 
     //Printing the answer:
-    cout<<"Gray   "<<"Binary"<<"\n";
-    for(int i=0;i<gray.size();i++)
+    printf("Gray   Binary\n");
+    for(int i=0;i<n;i++)
     {
         for(int j=0;j<2;j++)
         {
-            cout<<(char)matrice[i][j]<<"         ";
+            printf("%c        ",matrice[i][j]);
         }
-        cout<<"\n"; 
+            printf("\n"); 
 
     }
 
 }
 int main()
 {
-    string bin="1101"; //Given Binary code string 
-    string gray="1011";//Given Gray code string
-    cout<<"Binary to Gray Conversion:\n";
-    binarytogray(bin); //calling the user-defined function to convert given Binarycode into Graycode and display it
-    cout<<"\n";
-    cout<<"Gray to Binary conversion:\n";
-    graytobinary(gray); //calling the user-defined function to convert given Graycode into BinaryCode and display it
+
+    int n=5; //Default Size of the given code
+    char bin[]="11001";
+    char gray[]="10101";
+    printf("Binary to Gray Conversion:\n");
+    binarytogray(bin,n); //calling the user-defined function to convert given Binarycode into Graycode and display it
+    printf("\n");
+    printf("Gray to Binary conversion:\n");
+    graytobinary(gray,n); //calling the user-defined function to convert given Graycode into BinaryCode and display it
    return 0;
 }
