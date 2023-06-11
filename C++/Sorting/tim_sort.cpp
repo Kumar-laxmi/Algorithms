@@ -30,7 +30,6 @@ void merge(int arr[], int l, int m, int r)
         left[i] = arr[l + i];
     for (int i = 0; i < len2; i++)
         right[i] = arr[m + 1 + i];
-
     int i = 0;
     int j = 0;
     int k = l;
@@ -51,7 +50,6 @@ void merge(int arr[], int l, int m, int r)
         }
         k++;
     }
-
     // Copy remaining elements of
     // left, if any
     while (i < len1)
@@ -60,7 +58,6 @@ void merge(int arr[], int l, int m, int r)
         k++;
         i++;
     }
-
     // Copy remaining element of
     // right, if any
     while (j < len2)
@@ -70,12 +67,10 @@ void merge(int arr[], int l, int m, int r)
         j++;
     }
 }
-
 // Iterative Timsort function to sort the
 // array[0...n-1] (similar to merge sort)
 void timSort(int arr[], int n)
 {
-
     // Sort individual subarrays of size RUN
     for (int i = 0; i < n; i += RUN)
         insertionSort(arr, i, min((i + RUN - 1), (n - 1)));
@@ -85,7 +80,6 @@ void timSort(int arr[], int n)
     // and so on ....
     for (int size = RUN; size < n; size = 2 * size)
     {
-
         // pick starting point of
         // left sub array. We
         // are going to merge
@@ -109,7 +103,6 @@ void timSort(int arr[], int n)
         }
     }
 }
-
 // Utility function to print the Array
 void printArray(int arr[], int n)
 {
@@ -118,13 +111,11 @@ void printArray(int arr[], int n)
     printf("\n");
 }
 int main()
-
 {
     // Taking size of array as input
     int n;
     cout << "ENTER THE SIZE OF ARRAY: : ";
     cin >> n;
-
     // Taking elements of array as input
     int arr[n];
     cout << "ENTER THE ELEMENTS: " << endl;
@@ -132,7 +123,6 @@ int main()
     {
         cin >> arr[i];
     }
-
     // Printing unsorted array
     for (int i = 0; i < n; i++)
     {
@@ -141,7 +131,6 @@ int main()
     cout << "\n";
     timSort(arr, n);
     cout << "After tim sort Array is " << endl;
-
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
