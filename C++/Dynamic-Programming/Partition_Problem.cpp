@@ -50,7 +50,15 @@ bool partition(vector<int> const &nums)
 int main()
 {
     // Input: a set of items
-    vector<int> nums = { 7, 3, 1, 5, 4, 8 };
+    vector<int> nums;
+    int n=0;
+    cout<<"Enter size of array";
+    cin >> n;
+    cout<<"Enter elements of array";
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> nums[i];
+    }
  
     if (partition(nums)) {
         cout << "Set can be partitioned";

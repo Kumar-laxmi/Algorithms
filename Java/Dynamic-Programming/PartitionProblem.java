@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
  
 class PartitionProblem
 {
@@ -47,7 +48,17 @@ class PartitionProblem
     public static void main(String[] args)
     {
         // Input: a set of items
-        int[] nums = { 7, 3, 1, 5, 4, 8 };
+        Scanner sc = new Scanner(System.in);
+        int n = 0;
+        System.out.println("Enter size of array");
+        n=sc.nextInt();  
+        int[] nums = new int[n];
+        System.out.println("Enter elements of array");
+        for(int i=0; i<n; i++)  
+            {  
+            //reading array elements from the user   
+            nums[i]=sc.nextInt();  
+            }         
  
         if (partition(nums)) {
             System.out.println("Set can be partitioned");
@@ -55,6 +66,7 @@ class PartitionProblem
         else {
             System.out.println("Set cannot be partitioned");
         }
+        sc.close();
     }
 }
 
