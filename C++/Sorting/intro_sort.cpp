@@ -112,9 +112,11 @@ void Introsort(int arr[], int *begin, int *end)
 
 int main()
 {
+    
     cout << "Enter the length of array" << endl;
     int n;
     cin >> n;
+    int a[n];
     cout << "Enter the elements of array" << endl;
     for (int i = 0; i < n; i++)
         cin >> a[i];
