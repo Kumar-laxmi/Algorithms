@@ -2,7 +2,7 @@
 package Java.Graphs;
 import java.util.*;
 
-public class MColoring_Algo{
+public class M-Coloring_Algorithm{
      final int V = 4;
      int color[];
 
@@ -64,7 +64,7 @@ public class MColoring_Algo{
         System.out.println();
     }
    public static void main(String args[]) {
-       MColoring_Algo color = new MColoring_Algo();
+      M-Coloring_Algorithm color = new M-Coloring_Algorithm();
        /* Given Graph  and  m = 3
       (3)---(2)
        |   / |
