@@ -1,6 +1,6 @@
 import java.io.*;
 
-class HelloWorld {
+class Brain_Keringham{
 
     //Brian Kerningham's Algorithm in Java
     static int setBits(int n)
