@@ -67,9 +67,12 @@ def heapsort(arr, start, end):
     for i in range(end - 1, start, -1):
         swap(arr, start, i)
         max_heapify(arr, index=0, start=start, end=i)
-
+        
+        
+print("Enter elements to sort (seperated by spaces): ")
 arr = [int(i) for i in input().split()]
 introsort(arr)
+print("Sorted array: ")
 print(arr)
 
 '''
