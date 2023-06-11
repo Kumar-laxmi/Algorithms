@@ -50,14 +50,14 @@ def max_heapify(arr, index, start, end):
         return 2*i + 2
 
     size = end - start
-    l = left(index)
-    r = right(index)
-    if (l < size and arr[start + l] > arr[start + index]):
-        largest = l
+    leftSide = left(index)
+    rightSide = right(index)
+    if (leftSide < size and arr[start + leftSide] > arr[start + index]):
+        largest = leftSide
     else:
         largest = index
-    if (r < size and arr[start + r] > arr[start + largest]):
-        largest = r
+    if (rightSide < size and arr[start + rightSide] > arr[start + largest]):
+        largest = rightSide
     if largest != index:
         swap(arr, start+largest, start+index)
         max_heapify(arr, largest, start, end)

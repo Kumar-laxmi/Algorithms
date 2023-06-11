@@ -112,7 +112,6 @@ void Introsort(int arr[], int *begin, int *end)
 
 int main()
 {
-    
     cout << "Enter the length of array" << endl;
     int n;
     cin >> n;
@@ -124,7 +123,6 @@ int main()
     for (int i = 0; i < n; i++)
         cout << a[i] << " ";
     Introsort(a, a, a + n - 1);
-
     cout << "\nSorted array: \n";
     for (int i = 0; i < n; i++)
         cout << a[i] << " ";
