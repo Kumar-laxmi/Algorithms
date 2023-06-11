@@ -13,8 +13,6 @@
 // If we use a linear time searching algorithm like KMP, then we need to one by one search all words in text[]. This gives us total time complexity as O(n + length(word[0]) + O(n + length(word[1]) + O(n + length(word[2]) + … O(n + length(word[k-1]). This time complexity can be written as O(n*k + m). 
 
 // Aho-Corasick Algorithm finds all words in O(n + m + z) time where z is total number of occurrences of words in text. The Aho–Corasick string matching algorithm formed the basis of the original Unix command fgrep
-
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -31,12 +29,10 @@ int buildMatchingMachine(char arr[][10], int k)
 	memset(out, 0, sizeof(out));
 	memset(g, -1, sizeof(g));
 	int states = 1;
-
 	for (int i = 0; i < k; ++i)
 	{
 		char* word = arr[i];
 		int currentState = 0;
-
 		for (int j = 0; j < strlen(word); ++j)
 		{
 			int ch = word[j] - 'a';
@@ -55,11 +51,9 @@ int buildMatchingMachine(char arr[][10], int k)
 		if (g[0][ch] == -1)
 			g[0][ch] = 0;
 	}
-
 	memset(f, -1, sizeof(f));
 	int queue[MAXS];
 	int front = 0, rear = 0;
-
 	for (int ch = 0; ch < MAXC; ++ch)
 	{
 		if (g[0][ch] != 0)
@@ -81,11 +75,9 @@ int buildMatchingMachine(char arr[][10], int k)
 
 				while (g[failure][ch] == -1)
 					failure = f[failure];
-
 				failure = g[failure][ch];
 				f[g[state][ch]] = failure;
 				out[g[state][ch]] |= out[failure];
-
 				queue[rear++] = g[state][ch];
 			}
 		}

@@ -13,24 +13,12 @@
 // If we use a linear time searching algorithm like KMP, then we need to one by one search all words in text[]. This gives us total time complexity as O(n + length(word[0]) + O(n + length(word[1]) + O(n + length(word[2]) + … O(n + length(word[k-1]). This time complexity can be written as O(n*k + m). 
 
 // Aho-Corasick Algorithm finds all words in O(n + m + z) time where z is total number of occurrences of words in text. The Aho–Corasick string matching algorithm formed the basis of the original Unix command fgrep
-
-
-
 using namespace std;
 #include <bits/stdc++.h>
-
 const int MAXS = 500;
-
-
 const int MAXC = 26;
-
-
 int out[MAXS];
-
-
 int f[MAXS];
-
-
 int g[MAXS][MAXC];
 int buildMatchingMachine(string arr[], int k)
 {
@@ -62,10 +50,7 @@ int buildMatchingMachine(string arr[], int k)
 			g[0][ch] = 0;
 
 	memset(f, -1, sizeof f);
-
-	queue<int> q;
-
-	
+	queue<int> q;	
 	for (int ch = 0; ch < MAXC; ++ch)
 	{
 		
@@ -90,19 +75,12 @@ int buildMatchingMachine(string arr[], int k)
 			if (g[state][ch] != -1)
 			{
 			
-				int failure = f[state];
-
-				
+				int failure = f[state];				
 				while (g[failure][ch] == -1)
 					failure = f[failure];
-
 				failure = g[failure][ch];
-				f[g[state][ch]] = failure;
-
-			
-				out[g[state][ch]] |= out[failure];
-
-				
+				f[g[state][ch]] = failure;			
+				out[g[state][ch]] |= out[failure];				
 				q.push(g[state][ch]);
 			}
 		}
@@ -114,9 +92,7 @@ int buildMatchingMachine(string arr[], int k)
 int findNextState(int currentState, char nextInput)
 {
 	int answer = currentState;
-	int ch = nextInput - 'a';
-
-	     // If goto is not defined, use failure function
+	int ch = nextInput - 'a';	  
 	while (g[answer][ch] == -1)
 		answer = f[answer];
 
@@ -126,13 +102,8 @@ int findNextState(int currentState, char nextInput)
 
 void searchWords(string arr[], int k, string text)
 {
-
 	buildMatchingMachine(arr, k);
-
-
 	int currentState = 0;
-
-
 	for (int i = 0; i < text.size(); ++i)
 	{
 		currentState = findNextState(currentState, text[i]);
@@ -157,8 +128,6 @@ int main()
 	string arr[] = {"he", "she", "hers", "his"};
 	string text = "ahishers";
 	int k = sizeof(arr)/sizeof(arr[0]);
-
 	searchWords(arr, k, text);
-
 	return 0;
 }

@@ -121,7 +121,6 @@ class AhoCorasickAlgorithm {
         int k = arr.length;
         int MAXS = 500;
         int MAXC = 26;
-
         searchWords(arr, k, text, MAXS, MAXC);
     }
 }
