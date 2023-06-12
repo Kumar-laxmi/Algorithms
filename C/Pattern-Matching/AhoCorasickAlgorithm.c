@@ -66,7 +66,6 @@ int buildMatchingMachine(char arr[][10], int k)
 	while (front < rear)
 	{
 		int state = queue[front++];
-
 		for (int ch = 0; ch < MAXC; ++ch)
 		{
 			if (g[state][ch] != -1)
@@ -90,10 +89,8 @@ int findNextState(int currentState, char nextInput)
 {
 	int answer = currentState;
 	int ch = nextInput - 'a';
-
 	while (g[answer][ch] == -1)
 		answer = f[answer];
-
 	return g[answer][ch];
 }
 
@@ -124,8 +121,6 @@ int main()
 	char arr[][10] = {"he", "she", "hers", "his"};
 	char text[] = "ahishers";
 	int k = sizeof(arr) / sizeof(arr[0]);
-
 	searchWords(arr, k, text);
-
 	return 0;
 }
