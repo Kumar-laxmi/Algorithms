@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Function to reverse an array
 void reverseArray(int arr[], int start, int end)
 {
     while (start < end)
@@ -14,27 +13,21 @@ void reverseArray(int arr[], int start, int end)
     }
 }
 
-// Function to rotate an array by 'rotateBy' positions
 void rotateArray(int arr[], int size, int rotateBy)
 {
-    // Handle negative rotateBy values
     rotateBy = rotateBy % size;
     if (rotateBy < 0)
     {
         rotateBy = rotateBy + size;
     }
 
-    // Reverse the first part of the array
     reverseArray(arr, 0, rotateBy - 1);
 
-    // Reverse the second part of the array
     reverseArray(arr, rotateBy, size - 1);
 
-    // Reverse the entire array
     reverseArray(arr, 0, size - 1);
 }
 
-// Function to print an array
 void printArray(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
