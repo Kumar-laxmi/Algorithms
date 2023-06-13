@@ -18,14 +18,14 @@
 <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" /><br>   
 <img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
 <img src="https://forthebadge.com/images/badges/uses-brains.svg" />   
-</div> 
+</div>
 
 <br>
 
 <div align="center">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Kumar-laxmi/Algorithms?label=Repo%20Size&logo=github&logoColor=white&style=plastic">
    <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/Kumar-laxmi/Algorithms?style=plastic">
-   
+
    [![GitHub issues](https://img.shields.io/github/issues/Kumar-laxmi/Algorithms?style=plastic&color=critical)](https://github.com/Kumar-laxmi/Algorithms/issues)
    [![GitHub pull requests](https://img.shields.io/github/issues-pr/Kumar-laxmi/Algorithms?style=plastic)](https://github.com/Kumar-laxmi/Algorithms/pulls)
    [![GitHub](https://img.shields.io/github/license/Kumar-laxmi/Algorithms?style=plastic)](https://github.com/Kumar-laxmi/Algorithms/blob/master/LICENSE)
@@ -68,26 +68,26 @@
 <div align="center">
 
 <h3 align="center"><b>Arrays</b></h3>
- 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Diagonal Print Algorithm in 2D Array | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/arrays/Diagonal_Printing_in_2D_arrays.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/arrays/Diagonal_Printing_in_2D_arrays.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/arrays/Diagonal_Printing_in_2D_arrays.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/arrays/Diagonal_Printing_in_2D_arrays.py) |
 | 2.  | Spiral Print Matrix | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/arrays/spiralprint.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/arrays/spiralPrint.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/arrays/spiralPrint.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/arrays/Spiral_Print_Algorithm.py) |
 
 <h3 align="center"><b>Binary</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Hamming Distance Theorem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Binary/hammingDistance.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Binary/hammingDistance.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Binary/hammingDistance.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Binary/hammingDistance.py) |
 
 <h3 align="center"><b>Cryptography</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Caesar Cipher | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Cryptography/CaesarCipher.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/CaeserCipher.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/CaesarCipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/CaesarCipher.py) |
 | 2.  | Diffie - Hellman Algorithm | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/DiffieHellman.py) |
 | 3.  | Hill Cipher | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/HillCipher.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/HillCipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/HillCipher.py) |
-| 4.  | Homophonic Substitution | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Cryptography/homophonic_substitution.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/homophonic_substitution.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/HomophonicSubstitution.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/homophonic_Substitution.py) | 
+| 4.  | Homophonic Substitution | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Cryptography/homophonic_substitution.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/homophonic_substitution.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/HomophonicSubstitution.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/homophonic_Substitution.py) |
 | 5.  | Railfence Cipher | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Cryptography/Railfence.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/Railfence.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/Rail_Fence_Cipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/railfenceCipher.py) |
 | 6.  | RSA | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Cryptography/RSA_Algo.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/RSA_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/RSA_Algorithm.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/rsa.py) |
 | 7.  | SHA - 256 | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Cryptography/SHA256.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/SHA256.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/SHA256.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/SHA256.py) |
@@ -96,54 +96,54 @@
 
 <h3 align="center"><b>Data Compression</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Burrows-Wheeler Transform Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Data%20Compression/burrow_wheeler_transform.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Data%20Compression/burrow_wheeler_transform.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Data-Compression/burrow_wheeler_transform.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Data%20Compression/burrow_wheeler_transform.py) |
 | 2.  | Huffman Coding | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Data%20Compression/huffmanCoding.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Data%20Compression/huffmanCoding.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Data-Compression/Huffman.java),[Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Data%20Compression/huffmanCoding.py) |
 
 <h3 align="center"><b>Deadlock Avoidance</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Banker's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Deadlock%20Avoidance/bankers.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Deadlock%20Avoidance/BankerAlgorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Deadlock%20Avoidance/Bankers_Algorithm.java),[Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Deadlock%20Avoidance/bankers_algorithm.py) |
 
 <h3 align="center"><b>Deep Learning</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Perceptron Learning - Boolean Functions | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Deep%20learning/perceptron_learning.py) |
 
 <h3 align="center"><b>Divide and Conquer</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Karatsuba Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Divide-and-Conquer/karatsuba.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Divide-and-Conquer/KaratsubaAlgo.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Divide-and-Conquer/Karatsuba.py) |
 | 2.  | Strassen's Matrix Multiplication | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Divide-and-Conquer/Strassens.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Divide-and-Conquer/strassen_matrix_multiplication.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Divide-and-Conquer/strassen_matrix_multiplication.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Divide-and-Conquer/strassen_matrix_multiplication.py) |
 
 <h3 align="center"><b>Dynamic Programming</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | 0/1 Knapsack | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/01_knapsack.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/01_knapsack.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/_01_knapsack.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Dynamic-Programming/01_knapsack.py) |
-| 2.  | Coin change problem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/coinchange.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/coinchange.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/coinchange.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Dynamic-Programming/coinchange.py) | 
-| 3.  | Edit Distance | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/edit_distance.cpp) | 
-| 4.  | Fibonacci Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/Fibonacci_Number.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/Fibonacci_Number.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/Fibonacci_Number.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Dynamic-Programming/Fibonacci_Number.py) | 
-| 5.  | Longest Common Subsequence | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/Longest_Common_Subsequence.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/LongestCommonSubsequence.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/LongestCommonSubsequence.java) | 
-| 6.  | Matrix Chain Multiplication | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/Matrix_Chain_Multiplication.cpp) | 
+| 2.  | Coin change problem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/coinchange.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/coinchange.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/coinchange.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Dynamic-Programming/coinchange.py) |
+| 3.  | Edit Distance | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/edit_distance.cpp) |
+| 4.  | Fibonacci Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/Fibonacci_Number.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/Fibonacci_Number.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/Fibonacci_Number.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Dynamic-Programming/Fibonacci_Number.py) |
+| 5.  | Longest Common Subsequence | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/Longest_Common_Subsequence.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/LongestCommonSubsequence.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/LongestCommonSubsequence.java) |
+| 6.  | Matrix Chain Multiplication | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/Matrix_Chain_Multiplication.cpp) |
 | 7.  | Minimum Jump Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/Min_Jump.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/Min_Jump.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/Min_Jump.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Dynamic-Programming/Min_Jump.py) |
 | 8.  | Minimum Sum Partition Problem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/minimum_sum_partition.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/minimum_sum_partition.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/minimum_sum_partition.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Dynamic-Programming/minimum_sum_partition.py) |
 | 9.  | Travelling Salesman Problem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/Travelling_Salesman.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/TravellingSalesMen.cpp) |
 
 <h3 align="center"><b>Game Theory</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Grundy's Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Game%20Theory/Grundy_Numbers.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Game%20Theory/Grundy_Numbers.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Game%20Theory/Grundy_Numbers.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Game%20Theory/Grundy_Numbers.py) |
 
 <h3 align="center"><b>Graphs</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Bellman Ford | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Bellman_Form_Algorithm.cpp) |
 | 2.  | Dijkstra | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Dijkstra.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Dijkstra.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Dijkstra.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Dijkstra.py) |
 | 3.  | Dinic's Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Dinic.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Dinic.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Dinic.py) |
@@ -156,8 +156,8 @@
 
 <h3 align="center"><b>Greedy Algorithm</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Activity Selection | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Greedy-Algorithm/ActivitySelection.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Greedy-Algorithm/Activity_process.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Greedy-Algorithm/ActivitySelection.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Greedy-Algorithm/Activity_Selection.py) |
 | 2.  | Fractional Knapsack | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Greedy-Algorithm/fractional_knapsack.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Greedy-Algorithm/fractional_knapsack.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Greedy-Algorithm/fractional_knapsack.py) |
 | 3.  | Job Sequencing | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Greedy-Algorithm/JobSequencing.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Greedy-Algorithm/JobSequencing.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Greedy-Algorithm/Job_Sequencing.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Greedy-Algorithm/job_sequencing.py) |
@@ -166,38 +166,38 @@
 
 <h3 align="center"><b>Linked List</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Addition of two Linked Lists | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/Add%20Two%20Numbers.cpp) |
 | 2.  | Circular Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/Circular%20Linked%20List.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/CircularLinkedList.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/circular_linked_list.py) |
 | 3.  | Detect loop in a Linked List | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/Detect%20Loop%20in%20Linked%20List.cpp) |
 | 4.  | Doubly Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/DoublyLinkedList.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/DoublyLinkedList.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/DoubleLinkedList.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/doubly_linked_list.py) |
-| 5.  | Intersection of two Linked Lists | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/IntersectonOfTwoLinkedList.cpp) |
+| 5.  | Intersection of two Linked Lists | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/IntersectonOfTwoLinkedList.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/IntersectonOfTwoLinkedList.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/IntersectonOfTwoLinkedList.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/IntersectonOfTwoLinkedList.py) |
 | 6.  | Length of Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/linklist_length.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/linklist_length.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/linklist_length.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/linklist_length.py) |
 | 7.  | LRU Cache Design | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/LRUCacheDesign.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/LRUCacheDesign.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/LRUCacheDesign.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/LRUCacheDesign.py) |
 | 8.  | Merge Two Sorted Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/mergetwosortedll.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/MergeTwoSortedll.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/mergeTwoSortedLL.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/mergeTwoSortedLL.py) |
 | 9.  | Palindrome Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/palindrome.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/palindrome.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/LinkedListPalindrome.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/palindrome.py) |
 | 10.  | Reverse Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/Reverse%20a%20singly%20linked%20list.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/Reverse%20a%20singly%20linked%20list.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/Reverselinkedlist.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/Reverse%20a%20singly%20linked%20list.py) |
-| 11.  | Reverse Linked List in a Group of K | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/Reverse%20in%20group%20of%20K.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/Reverse%20in%20group%20of%20K.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/Reverse_in_group_of_K.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/Reverse%20in%20group%20of%20K.py) | 
+| 11.  | Reverse Linked List in a Group of K | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/Reverse%20in%20group%20of%20K.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/Reverse%20in%20group%20of%20K.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/Reverse_in_group_of_K.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/Reverse%20in%20group%20of%20K.py) |
 | 12.  | Singly Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/SinglyLinkedList.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/SinglyLinkedList.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/Singly%20Linked%20List.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/SinglyLinkedList.py) |
 | 13.  | Sorting Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/MergeSortLinkedList.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/MergeSortLinkedList.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/MergeSortLinkedList.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/MergeSortLinkedList.py) |
 
 <h3 align="center"><b>Machine Learning</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Decision Tree | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Machine%20Learning/Decision%20Tree/decision_tree.py) |
 | 2.  | Feed-Forward Neural Network | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/FeedFwdNN.cpp) |
-| 3.  | K-Means Clusters | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/%20K-nearest-neighbour-algo.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/tree/main/Python/Machine%20Learning/K%20Means%20Clustering) | 
+| 3.  | K-Means Clusters | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/%20K-nearest-neighbour-algo.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/tree/main/Python/Machine%20Learning/K%20Means%20Clustering) |
 | 4.  | K-Nearest Neighbours | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Machine%20Learning/KNN.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/%20K-nearest-neighbour-algo.cpp) |
 | 5.  | Linear Regression | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Machine%20Learning/linearregression.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/linearReg.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/tree/main/Python/Machine%20Learning/Linear-Regression) |
-| 6.  | Logistic Regression | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/LogisticRegression.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/tree/main/Python/Machine%20Learning/Logistic-Regression) | 
+| 6.  | Logistic Regression | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/LogisticRegression.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/tree/main/Python/Machine%20Learning/Logistic-Regression) |
 | 7.  | Naive Bayes | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Machine-Learning/NaiveBayesClassifier.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Machine%20Learning/Naive%20Bayes%20Classifier/NaiveBayesClassifier.py) |
 
 <h3 align="center"><b>Maths</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Armstrong Numbers | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/armstrong.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/armstrong.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/armstrong.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/armstrong.py) |
 | 2.  | Binary Exponentiation | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Binary_expo.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Binary%20Exponentiation%20Algorithm.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Binary_expo.py) |
 | 3.  | Bennett's Formula | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Binet-Formula-for-Fibonacci-Sequence.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Binet-Formula-for-Fibonacci-Sequence.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Binet_Formula.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Binet-Formula-for-Fibonacci-Sequence.py) |
@@ -223,15 +223,15 @@
 
 <h3 align="center"><b>Optimization</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Genetic Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/genetic.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/genetic.py) |
 | 2.  | Grey Wolf Optimization | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Optimization/greywolf.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/greywolf.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Optimization/grey_wolf.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/greywolf.py) |
 
 <h3 align="center"><b>Pattern Matching</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Boyer Moore Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Pattern-Matching/Boyer-moore.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/Boyer-moore.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Pattern-Matching/Boyer_moore.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Pattern-Matching/Boyer-moore.py) |
 | 2.  | KMP Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Pattern-Matching/KMP%20Algorithm.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/KMP_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Pattern-Matching/KmpAlgo.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Pattern-Matching/kmp_string_matching.py) |
 | 3.  | Rabin Karp | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/rabin_karp.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Pattern-Matching/rabin_karp.py) |
@@ -239,15 +239,15 @@
 
 <h3 align="center"><b>Recursion</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | String Permutation | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Recursion/Permutations.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Recursion/Permutations.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Recursion/Permutations.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Recursion/Permutations.py) |
 | 2.  | Tower of Hanoi | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Recursion/TowerOfHanoi.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Recursion/TowerOfHanoi.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Recursion/TowerOfHanoi.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Recursion/TowerOfHanoi.py) |
 
 <h3 align="center"><b>Searching</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | BFS and DFS | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Searching/bfs.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Searching/bfs.java) |
 | 2.  | Binary Search on 2D Matrix | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Searching/binary_search_in_a_2D_matrix.c),[C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Searching/Binary_search_in_2d_matrix.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Searching/binary_search_2d.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Searching/Binary_search_2D_matrix.py) |
 | 3.  | Binary Search | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Searching/binary_search.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Searching/binary_search.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Searching/binary_search.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Searching/binary_search.py) |
@@ -259,8 +259,8 @@
 
 <h3 align="center"><b>Sorting</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1. | 3 Sum Problem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/Triplet.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/Triplet.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/Triplet.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/Triplet.py) |
 | 2. | Bubble Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/bubble_sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/bubble_sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/bubble_sort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/bubble_sort.py) |
 | 3. | Bucket Sort | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sorting/Bucket_Sort.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sorting/Bucket_Sort.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sorting/BucketSort.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sorting/Bucket_Sort.py) |
@@ -281,8 +281,8 @@
 
 <h3 align="center"><b>Stacks</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1. | Max Area in Histogram | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Stack/Max_Area_Histogram.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Stack/Max_Area_Histogram.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Stack/Max_Area_Histogram.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Stack/Max_Area_Histogram.py) |
 | 2. | Next Greater Element | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Stack/nextgreaterelement.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Stack/Next%20greater%20element.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Stack/NextGreater.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Stack/NGE_Using_stack.py) |
 | 3. | Rain Water Problem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Stack/Rain_Water.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Stack/Rain_Water.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Stack/Rain_Water.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Stack/Rain_Water.py) |
@@ -290,23 +290,23 @@
 
 <h3 align="center"><b>Strings</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1. | Beautiful String Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/String/Beautiful_string.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/String/Beautiful_string.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/String/Beautiful_Sorting.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/String/Beautiful_string.py) |
 | 2. | Camel Case Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/String/Camel_Case.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/String/Camel_Case.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/String/Camel_Case.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/String/Camel_Case.py) |
 
 <h3 align="center"><b>Sub-Arrays</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1. | Boyer-Moore Majority Voting | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sub-Arrays/BoyerMooreAlgo.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Arrays/Boyer-Moore%20Majority%20Voting%20Algorithm.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sub-Arrays/boyer_moore_majority_vote.py) |
 | 2. | Kadane's Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Arrays/Kadane.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sub-Arrays/KadanesAlgorithm.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sub-Arrays/Kadane_Algorithm.py) |
 | 3. | Shortest Unsorted Continuous Sub-Arrays | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sub-Arrays/Unsorted_Array.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Arrays/Unsorted_Array.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sub-Arrays/Unsorted_Array.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sub-Arrays/Unsortd_Array.py) |
 
 <h3 align="center"><b>Trees</b></h3>
 
-| No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| No. | Algorithm Name                                                                        | Available languages                       |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1. | AVL Tree | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/AVL_Tree.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/avlTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) |
 | 2. | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/binarySearchTree.cpp) |
 | 3. | Binary Tree to BST | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/BinaryTreeToBST.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/BinaryTreeToBST.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/BinaryTreeToBST.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/BinaryTreeToBST.py) |
@@ -330,9 +330,9 @@
 <br>
 
 <h2 align="center"><u><b>Steps for Contributing</u> 🚀</b></h2>
-  
+
   <a href = "https://www.youtube.com/watch?v=u169J_merY8"><h3 align = "center">Refer to this YouTube Video for reference! </h3></a>
-  
+
 <br>
 
 - Fork and clone the Repo by typing the following commands in the terminal
@@ -415,8 +415,3 @@ $ git push origin <branch-name>
 Please don't forget to update the <a href="https://github.com/Kumar-laxmi/Algorithms#available-resources">Available Resources</a> section
 
 #### Happy?? Star ⭐ this Repo. 🤩
-
-
-
-
-
