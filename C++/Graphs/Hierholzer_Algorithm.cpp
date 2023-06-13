@@ -83,18 +83,29 @@ void printCycle(vector< vector<int> >& adj)
 
 int main()
 {
-    vector< vector<int> > adj;
+    int vertices, edges;
+    cout << "Enter the number of vertices in the graph: ";
+    cin >> vertices;
 
-	adj.resize(5);
-	adj[0].push_back(1);
-	adj[1].push_back(4);
-	adj[4].push_back(1);
-	adj[1].push_back(2);
-	adj[2].push_back(3);
-	adj[3].push_back(2);
-	adj[2].push_back(1);
-	adj[1].push_back(0);
+    cout << "Enter the number of edges in the graph: ";
+    cin >> edges;
+
+    vector<vector<int>> adj(vertices);
+
+    cout << "Enter the edges in the format 'source -> destination':" << endl;
+    for (int i = 0; i < edges; i++)
+    {
+        int source, destination;
+        cout << "Source-" << i+1 << " : ";
+        cin >> source;
+        cout << "Destination-" << i+1 << " : ";
+        cin >> destination;
+        adj[source].push_back(destination);
+    }
+
+    cout << "\nEulerian Cycle: ";
     printCycle(adj);
+    cout << endl;
 
     return 0;
 }

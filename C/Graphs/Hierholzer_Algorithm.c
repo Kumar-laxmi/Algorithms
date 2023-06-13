@@ -29,30 +29,50 @@ Then, we identify the remaining unused edges and start new trails from vertices 
 #include <stdio.h>
 #include <stdlib.h>
 
-void dfs(int curr_v, int** adj, int* edge_count, int* circuit, int* curr_path_top)
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+typedef struct {
+    struct Node* head;
+} LinkedList;
+
+LinkedList* createLinkedList() {
+    LinkedList* list = (LinkedList*)malloc(sizeof(LinkedList));
+    list->head = NULL;
+    return list;
+}
+
+void addEdge(LinkedList* adj[], int src, int dest) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = dest;
+    newNode->next = adj[src]->head;
+    adj[src]->head = newNode;
+}
+
+void dfs(int curr_v, LinkedList* adj[], int* edge_count, int* circuit, int* curr_path_top)
 {
     while (edge_count[curr_v])
     {
         circuit[(*curr_path_top)++] = curr_v;
-        int next_v = adj[curr_v][edge_count[curr_v] - 1];
+        int next_v = adj[curr_v]->head->data;
         edge_count[curr_v]--;
+        adj[curr_v]->head = adj[curr_v]->head->next;
         curr_v = next_v;
     }
     circuit[(*curr_path_top)++] = curr_v;
 }
 
-void printCycle(int** adj, int num_vertices)
+void printCycle(LinkedList* adj[], int num_vertices)
 {
     int* edge_count = (int*)malloc(num_vertices * sizeof(int));
     for (int i = 0; i < num_vertices; i++) {
+        struct Node* current = adj[i]->head;
         edge_count[i] = 0;
-    }
-
-    for (int i = 0; i < num_vertices; i++) {
-        int j = 0;
-        while (adj[i][j] != -1) {
+        while (current != NULL) {
             edge_count[i]++;
-            j++;
+            current = current->next;
         }
     }
 
@@ -98,28 +118,42 @@ void printCycle(int** adj, int num_vertices)
 
 int main()
 {
-    int num_vertices = 5;
+    int num_vertices, num_edges;
+    printf("Enter the number of vertices in the graph: ");
+    scanf("%d", &num_vertices);
 
-    int** adj = (int**)malloc(num_vertices * sizeof(int*));
+    printf("Enter the number of edges in the graph: ");
+    scanf("%d", &num_edges);
+
+    LinkedList* adj[num_vertices];
     for (int i = 0; i < num_vertices; i++) {
-        adj[i] = (int*)malloc(num_vertices * sizeof(int));
+        adj[i] = createLinkedList();
     }
 
-    adj[0][0] = 1;
-    adj[1][0] = 4;
-    adj[1][1] = 2;
-    adj[2][0] = 3;
-    adj[3][0] = 2;
-    adj[2][1] = 1;
-    adj[4][0] = 1;
-    adj[4][1] = 0;
+    printf("Enter the edges in the format 'source destination':\n");
+    for (int i = 0; i < num_edges; i++)
+    {
+        int source, destination;
+        printf("Source-%d : ", i + 1);
+        scanf("%d", &source);
+        printf("Destination-%d : ", i + 1);
+        scanf("%d", &destination);
+        addEdge(adj, source, destination);
+    }
 
+    printf("\nEulerian Cycle: ");
     printCycle(adj, num_vertices);
+    printf("\n");
 
     for (int i = 0; i < num_vertices; i++) {
+        struct Node* current = adj[i]->head;
+        while (current != NULL) {
+            struct Node* temp = current;
+            current = current->next;
+            free(temp);
+        }
         free(adj[i]);
     }
-    free(adj);
 
     return 0;
 }

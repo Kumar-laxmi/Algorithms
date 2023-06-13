@@ -81,20 +81,30 @@ public class Hierholzer_Algorithm {
     }
     
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the number of vertices in the graph: ");
+        int vertices = scanner.nextInt();
+        
+        System.out.print("Enter the number of edges in the graph: ");
+        int edges = scanner.nextInt();
+        
         List<List<Integer>> adj = new ArrayList<>();
-    
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < vertices; i++) {
             adj.add(new ArrayList<>());
         }
-        adj.get(0).add(1);
-        adj.get(1).add(4);
-        adj.get(4).add(1);
-        adj.get(1).add(2);
-        adj.get(2).add(3);
-        adj.get(3).add(2);
-        adj.get(2).add(1);
-        adj.get(1).add(0);
-
+        
+        System.out.println("Enter the edges in the format 'source destination':");
+        for (int i = 0; i < edges; i++) {
+            System.out.print("Source-" + (i + 1) + " : ");
+            int source = scanner.nextInt();
+            System.out.print("Destination-" + (i + 1) + " : ");
+            int destination = scanner.nextInt();
+            adj.get(source).add(destination);
+        }
+        
+        System.out.println("\nEulerian Cycle: ");
         printCycle(adj);
+        System.out.println("\n");
     }
 }

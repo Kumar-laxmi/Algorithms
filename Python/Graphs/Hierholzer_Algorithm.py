@@ -65,15 +65,17 @@ def printCycle(adj):
     print()
 
 if __name__ == '__main__':
-    adj = [[] for _ in range(5)]
+    vertices = int(input("Enter the number of vertices in the graph: "))
+    edges = int(input("Enter the number of edges in the graph: "))
 
-    adj[0].append(1)
-    adj[1].append(4)
-    adj[4].append(1)
-    adj[1].append(2)
-    adj[2].append(3)
-    adj[3].append(2)
-    adj[2].append(1)
-    adj[1].append(0)
+    adj = [[] for _ in range(vertices)]
 
+    print("Enter the edges in the format 'source destination':")
+    for i in range(edges):
+        source = int(input(f"Source-{i+1} : "))
+        destination = int(input(f"Destination-{i+1} : "))
+        adj[source].append(destination)
+
+    print("\nEulerian Cycle: ", end='')
     printCycle(adj)
+    print('\n')
