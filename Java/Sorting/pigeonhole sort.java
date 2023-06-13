@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CustomPigeonholeSort {
+public class PigeonholeSortExample {
     public static void pigeonholeSort(int[] arr) {
         int min = arr[0], max = arr[0];
         for (int i = 1; i < arr.length; i++) {
@@ -48,4 +48,6 @@ public class CustomPigeonholeSort {
         }
         System.out.println();
     }
+}
+
 }
