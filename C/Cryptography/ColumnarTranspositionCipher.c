@@ -128,9 +128,12 @@ void decryptMessage(char cipher[], char decryptedMsg[])
 
 int main()
 {
-    char msg[MAX_SIZE] = "I am an Open source contributor";
+    char msg[MAX_SIZE];
     char cipher[MAX_SIZE];
     char decryptedMsg[MAX_SIZE];
+
+    printf("Enter the Plain Text: ");
+    scanf("%[^\n]s", msg);
 
     setPermutationOrder();
 
