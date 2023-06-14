@@ -11,7 +11,7 @@
 #include <stdio.h>
 
 //method to find min
-#define min(a, b) (((a) < (b)) ? (a) : (b))
+#define min (a, b) (((a) < (b)) ? (a) : (b))
 
 
 

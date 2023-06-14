@@ -35,7 +35,7 @@ public class Exponential_search {
         return -1; // Element not found
     }
 
-    /**
+    /*
      fuction to perform exponential search.
      */
     public static int exponentialSearch(int[] arr, int target) {
@@ -54,8 +54,8 @@ public class Exponential_search {
 
     
 
-    /**
-     * A sample usage of the ExponentialSearch class.
+    /*
+      A sample usage of the Exponential_search class to perform exponential search.
 
      */
     public static void main(String[] args) {

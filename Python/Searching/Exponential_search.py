@@ -36,7 +36,6 @@ def exponential_search(arr, target):
     return binary_search(arr, target, i // 2, min(i, n - 1))
 
 
-
 arr = [2, 4, 8, 16, 32, 64, 128, 256]
 target = 32
 

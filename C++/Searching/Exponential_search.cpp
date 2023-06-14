@@ -60,8 +60,6 @@ int exponentialSearch(int arr[], int size, int target) {
     return binary_search(arr, target, i / 2, min(i, size - 1));
 }
 
-
-
 int main() {
     int arr[] = {2, 4, 8, 16, 32, 64, 128, 256};
     int size = sizeof(arr) / sizeof(arr[0]);
