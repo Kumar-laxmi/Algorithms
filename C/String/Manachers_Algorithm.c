@@ -70,7 +70,7 @@ char* longestPalindromeSubstring(const char* s, char* result) {
 int main() {
     char s[SIZE];
     char result[SIZE];
-    scanf("%s", s);
+    fgets(s, sizeof(s), stdin);
     printf("%s\n", longestPalindromeSubstring(s, result));
 
     return 0;

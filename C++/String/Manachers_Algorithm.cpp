@@ -41,12 +41,10 @@ string longestPalindromeSubstring(const string &s) {
     }
 
     // Find the longest palindrome length in p.
-
     int maxPalindrome = 0;
     int centerIndex = 0;
 
     for (int i = 1; i < Q.size() - 1; i++) {
-
         if (P[i] > maxPalindrome) {
             maxPalindrome = P[i];
             centerIndex = i;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public Manachers_Algorithm{
     private static final int SIZE = 100000 + 1;
     private static int[] P = new int[SIZE * 2];
 
