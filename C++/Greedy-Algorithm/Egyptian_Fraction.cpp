@@ -28,7 +28,11 @@ void egyptianFraction(int n, int d)
 }
 int main()
 {
-    int numerator = 6, denominator = 14;
+    int numerator, denominator;
+    cout << "Enter Numerator:";
+    cin >> numerator;
+    cout << "\nEnter Denominator:";
+    cin >> denominator;
     cout << "Egyptian Fraction representation of "
          << numerator << "/" << denominator << " is"
          << endl;

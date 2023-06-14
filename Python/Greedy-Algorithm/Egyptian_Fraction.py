@@ -1,38 +1,25 @@
-# import math package to use ceiling function
-import math
+# Python program to print a fraction in Egyptian Form using Greedy Algorithm
 
-# define a function egyptianFraction which receive parameter nr as numerator and dr as denominator
-def egyptianFraction(nr, dr):
+def egyptianFraction(n, d):
+    # When Both Numerator and denominator becomes zero then we simply return;
+    if d == 0 or n == 0:
+        return
+    if d % n == 0:
+        print("1/", d // n, sep='', end='')
+        return
+    if n % d == 0:
+        print(n // d, end='')
+        return
+    if n > d:
+        print(n // d, " + ", end='')
+        egyptianFraction(n % d, d)
+        return
+    x = d // n + 1
+    print("1/", x, " + ", end='', sep='')
+    egyptianFraction(n * x - d, d * x)
 
-	print("The Egyptian Fraction " +
-		"Representation of {0}/{1} is".
-				format(nr, dr), end="\n")
-
-	# empty list ef to store denominator
-	ef = []
-
-	# while loop runs until fraction becomes 0 i.e, numerator becomes 0
-	while nr != 0:
-
-		# taking ceiling
-		x = math.ceil(dr / nr)
-
-		# storing value in ef list
-		ef.append(x)
-
-		# updating new nr and dr
-		nr = x * nr - dr
-		dr = dr * x
-
-	# printing the values
-	for i in range(len(ef)):
-		if i != len(ef) - 1:
-			print(" 1/{0} +" .
-					format(ef[i]), end = " ")
-		else:
-			print(" 1/{0}" .
-					format(ef[i]), end = " ")
-
-# calling the function
-egyptianFraction(6, 14)
-
+# Main Function
+numerator = int(input("Enter Numerator: "))
+denominator = int(input("Enter Denominator: "))
+print("Egyptian Fraction representation of", numerator, "/", denominator, "is")
+egyptianFraction(numerator, denominator)

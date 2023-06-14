@@ -30,7 +30,11 @@ void egyptianFraction(int n, int d)
 
 int main()
 {
-    int numerator = 6, denominator = 14;
+    int numerator, denominator;
+    printf("Enter Numerator: ");
+    scanf("%d", &numerator);
+    printf("Enter Denominator:");
+    scanf("%d", &denominator);
     printf("Egyptian Fraction representation of %d/%d is\n", numerator, denominator);
     egyptianFraction(numerator, denominator);
     return 0;
