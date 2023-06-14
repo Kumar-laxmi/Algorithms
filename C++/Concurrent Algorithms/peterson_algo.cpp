@@ -11,7 +11,6 @@ atomic<int> turn;
 void process0()
 {
     while (true) {
-        flag[0] = true;
         turn = 1;
 
         // Wait until Process 1 is not in its critical section or it's not its turn

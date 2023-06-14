@@ -1,4 +1,4 @@
-class PetersonSolution {
+class peterson_algo {
 
     // Shared variables
     volatile boolean[] flag = new boolean[2];
