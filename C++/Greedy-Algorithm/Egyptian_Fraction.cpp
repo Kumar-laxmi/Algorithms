@@ -1,7 +1,7 @@
 /* C++ program to print a fraction in Egyptian Form using Greedy Algorithm*/
 #include <bits/stdc++.h>
 using namespace std;
-void egyptianFraction(int n, int d)
+void egyptian_Fraction(int n, int d)
 {
     // When Both Numerator and denominator becomes zero then we simply return;
     if (d == 0 || n == 0)
@@ -19,23 +19,21 @@ void egyptianFraction(int n, int d)
     if (n > d)
     {
         cout << n / d << " + ";
-        egyptianFraction(n % d, d);
+        egyptian_Fraction(n % d, d);
         return;
     }
     int x = d / n + 1;
     cout << "1/" << x << " + ";
-    egyptianFraction(n * x - d, d * x);
+    egyptian_Fraction(n * x - d, d * x);
 }
 int main()
 {
-    int numerator, denominator;
+    int num, den;
     cout << "Enter Numerator:";
-    cin >> numerator;
+    cin >> num;
     cout << "\nEnter Denominator:";
-    cin >> denominator;
-    cout << "Egyptian Fraction representation of "
-         << numerator << "/" << denominator << " is"
-         << endl;
-    egyptianFraction(numerator, denominator);
+    cin >> den;
+    cout << "Egyptian Fraction : " << num << "/" << den << " is" << endl;
+    egyptian_Fraction(num, den);
     return 0;
 }
