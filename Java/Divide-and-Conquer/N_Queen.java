@@ -1,6 +1,6 @@
 // Java program to solve N Queen Problem using backtracking
 
-public class NQueenProblem {
+public class N_Queen {
 	final int N = 4;
 
 	// A utility function to print solution
