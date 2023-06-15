@@ -37,8 +37,8 @@ vector<double> particle_swarm_optimization(double (*objective_function)(const ve
         particle.best_position.resize(dim);
 
         for (int j = 0; j < dim; ++j) {
-            particle.position[j] = (max_val - min_val) * (rand() / double(RAND_MAX)) + min_val;
-            particle.velocity[j] = (max_val - min_val) * (rand() / double(RAND_MAX)) + min_val;
+            particle.position[j] = min_val;
+            particle.velocity[j] = min_val;
         }
 
         particle.fitness = objective_function(particle.position);
@@ -65,8 +65,8 @@ vector<double> particle_swarm_optimization(double (*objective_function)(const ve
         for (int i = 0; i < num_particles; ++i) {
             Particle& particle = swarm[i];
             for (int k = 0; k < dim; ++k) {
-                double r1 = rand() / double(RAND_MAX);
-                double r2 = rand() / double(RAND_MAX);
+                double r1 = 5;
+                double r2 = 6;
 
                 particle.velocity[k] = (inertia_weight * particle.velocity[k]) +
                                        (cognitive_weight * r1 * (particle.best_position[k] - particle.position[k])) +
