@@ -224,7 +224,7 @@ def encrypt(pt, roundKeyBinary, roundKey):
 	return cipher_text
 
 
-pt =  "1230930918120938"
+pt = "1230930918120938"
 key = "AABB09182736CCDD"
 
 # Key generation
