@@ -18,22 +18,30 @@ void fisherYatesShuffle(int arr[], int n) {
 
 int main() {
     // Create an array of integers
-    int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int n = sizeof(numbers) / sizeof(numbers[0]);
+    int size;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+
+    int* numbers = (int*)malloc(size * sizeof(int));
+
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < size; ++i) {
+        scanf("%d", &numbers[i]);
+    }
 
     // Print the original array
     printf("Original array: ");
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < size; ++i) {
         printf("%d ", numbers[i]);
     }
     printf("\n");
 
     // Shuffle the array using Fisher-Yates shuffle
-    fisherYatesShuffle(numbers, n);
+    fisherYatesShuffle(numbers, size);
 
     // Print the shuffled array
     printf("Shuffled array: ");
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < size; ++i) {
         printf("%d ", numbers[i]);
     }
     printf("\n");
