@@ -9,7 +9,12 @@ def fisherYatesShuffle(arr):
         arr[i], arr[j] = arr[j], arr[i] # Swap the elements at indices i and j
 
 # Create a list of integers
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+size = int(input("Enter the size of the array: "))
+numbers = []
+
+print("Enter the elements of the array: ")
+for _ in range(size):
+    numbers.append(int(input()))
 
 # Print the original list
 print("Original list:", numbers)
