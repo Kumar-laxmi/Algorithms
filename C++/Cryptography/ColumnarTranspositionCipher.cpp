@@ -1,5 +1,6 @@
 #include <iostream>
 #include <map>
+#include <string>
 
 using namespace std;
 
@@ -109,7 +110,10 @@ string decrypt(string cipherText)
 
 int main()
 {
-    string message = "I am enthusiastic of learning new technologies.";
+    string message;
+    fflush(stdin);
+    printf("Enter the Plain Text: ");
+    getline(cin, message);
     setPermutationOrder();
     string cipher = encrypt(message);
     cout << "Cipher (Encrypted) Text: " << cipher << endl;

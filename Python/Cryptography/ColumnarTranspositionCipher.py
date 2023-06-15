@@ -73,7 +73,7 @@ def decryptMessage(cipher):
     return msg
 
 
-message = "Vidip Ghosh"
+message = input('Enter the plain text: ')
 
 cipher = encryptMessage(message)
 print("Encrypt Message", cipher)
