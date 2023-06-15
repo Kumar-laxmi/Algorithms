@@ -19,7 +19,7 @@ def shortestPath(graph, N):
     for i in range(N - 2, -1, -1):
 
         # Initialize distance from
-        # i to destination (N-1)
+        # i to sink (N-1)
         cost[i] = INF
 
         # Check all nodes of next stages
@@ -31,9 +31,9 @@ def shortestPath(graph, N):
             if graph[i][j] != INF:
 
                 # We apply recursive equation to
-                # costance to target through j.
+                # cost to target through j.
                 # and compare with minimum
-                # costance so far.
+                # cost so far.
                 cost[i] = min(cost[i], graph[i][j] + cost[j])
 
     return cost[0]
