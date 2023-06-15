@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class FisherYatesShuffle {
 
@@ -19,7 +20,16 @@ public class FisherYatesShuffle {
 
     public static void main(String[] args) {
         // Create an array of integers
-        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+
+        int[] numbers = new int[size];
+
+        System.out.println("Enter the elements of the array: ");
+        for (int i = 0; i < size; i++) {
+            numbers[i] = scanner.nextInt();
+        }
 
         // Print the original array
         System.out.println("Original array: " + Arrays.toString(numbers));
