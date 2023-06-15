@@ -168,7 +168,7 @@
 
 | No. | Algorithm Name                                                                        | Available languages                       | 
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
-| 1.  | Bloom-Filter Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Hashing/bloom_filter.c), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Hashing/BloomFilter.java) |
+| 1.  | Bloom-Filter Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Hashing/bloom_filter.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Hashing/bloom_filter.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Hashing/BloomFilter.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Hashing/bloom_filter.py) |
 
 <h3 align="center"><b>Linked List</b></h3>
 
@@ -225,7 +225,8 @@
 | 20.  | Reverse Integer | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Reverse%20Integer.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Reverse_integer.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/ReverseInteger.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/reverse_integer.py) |
 | 21.  | Roman to Decimal converter | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Roman_to_Decimal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Roman_to_Decimal.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Roman_to_Decimal.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Roman_to_Decimal.py) |
 | 22.  | Sieve Eratosthenes Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/sieveOfEratosthenes.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Sieve%20of%20Eratosthenes%20Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Sieve_erastonetihis.java),[Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/sieve_of_eratosthenes.py) |
-| 23.  | Zeller's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/zeller.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/zeller.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/zeller.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/zeller.py) |
+| 23.  | Strong Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Strong_Number.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Strong_Number.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Strong_Number.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Strong_Numbers.py) | 
+| 24.  | Zeller's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/zeller.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/zeller.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/zeller.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/zeller.py) |
 
 <h3 align="center"><b>Optimization</b></h3>
 
