@@ -21,7 +21,16 @@ void fisherYatesShuffle(std::vector<int>& arr) {
 
 int main() {
     // Create an array of integers
-    std::vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int size;
+    std::cout << "Enter the size of the array: ";
+    std::cin >> size;
+
+    std::vector<int> numbers(size);
+
+    std::cout << "Enter the elements of the array: ";
+    for (int i = 0; i < size; ++i) {
+        std::cin >> numbers[i];
+    }
 
     // Print the original array
     std::cout << "Original array: ";
