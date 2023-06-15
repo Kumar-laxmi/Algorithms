@@ -155,7 +155,7 @@ int main() {
     cin >> E;
 
     // Taking input from the user
-    cout << "Enter the edges in the format (source destination):" << endl;
+    cout << "Enter the edges in the format (source destination)" << endl;
     for (int i = 0; i < E; i++) {
         int source, destination;
         cout << "Source " << i+1 << " : ";
@@ -166,7 +166,7 @@ int main() {
     }
 
     // Printing the final result after analysing
-    cout << "\nFleury Algorithm : ";
+    cout << "\nResult of Fleury Algorithm : ";
     g.printEulerTrail();
     cout << endl;
 

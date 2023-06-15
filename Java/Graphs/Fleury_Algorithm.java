@@ -140,7 +140,7 @@ public class Fleury_Algorithm {
         int E = scanner.nextInt();
 
         // Taking input from the user
-        System.out.println("Enter the edges in the format (source destination):");
+        System.out.println("Enter the edges in the format (source destination)");
         for (int i = 0; i < E; i++) {
             int source, destination;
             System.out.print("Source " + (i + 1) + " : ");
@@ -153,7 +153,7 @@ public class Fleury_Algorithm {
         scanner.close();
 
         // Printing the final result after analyzing
-        System.out.print("\nFleury Algorithm : ");
+        System.out.print("\nResult of Fleury Algorithm : ");
         g.printEulerTour();
         System.out.println();
     }

@@ -160,7 +160,7 @@ int main() {
     scanf("%d", &E);
 
     // Taking input from the user
-    printf("Enter the edges in the format (source destination):\n");
+    printf("Enter the edges in the format (source destination)\n");
     for (int i = 0; i < E; ++i) {
         int source, destination;
         printf("Source %d: ", i + 1);
@@ -171,7 +171,7 @@ int main() {
     }
 
     // Printing the final result after analyzing
-    printf("\nFleury Algorithm: ");
+    printf("\nResult of Fleury Algorithm: ");
     printEulerTrail(g);
     printf("\n");
 

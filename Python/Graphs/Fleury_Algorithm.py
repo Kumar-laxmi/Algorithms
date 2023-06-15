@@ -111,13 +111,13 @@ g = Graph(V)
 E = int(input("Enter the number of edges in the graph: "))
 
 # Taking input from the user
-print("Enter the edges in the format (source destination):")
+print("Enter the edges in the format (source destination)")
 for i in range(E):
     source = int(input(f"Source {i+1}: "))
     destination = int(input(f"Destination {i+1}: "))
     g.addEdge(source, destination)
 
 # Printing the final result after analysing
-print("\nFleury Algorithm: ", end="")
+print("\nResult of Fleury Algorithm: ", end="")
 g.printEulerTrail()
 print()
