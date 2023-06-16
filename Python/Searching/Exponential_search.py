@@ -10,7 +10,7 @@
   """
 
  #  Searches for a target element in a sorted array using Binary search.
-  def binary_search(arr, target, left, right):
+def binary_search(arr, target, left, right):
     while left <= right:
         mid = left + (right - left) // 2
 
@@ -36,11 +36,26 @@ def exponential_search(arr, target):
     return binary_search(arr, target, i // 2, min(i, n - 1))
 
 
+<<<<<<< HEAD
 arr = [2, 4, 8, 16, 32, 64, 128, 256]
 target = 32
+=======
+
+
+arr = []
+n = int(input("Number of elements in the array: "))
+for i in range(n):
+    k = int(input("Enter an element: "))
+    arr.append(k)
+
+arr.sort()  # Sort the array in ascending order
+
+target = int(input("Enter the target element: "))
+>>>>>>> fc9a309b21402ca8b43dc4780d34eb65ab71cb83
 
 result = exponential_search(arr, target)
 if result == -1:
     print("Element not found")
 else:
     print(f"Element found at index {result}")
+

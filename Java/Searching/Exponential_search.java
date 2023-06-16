@@ -59,9 +59,29 @@ public class Exponential_search {
 
      */
     public static void main(String[] args) {
-        int[] arr = {2, 4, 8, 16, 32, 64, 128, 256};
-        int target = 32;
-
+       Scanner sc=new Scanner(System.in);
+       int temp=0;
+       System.out.println("Enter the number of elements:");
+        int n = sc.nextInt();
+         int[]arr=new int[n];
+            // values of  array
+            System.out.println("Enter the elements of  array:");
+            for (int i = 0; i < n; i++) {
+                arr[i] = sc.nextInt();
+            }
+           for(int i=0;i<arr.length-1;i++){
+            for(int j=i+1;j<arr.length;j++){
+               if(arr[i]>arr[j]){
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+             }
+           }
+           }
+            
+        System.out.println("Enter the target element:");
+        int target = sc.nextInt();
+             
         int result = exponentialSearch(arr, target);
         if (result == -1) {
             System.out.println("Element not found");

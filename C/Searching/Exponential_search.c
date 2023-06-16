@@ -48,9 +48,30 @@ int exponential_search(int arr[], int size, int target) {
 }
 
 int main() {
-    int arr[] = {2, 4, 8, 16, 32, 64, 128, 256};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int target = 32;
+    int arr[100];
+    int size, target;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &size);
+
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Sort the array
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = i+1; j < size ; j++) {
+            if (arr[i] > arr[j]) {
+                int temp = arr[i];
+                arr[i] = arr[j ];
+                arr[j] = temp;
+            }
+        }
+    }
+
+    printf("Enter the target element: ");
+    scanf("%d", &target);
 
     int result = exponential_search(arr, size, target);
     if (result == -1) {
