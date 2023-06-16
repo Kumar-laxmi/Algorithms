@@ -1,6 +1,5 @@
-# O(n) time | O(n) space
 def zeroSumSubarray(nums):
-    sums = set()  # Set to store cumulative sums
+    sums = set()   # Set to store cumulative sums
     currentSum = 0  # Variable to store the current sum
     for num in nums:
         currentSum += num  # Add the current number to the current sum
