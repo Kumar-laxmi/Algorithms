@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class VEBTree {
+public class VEBTreeAlgorithm {
     private int universeSize;
     private int minimum;
     private int maximum;
