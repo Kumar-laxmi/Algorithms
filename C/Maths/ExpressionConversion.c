@@ -263,10 +263,10 @@ void postfixToInfix(char* exp) {
 int main() {
     char exp[100];
     int choice;
+    printf("Enter expression: ");
+    scanf("%s", exp);
 
     do {
-        printf("Enter expression: ");
-        scanf("%s", exp);
         printf("---------------------------------------\n");
         printf("Press 1 for Infix to Postfix conversion\n");
         printf("Press 2 for Infix to Prefix conversion\n");
