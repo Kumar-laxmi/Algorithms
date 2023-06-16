@@ -1,7 +1,7 @@
 //O(n) time | O(n) space
 import java.util.HashSet;
 
-public class ZeroSumSubarray {
+public class zerosumsubarray {
 
     public static boolean zeroSumSubarray(int[] nums) {
         HashSet<Integer> sums = new HashSet<>(); // Set to store cumulative sums
