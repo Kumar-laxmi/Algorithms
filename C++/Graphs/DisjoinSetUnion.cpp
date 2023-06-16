@@ -1,71 +1,83 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
-// Stores the parent of each vertex
+
 int parent[1000000];
-// Function to find the topmost
-// parent of vertex a
+
+// Find the topmost parent of a vertex
 int root(int a)
 {
-    // If current vertex is
-    // the topmost vertex
     if (a == parent[a]) {
         return a;
     }
- 
-    // Otherwise, set topmost vertex of
-    // its parent as its topmost vertex
     return parent[a] = root(parent[a]);
 }
-// Function to connect the component
-// having vertex a with the component
-// having vertex b
+
+// Connect two components by updating their parent
 void connect(int a, int b)
 {
-    // Connect edges
     a = root(a);
     b = root(b);
- 
+
     if (a != b) {
         parent[b] = a;
     }
 }
-// Function to find unique top most parents
+
+// Count the number of connected components
 void connectedComponents(int n)
 {
     set<int> s;
- 
-    // Traverse all vertices
+
     for (int i = 0; i < n; i++) {
- 
-        // Insert all topmost
-        // vertices obtained
-        s.insert(root(parent[i]));}
-    // Print count of connected components
-    cout << s.size() << '\n';
+        s.insert(root(parent[i]));
+    }
+    cout << "Number of connected components: " << s.size() << '\n';
 }
-// Function to print answer
-void printAnswer(int N,vector<vector<int> > edges)
+
+// Print the input and call the functions
+void printAnswer(int N, vector<vector<int>> edges)
 {
-    // Setting parent to itself
+    // Initialize each vertex as its own parent
     for (int i = 0; i <= N; i++) {
         parent[i] = i;
     }
-     // Traverse all edges
+
+    // Connect the edges
     for (int i = 0; i < edges.size(); i++) {
         connect(edges[i][0], edges[i][1]);
-    } 
-    // Print answer
+    }
+
+    // Print the number of connected components
     connectedComponents(N);
 }
- // Driver Code
+
 int main()
 {
-    // Given N
-    int N = 8;
-     // Given edges
-    vector<vector<int> > edges = {{ 1, 0 }, { 0, 2 }, { 5, 3 }, { 3, 4 }, { 6, 7 }    };
-     // Function call
+    int N;
+    cout << "Enter the number of vertices: ";
+    cin >> N;
+
+    vector<vector<int>> edges;
+    int m;
+    cout << "Enter the number of edges: ";
+    cin >> m;
+
+    cout << "Enter the edges:\n";
+    for (int i = 0; i < m; i++) {
+        int u, v;
+        cin >> u >> v;
+        edges.push_back({u, v});
+    }
+
+    cout << "\nInput:\n";
+    cout << "Number of vertices: " << N << '\n';
+    cout << "Edges:\n";
+    for (int i = 0; i < m; i++) {
+        cout << edges[i][0] << " " << edges[i][1] << '\n';
+    }
+
+    cout << "\nOutput:\n";
     printAnswer(N, edges);
-     return 0;
+
+    return 0;
 }
