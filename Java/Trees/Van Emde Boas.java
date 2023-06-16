@@ -1,13 +1,13 @@
 import java.util.Arrays;
 
-public class VEBTreeAlgorithm {
+public class MyVEBTree {
     private int universeSize;
     private int minimum;
     private int maximum;
-    private VEBTree summary;
-    private VEBTree[] cluster;
+    private MyVEBTree summary;
+    private MyVEBTree[] cluster;
 
-    public VEBTree(int size) {
+    public MyVEBTree(int size) {
         universeSize = size;
         minimum = -1;
         maximum = -1;
@@ -16,11 +16,11 @@ public class VEBTreeAlgorithm {
             int upperSize = (int) Math.ceil(Math.sqrt(size));
             int lowerSize = (int) Math.floor(Math.sqrt(size));
 
-            summary = new VEBTree(upperSize);
-            cluster = new VEBTree[upperSize];
+            summary = new MyVEBTree(upperSize);
+            cluster = new MyVEBTree[upperSize];
 
             for (int i = 0; i < upperSize; i++)
-                cluster[i] = new VEBTree(lowerSize);
+                cluster[i] = new MyVEBTree(lowerSize);
         }
     }
 
@@ -153,7 +153,7 @@ public class VEBTreeAlgorithm {
     }
 
     public static void main(String[] args) {
-        VEBTree vebTree = new VEBTree(16);
+        MyVEBTree vebTree = new MyVEBTree(16);
         vebTree.insert(4);
         vebTree.insert(1);
         vebTree.insert(8);
@@ -168,4 +168,6 @@ public class VEBTreeAlgorithm {
         vebTree.remove(4);
         System.out.println(vebTree.contains(4)); // Output: false
     }
+}
+
 }
