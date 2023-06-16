@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
  
-public class coding {
+public class heronsFromula {
  
     public static void main(String[] args) {
         double s1, s2, s3, area, S;
