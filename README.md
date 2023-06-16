@@ -77,8 +77,9 @@
 <h3 align="center"><b>Binary</b></h3>
 
 | No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
-| 1.  | Hamming Distance Theorem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Binary/hammingDistance.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Binary/hammingDistance.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Binary/hammingDistance.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Binary/hammingDistance.py) |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
+| 1.  | Binary <-> Gray Code Conversion | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Binary/Binary%20to%20Gray%20Conversion.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Binary/Binary%20to%20gray%20conversion.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Binary/BinarytoGray.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Binary/Binary%20to%20Gray%20conversion.py) | 
+| 2.  | Hamming Distance Theorem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Binary/hammingDistance.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Binary/hammingDistance.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Binary/hammingDistance.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Binary/hammingDistance.py) |
 
 <h3 align="center"><b>Cryptography</b></h3>
 
