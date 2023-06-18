@@ -11,7 +11,6 @@ const int INF = 1e9;
 // Returns shortest cost from 0 to N-1.
 int shortestPath(int graph[12][12], int N)
 {
-
     // cost[i] is going to store shortest
     // distance from node i to node N-1.
     int cost[N];
@@ -34,7 +33,6 @@ int shortestPath(int graph[12][12], int N)
             }
         }
     }
-
     return cost[0];
 }
 
