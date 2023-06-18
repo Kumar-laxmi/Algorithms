@@ -136,7 +136,8 @@
 | 7.  | Matrix Chain Multiplication | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/Matrix_Chain_Multiplication.cpp) | 
 | 8.  | Minimum Jump Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/Min_Jump.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/Min_Jump.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/Min_Jump.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Dynamic-Programming/Min_Jump.py) |
 | 9.  | Minimum Sum Partition Problem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/minimum_sum_partition.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/minimum_sum_partition.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/minimum_sum_partition.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Dynamic-Programming/minimum_sum_partition.py) |
-| 10.  | Travelling Salesman Problem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/Travelling_Salesman.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/TravellingSalesMen.cpp) |
+| 10.  | Partition problem | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/Partition_Problem.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Dynamic-Programming/PartitionProblem.java) |
+| 11.  | Travelling Salesman Problem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Dynamic-Programming/Travelling_Salesman.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Dynamic-Programming/TravellingSalesMen.cpp) |
 
 <h3 align="center"><b>Game Theory</b></h3>
 
@@ -244,8 +245,8 @@
 | 1.  | Ant Colony Optimization | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/aco_optimization_py.py) | 
 | 2.  | Genetic Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/genetic.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/genetic.py) |
 | 3.  | Grey Wolf Optimization | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Optimization/greywolf.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/greywolf.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Optimization/grey_wolf.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/greywolf.py) |
-|     | Hill Climbing Algorithm | [C](), [C++](), [Java](), [Python]() |
-| 4.  | Particle Swarm Optimization | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/particle_swarm_optimization.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/particle_swarm_optimization.py) |
+| 4.  | Hill Climbing Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Optimization/Hill_climbing.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/Hill_climbing.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Optimization/Hill_climbing.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/Hill_climbing.py) |
+| 5.  | Particle Swarm Optimization | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/particle_swarm_optimization.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/particle_swarm_optimization.py) |
 
 <h3 align="center"><b>Pattern Matching</b></h3>
 
