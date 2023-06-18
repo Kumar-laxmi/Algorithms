@@ -29,7 +29,6 @@ size - size of the array
 
 int interpolationSearch(int array[], int start, int end, int target)
 {
-
 	int mid;
 	    // search space is array[low…high] 
   if (start <= end && target >= array[start] && target <= array[end]) {
@@ -55,9 +54,7 @@ int interpolationSearch(int array[], int start, int end, int target)
 
 // Driver Code
 int main()
-{
-
-  
+{  
   int array[] = {2, 5, 10, 14, 21, 26, 32, 37, 42, 49};
 	int size = sizeof(array) / sizeof(array[0]);
 
