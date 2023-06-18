@@ -9,7 +9,7 @@ class Node:
  
 def maxValue(node):
     if node is None:
-        return 0;
+        return 0
      
     leftMax = maxValue(node.left)
     rightMax = maxValue(node.right)
