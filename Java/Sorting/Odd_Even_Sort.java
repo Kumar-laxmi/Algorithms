@@ -1,6 +1,6 @@
 import java.io.*;
 
-class OddEven {
+class Odd_Even_Sort {
 	public static void oddEvenSort(int arr[], int n)
 	{
 		boolean isSorted = false; // Initially array is unsorted

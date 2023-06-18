@@ -20,6 +20,6 @@ def oddEvenSort(arr, n):
 arr = [50, 10, 2, -4, 0]
 n = len(arr)
 
-oddEvenSort(arr, n);
+oddEvenSort(arr, n)
 for i in range(0, n):
 	print(arr[i], end = ' ')
