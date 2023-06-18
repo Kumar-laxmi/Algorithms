@@ -40,6 +40,7 @@ int main() {
     printf("FFT: ");
     for (int i = 0; i < n; i++) {
         printf("%.2f + %.2fi ", creal(x[i]), cimag(x[i]));
+        printf("\n");
     }
     printf("\n");
 
