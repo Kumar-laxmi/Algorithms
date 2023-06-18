@@ -1,6 +1,6 @@
 import java.io.*;
  
-class ValBST {
+class Validate_Binary_Search_Tree {
  
   /* A binary tree node has data, pointer to left child
         and a pointer to right child */

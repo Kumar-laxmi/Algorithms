@@ -14,7 +14,7 @@ def maxValue(node):
     leftMax = maxValue(node.left)
     rightMax = maxValue(node.right)
      
-    value = 0;
+    value = 0
     if leftMax > rightMax:
         value = leftMax
     else:
