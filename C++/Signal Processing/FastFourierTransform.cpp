@@ -42,6 +42,7 @@ int main() {
     std::cout << "FFT: ";
     for (int i = 0; i < n; i++) {
         std::cout << std::real(x[i]) << " + " << std::imag(x[i]) << "i ";
+        std::cout << "\n";
     }
     std::cout << std::endl;
 
