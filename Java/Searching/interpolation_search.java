@@ -1,6 +1,6 @@
 import java.util.*;
 
-class rajendra {
+class interpolation_search {
 
 /*
 
