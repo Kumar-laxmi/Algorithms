@@ -60,10 +60,7 @@ def decryptMessage(cipher):
             msg_index += 1
         key_index += 1
 
-    try:
-        msg = ''.join(sum(dec_cipher, []))
-    except:
-        raise TypeError("This program can't handle repeating words.")
+    msg = ''.join(sum(dec_cipher, []))
 
     null_count = msg.count('_')
 
