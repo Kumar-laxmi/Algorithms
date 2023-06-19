@@ -99,7 +99,7 @@ void morseCode(const char* s) {
 int main() {
     char s[100];
     printf("Enter a string: ");
-    scanf("%s",s);
+    fgets(s, sizeof(s), stdin);
     morseCode(s);
 
     return 0;
