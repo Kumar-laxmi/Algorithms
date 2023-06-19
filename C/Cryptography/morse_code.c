@@ -10,8 +10,7 @@ appended in encoded message and have considered both numbers and alphabets.*/
 #include<stdio.h>
 #include<string.h>
 char* morseEncode(char x){
-    switch (x)
-    {
+    switch (x){
     case 'a':
         return ".-";
     case 'b':
