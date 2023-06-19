@@ -14,10 +14,7 @@ class morse_code{
 // function to encode a alphabet as
     // Morse code
     static String morseEncode(char x)
-    {
-     
-        // refered to the Morse table
-       
+    {// refered to the Morse table
         switch (x)
         {
             case 'a':
