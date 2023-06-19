@@ -31,7 +31,7 @@ class AdaBoostClassifier:
         for _ in range(self.num_classifiers):
             classifier = {}  # Weak classifier dictionary
             
-            # Find best weak classifier based on weighted error
+        
             best_error = float('inf')
             
             for feature in range(n_features):
@@ -77,20 +77,7 @@ class AdaBoostClassifier:
         
         return self.classes[np.argmax(scores, axis=1)]
 
-# Example usage:
-# X = np.array([[1, 2], [2, 1], [3, 4], [4, 3], [1, 3], [4, 2]])
-# y = np.array([0, 0, 1, 2, 1, 2])
-
-# adaboost = AdaBoostClassifier(num_classifiers=3)
-# adaboost.fit(X, y)
-
-# X_test = np.array([[1, 1], [3, 3]])
-# y_pred = adaboost.predict(X_test)
-
-# print("Predictions:", y_pred)
 if __name__ == '__main__':
-    #data_path = "Python/Machine Learning/XGBoost/Data.csv"
-    #X, y= prepare_data(data_path)
     dataset = load_breast_cancer()
     X = dataset.data
     y = dataset.target
@@ -98,8 +85,7 @@ if __name__ == '__main__':
 # Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
-# Create an instance of XGBoostClassifier or XGBoostRegressor and fit the model
-    model = AdaBoostClassifier(num_classifiers=3)  # or XGBoostRegressor()
+    model = AdaBoostClassifier(num_classifiers=3) 
     model.fit(X_train, y_train)
 
 # Make predictions using the trained model
