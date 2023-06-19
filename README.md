@@ -314,7 +314,6 @@
 | 1. | Boyer-Moore Majority Voting | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sub-Arrays/BoyerMooreAlgo.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Arrays/Boyer-Moore%20Majority%20Voting%20Algorithm.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sub-Arrays/boyer_moore_majority_vote.py) |
 | 2. | Kadane's Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Arrays/Kadane.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sub-Arrays/KadanesAlgorithm.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sub-Arrays/Kadane_Algorithm.py) |
 | 3. | Shortest Unsorted Continuous Sub-Arrays | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Sub-Arrays/Unsorted_Array.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Arrays/Unsorted_Array.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Sub-Arrays/Unsorted_Array.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sub-Arrays/Unsortd_Array.py) |
-| 4. | Zero Sum Sub-Arrays | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/zerosumsubarray.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Sub-Arrays/zerosumsubarray.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/zerosumsubarray.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Sub-Arrays/zerosumsubarray.py) |
 
 <h3 align="center"><b>Trees</b></h3>
 
