@@ -14,9 +14,7 @@ using namespace std;
 // function to encode a alphabet as
 // Morse code
 string morseEncode(char x)
-{
-
-	// refered  to the Morse table
+{	// refered  to the Morse table
 	switch (x) {
 	case 'a':
 		return ".-";
@@ -99,7 +97,6 @@ string morseEncode(char x)
 
 void morseCode(string s)
 {
-
 	// character by character print
 	// Morse code
 	for (int i = 0; s[i]; i++)
@@ -108,8 +105,7 @@ void morseCode(string s)
 }
 
 int main()
-{
-	string s;
+{	string s;
     cout<<"Enter a string:";
     cin>>s;
 	morseCode(s);
