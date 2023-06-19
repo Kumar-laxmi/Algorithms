@@ -13,8 +13,7 @@ using namespace std;
 
 // function to encode a alphabet as
 // Morse code
-string morseEncode(char x)
-{	// refered  to the Morse table
+string morseEncode(char x){ //refered morse code character table
 	switch (x) {
 	case 'a':
 		return ".-";
