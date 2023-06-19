@@ -20,7 +20,7 @@ Sample Input:
 Sample Output:
 1 0 3 5 8
  */
-public class AdditionOfTwoLL {
+public class AdditionOfTwoNumbersinLL {
     public static class ListNode {
         int val;
         ListNode next;

@@ -1,6 +1,6 @@
 #Addition of two Linked-List Number Python #1317
 
-# The code defines a class named ListNode, representing a node of the linked list. Each node has an integer value (val) and a reference to the next node (next).
+# The code defines a class named ListNode, representing a node of the linked list. Each node has an integer value (val) and a reference to the next node (next)
 # The addTwoNumbers function is responsible for adding two numbers represented as linked lists. However, the logic for addition is not implemented and needs to be completed based on the requirements.
 # The printList function is used to print the values of the nodes in a linked list.
 # The makeList function is used to create a linked list with a given number of nodes. It takes input from the user and constructs the linked list accordingly.

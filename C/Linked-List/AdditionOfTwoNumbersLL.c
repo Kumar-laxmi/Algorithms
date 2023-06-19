@@ -24,7 +24,7 @@ Sample Input:
 3
 1 2 4
 Sample Output:
-1 0 3 5 8
+10358
 
 
 
