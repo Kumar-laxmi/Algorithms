@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Scanner;
 
-class leastRecentlyUsed {
+class LRU {
     static int pageFaults(int pages[], int n, int capacity) {
         HashSet<Integer> s = new HashSet<>(capacity);
         HashMap<Integer, Integer> indexes = new HashMap<>();
