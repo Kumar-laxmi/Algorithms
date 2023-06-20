@@ -53,7 +53,6 @@ int buildMatchingMachine(string arr[], int k)
 	queue<int> q;	
 	for (int ch = 0; ch < MAXC; ++ch)
 	{
-		
 		if (g[0][ch] != 0)
 		{
 			f[g[0][ch]] = 0;
@@ -64,17 +63,13 @@ int buildMatchingMachine(string arr[], int k)
 	
 	while (q.size())
 	{
-	
 		int state = q.front();
-		q.pop();
-
-	
+		q.pop();	
 		for (int ch = 0; ch <= MAXC; ++ch)
 		{
 			
 			if (g[state][ch] != -1)
 			{
-			
 				int failure = f[state];				
 				while (g[failure][ch] == -1)
 					failure = f[failure];
@@ -85,7 +80,6 @@ int buildMatchingMachine(string arr[], int k)
 			}
 		}
 	}
-
 	return states;
 }
 
@@ -95,7 +89,6 @@ int findNextState(int currentState, char nextInput)
 	int ch = nextInput - 'a';	  
 	while (g[answer][ch] == -1)
 		answer = f[answer];
-
 	return g[answer][ch];
 }
 
@@ -108,7 +101,6 @@ void searchWords(string arr[], int k, string text)
 	{
 		currentState = findNextState(currentState, text[i]);
 
-	
 		if (out[currentState] == 0)
 			continue;
 
