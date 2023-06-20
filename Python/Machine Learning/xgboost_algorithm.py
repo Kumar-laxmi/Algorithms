@@ -1,3 +1,8 @@
+'''
+Implementation of a XGBoost algorithm.
+Author - Phalesh Kolpe
+'''
+
 import numpy as np
 import sys
 import pandas as pd
