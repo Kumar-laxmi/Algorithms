@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-class firstInFirstOut {
+class FIFO {
     static int pageFaults(int pages[], int n, int capacity) {
         HashSet<Integer> s = new HashSet<>(capacity);
         Queue<Integer> idx = new LinkedList<>();
