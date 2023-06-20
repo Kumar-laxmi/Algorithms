@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-class freivald {
+class frievald {
     static int n; // Number of rows in matrix A and C
     static int m; // Number of columns in matrix A, number of rows in matrix B
     static int k; // Number of columns in matrix B and C
