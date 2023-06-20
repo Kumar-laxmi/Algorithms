@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include <algorithm>
+#include <limits>
 
 struct WeakClassifier {
     int feature;
@@ -28,6 +30,49 @@ void destroyAdaBoostClassifier(AdaBoostClassifier& adaboost) {
     adaboost.classifiers.clear();
     adaboost.alphas.clear();
     adaboost.classes.clear();
+}
+
+std::vector<double> findUniqueValues(double X[][2], int nSamples, int nFeatures, int feature) {
+    std::vector<double> uniqueValues;
+    uniqueValues.reserve(nSamples);
+
+    for (int i = 0; i < nSamples; i++) {
+        double value = X[i][feature];
+        bool found = false;
+        for (const double& uniqueValue : uniqueValues) {
+            if (uniqueValue == value) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            uniqueValues.push_back(value);
+        }
+    }
+
+    return uniqueValues;
+}
+
+double calculateWeightedError(int* y, std::vector<int>& prediction, std::vector<double>& weights, int nSamples) {
+    double weightedError = 0.0;
+    for (int i = 0; i < nSamples; i++) {
+        if (y[i] != prediction[i]) {
+            weightedError += weights[i];
+        }
+    }
+    return weightedError;
+}
+
+void updateWeights(AdaBoostClassifier& adaboost, int* y, std::vector<int>& prediction, std::vector<double>& weights, double alpha, int nSamples) {
+    double sumWeights = 0.0;
+    for (int i = 0; i < nSamples; i++) {
+        weights[i] *= exp(-alpha * y[i] * prediction[i]);
+        sumWeights += weights[i];
+    }
+
+    for (int i = 0; i < nSamples; i++) {
+        weights[i] /= sumWeights;
+    }
 }
 
 void fit(AdaBoostClassifier& adaboost, double X[][2], int* y, int nSamples, int nFeatures) {
@@ -58,22 +103,7 @@ void fit(AdaBoostClassifier& adaboost, double X[][2], int* y, int nSamples, int 
         double bestError = INFINITY;
 
         for (int feature = 0; feature < nFeatures; feature++) {
-            std::vector<double> uniqueValues;
-            uniqueValues.reserve(nSamples);
-
-            for (int i = 0; i < nSamples; i++) {
-                double value = X[i][feature];
-                bool found = false;
-                for (const double& uniqueValue : uniqueValues) {
-                    if (uniqueValue == value) {
-                        found = true;
-                        break;
-                    }
-                }
-                if (!found) {
-                    uniqueValues.push_back(value);
-                }
-            }
+            std::vector<double> uniqueValues = findUniqueValues(X, nSamples, nFeatures, feature);
 
             for (const double& threshold : uniqueValues) {
                 std::vector<int> prediction(nSamples);
@@ -86,13 +116,7 @@ void fit(AdaBoostClassifier& adaboost, double X[][2], int* y, int nSamples, int 
                     }
                 }
 
-                // Calculate weighted error
-                double weightedError = 0.0;
-                for (int i = 0; i < nSamples; i++) {
-                    if (y[i] != prediction[i]) {
-                        weightedError += weights[i];
-                    }
-                }
+                double weightedError = calculateWeightedError(y, prediction, weights, nSamples);
 
                 if (weightedError < bestError) {
                     bestError = weightedError;
@@ -103,26 +127,15 @@ void fit(AdaBoostClassifier& adaboost, double X[][2], int* y, int nSamples, int 
             }
         }
 
-        // Calculate classifier weight (alpha)
         classifier.alpha = 0.5 * log((1.0 - bestError) / (bestError + 1e-10));
 
-        // Update weights
-        double sumWeights = 0.0;
-        for (int i = 0; i < nSamples; i++) {
-            weights[i] *= exp(-classifier.alpha * y[i] * classifier.prediction[i]);
-            sumWeights += weights[i];
-        }
-
-        // Normalize weights
-        for (int i = 0; i < nSamples; i++) {
-            weights[i] /= sumWeights;
-        }
+        updateWeights(adaboost, y, classifier.prediction, weights, classifier.alpha, nSamples);
 
         adaboost.alphas[t] = classifier.alpha;
     }
 }
 
-std::vector<int> predict(AdaBoostClassifier& adaboost, double X[][2], int nSamples, int nClasses) {
+std::vector<std::vector<double>> calculateScores(AdaBoostClassifier& adaboost, double X[][2], int nSamples, int nClasses) {
     std::vector<std::vector<double>> scores(nSamples, std::vector<double>(nClasses, 0.0));
 
     for (int t = 0; t < adaboost.numClassifiers; t++) {
@@ -139,6 +152,11 @@ std::vector<int> predict(AdaBoostClassifier& adaboost, double X[][2], int nSampl
             }
         }
     }
+    return scores;
+}
+
+std::vector<int> predict(AdaBoostClassifier& adaboost, double X[][2], int nSamples, int nClasses) {
+    std::vector<std::vector<double>> scores = calculateScores(adaboost, X, nSamples, nClasses);
 
     std::vector<int> predictions(nSamples);
     for (int i = 0; i < nSamples; i++) {
@@ -182,5 +200,5 @@ int main() {
 
     destroyAdaBoostClassifier(adaboost);
 
-    return 0;
+ return 0;
 }
