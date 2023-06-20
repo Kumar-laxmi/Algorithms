@@ -165,7 +165,7 @@ class Node:
         hessian = self.hessian[self.idxs]
         
         lhs_gradient = gradient[lhs].sum()
-        lhs_hessian  = hessian[lhs].sum()
+        lhs_hessian = hessian[lhs].sum()
         
         rhs_gradient = gradient[rhs].sum()
         rhs_hessian = hessian[rhs].sum()
