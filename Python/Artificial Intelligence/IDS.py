@@ -45,7 +45,7 @@ class Graph:
 		return False
 
 # Create a graph given in the above diagram
-g = Graph (7);
+g = Graph (7)
 g.addEdge(0, 1)
 g.addEdge(0, 2)
 g.addEdge(1, 3)
@@ -53,7 +53,9 @@ g.addEdge(1, 4)
 g.addEdge(2, 5)
 g.addEdge(2, 6)
 
-target = 6; maxDepth = 3; src = 0
+target = 6
+maxDepth = 3
+src = 0
 
 if g.IDDFS(src, target, maxDepth) == True:
 	print ("Target 6 is reachable from source 0 " +
