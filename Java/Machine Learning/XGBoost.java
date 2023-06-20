@@ -1,6 +1,5 @@
 /*Implementation of a XGBoost algorithm.
 Author - Phalesh Kolpe*/
-package Java.Machine_Learning;
 
 import java.util.ArrayList;
 import java.util.List;
