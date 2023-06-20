@@ -58,14 +58,18 @@ void fit(AdaBoostClassifier *adaboost, double X[][2], int *y, int nSamples, int 
         weights[i] = 1.0 / nSamples;
     }
 
+    double *uniqueValues = (double *)malloc(nSamples * sizeof(double));
+    int *prediction = (int *)malloc(nSamples * sizeof(int));
+
     for (int t = 0; t < adaboost->numClassifiers; t++) {
         WeakClassifier *classifier = &(adaboost->classifiers[t]);
 
         // Find best weak classifier based on weighted error
         double bestError = INFINITY;
+        int bestFeature = -1;
+        double bestThreshold = 0.0;
 
         for (int feature = 0; feature < nFeatures; feature++) {
-            double *uniqueValues = (double *)malloc(nSamples * sizeof(double));
             int numUniqueValues = 0;
 
             for (int i = 0; i < nSamples; i++) {
@@ -84,7 +88,6 @@ void fit(AdaBoostClassifier *adaboost, double X[][2], int *y, int nSamples, int 
 
             for (int k = 0; k < numUniqueValues; k++) {
                 double threshold = uniqueValues[k];
-                int *prediction = (int *)malloc(nSamples * sizeof(int));
 
                 for (int i = 0; i < nSamples; i++) {
                     if (X[i][feature] < threshold) {
@@ -104,20 +107,19 @@ void fit(AdaBoostClassifier *adaboost, double X[][2], int *y, int nSamples, int 
 
                 if (weightedError < bestError) {
                     bestError = weightedError;
-                    classifier->feature = feature;
-                    classifier->threshold = threshold;
-
-                    if (classifier->prediction != NULL) {
-                        free(classifier->prediction);
-                    }
-                    classifier->prediction = prediction;
-                } else {
-                    free(prediction);
+                    bestFeature = feature;
+                    bestThreshold = threshold;
                 }
             }
-
-            free(uniqueValues);
         }
+
+        classifier->feature = bestFeature;
+        classifier->threshold = bestThreshold;
+
+        if (classifier->prediction != NULL) {
+            free(classifier->prediction);
+        }
+        classifier->prediction = prediction;
 
         // Calculate classifier weight (alpha)
         classifier->alpha = 0.5 * log((1.0 - bestError) / (bestError + 1e-10));
@@ -138,7 +140,10 @@ void fit(AdaBoostClassifier *adaboost, double X[][2], int *y, int nSamples, int 
     }
 
     free(weights);
+    free(uniqueValues);
+    free(prediction);
 }
+
 
 int *predict(AdaBoostClassifier *adaboost, double X[][2], int nSamples, int nClasses) {
     double **scores = (double **)malloc(nSamples * sizeof(double *));
