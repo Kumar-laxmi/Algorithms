@@ -7,11 +7,6 @@ from sklearn.metrics import confusion_matrix,accuracy_score
 from sklearn.datasets import load_breast_cancer
 
 
-def split_line(line):
-    """Splits a line by comma and returns the values as a list."""
-    values = line.strip().split(",")
-    return values
-
 
 def prepare_data(file_path: str) -> Tuple[np.ndarray, np.ndarray, list]:
     
