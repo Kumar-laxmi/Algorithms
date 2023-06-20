@@ -58,7 +58,7 @@ boolean IDDFS(int src, int target, int max_depth)
 }
 
 // Driver code
-class Main {
+class IDS {
 public static void main(String[] args)
 {
 	// Let us create a Directed graph with 7 nodes
