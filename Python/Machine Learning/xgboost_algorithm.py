@@ -65,7 +65,7 @@ class Node:
         self.depth = depth
         self.min_leaf = min_leaf
         self.lambda_ = lambda_
-        self.gamma  = gamma
+        self.gamma = gamma
         self.min_child_weight = min_child_weight
         self.row_count = len(idxs)
         self.col_count = x.shape[1]
@@ -162,13 +162,13 @@ class Node:
         "XGBoost: A Scalable Tree Boosting System"
         '''
         gradient = self.gradient[self.idxs]
-        hessian  = self.hessian[self.idxs]
+        hessian = self.hessian[self.idxs]
         
         lhs_gradient = gradient[lhs].sum()
         lhs_hessian  = hessian[lhs].sum()
         
         rhs_gradient = gradient[rhs].sum()
-        rhs_hessian  = hessian[rhs].sum()
+        rhs_hessian = hessian[rhs].sum()
         
         gain = 0.5 *( (lhs_gradient**2/(lhs_hessian + self.lambda_)) + (rhs_gradient**2/(rhs_hessian + self.lambda_)) - ((lhs_gradient + rhs_gradient)**2/(lhs_hessian + rhs_hessian + self.lambda_))) - self.gamma
         return(gain)
@@ -229,7 +229,7 @@ class XGBoostClassifier:
     @staticmethod
     def log_odds(column):
         binary_yes = np.count_nonzero(column == 1)
-        binary_no  = np.count_nonzero(column == 0)
+        binary_no = np.count_nonzero(column == 0)
         return(np.log(binary_yes/binary_no))
     
     
@@ -243,7 +243,7 @@ class XGBoostClassifier:
         self.learning_rate = learning_rate
         self.boosting_rounds = boosting_rounds 
         self.lambda_ = lambda_
-        self.gamma  = gamma
+        self.gamma = gamma
     
         self.base_pred = np.full((X.shape[0], 1), 1).flatten().astype('float64')
     
@@ -302,7 +302,7 @@ class XGBoostRegressor:
         self.learning_rate = learning_rate
         self.boosting_rounds = boosting_rounds 
         self.lambda_ = lambda_
-        self.gamma  = gamma
+        self.gamma = gamma
     
         self.base_pred = np.full((X.shape[0], 1), np.mean(y)).flatten().astype('float64')
     
