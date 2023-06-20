@@ -1,3 +1,4 @@
+// Given three matrices A, B and C, find if C is a product of A and B.
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
