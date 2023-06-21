@@ -8,6 +8,7 @@
 -> Connects all nodes / vertices
 -> Has no cycles
 -> Has smallest possible sum of edge weights.*/
+
 #include <algorithm>
 #include <iostream>
 using namespace std;
@@ -16,16 +17,17 @@ const int maximum = 100000;
 int no[maximum], nodes, edges;
 pair <long long, pair<int, int>> k[maximum];
 
-int base(int a)
+int base(int a) // Find the base/parent of the given node
 {
     while (no[a] != a)
     {
-        no[a] = no[no[a]];
+        no[a] = no[no[a]];  // Path compression optimization
         a = no[a];
     }
     return a;
 }
 
+// Merge the sets containing nodes a and b
 void temp(int a, int b)
 {
     int k = base(a);
@@ -33,6 +35,7 @@ void temp(int a, int b)
     no[k] = no[l];
 }
 
+// Kruskal's algorithm to find the minimum spanning tree
 long long krus(pair<long long, pair<int, int>> k[])
 {
     int a, b;
@@ -42,10 +45,10 @@ long long krus(pair<long long, pair<int, int>> k[])
         a = k[i].second.first;
         b = k[i].second.second;
         cost = k[i].first;
-        if (base(a) != base(b))
+        if (base(a) != base(b))   // Check if adding the edge forms a cycle
         {
             minCost += cost;
-            temp(a, b);
+            temp(a, b); // Merge the sets
         }
     }
     return minCost;
@@ -58,7 +61,7 @@ int main()
 
     for (int i = 0; i < maximum; ++i)
     {
-        no[i] = i;
+        no[i] = i;  // Initialize each node as a separate set
     }
 
     cout << "Enter Nodes and edges";
@@ -70,7 +73,8 @@ int main()
         k[i] = make_pair(w, make_pair(a, b));
     }
     sort(k, k + edges);
-    minCost = krus(k);
+    
+    minCost = krus(k);   // Find the minimum spanning tree cost
     cout << "Minimum cost is " << minCost << endl;
     return 0;
 }
