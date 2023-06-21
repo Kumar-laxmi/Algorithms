@@ -42,7 +42,6 @@ int main() {
     cin >> c;
 
     switch (c) {
-
       //when entered 1
         //Decimal to Binary
         case 1: {
