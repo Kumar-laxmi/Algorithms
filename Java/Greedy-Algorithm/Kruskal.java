@@ -13,7 +13,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main 
+class Kruskal 
 {
     static final int maximum = 100000;
     static int[] no = new int[maximum];
