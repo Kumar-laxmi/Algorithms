@@ -22,11 +22,11 @@ long long PollardRho(long long n) {
         return 2;
     
     srand(time(nullptr));
-    long long x = (rand() % (n - 2)) + 2;
+    long long x = (rand_r() % (n - 2)) + 2;
     long long y = x;
-    long long c = (rand() % (n - 1)) + 1;
+    long long c = (rand_r() % (n - 1)) + 1;
     long long d = 1L;
-
+    
     while (d == 1) {
         x = (modular_pow(x, 2, n) + c + n) % n;
         y = (modular_pow(y, 2, n) + c + n) % n;
