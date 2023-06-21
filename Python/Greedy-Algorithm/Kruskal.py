@@ -17,8 +17,8 @@ def base(a, no):    #base/parent of node
 
 def temp(a, b, no):     # Merge sets containing nodes a and b
     k = base(a, no)
-    l = base(b, no)
-    no[k] = no[l]
+    j = base(b, no)
+    no[k] = no[j]
 
 def krus(k, edges, no):
     a, b = 0, 0
