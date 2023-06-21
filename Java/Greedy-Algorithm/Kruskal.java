@@ -13,7 +13,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
-class Main 
+public class Main 
 {
     static final int maximum = 100000;
     static int[] no = new int[maximum];
