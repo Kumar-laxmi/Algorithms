@@ -4,7 +4,7 @@
 # A splay tree is a self-adjusting binary search tree
 # where recently accessed nodes are moved to the root for
 
-from colorama import Fore, Style
+# from colorama import Fore, Style
 
 
 class Node:
@@ -161,13 +161,16 @@ if __name__ == '__main__':
         elif c == 4:
             break
         else:
-            print(Fore.RED + "\nInvalid type!\n" + Style.RESET_ALL)
+            # print(Fore.RED + "\nInvalid type!\n" + Style.RESET_ALL)
+            print("\nInvalid typle!\n")
             continue
 
-        print(", the PreOrder Traversal: ", end='' + Fore.BLUE)
+        # print(", the PreOrder Traversal: ", end='' + Fore.BLUE)
+        print(", the PreOrder Traversal: ", end='')
         if not root:
             print("None")
         else:
             st.preOrder(root)
             print()
-        print(Style.RESET_ALL)
+        # print(Style.RESET_ALL)
+        print()
