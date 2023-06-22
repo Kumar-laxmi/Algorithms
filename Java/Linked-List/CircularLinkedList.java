@@ -17,7 +17,7 @@ public class CircularLinkedList {
     Node head;      // Head node of the circular linked list
 
     // Method to insert a node at the end of the circular linked list
-    
+
     // Insert nodes into the list:
     // a. Create a new node with the given data.
     // b. If the head is null, make the new node the head and set its next pointer to itself, forming a circular reference.
@@ -26,7 +26,7 @@ public class CircularLinkedList {
     // e. Set the next pointer of the new node to the head, completing the circular reference.
 
 
-    
+
     void insert(int data) {
         Node newNode = new Node(data);   // Create a new node
 
@@ -46,6 +46,27 @@ public class CircularLinkedList {
             newNode.next = head;          // Make the new node point to the head
         }
     }
+    
+    // Function to update the value of a node in the circular linked list
+    void updateNode(int oldValue, int newValue) {
+        if (head == null) {
+            System.out.println("List is empty.");
+            return;
+        }
+        
+        Node curr = head.next;
+        
+        do {
+            if (curr.data == oldValue) {
+                curr.data = newValue;
+                return;
+            }
+            curr = curr.next;
+        } while (curr != head.next);
+        
+        System.out.println("Value not found in the list.");
+    }
+    
 
     // Method to delete a node from the circular linked list
     void delete(int data) {
@@ -136,5 +157,13 @@ public class CircularLinkedList {
         System.out.print("Updated Circular Linked List: ");
         circularList.display();
         System.out.println();
+
+        // Update circular linked list
+        System.out.print("Enter the element to update: ");
+        int oldValue = scanner.nextInt();
+        System.out.print("Enter the new value: ");
+        int newValue = scanner.nextInt();
+        circularList.updateNode(oldValue , newValue);
+        circularList.display();
     }
 }
