@@ -1,5 +1,5 @@
 /**
-* This is an implementation of Shortest Job First Algorithm in C++
+* This is an implementation of Shortest Job First Algorithm in C
 * The psuedo code or algo is as follows: 
 * - Retrieve the arrival time and burst time for each process.
 * - Initialize an empty ready queue to hold the processes that have arrived but not yet    executed.

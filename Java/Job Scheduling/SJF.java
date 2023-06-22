@@ -1,3 +1,23 @@
+/**
+* This is an implementation of Shortest Job First Algorithm in Java
+* The psuedo code or algo is as follows: 
+* - Retrieve the arrival time and burst time for each process.
+* - Initialize an empty ready queue to hold the processes that have arrived but not yet    executed.
+* - Sort the processes based on their burst time in ascending order.
+* - Set the current time to 0.
+* - While there are processes in the ready queue or unprocessed processes:
+*    - Check for any arriving processes at the current time and add them to the ready queue. 
+*    - If the ready queue is empty, increment the current time.
+*    - If the ready queue is not empty:
+*      - Sort the ready queue based on the remaining burst time of each process (assuming the *        burst time decreases with each execution).
+*      - Select the process with the shortest burst time from the ready queue.
+*      - Execute the selected process for one time unit.
+*      - Update the remaining burst time for the executed process.
+*      - If the remaining burst time of the process is 0, calculate and store its turnaround *         time and waiting time.
+*      - Increment the current time by one unit.
+* - Calculate the average turnaround time and average waiting time for all executed processes.
+* - Display the average turnaround time and average waiting time.
+**/
 class Process {
     int pid; // Process ID
     int burstTime; // Burst Time - the total time required by a process
