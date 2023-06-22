@@ -1,5 +1,4 @@
- // M-Coloring Algorithm in java
-package Java.Graphs;
+ // M-Coloring Algorithm in java 
 import java.util.*;
 
 public class MColoring_Algo{
@@ -17,7 +16,6 @@ public class MColoring_Algo{
         return true;
     }  
 
-    
      boolean giveColor(int graph[][], int m,int color[], int v)
     {
         if (v == V){        

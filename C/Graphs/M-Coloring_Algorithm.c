@@ -1,4 +1,4 @@
- // M-Coloring Algorithm in C
+ // M-Coloring Algorithm in C 
 #include <stdbool.h>
 #include <stdio.h>
 #define V 4

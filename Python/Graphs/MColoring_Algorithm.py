@@ -1,4 +1,4 @@
-# MColoring Algorithm in python
+# MColoring Algorithm in python 
 def isSafe(graph, color):
  
     for i in range(4):
