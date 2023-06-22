@@ -35,7 +35,6 @@ bool giveColor(bool graph[V][V], int m, int color[],int v)
         return true;
 
     for (int c = 1; c <= m; c++) {
-
         if (isSafe(v, graph, color, c)) {
             color[v] = c;              
  
@@ -54,7 +53,6 @@ bool giveColor(bool graph[V][V], int m, int color[],int v)
 }
 bool MColoring(bool graph[V][V], int m)
 {
- 
     int color[V];
     for (int i = 0; i < V; i++){
         color[i] = 0;  //initializing color array with zero
