@@ -13,8 +13,9 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-//Linked List Node
-class Node {
+public class Main {
+    //Linked List Node
+    static class Node {
     int val;
     Node next;
 
@@ -22,10 +23,8 @@ class Node {
     Node(int data) {
         val = data;
         next = null;
+     }
     }
-}
-
-public class Main {
     //Display linked list
     static void display(Node head) {
         Node temp = head;
