@@ -81,7 +81,6 @@ void printSolution(int color[])
 
 int main()
 {
- 
     /* Given Graph  and  m = 3
       (3)---(2)
        |   / |
