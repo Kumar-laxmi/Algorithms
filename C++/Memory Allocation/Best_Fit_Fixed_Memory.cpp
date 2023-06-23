@@ -1,5 +1,5 @@
 /**
- * This is a C Implementation of Best Fit Memory Allocation Algorithm (Fixed Size Memory Blocks)
+ * This is a C++ Implementation of Best Fit Memory Allocation Algorithm (Fixed Size Memory Blocks)
  *
  *    Psuedo Code for the algo is as:
  *
@@ -18,55 +18,40 @@
 **/
 
 
-#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
-void sortMemory(int temp[], int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (temp[j] > temp[j + 1]) {
-                int tempVal = temp[j];
-                temp[j] = temp[j + 1];
-                temp[j + 1] = tempVal;
-            }
-        }
-    }
-}
+using namespace std;
 
 void bestFitFixedMemory() {
     int p, n;
-    printf("Enter number of processes: ");
-    scanf("%d", &p);
-    printf("Enter number of memory blocks: ");
-    scanf("%d", &n);
+    cout << "Enter number of processes: ";
+    cin >> p;
+    cout << "Enter number of memory blocks: ";
+    cin >> n;
 
-    int process[p], memory[n];
-
-    int memoryBestFit[n];
+    vector<int> process(p);
+    vector<int> memory(n);
+    vector<int> memoryBestFit(n);
+    vector<int> temp(n, 0);
+    vector<int> outputBestFit(p, -1);
 
     for (int i = 0; i < n; i++) {
-        printf("Enter input for memory block #%d: ", i + 1);
-        scanf("%d", &memory[i]);
+        cout << "Enter input for memory block #" << i + 1 << ": ";
+        cin >> memory[i];
     }
 
     for (int i = 0; i < p; i++) {
-        printf("Memory required for process #%d: ", i + 1);
-        scanf("%d", &process[i]);
+        cout << "Memory required for process #" << i + 1 << ": ";
+        cin >> process[i];
     }
 
-    for (int i = 0; i < n; i++) {
-        memoryBestFit[i] = memory[i];
-    }
+    memoryBestFit = memory;
+    temp = memory;
+    sort(temp.begin(), temp.end());
 
-    int temp[n];
-    for (int i = 0; i < n; i++) {
-        temp[i] = memory[i];
-    }
-
-    sortMemory(temp, n);
-
-    int outputBestFit[p];
     for (int i = 0; i < p; i++) {
-        outputBestFit[i] = -1; // Initialize to -1 indicating memory not allocated
         for (int j = 0; j < n; j++) {
             if (temp[j] >= process[i]) {
                 outputBestFit[i] = temp[j];
@@ -76,15 +61,14 @@ void bestFitFixedMemory() {
         }
     }
 
-    printf("\n");
-    printf("Process No.\tMemory Block Allocated in Best Fit\n");
+    cout << endl;
+    cout << "Process No.\tMemory Block Allocated in Best Fit" << endl;
     for (int i = 0; i < p; i++) {
-        printf("%d\t\t\t", i + 1);
+        cout << i + 1 << "\t\t\t";
         if (outputBestFit[i] == -1)
-            printf("Memory not allocated\t");
+            cout << "Memory not allocated" << endl;
         else
-            printf("%d\t\t\t", outputBestFit[i]);
-        printf("\n");
+            cout << outputBestFit[i] << endl;
     }
 }
 
