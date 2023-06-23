@@ -23,18 +23,14 @@
     {
     	// If k is smaller than number of elements in array
     	if (k > 0 && k <= r - l + 1) {
-    
     		// Partition the array around last element and get position of pivot element in sorted array
     		int index = partition(arr, l, r);
-    
     		// If position is same as k
     		if (index - l == k - 1)
     			return arr[index];
-    
     		// If position is more, recur for left subarray
     		if (index - l > k - 1)
     			return kthsmallest(arr, l, index - 1, k);
-
             // Else recur for right subarray
             return kthSmallest(arr, index + 1, r,
                                             k - index + l - 1);
