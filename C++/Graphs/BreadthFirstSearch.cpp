@@ -21,7 +21,6 @@ public:
 
     // BFS traversal from a given source node 's'
     void BFS(int s) {
-
 		// Create a queue for BFS traversal
         queue<int> q;
         vector<bool> visited(V, false);
