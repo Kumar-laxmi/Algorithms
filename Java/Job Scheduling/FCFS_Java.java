@@ -10,6 +10,23 @@
 
 import java.util.*;
 public class FCFS_Java {
+ static class Process{
+    int process_id;
+    int at;
+    int bt;
+    int ct;
+    int tat=0;
+    int wt=0;
+
+    Process(int pid,int at,int bt){
+        this.process_id=pid;
+        this.at=at;
+        this.bt=bt;
+        this.ct=at+bt;
+    }
+
+
+}
     public static void main(String[] args) {
         Process[] p=new Process[100];
         float avgwt=0;
@@ -70,21 +87,4 @@ public class FCFS_Java {
 
 
     }
-}
- class Process{
-    int process_id;
-    int at;
-    int bt;
-    int ct;
-    int tat=0;
-    int wt=0;
-
-    Process(int pid,int at,int bt){
-        this.process_id=pid;
-        this.at=at;
-        this.bt=bt;
-        this.ct=at+bt;
-    }
-
-
 }
