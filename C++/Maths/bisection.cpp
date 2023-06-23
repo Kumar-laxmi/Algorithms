@@ -182,7 +182,7 @@ Response solveBisection(float low_lim, float up_lim, int iter, const string& mod
         res_obj.status = "found";
         return res_obj;
     }
-    if (f(low_lim, mode, eq) * f(up_lim, mode, eq) < 0) {
+    if (f(low_lim, mode, eq) * f(up_lim, mode, eq) > 0) {
         res_obj.remarks = "Root doesn't exist";
         res_obj.ans = 0;
         res_obj.status = "not found";

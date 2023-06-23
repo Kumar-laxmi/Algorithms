@@ -232,7 +232,7 @@ Response solveBisection(float low_lim, float up_lim, int iter, const char* mode,
         res_obj.status = strdup("found");
         return res_obj;
     }
-    if (f(low_lim, mode, eq) * f(up_lim, mode, eq) < 0) {
+    if (f(low_lim, mode, eq) * f(up_lim, mode, eq) > 0) {
         res_obj.remarks = strdup("Root doesn't exist");
         res_obj.ans = 0;
         res_obj.status = strdup("not found");
