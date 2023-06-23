@@ -46,7 +46,6 @@ bool kaprekar_num(int num)
     }
 
     return false;
-    
 }
 
 int main()
