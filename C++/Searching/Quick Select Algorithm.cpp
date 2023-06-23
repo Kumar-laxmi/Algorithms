@@ -34,6 +34,10 @@
     		// If position is more, recur for left subarray
     		if (index - l > k - 1)
     			return kthsmallest(arr, l, index - 1, k);
+
+            // Else recur for right subarray
+            return kthSmallest(arr, index + 1, r,
+                                            k - index + l - 1);
     	}
     
     	// If k is more than number of elements in array
