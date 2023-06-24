@@ -262,6 +262,7 @@
 | 3.  | Grey Wolf Optimization | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Optimization/greywolf.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/greywolf.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Optimization/grey_wolf.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/greywolf.py) |
 | 4.  | Hill Climbing Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Optimization/Hill_climbing.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/Hill_climbing.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Optimization/Hill_climbing.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/Hill_climbing.py) |
 | 5.  | Particle Swarm Optimization | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/particle_swarm_optimization.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/particle_swarm_optimization.py) |
+| 6.  | Shuffled Frog Leaping Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/shuffled_frog_leaping_optimization.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/shuffled_frog_leaping_optimization.py) |
 
 <h3 align="center"><b>Pattern Matching</b></h3>
 
