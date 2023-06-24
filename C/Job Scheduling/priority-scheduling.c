@@ -42,7 +42,8 @@ int main()
     printf("Enter Names of Processes: ");
     for (int i = 0; i < n; i++)
     {
-        scanf("%s", process[i].name);
+        fflush(stdin);
+        gets(process[i].name);
     }
     printf("Enter Arrival Times of Processes: ");
     for (int i = 0; i < n; i++)
@@ -64,12 +65,6 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n; j++)
-        {
-            printf("%s ", process[j].name);
-        }
-        printf("\n");
-
         process[i].responseTime = curr - process[i].arrivalTime;
         process[i].completionTime = curr + process[i].burstTime;
 
