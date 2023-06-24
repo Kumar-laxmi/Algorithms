@@ -1,6 +1,6 @@
 package Java.Maths;
 
-public class kaprekar{
+public class Kaprekar_Number{
     
     static boolean kaprekar_num(int num)
     {
