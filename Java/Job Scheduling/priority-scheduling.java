@@ -4,13 +4,13 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-class PriorityScheduling {
-    public String name;
-    public int completionTime, arrivalTime, burstTime, turnAroundTime, responseTime, waitingTime;
-    public int priority;
-}
-
 public class Main {
+    static class PriorityScheduling {
+        public String name;
+        public int completionTime, arrivalTime, burstTime, turnAroundTime, responseTime, waitingTime;
+        public int priority;
+    }
+
     static class PriorityComparator implements Comparator<PriorityScheduling> {
         private int curr;
 
@@ -66,7 +66,7 @@ public class Main {
 
             process.get(i).turnAroundTime = process.get(i).completionTime - process.get(i).arrivalTime;
             process.get(i).waitingTime = process.get(i).turnAroundTime - process.get(i).burstTime;
-            
+
             avgTurnAroundTime += process.get(i).turnAroundTime;
             avgWaitingTime += process.get(i).waitingTime;
             avgResponseTime += process.get(i).responseTime;

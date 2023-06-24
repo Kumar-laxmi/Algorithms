@@ -36,14 +36,15 @@ int main()
     printf("Enter Number of Processes: ");
     int n;
     scanf("%d", &n);
+    fflush(stdin);
 
     struct priorityScheduling *process = malloc(n * sizeof(struct priorityScheduling));
 
     printf("Enter Names of Processes: ");
     for (int i = 0; i < n; i++)
     {
-        fflush(stdin);
-        gets(process[i].name);
+        fgets(process[i].name, sizeof(process[i].name), stdin);
+        process[i].name[strcspn(process[i].name, "\n")] = '\0';
     }
     printf("Enter Arrival Times of Processes: ");
     for (int i = 0; i < n; i++)
@@ -61,10 +62,10 @@ int main()
         scanf("%d", &process[i].burstTime);
     }
 
-    swap(process, n);
-
     for (int i = 0; i < n; i++)
     {
+        swap(process, n);
+
         process[i].responseTime = curr - process[i].arrivalTime;
         process[i].completionTime = curr + process[i].burstTime;
 
@@ -76,8 +77,6 @@ int main()
         avgTurnAroundTime += process[i].turnAroundTime;
         avgresponseTime += process[i].responseTime;
         avgwaitingTime += process[i].waitingTime;
-
-        swap(process, n);
     }
 
     printf("    AT\tP\tBT\tCT\tTAT\tWT\tRT\n");
