@@ -9,7 +9,7 @@
 
 
 import java.util.*;
-public class FCFS_Java {
+public class First_Come_First_Serve {
  static class Process{
     int process_id;
     int at;
