@@ -48,10 +48,10 @@ int main()
         cin >> process[i].burstTime;
     }
 
-    sort(process.begin(), process.end(), cmp);
-
     for (int i = 0; i < n; i++)
     {
+        sort(process.begin(), process.end(), cmp);
+
         process[i].responseTime = curr - process[i].arrivalTime;
         process[i].completionTime = curr + process[i].burstTime;
 
@@ -63,8 +63,6 @@ int main()
         avgTurnAroundTime += process[i].turnAroundTime;
         avgresponseTime += process[i].responseTime;
         avgwaitingTime += process[i].waitingTime;
-
-        sort(process.begin(), process.end(), cmp);
     }
 
     cout << "    AT\tP\tBT\tCT\tTAT\tWT\tRT" << endl;

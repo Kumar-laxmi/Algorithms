@@ -40,9 +40,9 @@ if __name__ == "__main__":
     for i in range(n):
         process[i].burstTime = int(input())
 
-    process.sort(key=lambda x: x.priority-curr)
-
     for i in range(n):
+        process.sort(key=lambda x: x.priority-curr)
+        
         process[i].responseTime = curr - process[i].arrivalTime
         process[i].completionTime = curr + process[i].burstTime
 
@@ -56,8 +56,6 @@ if __name__ == "__main__":
         avgTurnAroundTime += process[i].turnAroundTime
         avgResponseTime += process[i].responseTime
         avgWaitingTime += process[i].waitingTime
-
-        process.sort(key=lambda x: x.priority-curr)
 
     print("    AT\tP\tBT\tCT\tTAT\tWT\tRT")
     for i in range(n):

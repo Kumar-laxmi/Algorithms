@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class priority_scheduling {
     static class PriorityScheduling {
         public String name;
         public int completionTime, arrivalTime, burstTime, turnAroundTime, responseTime, waitingTime;
