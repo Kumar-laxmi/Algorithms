@@ -1,7 +1,7 @@
 //First Come First Serve(FCFS):
 
 //Criteria for FCFS: Arrival Time
-//Mode: Non-premptive->Once the processor starts its execution, it must finish it before executing the other. It can’t be paused in the middle.
+//Mode: Non-premptive->Once the processor starts its execution, it must finish it before executing the other. It canâ€™t be paused in the middle.
 //Turn Around Time(TAT)=Completion time - Arrival time;
 //Waiting time(WT)=Turn Around Time - Burst Time;
 //Average TAT=(Total TAT)/(No. of process);
