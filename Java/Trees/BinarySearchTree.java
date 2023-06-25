@@ -1,3 +1,4 @@
+import java.util.*;
 public class BinarySearchTree { 
 
     // Root of Binary Tree 
