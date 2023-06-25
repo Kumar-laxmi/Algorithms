@@ -1,20 +1,23 @@
 import java.util.Scanner;
 
-// Node class represents a node in the circular linked list
-class Node {
-    int data;       // Data value of the node
-    Node next;      // Reference to the next node
-
-    // Constructor to initialize the node
-    Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
 
 // Circular Linked List class
 public class CircularLinkedList {
-    Node head;      // Head node of the circular linked list
+
+// Node class represents a node in the circular linked list
+    static class Node {
+        int data;       // Data value of the node
+        Node next;      // Reference to the next node
+
+        // Constructor to initialize the node
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+
+    public static Node head;      // Head node of the circular linked list
 
     // Method to insert a node at the end of the circular linked list
 
