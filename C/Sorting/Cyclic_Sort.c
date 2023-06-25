@@ -2,15 +2,15 @@
  * C Program to Implement Cyclic Sort 
  */
 #include <stdio.h>
- 
+
 #define MAX 8
- 
+
 void cyclic_sort(int *);
- 
+
 void main()
 {
     int a[MAX],i;
- 
+
     printf("enter the elements into array :");
     for (i = 0;i < MAX; i++)
     {
@@ -23,12 +23,12 @@ void main()
         printf("%d ", a[i]);
     }
 }
- 
+
 /* sorts elements using cyclic sort algorithm */
 void cyclic_sort(int * a)
 {
     int temp, item, pos, i, j, k;
- 
+
     for (i = 0;i < MAX; i++)
     {
         item = a[i];
