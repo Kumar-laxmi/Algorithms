@@ -10,7 +10,7 @@
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Affine {
+public class Affine_Cipher{
     static int a, b; //Keys for affine cipher
     static int m = 26;//total number of alphabets
 
