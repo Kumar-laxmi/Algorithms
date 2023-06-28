@@ -15,7 +15,7 @@ class Node {
     }
 }
 
-class Treap {
+class treap_algo {
     Node root;
 
     // Function to perform a right rotation on the given root node
@@ -105,7 +105,7 @@ class Treap {
     }
 
     public static void main(String[] args) {
-       Treap treap = new Treap();
+       treap_algo treap = new treap_algo();
         int choice, key, priority;
         Scanner scanner = new Scanner(System.in);
         //Main loop to interact with the user and perform operations
