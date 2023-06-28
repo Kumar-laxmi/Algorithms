@@ -9,17 +9,15 @@ struct Node {
     Node* left;
     Node* right;
 };
-
-// Function to create a new node with the given key
+ // Function to create a new node with the given key
 // and a randomly generated priority value
-Node* createNode(int key) {
+Node* createNode(int key, int priority) {
     Node* newNode = new Node();
     newNode->key = key;
-    newNode->priority = rand()%11;
+    newNode->priority = priority;
     newNode->left = newNode->right = NULL;
     return newNode;
 }
-
 // Function to perform a right rotation on the given root node
 Node* rightRotate(Node* root) {
     Node* newRoot = root->left;
@@ -28,7 +26,6 @@ Node* rightRotate(Node* root) {
     root->left = temp;
     return newRoot;
 }
-
 // Function to perform a left rotation on the given root node
 Node* leftRotate(Node* root) {
     Node* newRoot = root->right;
@@ -37,26 +34,24 @@ Node* leftRotate(Node* root) {
     root->right = temp;
     return newRoot;
 }
-
 // Function to insert a new node with the given key into the tree
-Node* insert(Node* root, int key) {
+Node* insert(Node* root, int key, int priority) {
     if (root == NULL)
-        return createNode(key);
+        return createNode(key, priority);
 
     if (key < root->key) {
-        root->left = insert(root->left, key);
+        root->left = insert(root->left, key, priority);
         if (root->left->priority > root->priority)
             root = rightRotate(root);
     }
     else {
-        root->right = insert(root->right, key);
+        root->right = insert(root->right, key, priority);
         if (root->right->priority > root->priority)
             root = leftRotate(root);
     }
     return root;
 }
-
-// Function to delete the node with the given key from the tree
+ // Function to delete the node with the given key from the tree
 Node* deleteNode(Node* root, int key) {
     if (root == NULL)
         return root;
@@ -89,7 +84,6 @@ Node* deleteNode(Node* root, int key) {
     }
     return root;
 }
-
 // Function to perform an inorder traversal of the tree
 void inorderTraversal(Node* root) {
     if (root != NULL) {
@@ -101,9 +95,8 @@ void inorderTraversal(Node* root) {
 
 int main() {
     Node* root = NULL;
-    int choice, key;
-
-    // Main loop to interact with the user and perform operations
+    int choice, key, priority;
+//Main loop to interact with the user and perform operations
     while (true) {
         cout << "1. Insert  2. Delete  3. Print Inorder  4. Exit\n";
         cout << "Enter your choice: ";
@@ -113,7 +106,9 @@ int main() {
             case 1:
                 cout << "Enter the key to insert: ";
                 cin >> key;
-                root = insert(root, key);
+                cout << "Enter the priority: ";
+                cin >> priority;
+                root = insert(root, key, priority);
                 break;
 
             case 2:
@@ -127,7 +122,7 @@ int main() {
                 inorderTraversal(root);
                 break;
 
-            case 4:
+           case 4:
                 exit(0);
 
             default:
