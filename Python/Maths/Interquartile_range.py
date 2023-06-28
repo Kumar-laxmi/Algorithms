@@ -7,7 +7,7 @@ for i in range (0 , n):
     element = int(input())
     arr.append(element)
 
-arr.sort();  
+arr.sort()
 
 start = 0  
 last = n-1 
