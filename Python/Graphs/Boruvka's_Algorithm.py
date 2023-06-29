@@ -37,7 +37,8 @@ class Graph:
 
 	# The main function to construct MST using Boruvka's algorithm
 	def boruvkaMST(self):
-		parent = []; rank = [];
+		parent = []
+        rank = []
 
 		# An array to store index of the cheapest edge of subset. It store [u,v,w] for each component
 		minimum =[]

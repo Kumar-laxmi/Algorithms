@@ -138,10 +138,8 @@ public:
 
 		// Keep combining components (or sets) until all components are not combined into single MST
 		while (numberOfTrees > 1) {
-
 			// Traverse through all edges and update cheapest of every component
 			for (int i = 0; i < graph.size(); i++) {
-
 				// Find components (or sets) of two corners of current edge
 				int u = graph[i][0], v = graph[i][1],
 					w = graph[i][2];
@@ -163,7 +161,6 @@ public:
 
 			// Consider the above picked cheapest edges and add them to MST
 			for (int node = 0; node < V; node++) {
-
 				// Check if cheapest for current set exists
 				if (minimum[node][2] != -1) {
 					int u = minimum[node][0],
@@ -180,7 +177,6 @@ public:
 				}
 			}
 			for (int node = 0; node < V; node++) {
-
 				// Reset cheapest array
 				minimum[node][2] = -1;
 			}
@@ -209,4 +205,3 @@ int main(){
 
 	g.boruvkaMST();
 }
-
