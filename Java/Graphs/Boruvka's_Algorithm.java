@@ -74,7 +74,7 @@ SPACE COMPLEXITY: O(N)
 import java.util.*;
 
 // Class to represent a graph
-class Graph {
+class Boruvka {
   private int V; // No. of vertices
   private List<List<Integer> > graph; // default dictionary to store graph
 
@@ -180,9 +180,6 @@ class Graph {
 	}
 	System.out.printf("\nWeight of Minimum Spanning Tree (MST) is %d\n",MSTWeight);
 }
-}
-
-class Boruvka {
 public static void main(String[] args){
 	Graph g = new Graph(9);
 	g.addEdge(0, 1, 6);
