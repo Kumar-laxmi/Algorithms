@@ -117,6 +117,7 @@
 | No. | Algorithm Name                                                                        | Available languages                       | 
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
 | 1.  | Perceptron Learning - Boolean Functions | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Deep%20learning/perceptron_learning.py) |
+| 2.  | Convolutional neural network| [[C++](https://github.com/Craniace/Algorithms/blob/main/C++/Deep%20Learninig/Convolutional_neural_network.cpp),[Java](https://github.com/Craniace/Algorithms/blob/main/Java/Deep%20Learninig/Covolutional_neural_network.java),Python](https://github.com/Craniace/Algorithms/blob/main/Python/Deep%20learning/Convolutional_neural_network.py) |
 
 <h3 align="center"><b>Divide and Conquer</b></h3>
 
