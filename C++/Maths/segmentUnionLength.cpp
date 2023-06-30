@@ -123,7 +123,6 @@ int main() {
         }
 
         cout << endl;
-
     } while (choice != 3);
 
     return 0;
