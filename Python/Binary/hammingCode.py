@@ -65,7 +65,7 @@ def hamming_encode(message):
             encoded_block[position - 1] = calculateParityValue(positionsOfOne,position)
     
     #Convert list to string
-    result =  ''.join([str(i) for i in encoded_block])
+    result = ''.join([str(i) for i in encoded_block])
     return result
 
 #Sample case
