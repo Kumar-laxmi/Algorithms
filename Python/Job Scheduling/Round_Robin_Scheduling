@@ -1,0 +1,38 @@
+from collections import deque
+
+def round_robin(processes, quantum):
+    n = len(processes)
+    waiting_time = [0] * n
+    turnaround_time = [0] * n
+    remaining_burst_time = [process[1] for process in processes]
+    queue = deque()
+    current_time = 0
+
+    # Enqueue processes
+    for i in range(n):
+        queue.append(i)
+
+    # Perform round robin scheduling
+    while queue:
+        process_index = queue.popleft()
+        if remaining_burst_time[process_index] <= quantum:
+            # Process completes within the quantum
+            current_time += remaining_burst_time[process_index]
+            turnaround_time[process_index] = current_time
+            waiting_time[process_index] = turnaround_time[process_index] - processes[process_index][1]
+            remaining_burst_time[process_index] = 0
+        else:
+            # Quantum time slice expires, move the process to the end of the queue
+            current_time += quantum
+            remaining_burst_time[process_index] -= quantum
+            queue.append(process_index)
+
+    # Print the results
+    print("Process\tBurst Time\tWaiting Time\tTurnaround Time")
+    for i in range(n):
+        print(f"P{i}\t\t{processes[i][1]}\t\t{waiting_time[i]}\t\t{turnaround_time[i]}")
+
+# Usage example
+processes = [("P0", 10), ("P1", 4), ("P2", 6), ("P3", 3)]
+quantum = 3
+round_robin(processes, quantum)
