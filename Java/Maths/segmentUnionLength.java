@@ -21,6 +21,12 @@ Klee's Algorithm for segmentUnionLength:
         - If the current endpoint is the left endpoint of a segment, increment counter by 1; otherwise, decrement counter by 1.
     7) Return the calculated result as the length of the union of segments.
 
+Time Complexity
+    - The algorithm has a time complexity of O(N log N), where N is the number of segments.
+    - It involves sorting the points vector, which takes O(N log N) time.
+    - The subsequent iteration over the points vector has a linear time complexity of O(N).
+    - Overall, the algorithm efficiently calculates the length of the union of segments.
+
 Real-World Applications:
 Klee's algorithm finds applications in various domains, such as:
 
