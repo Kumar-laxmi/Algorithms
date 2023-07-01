@@ -21,7 +21,6 @@ Occurrences found at indices: 0, 9, 12
 
 // in order to prevent spurious hits
 #define d 5
-#define size 50
 
 void rabinKarp(char pattern[], char text[], int q)
 {
@@ -82,11 +81,8 @@ void rabinKarp(char pattern[], char text[], int q)
 void main()
 {
     // inputs:
-    char pattern[size],text[size];
-    printf("Enter the text: ");
-    gets(text);
-    printf("Enter the pattern: ");
-    gets(pattern);
+    char pattern[]="AABAACAADAABAABA";
+    char text[]="AABA";
 
     // taking q as a large prime number to prevent hash value from becoming too large a value
     int q = 19;
