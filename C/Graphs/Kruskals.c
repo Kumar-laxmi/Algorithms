@@ -6,7 +6,7 @@
     Step 3: Check if the new edge creates a cycle or loop in a spanning tree.
     Step 4: If it doesn’t form the cycle, then include that edge in MST. Otherwise, discard it.
     Step 5: Repeat from step 2 until it includes |V| - 1 edges in MST.
-    Expected Output Of the code:-
+    Expected Output Of the code:
     Enter the number of vertices: 
     Enter the number of edges:
     Enter the details of each edge (source, destination, weight): 
