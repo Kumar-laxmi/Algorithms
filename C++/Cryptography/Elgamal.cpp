@@ -16,9 +16,9 @@ int gcd(int a, int b) {
 }
 
 int gen_key(int q) {
-    int key = rand() % q + pow(10, 20);
+    int key = rand_r() % q + pow(10, 20);
     while (gcd(q, key) != 1) {
-        key = rand() % q + pow(10, 20);
+        key = rand_r() % q + pow(10, 20);
     }
     return key;
 }
@@ -73,8 +73,8 @@ int main() {
     string msg = "Summer of code";
     cout << "Original Message: " << msg << endl;
 
-    int q = rand() % static_cast<int>(pow(10, 50) - pow(10, 20) + 1) + pow(10, 20);
-    int g = rand() % (q - 2) + 2;
+    int q = rand_r() % static_cast<int>(pow(10, 50) - pow(10, 20) + 1) + pow(10, 20);
+    int g = rand_r() % (q - 2) + 2;
     int key = gen_key(q);
     int h = power(g, key, q);
     cout << "g used: " << g << endl;

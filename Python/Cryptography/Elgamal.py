@@ -5,7 +5,7 @@ def gcd(a, b):
 	if a < b:
 		return gcd(b, a)
 	elif a % b == 0:
-		return b;
+		return b
 	else:
 		return gcd(b, a % b)
 
@@ -25,7 +25,7 @@ def power(a, b, c):
 
 	while b > 0:
 		if b % 2 != 0:
-			x = (x * y) % c;
+			x = (x * y) % c
 		y = (y * y) % c
 		b = int(b / 2)
 
@@ -74,7 +74,7 @@ def main():
 	en_msg, p = encrypt(msg, q, h, g)
 	dr_msg = decrypt(en_msg, p, key, q)
 	dmsg = ''.join(dr_msg)
-	print("Decrypted Message :", dmsg);
+	print("Decrypted Message :", dmsg)
 
 
 if __name__ == '__main__':
