@@ -18,7 +18,6 @@ import java.util.*;
 // Structure to represent an edge
 class Edge {
     int src, dest, weight;
-
     Edge(int src, int dest, int weight) {
         this.src = src;
         this.dest = dest;
