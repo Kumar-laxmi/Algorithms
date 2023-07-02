@@ -34,17 +34,14 @@ int power(int a, int b, int c) {
         y = (y * y) % c;
         b = b / 2;
     }
-
     return x % c;
 }
 
 vector<int> encrypt(string msg, int q, int h, int g) {
     vector<int> en_msg;
-
     int k = gen_key(q);
     int s = power(h, k, q);
     int p = power(g, k, q);
-
     for (int i = 0; i < msg.length(); i++) {
         en_msg.push_back(msg[i]);
     }
@@ -78,16 +75,12 @@ int main() {
 
     int q = rand() % static_cast<int>(pow(10, 50) - pow(10, 20) + 1) + pow(10, 20);
     int g = rand() % (q - 2) + 2;
-
     int key = gen_key(q);
     int h = power(g, key, q);
     cout << "g used: " << g << endl;
     cout << "g^a used: " << h << endl;
-
     vector<int> en_msg = encrypt(msg, q, h, g);
     string dr_msg = decrypt(en_msg, en_msg[0], key, q);
-
     cout << "Decrypted Message: " << dr_msg << endl;
-
     return 0;
 }
