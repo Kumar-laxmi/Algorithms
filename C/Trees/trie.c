@@ -1,3 +1,9 @@
+// Path: C/Trees/trie.c
+// C program to implement trie.
+
+// A prefix trie is an ordered tree data structure used in the representation of a set of strings over a finite alphabet set,
+// which allows efficient storage of words with common prefixes.
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
