@@ -3,7 +3,6 @@
 using namespace std;
 
 void solver() {
-    
     cout << "Enter the number of vertices,edges and sources" << endl;
     
     int n,m,s;
@@ -15,7 +14,6 @@ void solver() {
     cout << "Enter the sources: ";
     
     for(int i = 0;i<s;i++) {
-        
         int src;
         cin >> src;
         
@@ -36,8 +34,6 @@ void solver() {
     vector<int> vis(n+1,0);
     queue<int> q;
     
-    cout << sources.size() << endl;
-    
     for(auto it: sources) {
         vis[it] = 1;
         q.push(it);
@@ -46,11 +42,8 @@ void solver() {
     int lvl = 0;
     
     while(q.size()) {
-        
         int sz = q.size();
         while(sz--) {
-            
-            
             int node = q.front();
             q.pop();
             
@@ -72,12 +65,9 @@ void solver() {
     for(int i = 1;i<=n;i++) {
         cout << i << ": " << dist[i] << endl;
     }
-    
-    
 }
 
 int main() {
-    
     fast_io;
     int t = 1;
     // cin >> t;
