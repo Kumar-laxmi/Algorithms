@@ -64,7 +64,6 @@ public class Multisource_Shortest_Path {
 
             for(int i = 0;i<sz;i++) {
                 int node = q.remove();
-                System.out.println(node);
                 dist[node] = lvl;
 
                 for(int it: adj[node]) {
