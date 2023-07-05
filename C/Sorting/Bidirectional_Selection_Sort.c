@@ -9,7 +9,7 @@ void bidirectionalSelectionSort(int arr[], int size) {
         int minIndex = left;
         int maxIndex = right;
 
-        for (int i = left; i <= right; i++) {
+        for (int i = left+1; i <= right; i++) {
             if (arr[i] < minimum) {
                 minimum = arr[i];
                 minIndex = i;

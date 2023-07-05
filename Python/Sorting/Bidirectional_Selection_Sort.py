@@ -8,7 +8,7 @@ def bidirectional_selection_sort(arr):
         min_index = left
         max_index = right
 
-        for i in range(left, right + 1):
+        for i in range(left+1, right + 1):
             if arr[i] < minimum:
                 minimum = arr[i]
                 min_index = i

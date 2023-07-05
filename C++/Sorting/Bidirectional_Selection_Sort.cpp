@@ -3,15 +3,15 @@
 using namespace std;
 
 void bidirectionalSelectionSort(vector<int>& arr, int size) {
-    int left = 0, right = size;
+    int left = 0, right = size - 1;
 
     while (left < right) {
         int minimum = arr[left];
-        int maximum = arr[right];
+        int maximum = arr[left];
         int minIndex = left;
-        int maxIndex = right;
+        int maxIndex = left;
 
-        for (int i = left; i <= right; i++) {
+        for (int i = left + 1; i <= right; i++) {
             if (arr[i] < minimum) {
                 minimum = arr[i];
                 minIndex = i;
@@ -22,12 +22,14 @@ void bidirectionalSelectionSort(vector<int>& arr, int size) {
             }
         }
 
-        if (minIndex == right) {
+        if (minIndex != left) {
             swap(arr[left], arr[minIndex]);
-        } else {
-            swap(arr[left], arr[minIndex]);
-            swap(arr[right], arr[maxIndex]);
+            if (maxIndex == left)
+                maxIndex = minIndex;
         }
+
+        if (maxIndex != right)
+            swap(arr[right], arr[maxIndex]);
 
         left++;
         right--;
@@ -36,23 +38,18 @@ void bidirectionalSelectionSort(vector<int>& arr, int size) {
 
 int main() {
     vector<int> array;
+    cout<<"Enter the number of elements : ";
     int n;
-    cout<<"Enter number of elements in array : ";
-    cin>>n;
+    cin >> n;
     cout<<"Enter the elements : ";
-    for(int i=0; i<n; i++){
-        int element; cin>>element; array.emplace_back(element);
+    for (int i = 0; i < n; i++) {
+        int element;
+        cin >> element;
+        array.emplace_back(element);
     }
 
-    cout << "Original array: ";
-    for (int num : array) {
-        cout << num << " ";
-    }
-    cout << endl;
+    bidirectionalSelectionSort(array, n);
 
-    bidirectionalSelectionSort(array,n);
-
-    cout << "Sorted array: ";
     for (int num : array) {
         cout << num << " ";
     }
