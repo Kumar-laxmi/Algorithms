@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Bidirectional_Selection_Sort {
     public static void bidirectionalSelectionSort(int[] arr) {
         int left = 0, right = arr.length - 1;
 
