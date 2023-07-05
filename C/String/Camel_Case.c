@@ -12,34 +12,43 @@ Examples:
 Example Explanation */
 #include <stdio.h>
 #include <stdlib.h>
-int main()                // Main function
-{
-    char str[100],cc[100];    //Function to remove spaces and convert into camel case
-    int flag=0,i=0,j=0;
-    printf("Enter a sentence\n");  //String
-    scanf("%[^\n]%*c", str);
-    printf("Original String = %s\n",str);
-    while(str[i]!='\0')
-    {
-        if(str[i]==' ')     //conversion into upper case
-        {
-           i++;
-           flag=1;
-           continue;
+#include <string.h>
+#include <ctype.h>
+#include <stdbool.h>
+int main() {
+    int testCase;
+    printf("Enter the no of test cases: ");
+    scanf("%d", &testCase);
+    printf("\n");
+
+    while (getchar() != '\n'); // Clear the input buffer
+
+    while (testCase--) {
+        char str[1000];
+        int flag = 0;
+        printf("Enter a sentence: ");
+        fgets(str, sizeof(str), stdin);
+        
+        printf("\nOriginal: %s", str); 
+        for (int i = 0 ; i < strlen(str) ; i++) {
+            if (i == 0) str[i] = tolower(str[i]);  //Converts to lowercase 
+            else if (str[i] == ' ') flag = 1; // Check for spaces in the sentence
+            else if (flag && str[i] != ' ') {
+                str[i] = toupper(str[i]);  //Converts to uppercase
+                flag = 0;
+            }
+            else str[i] = tolower(str[i]);  //Converts to lowercase
         }
-        if(flag==1)  // new string will be reduced by the
-       
-        {
-            cc[j]=str[i]-32;
-            flag=0;
+        char camelCase[sizeof(str)];
+        int i, j = 0;
+        for (i = 0; str[i] != '\0'; i++) {
+            if (str[i] != ' ') {
+                camelCase[j++] = str[i];
+            }
         }
-        else        // size of spaces in the original string
-        {
-            cc[j]=str[i];
-        }
-        j++;
-        i++;
+        printf("Camel Case: %s\n", camelCase);
+        printf("\n");
     }
-    printf("Camel Case = %s",cc);  //input text
+
     return 0;
 }
