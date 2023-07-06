@@ -59,7 +59,6 @@ vector<int> encrypt(string msg, int q, int h, int g) {
 string decrypt(vector<int> en_msg, int p, int key, int q) {
     string dr_msg;
     int h = power(p, key, q);
-
     for (int i = 0; i < en_msg.size(); i++) {
         dr_msg.push_back(en_msg[i] / h);
     }
@@ -69,10 +68,10 @@ string decrypt(vector<int> en_msg, int p, int key, int q) {
 
 int main() {
     srand(time(0));
-
-    string msg = "Summer of code";
+    string msg;
+    cout << "Enter the message: ";
+    getline(cin, msg);
     cout << "Original Message: " << msg << endl;
-
     int q = rand_r() % static_cast<int>(pow(10, 50) - pow(10, 20) + 1) + pow(10, 20);
     int g = rand_r() % (q - 2) + 2;
     int key = gen_key(q);

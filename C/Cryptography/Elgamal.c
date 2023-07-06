@@ -55,7 +55,9 @@ void decrypt(int* en_msg, int p, int key, int q, char* dr_msg, int size) {
 
 int main() {
     srand(time(0));
-    char msg[] = "Summer of code";
+    char msg[100];
+    printf("Enter the message: ");
+    fgets(msg, sizeof(msg), stdin);
     printf("Original Message: %s\n", msg);
     int q = rand() % (int) pow(10, 50) + pow(10, 20);
     int g = rand() % (q - 2) + 2;

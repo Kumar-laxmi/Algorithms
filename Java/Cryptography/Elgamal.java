@@ -4,17 +4,21 @@ import java.security.SecureRandom;
 public class Elgamal {
     private static BigInteger TWO = BigInteger.valueOf(2);
 
-    public static void main(String[] args) {
-        BigInteger p = generateLargePrime();
-        BigInteger g = generateGenerator(p);
-        BigInteger privateKey = generatePrivateKey(p);
-        BigInteger publicKey = generatePublicKey(g, p, privateKey);
-        String message = "Summer of code";
-        System.out.println("Original Message: " + message);
-        ElGamalCipher cipher = encrypt(message, publicKey, p, g);
-        String decryptedMessage = decrypt(cipher, privateKey, p);
-        System.out.println("Decrypted Message: " + decryptedMessage);
-    }
+   public static void main(String[] args) {
+    BigInteger p = generateLargePrime();
+    BigInteger g = generateGenerator(p);
+    BigInteger privateKey = generatePrivateKey(p);
+    BigInteger publicKey = generatePublicKey(g, p, privateKey);
+    
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter the message: ");
+    String message = scanner.nextLine();
+    scanner.close();    
+    System.out.println("Original Message: " + message);    
+    ElGamalCipher cipher = encrypt(message, publicKey, p, g);
+    String decryptedMessage = decrypt(cipher, privateKey, p);    
+    System.out.println("Decrypted Message: " + decryptedMessage);
+   }
 
     private static BigInteger generateLargePrime() {
         return BigInteger.probablePrime(512, new SecureRandom());
@@ -72,7 +76,6 @@ public class Elgamal {
         for (int i = 0; i < cipher.getSize(); i++) {
             BigInteger r = cipher.getR(i);
             BigInteger m = cipher.getM(i);
-
             BigInteger s = r.modPow(privateKey, p);
             BigInteger originalMessage = m.multiply(s.modInverse(p)).mod(p);
             decryptedMessage.append((char) originalMessage.intValue());
