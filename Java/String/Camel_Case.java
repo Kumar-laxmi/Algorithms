@@ -11,7 +11,7 @@ Examples:
    OUTPUT: "hiAtulHere"
    Example Explanation */
 import java.util.Scanner;
-class Main {
+class Camel_Case {
     // Function to remove spaces and convert into camel case
     static String convert(String s) {
         boolean flag = false;
