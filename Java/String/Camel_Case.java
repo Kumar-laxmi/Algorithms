@@ -8,7 +8,7 @@ Examples:
  1] INPUT: "this is camel case"
     OUTPUT "thisIsCamelCase"
  2] INPUT: "Hi Atul here"
-   OUTPUT: "HiAtulHere"
+   OUTPUT: "hiAtulHere"
    Example Explanation */
 import java.util.Scanner;
 class Main {
