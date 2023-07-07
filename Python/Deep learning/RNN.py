@@ -13,7 +13,7 @@ class RNN:
     def forward(self, inputs):
         self.hidden_state = np.zeros((1, self.hiddsize))
         for x in inputs:
-            self.hidden_state = np.tanh(np.dot(x, self.b1) + np.dot(self.hidden_state, self.W_a1))
+            self.hidden_state = np.tanh(np.dot(x, self.b1) + np.dot(self.hidden_state, self.a1))
         output = np.dot(self.hidden_state, self.c1)
         return output
 intsize = 1
