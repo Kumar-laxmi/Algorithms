@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+struct Node {
+  int data;
+  struct Node *next;
+};
+
+bool hasLoop(struct Node *head) {
+  struct Node *hashTable[1000];
+  int i;
+
+  for (i = 0; i < 1000; i++) {
+    hashTable[i] = NULL;
+  }
+
+  while (head != NULL) {
+    if (hashTable[head->data] != NULL) {
+      return true;
+    } else {
+      hashTable[head->data] = head;
+      head = head->next;
+    }
+  }
+
+  return false;
+}
+
+int main() {
+  struct Node *head = malloc(sizeof(struct Node));
+  head->data = 1;
+  head->next = malloc(sizeof(struct Node));
+  head->next->data = 2;
+  head->next->next = malloc(sizeof(struct Node));
+  head->next->next->data = 3;
+  head->next->next->next = head;
+
+  if (hasLoop(head)) {
+    printf("The linked list has a loop.\n");
+  } else {
+    printf("The linked list does not have a loop.\n");
+  }
+
+  return 0;
+}
