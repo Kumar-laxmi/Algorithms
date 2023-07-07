@@ -173,9 +173,10 @@
 | 11. | Hamiltonian Path | [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Hamiltonian_path.java) |
 | 12. | Hopcroft-Karp Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Hopcroft-Karp%20algorithm.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Hopcroft-Karp%20algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Hopcroft-Karp.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Hopcroft-Karp%20algorithm.py) |
 | 13. | Kosaraju's Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Kosaraju_Algorithm.cpp) |
-| 14. | Multistage Graph (Shortest Path) | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/multistage_graph.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/multistage_graph.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/MultistageGraph.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/multistage_graph.py) |
-| 15. | Prim's Algorithm | [C++](https://github.com/Kumr-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Prims_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Prims.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/prims_algorithm.py) |
-| 16. | Tarjan Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Tarjan.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Tarjan_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Tarjan.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Tarjan.py) |
+| 14. | Kruskal's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Kruskals.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Kruskals.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Kruskals.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Kruskals.py) |
+| 15. | Multistage Graph (Shortest Path) | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/multistage_graph.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/multistage_graph.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/MultistageGraph.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/multistage_graph.py) |
+| 16. | Prim's Algorithm | [C++](https://github.com/Kumr-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Prims_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Prims.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/prims_algorithm.py) |
+| 17. | Tarjan Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Tarjan.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Tarjan_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Tarjan.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Tarjan.py) |
 
 <h3 align="center"><b>Greedy Algorithm</b></h3>
 
@@ -197,8 +198,9 @@
 <h3 align="center"><b>Job Scheduling</b></h3>
 
 | No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
-| 1.  | Priority Scheduling | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/priority_scheduling.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/priority_scheduling.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/priority_scheduling.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/priority_scheduling.py) |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
+| 1.  | Longest Remaining Time First | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/Longest_Remaining_Time_First.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/Longest_Remaining_Time_First.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/LRTF.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/Longest_Remaining_Time_First.py) | 
+| 2.  | Priority Scheduling | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/priority_scheduling.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/priority_scheduling.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/priority_scheduling.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/priority_scheduling.py) |
 
 <h3 align="center"><b>Linked List</b></h3>
 
@@ -274,6 +276,7 @@
 | 4.  | Hill Climbing Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Optimization/Hill_climbing.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/Hill_climbing.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Optimization/Hill_climbing.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/Hill_climbing.py) |
 | 5.  | Particle Swarm Optimization | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/particle_swarm_optimization.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/particle_swarm_optimization.py) |
 | 6.  | Shuffled Frog Leaping Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/shuffled_frog_leaping_optimization.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/shuffled_frog_leaping_optimization.py) |
+| 7.  | Simulated Annealing | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/simulated_annealing.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/simulated_annealing.py) |
 
 <h3 align="center"><b>Pattern Matching</b></h3>
 
