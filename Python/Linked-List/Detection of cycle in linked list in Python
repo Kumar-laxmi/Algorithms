@@ -1,31 +1,39 @@
-def hasLoop(head):
-  hashTable = set()
-
-  while head:
-    if head in hashTable:
-      return True
-    else:
-      hashTable.add(head)
-      head = head.next
-
-  return False
-
-def main():
-  head = Node(1)
-  head.next = Node(2)
-  head.next.next = Node(3)
-  head.next.next.next = head
-
-  if hasLoop(head):
-    print("The linked list has a loop.")
-  else:
-    print("The linked list does not have a loop.")
-
-if __name__ == "__main__":
-  main()
 
 class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 
-  def __init__(self, data):
-    self.data = data
-    self.next = None
+def detectCycle(head):
+    visited = set()
+    while head:
+        if head in visited:
+            return True
+        visited.add(head)
+        head = head.next
+    return False
+
+def createLinkedList():
+    head = None
+    tail = None
+    while True:
+        data = input("Enter data for the next node (press enter to stop): ")
+        if not data:
+            break
+        node = Node(data)
+        if head is None:
+            head = node
+            tail = node
+        else:
+            tail.next = node
+            tail = node
+    return head
+
+# Create a linked list
+head = createLinkedList()
+
+# Check if there is a cycle in the linked list
+if detectCycle(head):
+    print("There is a cycle in the linked list.")
+else:
+    print("There is no cycle in the linked list.")
