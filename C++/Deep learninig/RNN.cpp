@@ -15,6 +15,7 @@ private:
     std::vector<std::vector<double>> c1;
     std::vector<double> b_h;
     std::vector<double> b_y;
+
 public:
     RNN(int intsize, int hiddsiz, int outsize) {
         this->intsize = intsize;
