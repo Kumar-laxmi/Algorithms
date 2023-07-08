@@ -34,5 +34,22 @@ def compress(data):
             current_symbol = ""
     return compressed_data
 
-print(compress("ABBCBCABABCAABCAAB"))
+def decompress(data):
+    storage = {0: ""}
+    decompressed_data = ""
+    index = 1
+    for character in data:
+        storage[index] = storage[character[0]] + character[1]
+        decompressed_data += storage[index]
+        index += 1
+    return decompressed_data
+
+
+message = "ABBCBCABABCAABCAAB"
+compressed_message = compress(message)
+decompressed_message = decompress(compressed_message)
+
+print(f"Original Message: {message}")
+print(f"Compressed Message: {compressed_message}")
+print(f"Decompressed Message: {decompressed_message}")
 
