@@ -17,9 +17,9 @@ int Partition(int arr[],int p,int r){
   	return i+1;
 }
 int Randomized_partition(int arr[],int p,int r){
-	//rand()%(r-p+1) generate random number in range 0 to r-p
+	//rand_r()%(r-p+1) generate random number in range 0 to r-p
 	// we want in range (p,r) so add p
-	int i=p+rand()%(r-p+1);
+	int i=p+rand_r()%(r-p+1);
 	swap(arr[i],arr[r]);
     
 	return(Partition(arr,p,r));
