@@ -33,7 +33,7 @@ vector <pair <int, char>> compress(string data) {
 
     for (char character: data) {
         current_symbol += character;
-        if (storage.find(current_symbol) != storage.end()) {
+        if (storage.find(current_symbol) == storage.end()) {
             storage[current_symbol] = index;
             compressed_data.push_back(make_pair(
                 storage[current_symbol.substr(0, current_symbol.length() - 1)], character
@@ -41,8 +41,9 @@ vector <pair <int, char>> compress(string data) {
             index += 1;
             current_symbol = "";
         }
-        return compressed_data;
+        
     }
+    return compressed_data;
 
 }
 
