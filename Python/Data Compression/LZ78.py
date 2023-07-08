@@ -47,9 +47,10 @@ def decompress(data):
 
 message = "ABBCBCABABCAABCAAB"
 compressed_message = compress(message)
+    #[(0, 'A'), (0, 'B'), (2, 'C'), (3, 'A'), (2, 'A'), (4, 'A'), (6, 'B')]
 decompressed_message = decompress(compressed_message)
 
 print(f"Original Message: {message}")
-print(f"Compressed Message: {compressed_message}")
-print(f"Decompressed Message: {decompressed_message}")
+print(f"Compressed Message: {compressed_message}") 
+print(f"Decompressed Message: {decompressed_message}") 
 
