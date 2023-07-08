@@ -41,7 +41,6 @@ vector <pair <int, char>> compress(string data) {
             index += 1;
             current_symbol = "";
         }
-        
     }
 
     return compressed_data;
@@ -73,5 +72,4 @@ int main() {
     }
     cout << endl;
     cout << "Decompresed Message: " << decompressed_message << endl;
-
 }
