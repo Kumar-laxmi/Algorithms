@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 #include<iostream>
+#include <stdlib.h>
+int rand(void);
 using namespace std;
 
 int Partition(int arr[],int p,int r){
