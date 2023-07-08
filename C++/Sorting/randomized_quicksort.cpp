@@ -37,8 +37,7 @@ void Randomized_quicksort(int arr[],int p,int r){
 int main() {   
    int arr[]={78,9,10,-1,2,-45,91};
    int n = sizeof(arr)/sizeof(arr[0]);
-    srand(time(0));  //generate random seed
-    unsigned int seed = rand(); 
+    srand(time(0));  //generate random seed 
    Randomized_quicksort(arr,0,n-1) ; // arr,p,r;
    cout<<"Sorted array using Randomized quicksort is :"<<endl;
     for(int i=0;i<n;i++){
