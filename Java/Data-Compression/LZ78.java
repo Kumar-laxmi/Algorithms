@@ -29,52 +29,52 @@ public class LZ78 {
 
     private static List<Pair<Integer, Character>> compress(String data) {
         Map<String, Integer> storage = new HashMap<>();
-        List<Pair<Integer, Character>> compressedData = new ArrayList<>();
-        StringBuilder currentSymbol = new StringBuilder();
+        List<Pair<Integer, Character>> compressed_data = new ArrayList<>();
+        StringBuilder current_symbol = new StringBuilder();
         int index = 1;
     
         for (char character : data.toCharArray()) {
-            currentSymbol.append(character);
-            if (!storage.containsKey(currentSymbol.toString())) {
-                storage.put(currentSymbol.toString(), index);
-                int previousIndex = currentSymbol.length() > 1 ? storage.get(currentSymbol.substring(0, currentSymbol.length() - 1)) : 0;
-                compressedData.add(new Pair<>(previousIndex, character));
+            current_symbol.append(character);
+            if (!storage.containsKey(current_symbol.toString())) {
+                storage.put(current_symbol.toString(), index);
+                int previous_index = current_symbol.length() > 1 ? storage.get(current_symbol.substring(0, current_symbol.length() - 1)) : 0;
+                compressed_data.add(new Pair<>(previous_index, character));
                 index++;
-                currentSymbol.setLength(0);
+                current_symbol.setLength(0);
             }
         }
     
-        return compressedData;
+        return compressed_data;
     }
 
     private static String decompress(List<Pair<Integer, Character>> data) {
         Map<Integer, String> storage = new HashMap<>();
-        StringBuilder decompressedData = new StringBuilder();
+        StringBuilder decompressed_data = new StringBuilder();
         int index = 1;
     
         for (Pair<Integer, Character> character : data) {
             String phrase = character.getFirst() == 0 ? "" : storage.get(character.getFirst());
             phrase += character.getSecond();
             storage.put(index, phrase);
-            decompressedData.append(phrase);
+            decompressed_data.append(phrase);
             index++;
         }
     
-        return decompressedData.toString();
+        return decompressed_data.toString();
     }
 
     public static void main(String[] args) {
         String message = "ABBCBCABABCAABCAAB";
-        List<Pair<Integer, Character>> compressedMessage = compress(message);
-        String decompressedMessage = decompress(compressedMessage);
+        List<Pair<Integer, Character>> compressed_message = compress(message);
+        String decompressed_message = decompress(compressed_message);
 
         System.out.println("Original Message: " + message);
         System.out.print("Compressed Message: ");
-        for (Pair<Integer, Character> element : compressedMessage) {
+        for (Pair<Integer, Character> element : compressed_message) {
             System.out.print("(" + element.getFirst() + ", " + element.getSecond() + "), ");
         }
         System.out.println();
-        System.out.println("Decompressed Message: " + decompressedMessage);
+        System.out.println("Decompressed Message: " + decompressed_message);
     }
 
     private static class Pair<F, S> {
