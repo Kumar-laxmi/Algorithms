@@ -4,7 +4,7 @@
 public class BoyerMoore {
     public static void main(String[] args) {
         int arr [] = {2,1,2,2,2,1,1,3,2};
-        int x=1, count =1, element = arr[0];;
+        int x=1, count =1, element = arr[0];
         while(x<arr.length){
             if(arr[x]==element){
                 count++;
