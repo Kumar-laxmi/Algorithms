@@ -1,6 +1,6 @@
 // Similar Triangles Program
 // It can be used to check whether the two traingles are similar or not.
-// Author:  
+// Author:  @swastik-akhil
 
 
 public class SimilarTriangles {
