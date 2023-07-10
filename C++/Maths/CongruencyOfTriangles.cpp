@@ -3,9 +3,7 @@
     // Author: @swastik-akhil
 
 #include <iostream>
-
 int main() {
-
     // SSS property
     int a1 = 3, b1 = 4, c1 = 5;
     int a2 = 3, b2 = 4, c2 = 5;
@@ -16,7 +14,6 @@ int main() {
     else {
         std::cout << "The triangles are not congruent" << std::endl;
     }
-
     // SAS property
     int a3 = 3, m = 50, b3 = 4;
     int a4 = 3, n = 50, b4 = 4;
@@ -27,7 +24,6 @@ int main() {
     else {
         std::cout << "The triangles are not congruent" << std::endl;
     }
-
     // ASA property
     int m1 = 40, a5 = 3, m2 = 60;
     int m3 = 40, a6 = 3, m4 = 60;
@@ -38,7 +34,6 @@ int main() {
     else {
         std::cout << "The triangles are not congruent" << std::endl;
     }
-
     // AAS property
     int m5 = 40, m6 = 60, a7 = 6;
     int m7 = 40, m8 = 60, a8 = 6;
@@ -49,7 +44,6 @@ int main() {
     else {
         std::cout << "The triangles are not congruent" << std::endl;
     }
-
     // RHS property
     int a9 = 3, b5 = 4;
     int a10 = 3, b6 = 4;
