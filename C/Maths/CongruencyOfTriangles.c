@@ -5,9 +5,6 @@
 #include <stdio.h>
 
 int main() {
-    
-    // SSS property
-    
     int a1 = 3, b1 = 4, c1 = 5;
     int a2 = 3, b2 = 4, c2 = 5;
 
