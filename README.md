@@ -100,6 +100,12 @@
 | 10. | Vernam Cipher | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Cryptography/VernamCipher.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/VernamCipher.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/VernamCipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/VernamCipher.py) |
 | 11. | Vignere Cipher | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/Vigen%C3%A8reCipher.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/Vigen%C3%A8reCipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/vigenere_cipher.py) |
 
+<h3 align="center"><b>Concurrent Programming</b></h3>
+
+| No. | Algorithm Name                                                                        | Available languages                       | 
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| 1.  | Peterson's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Concurrent%20Algorithms/peterson_algo.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Concurrent%20Algorithms/peterson_algo.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Concurrent%20Algorithms/peterson_algo.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Concurrent%20Algorithms/peterson_algo.py) |
+
 <h3 align="center"><b>Data Compression</b></h3>
 
 | No. | Algorithm Name                                                                        | Available languages                       | 
@@ -199,8 +205,9 @@
 
 | No. | Algorithm Name                                                                        | Available languages                       | 
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ |
-| 1.  | Longest Remaining Time First | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/Longest_Remaining_Time_First.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/Longest_Remaining_Time_First.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/LRTF.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/Longest_Remaining_Time_First.py) | 
-| 2.  | Priority Scheduling | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/priority_scheduling.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/priority_scheduling.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/priority_scheduling.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/priority_scheduling.py) |
+| 1.  | First Come First Serve | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/First_Come_First_Serve.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/First_Come_First_Serve.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/First_Come_First_Serve.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/First_Come_First_Serve.py) |
+| 2.  | Longest Remaining Time First | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/Longest_Remaining_Time_First.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/Longest_Remaining_Time_First.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/LRTF.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/Longest_Remaining_Time_First.py) | 
+| 3.  | Priority Scheduling | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/priority_scheduling.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/priority_scheduling.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/priority_scheduling.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/priority_scheduling.py) |
 
 <h3 align="center"><b>Linked List</b></h3>
 
