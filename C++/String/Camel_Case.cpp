@@ -8,45 +8,37 @@ Examples:
  1] INPUT: "this is camel case"
     OUTPUT "thisIsCamelCase"
  2] INPUT: "Hi Atul here"
-   OUTPUT: "HiAtulHere"
+   OUTPUT: "hiAtulHere"
 Example Explanation */
+
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
-int main()                // Main function
-{
-    int count;
-    cout << "Enter text count: ";  
-    cin >> count;                     // Taking input of count from user
-    if(cin.fail())
-    {
-        cout << "Invalid input." << endl;     //If input is in invalid format
-        exit(0);
-    }
-    cin.ignore(10000,'\n');
-    for(int i = 0; i < count; i++)
-    {
-        string film;
-        cout << "Enter text : ";     //Taking text sentence from user
-        getline(cin, film);
-        if(cin.fail())
-        {
-            cout << "Invalid input." << endl;
-            exit(0);
-        }
-        if(film.size() == 0)            // If user dosen't input 
-            break;
-        film[0] = tolower(film[0]);
-        for(unsigned int i = 1; i < film.size() - 1; i++)
-        {
-            if(film[i] == ' ')
-            {
-                film.erase(i,1);
-                film[i] = toupper(film[i]);
-                i--;
+
+int main() {
+    int Testcase;
+    cout << "Enter no of Testcases: ";
+    cin >> Testcase;
+    cout << endl;
+    cin.ignore(); // Clear the input buffer
+    while (Testcase--) {
+        string str;
+        cout << "Enter a sentence: ";
+        getline(cin, str);
+        bool flag = false;
+        string camelCaseString = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (i == 0) camelCaseString += tolower(str[i]);   //Converts to lowercase
+            else if (str[i] == ' ') flag = true; // Check for spaces in the sentence
+            else if (flag && str[i] != ' ') {
+                camelCaseString += toupper(str[i]);   //Converts to uppercase
+                flag = false;
             }
+            else camelCaseString += tolower(str[i]);   //Converts to lowercase
         }
-        cout << "Result: " << film << endl;   // Print the text into Camelcase format
-     }
+        cout << "Original: " << str << endl;
+        cout << "Camel Case: " << camelCaseString << endl;
+    }
     return 0;
 }
