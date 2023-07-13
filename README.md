@@ -413,10 +413,11 @@
   
 <br>
 
-- Fork and clone the Repo by typing the following commands in the terminal
+- Fork the Repo
+- Clone the forked Repo by typing the following commands in the terminal
 
 ```
-$ git clone https://github.com/Kumar-laxmi/Algorithms.git
+$ git clone https://github.com/<your-github-username>/Algorithms.git
 
 $ cd Algorithms
 ```
@@ -452,6 +453,7 @@ $ cd QuickLearn
 
 <hr>
 
+- Fork the Repo 'https://github.com/Kumar-laxmi/Algorithms.git'
 - Clone the Repository after forking
 
 ```
@@ -460,12 +462,18 @@ $ git clone https://github.com/<your-github-username>/Algorithms.git
 $ cd algorithms
 ```
 
-- Make changes to the code(for ex- add an update route)
-
 - Create a Branch using:
 
 ```
-$ git checkout -b <branch-name>
+$ git checkout -b <new-branch-name>
+```
+
+- Make changes to the code(for ex- add an update route)
+
+- To see modified changes
+
+```
+$ git status
 ```
 
 - Stage your changes using:
@@ -483,7 +491,7 @@ $ git commit -m "add any comment"
 - Push the changes to the forked repository using:
 
 ```
-$ git push origin <branch-name>
+$ git push origin <new-branch-name>
 ```
 
 - Navigate to the original repository and make a pull request
