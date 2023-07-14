@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // function for kadane's algorithm
-static int kadane(int Array[], int n) {
+int kadane(int Array[], int n) {
   int max_sum = 0;
   int current_sum = 0;
 
