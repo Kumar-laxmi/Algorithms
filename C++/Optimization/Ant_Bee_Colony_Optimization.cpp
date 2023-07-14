@@ -14,27 +14,27 @@ double objective_function(double x) {
 double LB = -5.12;
 double upper_bound = 5.12;
 
-// Define the ABC algorithm
-double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlooker_bees, int n_trials) {
- vector<double> population(n_employed_bees);
- vector<double> fitness(n_employed_bees);
+// Define the Ant Been Colony algorithm
+double artificial_bee_colony(int n_iterations, int NB, int n_onlooker_bees, int n_trials) {
+ vector<double> population(NB);
+ vector<double> fitness(NB);
 
-    // Initialize the population
+    // Initialize the sample space
     random_device rd;
     mt19937 gen(rd());
-    uniform_real_distribution<double> dist(5,4);
+    uniform_real_distribution<double> D(5,4);
 
-    for (int i = 0; i < n_employed_bees; i++) {
-        population[i] = dist(gen);
+    for (int i = 0; i < NB; i++) {
+        population[i] = D(gen);
     }
 
     // Initialize the best solution
     double best_solution = population[0];
 
-    // Main loop
+    // Main loop starting here
     for (int iteration = 0; iteration < n_iterations; iteration++) {
-        // Employed bees phase
-        for (int i = 0; i < n_employed_bees; i++) {
+        // Employed bees are initialized
+        for (int i = 0; i < NB; i++) {
             double solution = population[i];
             double new_solution = generate_neighbor_solution(solution, population, gen);
             if (objective_function(new_solution) < objective_function(solution)) {
@@ -42,67 +42,67 @@ double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlook
             }
         }
 
-        // Calculate the fitness values
+        // going to find objective values
         double total_fitness = 0.0;
-        for (int i = 0; i < n_employed_bees; i++) {
+        for (int i = 0; i < NB; i++) {
             fitness[i] = 1.0 / (objective_function(population[i]) + 0.01);
             total_fitness += fitness[i];
         }
 
-        // Onlooker bees phase
-        std::vector<double> probabilities(n_employed_bees);
-        for (int i = 0; i < n_employed_bees; i++) {
+        // Onlooker phase
+        std::vector<double> probabilities(NB);
+        for (int i = 0; i < NB; i++) {
             probabilities[i] = fitness[i] / total_fitness;
         }
 
         for (int i = 0; i < n_onlooker_bees; i++) {
-            // Select a solution based on its fitness value
-            std::discrete_distribution<int> dist(probabilities.begin(), probabilities.end());
-            int selected_index = dist(gen);
-            double selected_solution = population[selected_index];
+            // Select a solution based on its fitness value to get the objective value
+            std::discrete_distribution<int> D(probabilities.begin(), probabilities.end());
+            int SI = D(gen);
+            double selected_solution = population[SI];
 
-            // Generate a neighbor solution
+            // optimal
             double new_solution = generate_neighbor_solution(selected_solution, population, gen);
             if (objective_function(new_solution) < objective_function(selected_solution)) {
-                population[selected_index] = new_solution;
+                population[SI] = new_solution;
             }
         }
 
-        // Scout bees phase
+        // ABC
         double best_fitness = fitness[0];
-        for (int i = 1; i < n_employed_bees; i++) {
+        for (int i = 1; i < NB; i++) {
             if (objective_function(population[i]) < objective_function(best_solution)) {
                 best_solution = population[i];
                 best_fitness = fitness[i];
             }
         }
-        for (int i = 0; i < n_employed_bees; i++) {
+        for (int i = 0; i < NB; i++) {
             if (fitness[i] > best_fitness) {
-                population[i] = dist(gen);
+                population[i] = D(gen);
             }
         }
 
-        // Print the best solution in the current iteration
+        // ABC
         std::cout << "Iteration " << (iteration + 1) << ": Best solution = " << objective_function(best_solution) << std::endl;
     }
 
-    // Return the best solution found
+    // ABC
     return best_solution;
 }
 
-// Generate a neighbor solution for a given solution
+// ABC
 double generate_neighbor_solution(double solution, const std::vector<double>& population, std::mt19937& gen) {
-    std::uniform_int_distribution<int> dist(0, population.size() - 1);
+    std::uniform_int_distribution<int> D(0, population.size() - 1);
     double neighbor = solution;
     while (neighbor == solution) {
-        int index = dist(gen);
+        int index = D(gen);
         neighbor = population[index];
     }
     return neighbor;
 }
 
 int main() {
-    // Example usage
+    // ABC
     double best_solution = artificial_bee_colony(10,30,30,30);
  cout << "Best solution found: " << objective_function(best_solution) << endl;
 
