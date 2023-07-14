@@ -61,7 +61,7 @@ double artificial_bee_colony(int n_iterations, int NB, int n_onlooker_bees, int 
             int SI = D(gen);
             double selected_solution = population[SI];
 
-            // optimal
+            // optimal ABC
             double new_solution = generate_neighbor_solution(selected_solution, population, gen);
             if (objective_function(new_solution) < objective_function(selected_solution)) {
                 population[SI] = new_solution;

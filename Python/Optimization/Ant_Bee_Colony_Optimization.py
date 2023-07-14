@@ -7,7 +7,7 @@ UB = 100
 
 def Optimal(xy):
     return np.sum(np.power(xy, 2))
-    # represents sum of squares eg- x^2+y^2+..
+    # ABC represents sum of squares eg- x^2+y^2+..
 
 def ABC(NI, NEI, individuals):
     
