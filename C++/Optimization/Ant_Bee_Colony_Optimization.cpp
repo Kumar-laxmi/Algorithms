@@ -1,22 +1,15 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
 double generate_neighbor_solution(double solution, const vector<double>& population);
 double objective_function(double x) {
     return x * x;
      //represents sum of squares eg- x^2+y^2+..
 }
-
 double LB = -100;
 double UB = 100;
-
-
 double artificial_bee_colony(int n_iterations, int NEB, int n_onlooker_bees, int n_trials) {
  vector<double> population(NEB);
  vector<double> fitness(NEB);
-
-
  random_device rd;
     std::mt19937 gen(rd());
     std::uniform_real_distribution<double> dist(LB, UB);
@@ -98,6 +91,5 @@ double generate_neighbor_solution(double solution, const vector<double>& populat
 int main() {
     double best_solution = artificial_bee_colony(10,2,30,30);
  cout << "Optimal solution found is : " << objective_function(best_solution) << endl;
-
     return 0;
 }
