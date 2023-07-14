@@ -3,6 +3,7 @@ import numpy as np
 
 LB = -100
 UB = 100
+#starting
 
 
 def Optimal(xy):
