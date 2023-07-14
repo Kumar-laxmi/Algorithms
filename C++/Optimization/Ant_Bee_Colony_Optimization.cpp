@@ -11,8 +11,8 @@ double objective_function(double x) {
 }
 
 // Define the bounds for the search space
-double LB = -5.12;
-double upper_bound = 5.12;
+double LB = -100;
+double upper_bound = 100;
 // done
 
 // Define the Ant Been Colony algorithm
