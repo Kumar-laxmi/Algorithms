@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 
+
 using namespace std;
 
 const int LB = -100;
@@ -28,6 +29,7 @@ vector<double> genneighbours(const vector<double>& individual, const vector<vect
     }
     return neighbor;
 }
+
 vector<double> ABC(int NI, int NEI, int individuals) {
     vector<vector<double>> population;
     for (int i = 0; i < NEI; ++i) {
@@ -40,10 +42,10 @@ vector<double> ABC(int NI, int NEI, int individuals) {
 
     for (int iteration = 0; iteration < NI; ++iteration) {
         for (int i = 0; i < NEI; ++i) {
-            vector<double>& individual = population[i];
+            vector<double> individual = population[i];
             vector<double> newIndividual = genneighbours(individual, population);
             if (Optimal(newIndividual) < Optimal(individual)) {
-                individual = newIndividual;
+                population[i] = newIndividual;
             }
         }
 
@@ -72,10 +74,10 @@ vector<double> ABC(int NI, int NEI, int individuals) {
                 SI++;
             }
 
-            vector<double>& selectedIndividual = population[SI];
+            vector<double> selectedIndividual = population[SI];
             vector<double> newIndividual = genneighbours(selectedIndividual, population);
             if (Optimal(newIndividual) < Optimal(selectedIndividual)) {
-                selectedIndividual = newIndividual;
+                population[SI] = newIndividual;
             }
         }
 
@@ -102,8 +104,8 @@ vector<double> ABC(int NI, int NEI, int individuals) {
 }
 
 int main() {
-    vector<double> irla = ABC(10, 30, 30);
-    cout << "Optimal Solution found for the sphere function is: " << Optimal(irla) << endl;
+    vector<double> BI = ABC(10, 30, 30);
+    cout << "Optimal Solution found is: " << Optimal(BI) << endl;
 
     return 0;
 }
