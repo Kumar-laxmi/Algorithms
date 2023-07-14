@@ -1,115 +1,110 @@
-#include <iostream>
-#include <random>
-#include <vector>
+#include <bits/stdc++.h>
 
-// Forward declaration
-double generate_neighbor_solution(double solution, const std::vector<double>& population, std::mt19937& gen);
+using namespace std;
 
-// Define the objective function to be optimized
-double objective_function(double x) {
-    // Example: Sphere function
-    return x * x;
+const int LB = -100;
+const int UB = 100;
+
+double Optimal(const vector<double>& xy) {
+    double sum = 0.0;
+    for (double val : xy) {
+        sum += pow(val, 2);
+    }
+    return sum;
 }
 
-// Define the bounds for the search space
-double lower_bound = -5.12;
-double upper_bound = 5.12;
-
-// Define the ABC algorithm
-double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlooker_bees, int n_trials) {
-    std::vector<double> population(n_employed_bees);
-    std::vector<double> fitness(n_employed_bees);
-
-    // Initialize the population
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_real_distribution<double> dist(lower_bound, upper_bound);
-
-    for (int i = 0; i < n_employed_bees; i++) {
-        population[i] = dist(gen);
-    }
-
-    // Initialize the best solution
-    double best_solution = population[0];
-
-    // Main loop
-    for (int iteration = 0; iteration < n_iterations; iteration++) {
-        // Employed bees phase
-        for (int i = 0; i < n_employed_bees; i++) {
-            double solution = population[i];
-            double new_solution = generate_neighbor_solution(solution, population, gen);
-            if (objective_function(new_solution) < objective_function(solution)) {
-                population[i] = new_solution;
-            }
-        }
-
-        // Calculate the fitness values
-        double total_fitness = 0.0;
-        for (int i = 0; i < n_employed_bees; i++) {
-            fitness[i] = 1.0 / (objective_function(population[i]) + 0.01);
-            total_fitness += fitness[i];
-        }
-
-        // Onlooker bees phase
-        std::vector<double> probabilities(n_employed_bees);
-        for (int i = 0; i < n_employed_bees; i++) {
-            probabilities[i] = fitness[i] / total_fitness;
-        }
-
-        for (int i = 0; i < n_onlooker_bees; i++) {
-            // Select a solution based on its fitness value
-            std::discrete_distribution<int> dist(probabilities.begin(), probabilities.end());
-            int selected_index = dist(gen);
-            double selected_solution = population[selected_index];
-
-            // Generate a neighbor solution
-            double new_solution = generate_neighbor_solution(selected_solution, population, gen);
-            if (objective_function(new_solution) < objective_function(selected_solution)) {
-                population[selected_index] = new_solution;
-            }
-        }
-
-        // Scout bees phase
-        double best_fitness = fitness[0];
-        for (int i = 1; i < n_employed_bees; i++) {
-            if (objective_function(population[i]) < objective_function(best_solution)) {
-                best_solution = population[i];
-                best_fitness = fitness[i];
-            }
-        }
-        for (int i = 0; i < n_employed_bees; i++) {
-            if (fitness[i] > best_fitness) {
-                population[i] = dist(gen);
-            }
-        }
-
-        // Print the best solution in the current iteration
-        std::cout << "Iteration " << (iteration + 1) << ": Best solution = " << objective_function(best_solution) << std::endl;
-    }
-
-    // Return the best solution found
-    return best_solution;
+double fetrand(double lb, double ub) {
+    static random_device rd;
+    static mt19937 gen(rd());
+    uniform_real_distribution<double> dis(lb, ub);
+    return dis(gen);
 }
 
-// Generate a neighbor solution for a given solution
-double generate_neighbor_solution(double solution, const std::vector<double>& population, std::mt19937& gen) {
-    std::uniform_int_distribution<int> dist(0, population.size() - 1);
-    double neighbor = solution;
-    while (neighbor == solution) {
-        int index = dist(gen);
-        neighbor = population[index];
+vector<double> genneighbours(const vector<double>& individual, const vector<vector<double>>& population) {
+    vector<double> neighbor = individual;
+    while (neighbor == individual) {
+        int randIndex = rand() % population.size();
+        neighbor = population[randIndex];
     }
     return neighbor;
 }
 
+vector<double> ABC(int NI, int NEI, int individuals) {
+    vector<vector<double>> population;
+    for (int i = 0; i < NEI; ++i) {
+        vector<double> individual;
+        for (int j = 0; j < individuals; ++j) {
+            individual.push_back(fetrand(LB, UB));
+        }
+        population.push_back(individual);
+    }
+
+    for (int iteration = 0; iteration < NI; ++iteration) {
+        for (int i = 0; i < NEI; ++i) {
+            vector<double> individual = population[i];
+            vector<double> newIndividual = genneighbours(individual, population);
+            if (Optimal(newIndividual) < Optimal(individual)) {
+                population[i] = newIndividual;
+            }
+        }
+
+        vector<double> fitness;
+        for (const vector<double>& individual : population) {
+            fitness.push_back(1.0 / (Optimal(individual) + 0.01));
+        }
+        double totalFitness = 0.0;
+        for (double f : fitness) {
+            totalFitness += f;
+        }
+
+        for (int i = 0; i < individuals; ++i) {
+            vector<double> prob;
+            for (double f : fitness) {
+                prob.push_back(f / totalFitness);
+            }
+            double randVal = fetrand(0.0, 1.0);
+            double probSum = 0.0;
+            int SI = 0;
+            for (double p : prob) {
+                probSum += p;
+                if (randVal <= probSum) {
+                    break;
+                }
+                SI++;
+            }
+
+            vector<double> selectedIndividual = population[SI];
+            vector<double> newIndividual = genneighbours(selectedIndividual, population);
+            if (Optimal(newIndividual) < Optimal(selectedIndividual)) {
+                population[SI] = newIndividual;
+            }
+        }
+
+        vector<double> BI = population[0];
+        for (const vector<double>& individual : population) {
+            if (Optimal(individual) < Optimal(BI)) {
+                BI = individual;
+            }
+        }
+        for (int i = 0; i < NEI; ++i) {
+            if (Optimal(population[i]) > Optimal(BI)) {
+                vector<double> individual;
+                for (int j = 0; j < individuals; ++j) {
+                    individual.push_back(fetrand(LB, UB));
+                }
+                population[i] = individual;
+            }
+        }
+
+        cout << "Iteration " << (iteration + 1) << ": Best solution = " << Optimal(BI) << endl;
+    }
+
+    return {};
+}
+
 int main() {
-    // Example usage
-    int n_iterations = 10;
-    int n_employed_bees = 30;
-    int n_onlooker_bees = 30;
-    int n_trials = 3;
-    double best_solution = artificial_bee_colony(n_iterations, n_employed_bees, n_onlooker_bees, n_trials);
-    std::cout << "Best solution found: " << objective_function(best_solution) << std::endl;
+    vector<double> irla = ABC(10, 30, 30);
+    cout << "Optimal Solution found for the sphere function is: " << Optimal(irla) << endl;
 
     return 0;
 }
