@@ -12,7 +12,7 @@ double objective_function(double x) {
 
 // Define the bounds for the search space
 double LB = -5.12;
-double UB = 5.12;
+double upper_bound = 5.12;
 
 // Define the ABC algorithm
 double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlooker_bees, int n_trials) {
@@ -27,11 +27,13 @@ double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlook
     for (int i = 0; i < n_employed_bees; i++) {
         population[i] = dist(gen);
     }
+
+    // Initialize the best solution
     double best_solution = population[0];
 
     // Main loop
     for (int iteration = 0; iteration < n_iterations; iteration++) {
-    
+        // Employed bees phase
         for (int i = 0; i < n_employed_bees; i++) {
             double solution = population[i];
             double new_solution = generate_neighbor_solution(solution, population, gen);
@@ -40,6 +42,7 @@ double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlook
             }
         }
 
+        // Calculate the fitness values
         double total_fitness = 0.0;
         for (int i = 0; i < n_employed_bees; i++) {
             fitness[i] = 1.0 / (objective_function(population[i]) + 0.01);
@@ -47,7 +50,7 @@ double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlook
         }
 
         // Onlooker bees phase
-        vector<double> probabilities(n_employed_bees);
+        std::vector<double> probabilities(n_employed_bees);
         for (int i = 0; i < n_employed_bees; i++) {
             probabilities[i] = fitness[i] / total_fitness;
         }
