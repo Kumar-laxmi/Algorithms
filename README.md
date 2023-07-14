@@ -100,6 +100,12 @@
 | 10. | Vernam Cipher | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Cryptography/VernamCipher.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/VernamCipher.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/VernamCipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/VernamCipher.py) |
 | 11. | Vignere Cipher | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Cryptography/Vigen%C3%A8reCipher.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Cryptography/Vigen%C3%A8reCipher.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Cryptography/vigenere_cipher.py) |
 
+<h3 align="center"><b>Concurrent Programming</b></h3>
+
+| No. | Algorithm Name                                                                        | Available languages                       | 
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| 1.  | Peterson's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Concurrent%20Algorithms/peterson_algo.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Concurrent%20Algorithms/peterson_algo.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Concurrent%20Algorithms/peterson_algo.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Concurrent%20Algorithms/peterson_algo.py) |
+
 <h3 align="center"><b>Data Compression</b></h3>
 
 | No. | Algorithm Name                                                                        | Available languages                       | 
@@ -175,7 +181,7 @@
 | 13. | Kosaraju's Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Kosaraju_Algorithm.cpp) |
 | 14. | Kruskal's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Kruskals.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Kruskals.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Kruskals.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Kruskals.py) |
 | 15. | Multistage Graph (Shortest Path) | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/multistage_graph.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/multistage_graph.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/MultistageGraph.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/multistage_graph.py) |
-| 16. | Prim's Algorithm | [C++](https://github.com/Kumr-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Prims_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Prims.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/prims_algorithm.py) |
+| 16. | Prim's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Prims.c), [C++](https://github.com/Kumr-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Prims_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Prims.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/prims_algorithm.py) |
 | 17. | Tarjan Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Graphs/Tarjan.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Graphs/Tarjan_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Graphs/Tarjan.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Graphs/Tarjan.py) |
 
 <h3 align="center"><b>Greedy Algorithm</b></h3>
@@ -199,8 +205,9 @@
 
 | No. | Algorithm Name                                                                        | Available languages                       | 
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ |
-| 1.  | Longest Remaining Time First | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/Longest_Remaining_Time_First.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/Longest_Remaining_Time_First.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/LRTF.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/Longest_Remaining_Time_First.py) | 
-| 2.  | Priority Scheduling | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/priority_scheduling.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/priority_scheduling.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/priority_scheduling.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/priority_scheduling.py) |
+| 1.  | First Come First Serve | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/First_Come_First_Serve.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/First_Come_First_Serve.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/First_Come_First_Serve.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/First_Come_First_Serve.py) |
+| 2.  | Longest Remaining Time First | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/Longest_Remaining_Time_First.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/Longest_Remaining_Time_First.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/LRTF.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/Longest_Remaining_Time_First.py) | 
+| 3.  | Priority Scheduling | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/priority_scheduling.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/priority_scheduling.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/priority_scheduling.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/priority_scheduling.py) |
 
 <h3 align="center"><b>Linked List</b></h3>
 
@@ -252,19 +259,21 @@
 | 13.  | Frievald's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/freivald.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/freivald.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/freivald.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/freivald.py) |
 | 14.  | GCD & LCM | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/GCD%20and%20LCM.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/GCD%20and%20LCM.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/GCD_and_LCM.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/GCD%20and%20LCM.py) |
 | 15.  | Heron's Formula | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/heronsFormula.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/heronsFormula.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/heronsFormula.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/heronsFormula.py) |
-| 16.  | Lucas Lehmer Series | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Lucas_Lehmer_Series.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Lucas_Lehmer_Series.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Lucas_Lehmer_Series.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Lucas_Lehmer_Series.py) |
-| 17.  | Manhattan Distance | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Manhattan_distance.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Manhattan_distance.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Manhattan_distance.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Manhattan_distance.py) |
-| 18.  | Modular Exponentiation | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/ModularExponentiation.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Modular_exponentiation.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/ModularExponentiation.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/ModularExponentiation.py) |
-| 19.  | Pascal's Triangle | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Pascal_Triangle.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Pascal_Triangle.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Pascal_Triangle.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Pascal_Triangle.py) |
-| 20.  | Perfect Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/perfect.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/perfect.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/PerfectNumber.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/perfect.py) |
-| 21.  | Prefix-Postfix-Infix Interconversion | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Infix_Postfix_Prefix_Interconversion.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/prefix_infix_postfix_interconversion.py) |
-| 22.  | Prime Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/is_prime.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/is_prime.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/is_prime.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/is_prime.py) |
-| 23.  | Reverse Integer | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Reverse%20Integer.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Reverse_integer.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/ReverseInteger.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/reverse_integer.py) |
-| 24.  | Roman to Decimal converter | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Roman_to_Decimal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Roman_to_Decimal.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Roman_to_Decimal.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Roman_to_Decimal.py) |
-| 25.  | Sieve Eratosthenes Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/sieveOfEratosthenes.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Sieve%20of%20Eratosthenes%20Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Sieve_erastonetihis.java),[Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/sieve_of_eratosthenes.py) |
-| 26.  | Strong Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Strong_Number.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Strong_Number.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Strong_Number.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Strong_Numbers.py) | 
-| 27.  | Sudoku Solver | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/sudoku.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/sudoku.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/sudoku.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/sudoku.py) |
-| 28.  | Zeller's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/zeller.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/zeller.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/zeller.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/zeller.py) |
+| 16.  | Interquartile Ranges | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Interquartile_range.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Interquartile_range.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Interquartile_range.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Interquartile_range.py) |
+| 17.  | Lucas Lehmer Series | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Lucas_Lehmer_Series.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Lucas_Lehmer_Series.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Lucas_Lehmer_Series.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Lucas_Lehmer_Series.py) |
+| 18.  | Luhn's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Luhn%20algorithm.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Luhn%20algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/LuhnAlgorithm.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Luhn%20algorithm.py) |
+| 19.  | Manhattan Distance | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Manhattan_distance.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Manhattan_distance.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Manhattan_distance.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Manhattan_distance.py) |
+| 20.  | Modular Exponentiation | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/ModularExponentiation.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Modular_exponentiation.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/ModularExponentiation.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/ModularExponentiation.py) |
+| 21.  | Pascal's Triangle | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Pascal_Triangle.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Pascal_Triangle.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Pascal_Triangle.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Pascal_Triangle.py) |
+| 22.  | Perfect Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/perfect.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/perfect.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/PerfectNumber.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/perfect.py) |
+| 23.  | Prefix-Postfix-Infix Interconversion | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Infix_Postfix_Prefix_Interconversion.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/prefix_infix_postfix_interconversion.py) |
+| 24.  | Prime Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/is_prime.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/is_prime.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/is_prime.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/is_prime.py) |
+| 25.  | Reverse Integer | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Reverse%20Integer.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Reverse_integer.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/ReverseInteger.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/reverse_integer.py) |
+| 26.  | Roman to Decimal converter | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Roman_to_Decimal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Roman_to_Decimal.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Roman_to_Decimal.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Roman_to_Decimal.py) |
+| 27.  | Sieve Eratosthenes Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/sieveOfEratosthenes.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Sieve%20of%20Eratosthenes%20Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Sieve_erastonetihis.java),[Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/sieve_of_eratosthenes.py) |
+| 28.  | Strong Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Strong_Number.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Strong_Number.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Strong_Number.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Strong_Numbers.py) | 
+| 29.  | Sudoku Solver | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/sudoku.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/sudoku.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/sudoku.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/sudoku.py) |
+| 30.  | Zeller's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/zeller.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/zeller.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/zeller.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/zeller.py) |
 
 <h3 align="center"><b>Optimization</b></h3>
 
@@ -285,7 +294,7 @@
 | 1.  | Aho-Corasick Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Pattern-Matching/AhoCorasickAlgorithm.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/AhoCorasickAlgorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Pattern-Matching/AhoCorasickAlgorithm.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Pattern-Matching/AhoCorasickAlgorithm.py) |
 | 2.  | Boyer Moore Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Pattern-Matching/Boyer-moore.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/Boyer-moore.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Pattern-Matching/Boyer_moore.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Pattern-Matching/Boyer-moore.py) |
 | 3.  | KMP Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Pattern-Matching/KMP%20Algorithm.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/KMP_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Pattern-Matching/KmpAlgo.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Pattern-Matching/kmp_string_matching.py) |
-| 4.  | Rabin Karp | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/rabin_karp.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Pattern-Matching/rabin_karp.py) |
+| 4.  | Rabin Karp | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Pattern-Matching/RabinKarpAlgo.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/rabin_karp.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Pattern-Matching/RabinKarp.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Pattern-Matching/rabin_karp.py) |
 | 5.  | Z - Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Pattern-Matching/Z_Algorithm.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Pattern-Matching/Z_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Pattern-Matching/Z_Algorithm.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Pattern-Matching/Z_Algorithm.py) |
 
 <h3 align="center"><b>Recursion</b></h3>
@@ -376,14 +385,16 @@
 | 4. | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/binarySearchTree.cpp) |
 | 5. | Binary Tree to BST | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/BinaryTreeToBST.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/BinaryTreeToBST.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/BinaryTreeToBST.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/BinaryTreeToBST.py) |
 | 6. | Binary Tree Views(Left, Right, Top, Bottom) | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/Binary_Tree_View.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/Binary_Tree_View.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/Binary_Tree_View.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/Binary_Tree_View.py) |
-| 7. | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/MorrisTraversal.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/MorrisTraversal.py) |
-| 8. | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/RedBlackTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) |
-| 9. | Segment Tree | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/SegmentTree.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/SegmentTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/SegmentTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/SegmentTree.py) |
-| 10. | Splay Trees | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/SplayTree.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/splaytree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/splayTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/splay_tree.py) |
-| 11. | Symmetric Tree Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/Symmetric_Tree.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/Symmetric_Tree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/Symmetric_Tree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/Symmetric_Tree.py) |
-| 12. | Tree Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/tree_traversals.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/tree_traversals.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/tree_traversals.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/tree_traversals.py) |
-| 13. | Trie | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/Trie.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/Trie.java) |
-| 14. | Van Emde Boas Tree | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/Van%20Emde%20Boas.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/Van%20Emde%20Boas.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/Van%20Emde%20Boas.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/Van%20Emde%20Boas.py) |
+| 7. | Fenwik Tree | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/Fenwick%20Tree.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/Fenwick%20Tree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/Fenwick_Tree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/Fenwick%20Tree.py) |
+| 8. | Morris Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/morris_transversal.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/MorrisTraversal.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/MorrisTraversal.py) |
+| 9. | Red-Black Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/red_black.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/RedBlackTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/red_black.py) |
+| 10. | Segment Tree | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/SegmentTree.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/SegmentTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/SegmentTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/SegmentTree.py) |
+| 11. | Splay Trees | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/SplayTree.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/splaytree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/splayTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/splay_tree.py) |
+| 12. | Symmetric Tree Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/Symmetric_Tree.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/Symmetric_Tree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/Symmetric_Tree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/Symmetric_Tree.py) |
+| 13. | Treap | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/treap_algo.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/treap_algo.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/treap_algo.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/treap_algo.py) | 
+| 14. | Tree Traversal | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/tree_traversals.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/tree_traversals.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/tree_traversals.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/tree_traversals.py) |
+| 15. | Trie | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/Trie.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/Trie.java) |
+| 16. | Van Emde Boas Tree | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/Van%20Emde%20Boas.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/Van%20Emde%20Boas.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/Van%20Emde%20Boas.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/Van%20Emde%20Boas.py) |
 
  </div>
 
@@ -403,10 +414,11 @@
   
 <br>
 
-- Fork and clone the Repo by typing the following commands in the terminal
+- Fork the Repo
+- Clone the forked Repo by typing the following commands in the terminal
 
 ```
-$ git clone https://github.com/Kumar-laxmi/Algorithms.git
+$ git clone https://github.com/<your-github-username>/Algorithms.git
 
 $ cd Algorithms
 ```
@@ -442,6 +454,7 @@ $ cd QuickLearn
 
 <hr>
 
+- Fork the Repo 'https://github.com/Kumar-laxmi/Algorithms.git'
 - Clone the Repository after forking
 
 ```
@@ -450,12 +463,18 @@ $ git clone https://github.com/<your-github-username>/Algorithms.git
 $ cd algorithms
 ```
 
-- Make changes to the code(for ex- add an update route)
-
 - Create a Branch using:
 
 ```
-$ git checkout -b <branch-name>
+$ git checkout -b <new-branch-name>
+```
+
+- Make changes to the code(for ex- add an update route)
+
+- To see modified changes
+
+```
+$ git status
 ```
 
 - Stage your changes using:
@@ -473,7 +492,7 @@ $ git commit -m "add any comment"
 - Push the changes to the forked repository using:
 
 ```
-$ git push origin <branch-name>
+$ git push origin <new-branch-name>
 ```
 
 - Navigate to the original repository and make a pull request
