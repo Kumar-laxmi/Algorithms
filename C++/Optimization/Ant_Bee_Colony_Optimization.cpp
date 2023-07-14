@@ -11,8 +11,8 @@ double objective_function(double x) {
 }
 
 // Define the bounds for the search space
-double lower_bound = -5.12;
-double upper_bound = 5.12;
+double LB = -5.12;
+double UB = 5.12;
 
 // Define the ABC algorithm
 double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlooker_bees, int n_trials) {
@@ -27,13 +27,11 @@ double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlook
     for (int i = 0; i < n_employed_bees; i++) {
         population[i] = dist(gen);
     }
-
-    // Initialize the best solution
     double best_solution = population[0];
 
     // Main loop
     for (int iteration = 0; iteration < n_iterations; iteration++) {
-        // Employed bees phase
+    
         for (int i = 0; i < n_employed_bees; i++) {
             double solution = population[i];
             double new_solution = generate_neighbor_solution(solution, population, gen);
@@ -42,33 +40,31 @@ double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlook
             }
         }
 
-        // Calculate the fitness values
         double total_fitness = 0.0;
         for (int i = 0; i < n_employed_bees; i++) {
             fitness[i] = 1.0 / (objective_function(population[i]) + 0.01);
             total_fitness += fitness[i];
         }
 
-        // Onlooker bees phase
-        std::vector<double> probabilities(n_employed_bees);
+        vector<double> probabilities(n_employed_bees);
         for (int i = 0; i < n_employed_bees; i++) {
             probabilities[i] = fitness[i] / total_fitness;
         }
 
         for (int i = 0; i < n_onlooker_bees; i++) {
-            // Select a solution based on its fitness value
+    
             std::discrete_distribution<int> dist(probabilities.begin(), probabilities.end());
             int selected_index = dist(gen);
             double selected_solution = population[selected_index];
 
-            // Generate a neighbor solution
+
             double new_solution = generate_neighbor_solution(selected_solution, population, gen);
             if (objective_function(new_solution) < objective_function(selected_solution)) {
                 population[selected_index] = new_solution;
             }
         }
 
-        // Scout bees phase
+
         double best_fitness = fitness[0];
         for (int i = 1; i < n_employed_bees; i++) {
             if (objective_function(population[i]) < objective_function(best_solution)) {
@@ -83,7 +79,7 @@ double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlook
         }
 
         // Print the best solution in the current iteration
-        std::cout << "Iteration " << (iteration + 1) << ": Best solution = " << objective_function(best_solution) << std::endl;
+        cout << "Iteration " << (iteration + 1) << ": Best solution = " << objective_function(best_solution) << std::endl;
     }
 
     // Return the best solution found
@@ -92,7 +88,7 @@ double artificial_bee_colony(int n_iterations, int n_employed_bees, int n_onlook
 
 // Generate a neighbor solution for a given solution
 double generate_neighbor_solution(double solution, const std::vector<double>& population, std::mt19937& gen) {
-    std::uniform_int_distribution<int> dist(0, population.size() - 1);
+    uniform_int_distribution<int> dist(0, population.size() - 1);
     double neighbor = solution;
     while (neighbor == solution) {
         int index = dist(gen);
@@ -102,7 +98,6 @@ double generate_neighbor_solution(double solution, const std::vector<double>& po
 }
 
 int main() {
-    // Example usage
     double best_solution = artificial_bee_colony(10,30,30,30);
  cout << "Best solution found: " << objective_function(best_solution) << endl;
 
