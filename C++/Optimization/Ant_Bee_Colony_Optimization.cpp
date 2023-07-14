@@ -28,16 +28,22 @@ vector<double> genneighbours(const vector<double>& individual, const vector<vect
     }
     return neighbor;
 }
-
 vector<double> ABC(int NI, int NEI, int individuals) {
     vector<vector<double>> population;
+    for (int i = 0; i < NEI; ++i) {
+        vector<double> individual;
+        for (int j = 0; j < individuals; ++j) {
+            individual.push_back(fetrand(LB, UB));
+        }
+        population.push_back(individual);
+    }
 
     for (int iteration = 0; iteration < NI; ++iteration) {
         for (int i = 0; i < NEI; ++i) {
-            vector<double> individual = population[i];
+            vector<double>& individual = population[i];
             vector<double> newIndividual = genneighbours(individual, population);
             if (Optimal(newIndividual) < Optimal(individual)) {
-                population[i] = newIndividual;
+                individual = newIndividual;
             }
         }
 
@@ -66,10 +72,10 @@ vector<double> ABC(int NI, int NEI, int individuals) {
                 SI++;
             }
 
-            vector<double> selectedIndividual = population[SI];
+            vector<double>& selectedIndividual = population[SI];
             vector<double> newIndividual = genneighbours(selectedIndividual, population);
             if (Optimal(newIndividual) < Optimal(selectedIndividual)) {
-                population[SI] = newIndividual;
+                selectedIndividual = newIndividual;
             }
         }
 
