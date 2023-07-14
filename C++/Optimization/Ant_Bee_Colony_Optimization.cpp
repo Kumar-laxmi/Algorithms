@@ -31,13 +31,6 @@ vector<double> genneighbours(const vector<double>& individual, const vector<vect
 
 vector<double> ABC(int NI, int NEI, int individuals) {
     vector<vector<double>> population;
-    for (int i = 0; i < NEI; ++i) {
-        vector<double> individual;
-        for (int j = 0; j < individuals; ++j) {
-            individual.push_back(fetrand(LB, UB));
-        }
-        population.push_back(individual);
-    }
 
     for (int iteration = 0; iteration < NI; ++iteration) {
         for (int i = 0; i < NEI; ++i) {
