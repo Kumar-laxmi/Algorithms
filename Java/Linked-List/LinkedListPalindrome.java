@@ -29,6 +29,7 @@ For example- 1->2->2->1 is palindrome while 1->2->3 is not palindrome
 //this program assumes there will be atleast one node in linked list
 
 import java.util.*;
+import java.util.LinkedList;
 
 class LinkedListPalindrome
 {
@@ -114,6 +115,45 @@ class LinkedListPalindrome
             fast=fast.next;
         }
         return true;
+        // if (head == null || head.next == null) {
+        //     return true;
+        // }
+
+        // Node slow = head;
+        // Node fast = head;
+
+        // // Find the middle node of the linked list.
+        // while (fast != null && fast.next != null) {
+        //     slow = slow.next;
+        //     fast = fast.next.next;
+        // }
+
+        // Node curr = slow;
+        // Node prev = null;
+        // Node nxt = null;
+
+        // // Reverse the second half of the linked list.
+        // while (curr != null) {
+        //     nxt = curr.next;
+        //     curr.next = prev;
+        //     prev = curr;
+        //     curr = nxt;
+        // }
+
+        // // Adjust the pointers for comparison.
+        // slow = prev;
+        // fast = head;
+
+        // // Compare the first and second halves of the linked list.
+        // while (slow != null) {
+        //     if (slow.data != fast.data) {
+        //         return false;
+        //     }
+        //     slow = slow.next;
+        //     fast = fast.next;
+        // }
+
+        // return true;
     }
     
     

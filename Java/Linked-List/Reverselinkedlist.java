@@ -1,4 +1,4 @@
-Reversing a linked list using iterative approach
+//Reversing a linked list using iterative approach
 
 class Reverselinkedlist
 
@@ -120,4 +120,4 @@ class Reverselinkedlist
 
 }
 
-Time Complexity of reversing a linked list is O(n) 
+//Time Complexity of reversing a linked list is O(n) 

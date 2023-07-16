@@ -217,3 +217,4 @@ class LinkedList {
         }
         prev.next = null;
     }
+}
