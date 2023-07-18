@@ -45,8 +45,6 @@ Credit link:- https://www.geeksforgeeks.org/given-a-set-of-line-segments-find-if
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define MAX_SEGMENTS 1000
-
 #define max(a, b) ((a) > (b) ? (a) : (b))
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
@@ -156,33 +154,11 @@ struct Event *succ(struct Event *events, int size, int index)
 }
 
 // Function to calculate number of intersection points
-int isIntersect(struct Segment arr[], int n)
+int isIntersect(struct Event events[],struct Segment arr[], int n,bool checked[n][n])
 {
-    // to keep track of pairs for which intersection is already checked
-    bool checked[MAX_SEGMENTS][MAX_SEGMENTS];
-
-    for (int i = 0; i < MAX_SEGMENTS; i++)
-    {
-        for (int j = 0; j < MAX_SEGMENTS; j++)
-        {
-            checked[i][j] = false;
-        }
-    }
-
-    // Pushing all points to an array of events
-    struct Event events[2 * MAX_SEGMENTS];
-    int eventsSize = 0;
-    for (int i = 0; i < n; ++i)
-    {
-        events[eventsSize++] = (struct Event){arr[i].left.x, arr[i].left.y, true, i};
-        events[eventsSize++] = (struct Event){arr[i].right.x, arr[i].right.y, false, i};
-    }
-
-    // Sorting all events according to the x-coordinate.
-    qsort(events, eventsSize, sizeof(struct Event), compareEvents);
-
     // For storing active segments.
-    struct Event s[MAX_SEGMENTS];
+    int eventsSize = 2 * n;
+    struct Event s[n];
     int sSize = 0;
     int ans = 0;
 
@@ -226,7 +202,7 @@ int isIntersect(struct Segment arr[], int n)
                 ans--;
 
             // Insert the current point (or event)
-            if (sSize < MAX_SEGMENTS)
+            if (sSize < n)
                 s[sSize++] = curr;
         }
         // If the current point is the right endpoint of its segment
@@ -277,6 +253,35 @@ int isIntersect(struct Segment arr[], int n)
     return ans;
 }
 
+//input array of segment handler
+int inputHandler(struct Segment arr[], int n) {
+
+    // to keep track of pairs for which intersection is already checked
+    bool checked[n][n];
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            checked[i][j] = false;
+        }
+    }
+
+    // Pushing all points to an array of events
+    struct Event events[2 * n];
+    int eventsSize = 0;
+    for (int i = 0; i < n; ++i)
+    {
+        events[eventsSize++] = (struct Event){arr[i].left.x, arr[i].left.y, true, i};
+        events[eventsSize++] = (struct Event){arr[i].right.x, arr[i].right.y, false, i};
+    }
+
+    // Sorting all events according to the x-coordinate.
+    qsort(events, eventsSize, sizeof(struct Event), compareEvents);
+
+    return isIntersect(events,arr, n,checked);
+}
+
 int main()
 {
     int choice;
@@ -299,7 +304,7 @@ int main()
             printf("Enter the number of line segments: ");
             scanf("%d", &n);
 
-            struct Segment arr[MAX_SEGMENTS];
+            struct Segment arr[n];
             printf("Enter the coordinates for each line segment:\n");
             for (int i = 0; i < n; ++i)
             {
@@ -310,7 +315,7 @@ int main()
                 scanf("%d %d", &arr[i].right.x, &arr[i].right.y);
             }
 
-            printf("Number of intersection points: %d\n", isIntersect(arr, n));
+            printf("Number of intersection points: %d\n", inputHandler(arr, n));
             break;
         }
         case 2:
