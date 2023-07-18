@@ -82,7 +82,8 @@
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Binary <-> Gray Code Conversion | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Binary/Binary%20to%20Gray%20Conversion.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Binary/Binary%20to%20gray%20conversion.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Binary/BinarytoGray.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Binary/Binary%20to%20Gray%20conversion.py) | 
 | 2.  | Brian Kerningham's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Binary/Brain_Keringham.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Binary/Brain_Keringham.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Binary/Brain_Keringham.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Binary/Brain_Keringham.py) |
-| 3.  | Hamming Distance Theorem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Binary/hammingDistance.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Binary/hammingDistance.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Binary/hammingDistance.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Binary/hammingDistance.py) |
+| 3.  | Hamming Code | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Binary/hammingCode.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Binary/hammingCode.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Binary/hammingCode.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Binary/hammingCode.py) |
+| 4.  | Hamming Distance Theorem | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Binary/hammingDistance.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Binary/hammingDistance.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Binary/hammingDistance.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Binary/hammingDistance.py) |
 
 <h3 align="center"><b>Cryptography</b></h3>
 
@@ -214,7 +215,7 @@
 | No. | Algorithm Name                                                                        | Available languages                       | 
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
 | 1.  | Addition of two Linked Lists | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/AdditionOfTwoNumbersLL.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/Add%20Two%20Numbers.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/AdditionOfTwoNumbersinLL.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/AdditionOfTwoNumbersLL.py) |
-| 2.  | Circular Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/Circular%20Linked%20List.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/CircularLinkedList.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/circular_linked_list.py) |
+| 2.  | Circular Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/Circular%20Linked%20List.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/CircularLinkedList.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/CircularLinkedList.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/circular_linked_list.py) |
 | 3.  | Detect loop in a Linked List | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/Detect%20Loop%20in%20Linked%20List.cpp) |
 | 4.  | Doubly Linked List | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Linked-List/DoublyLinkedList.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/DoublyLinkedList.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Linked-List/DoubleLinkedList.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Linked-List/doubly_linked_list.py) |
 | 5.  | Intersection of two Linked Lists | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Linked-List/IntersectonOfTwoLinkedList.cpp) |
@@ -276,6 +277,12 @@
 | 30.  | Strong Number | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/Strong_Number.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/Strong_Number.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/Strong_Number.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/Strong_Numbers.py) | 
 | 31.  | Sudoku Solver | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/sudoku.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/sudoku.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/sudoku.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/sudoku.py) |
 | 32.  | Zeller's Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Maths/zeller.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Maths/zeller.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Maths/zeller.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Maths/zeller.py) |
+
+<h3 align="center"><b>Memory Allocation</b></h3>
+
+| No. | Algorithm Name                                                                        | Available languages                       | 
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
+| 1.  | Next Fit Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Memory%20Allocation/Next_Fit_Fixed_Memory.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Memory%20Allocation/Next_Fit_Fixed_Memory.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Memory%20Allocation/NextFitFixedMemory.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Memory%20Allocation/NextFitFixedMemory.py) | 
 
 <h3 align="center"><b>Optimization</b></h3>
 
@@ -505,6 +512,12 @@ $ git push origin <new-branch-name>
 Please don't forget to update the <a href="https://github.com/Kumar-laxmi/Algorithms#available-resources">Available Resources</a> section
 
 #### Happy?? Star ⭐ this Repo. 🤩
+
+
+
+
+
+
 
 
 
