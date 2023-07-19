@@ -203,6 +203,7 @@
 | No. | Algorithm Name                                                                        | Available languages                       | 
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
 | 1.  | Bloom-Filter Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Hashing/bloom_filter.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Hashing/bloom_filter.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Hashing/BloomFilter.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Hashing/bloom_filter.py) |
+| 2.  | Cuckoo Hashing | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Hashing/cuckoo_hashing.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Hashing/cuckoo_hashing.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Hashing/cuckoo_hashing.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Hashing/cuckoo_hashing.py) |
 
 <h3 align="center"><b>Job Scheduling</b></h3>
 
