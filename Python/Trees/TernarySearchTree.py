@@ -5,7 +5,7 @@
 # 2.) Implement an insert() function that recursively inserts characters into the TST based on comparisons.
 # 3.) Implement a search() function that recursively searches for a string in the TST by comparing characters.
 # 4.) Initialize an empty TST and use the insert() function to add strings to the TST.
-# 5.) Use the search() function to check if a string exists in the TST.
+# 5.) Use the search() function to check if a string exists in the TST!.
 
 # Node class represents a node in the TST
 class Node:
@@ -77,7 +77,10 @@ if __name__ == "__main__":
     tst.insert("apple")
     tst.insert("banana")
     tst.insert("carrot")
+    s = input("Enter String ")
 
     # Search for words in the TST
-    print(tst.search("apple"))   # Output: True (exists)
-    print(tst.search("grape"))   # Output: False (does not exist)
+    if(tst.search("apple") == True):
+        print(s , " is present") # Output: True (exists)
+    else:
+        print(s , " is not present") # Output: False (does not exist)

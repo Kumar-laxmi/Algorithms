@@ -108,9 +108,10 @@ int main() {
     tst.insert("apple");
     tst.insert("banana");
     tst.insert("carrot");
-    cout << tst.search("apple") << endl;// Output: 1 (exists)  
-    cout <<tst.search("grape") << endl;  // Output: 0 (does not exist)
+    cout<<"Enter String "<<endl;
+    string s;
+    cin>>s;
+    if(tst.search(s) == 1) cout<<s<<" is Present "<< endl;// Output: 1 (exists)
+    else cout<<s<<" is not Present "<< endl;  // Output: 0 (does not exist)
     return 0;
 }
-
-   

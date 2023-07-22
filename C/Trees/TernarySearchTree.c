@@ -89,8 +89,14 @@ int main() {
     insert(&root, "carrot");
 
     // Search for words in the TST
-    printf("%d\n", search(root, "apple"));  // Output: 1 (exists)
-    printf("%d\n", search(root, "grape"));  // Output: 0 (does not exist)
+    printf("Enter String \n");
+    char s[20];
+    scanf("%[^\n]%*c", s);
+    if(search(root, "apple") == 1){
+        printf("%s is present ", s); // Output: 1 (exists)
+    }else{
+         printf("%s is not present", s); // Output: 0 (does not exist)
+    }
 
     return 0;
 }

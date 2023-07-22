@@ -1,5 +1,5 @@
 // Ternary Search Tree (TST) implementation in Java
-
+import java.util.Scanner;  // Import the Scanner class
 
 // The algorithm of the Ternary Search Tree (TST) 
 //1.) Create a TST node class with character data, left, middle, and right pointers, and an end-of-word flag.
@@ -8,8 +8,10 @@
 //4.) Initialize an empty TST and use the insert() function to add strings to the TST.
 //5.) Use the search() function to check if a string exists in the TST.
 
-// Node class represents a node in the TST
-class Node {
+// Main class
+public class TernarySearchTree {
+    // Node class represents a node in the TST
+static class Node {
     char data;                  // The character stored in the node
     boolean isEndOfWord;        // Flag to indicate if the node represents the end of a word
     Node left, middle, right;   // Pointers to the left, middle, and right child nodes
@@ -23,7 +25,7 @@ class Node {
 }
 
 // Ternary Search Tree class
-class ternarySearchTree {
+static class ternarySearchTree {
     Node root;  // Root node of the TST
 
     // Method to insert a string into the TST
@@ -84,8 +86,7 @@ class ternarySearchTree {
     }
 }
 
-// Main class
-public class TernarySearchTree {
+
     // Main method
     public static void main(String[] args) {
         ternarySearchTree tst = new ternarySearchTree();
@@ -96,7 +97,10 @@ public class TernarySearchTree {
         tst.insert("carrot");
 
         // Search for words in the TST
-        System.out.println(tst.search("apple"));   // Output: true (exists)
-        System.out.println(tst.search("grape"));   // Output: false (does not exist)
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter string");
+        String s = myObj.nextLine();
+        if(tst.search(s) == true){System.out.println(s + " is present");}// Output: true (exists)
+        else {System.out.println(s + " is not present");} // Output: false (does not exist)
     }
 }
