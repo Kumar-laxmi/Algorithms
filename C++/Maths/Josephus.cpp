@@ -13,7 +13,7 @@ using namespace std;
 // 5. Return the position of the last remaining person.
 
 int josephus(int n, int k) {
-    std::list<int> circle;
+    list<int> circle;
     for (int i = 1; i <= n; ++i) {
         circle.push_back(i);  // Initialize the circle with people numbered from 1 to n
     }
@@ -42,7 +42,7 @@ int main() {
     cout<<"Enter n and k "<<endl;
     cin>>n>>k;
     int last_person = josephus(n, k);  // Solve the Josephus Problem
-    std::cout << "The last remaining person is at position: " << last_person << std::endl;
+    cout << "The last remaining person is at position: " << last_person <<endl;
 
     return 0;
 }
