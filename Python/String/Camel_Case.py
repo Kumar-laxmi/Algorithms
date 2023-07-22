@@ -7,23 +7,21 @@
  #1] INPUT: "this is camel case"
     #OUTPUT "thisIsCamelCase"
  #2] INPUT: "Hi Atul here"
-  # OUTPUT: "HiAtulHere"
+  # OUTPUT: "hiAtulHere"
    #Example Explanation
-def convert(s):      # Function to remove spaces and convert into camel case
-    if(len(s) == 0):
-        return
-    s1 = ''
-    s1 += s[0].upper()   #check for spaces in the sentence
-    for i in range(1, len(s)):
-        if (s[i] == ' '):
-            s1 += s[i + 1].upper()     #conversion into upper case
-            i += 1
-        elif(s[i - 1] != ' '):         #If not space, copy character
-            s1 += s[i]
-    print(s1)    
+
 # Main Function
 def main():
-    s = "Hii this is camel case"    #new string will be reduced by the size of spaces in the original string
-    convert(s)     
+    N = (int(input("No of TestCases : ")))
+    for _ in range(N):
+        S = input("Enter a sentence : ")
+        print("Original: {}".format(S))
+        S = S.title() #Convert the first only the first letter of a word to uppercase and rest all to lowercase
+        S = S.split() #Generates a list of words
+        S[0] = S[0].lower()
+        S = "".join(S) #Joins all the words
+        print("Camel Casing : {}".format(S))
+        print()
+
 if __name__=="__main__":
     main()
