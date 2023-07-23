@@ -115,6 +115,7 @@
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
 | 1.  | Burrows-Wheeler Transform Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Data%20Compression/burrow_wheeler_transform.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Data%20Compression/burrow_wheeler_transform.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Data-Compression/burrow_wheeler_transform.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Data%20Compression/burrow_wheeler_transform.py) |
 | 2.  | Huffman Coding | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Data%20Compression/huffmanCoding.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Data%20Compression/huffmanCoding.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Data-Compression/Huffman.java),[Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Data%20Compression/huffmanCoding.py) |
+| 3. | LZ78 Compression | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Data%20Compression/LZ78.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C++/Data%20Compression/LZ78.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Data-Compression/LZ78.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Data%20Compression/LZ78.py) | 
 
 <h3 align="center"><b>Deadlock Avoidance</b></h3>
 
