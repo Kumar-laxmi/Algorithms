@@ -1,4 +1,4 @@
-public class smith_waterman_algo {
+public class Smith_waterman_algo {
     public static void main(String[] args) {
         String sequence1 = "ACGTCG";
         String sequence2 = "AGTCAG";
