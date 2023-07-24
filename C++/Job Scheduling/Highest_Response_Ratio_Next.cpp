@@ -7,7 +7,6 @@ static bool comp(pair<int,pair<int,int>>& a,pair<int,pair<int,int>>& b) {
 }
 
 int main() {
-    
     fast_io;
     
     int pnum;
