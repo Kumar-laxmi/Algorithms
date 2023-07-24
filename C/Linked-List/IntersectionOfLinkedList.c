@@ -106,6 +106,8 @@ int main() {
     node* intersection = IntersectionNode(head1, head2);
     if (intersection) {
         printf("Intersection point is: %d\n", intersection->val);
+        printf("Linked list after intersection point: ");
+        display(intersection);
     }
     else {
         printf("No intersection point\n");

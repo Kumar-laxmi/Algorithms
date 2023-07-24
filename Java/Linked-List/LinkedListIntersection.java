@@ -98,6 +98,8 @@ class LinkedListIntersection {
         Node intersection = intersectionNode(head1, head2);
         if (intersection != null) {
             System.out.println("Intersection point is: " + intersection.val);
+            System.out.println("Linked list after intersection: ");
+            display(intersection);
         } else {
             System.out.println("No intersection point");
         }

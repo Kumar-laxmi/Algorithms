@@ -92,6 +92,8 @@ display(head2)
 # Find intersection point
 intersection = IntersectionNode(head1, head2)
 if intersection:
-    print("Intersection point is:", intersection.val)
+    print("Intersection point is: ", intersection.val)
+    print("Linked list after intersection: ")
+    display(intersection)
 else:
     print("No intersection point")
