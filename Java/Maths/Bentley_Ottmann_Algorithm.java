@@ -43,7 +43,7 @@ Credit link:- https://www.geeksforgeeks.org/given-a-set-of-line-segments-find-if
 */
 import java.util.*;
 
-class countLineIntersection {
+class Bentley_Ottmann_Algorithm {
     // A point in 2D plane
     static class Point {
         int x, y;
