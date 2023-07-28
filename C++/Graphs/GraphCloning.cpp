@@ -33,8 +33,7 @@ Node* cloneGraph(Node* node) {
         Node* newNode = q.front().second;
         q.pop();
 
-        for(auto it: old->neighbors) {
-
+        for(auto it: old->neighbors) {  
             if(!mp.count(it)) {
                 Node* newChild = new Node(it->val);
                 newNode->neighbors.push_back(newChild);
@@ -43,8 +42,7 @@ Node* cloneGraph(Node* node) {
             } else {
                 Node* newNeighbor = mp[it];
                 newNode->neighbors.push_back(newNeighbor);
-            }
-                
+            }  
         }
     }
 
@@ -92,7 +90,6 @@ void bfs(Node* node,bool compare = 0) {
             q.push(it);
         }
     }
-    
 }
 
 
