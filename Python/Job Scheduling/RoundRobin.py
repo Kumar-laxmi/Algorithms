@@ -4,7 +4,7 @@ class Process:
         self.id = id
         self.arrivalTime = arrivalTime
         self.burstTime = burstTime
-
+        
 
 # round robin function definition
 def roundRobin(numProcess, timeQuantum, process):
