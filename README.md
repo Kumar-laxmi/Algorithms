@@ -218,10 +218,8 @@
 <h3 align="center"><b>Job Scheduling</b></h3>
 
 | No. | Algorithm Name                                                                        | Available languages                       | 
-| --- | ----------------------------------------------------------------------------------- | ------------------------------ |
-| 1.  | First Come First Serve | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/First_Come_First_Serve.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/First_Come_First_Serve.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/First_Come_First_Serve.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/First_Come_First_Serve.py) |
-| 2.  | Priority Scheduling | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/priority_scheduling.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/priority_scheduling.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/priority_scheduling.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/priority_scheduling.py) |
-| 3.  | Shortest Job First | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/Shortest_Job_First.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/Shortest_Job_First.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/Shortest_Job_First.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/Shortest_Job_First.py) |
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| 1.  | Priority Scheduling | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Job%20Scheduling/priority_scheduling.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Job%20Scheduling/priority_scheduling.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Job%20Scheduling/priority_scheduling.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Job%20Scheduling/priority_scheduling.py) |
 
 <h3 align="center"><b>Linked List</b></h3>
 
@@ -446,7 +444,7 @@
 
 <h2 align="center"><u><b>Steps for Contributing</u> 🚀</b></h2>
   
-  <a href = "https://www.youtube.com/watch?v=u169J_merY8"><h3 align = "center">Refer to this YouTube Video for reference! </h3></a>
+  <a href = "https://www.youtube.com/watch?v=u169J_merY8" target="_blank"><h3 align = "center">Refer to this YouTube Video for reference! </h3></a>
   
 <br>
 
