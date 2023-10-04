@@ -50,6 +50,7 @@
 | 1.  | <a href="https://hacktoberfest.com/">Hacktoberfest (2022)</a>             | 1st Oct 2022 - 31st Oct 2022 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
 | 2.  | <a href="https://swoc.getsocialnow.co/">Social Winter of Code (2023) </a> | 1st Jan 2023 - 15th Mar 2023 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
 | 3.  | <a href="https://hack2skill.com/hack/ssoc">Social Summer of Code (2023) </a> | 1st June 2023 - 31st July 2023 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
+| 4.  | <a href="https://hacktoberfest.com/">Hacktoberfest (2023) </a> | 1st Oct 2023 - 31st Oct 2023 | <a href="https://github.com/Kumar-laxmi">Algorithm</a> |
 
  </div>
 <br>
@@ -75,6 +76,12 @@
 | 2.  | Fisher-Yates Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/arrays/Fisher_Yates_Shuffle_Algorithm.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/arrays/Fisher_Yates_Shuffle_Algorithm.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/arrays/FisherYatesShuffle.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/arrays/Fisher_Yates_Shuffle_Algorithm.py) |
 | 3.  | Monotonic Array | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/arrays/monotonic_array.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/arrays/monotonic_array.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/arrays/monotonic_array.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/arrays/monotonic_array.py) |
 | 4.  | Spiral Print Matrix | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/arrays/spiralprint.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/arrays/spiralPrint.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/arrays/spiralPrint.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/arrays/Spiral_Print_Algorithm.py) |
+
+<h3 align="center"><b>Artificial Intelligence</b></h3>
+ 
+| No. | Algorithm Name                                                                        | Available languages                       | 
+| --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
+| 1.  | A* Search Algorithm | [C++]() |
 
 <h3 align="center"><b>Binary</b></h3>
 
@@ -315,7 +322,7 @@
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ |
 | 1.  | Ant Colony Optimization | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/aco_optimization_py.py) | 
 | 2.  | Genetic Algorithm | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/genetic.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/genetic.py) |
-| 3.  | Gradient Descend | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/Gradient_Descent.py) |
+| 3.  | Gradient Descent | [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/Gradient_Descent.py) |
 | 4.  | Grey Wolf Optimization | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Optimization/greywolf.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/greywolf.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Optimization/grey_wolf.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/greywolf.py) |
 | 5.  | Hill Climbing Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Optimization/Hill_climbing.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/Hill_climbing.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Optimization/Hill_climbing.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/Hill_climbing.py) |
 | 6.  | Particle Swarm Optimization | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Optimization/particle_swarm_optimization.cpp), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Optimization/particle_swarm_optimization.py) |
