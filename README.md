@@ -425,7 +425,7 @@
 
 | No. | Algorithm Name                                                                        | Available languages                       | 
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ |
-| 1. | AO* Tree | [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/aostar.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/aostar.py) | 
+| 1. | AO* Tree | [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AO_Star.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/aostar.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/aostar.py) | 
 | 2. | AVL Tree | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/AVL_Tree.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/AVLTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/avlTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/AVLTree.py) |
 | 3. | B+ Tree | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Trees/BPlusTree.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/BPlusTree.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Trees/BPlusTree.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Trees/BPlusTree.py) |
 | 4. | Binary Search Tree | [C](https://github.com/Kumar-laxmi/Algorithms/tree/main/C/Trees), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Trees/binarySearchTree.cpp) |
