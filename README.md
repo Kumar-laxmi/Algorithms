@@ -81,7 +81,7 @@
  
 | No. | Algorithm Name                                                                        | Available languages                       | 
 | --- | ----------------------------------------------------------------------------------- | ------------------------------ | 
-| 1.  | A* Search Algorithm | [C++]() |
+| 1.  | A* Search Algorithm | [C](https://github.com/Kumar-laxmi/Algorithms/blob/main/C/Artificial%20Intelligence/A_star.c), [C++](https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/Artificial%20Intelligence/A_Star.cpp), [Java](https://github.com/Kumar-laxmi/Algorithms/blob/main/Java/Artificial%20Intelligence/A_star.java), [Python](https://github.com/Kumar-laxmi/Algorithms/blob/main/Python/Artificial%20Intelligence/A_star.py) |
 
 <h3 align="center"><b>Binary</b></h3>
 
