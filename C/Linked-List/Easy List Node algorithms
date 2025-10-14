@@ -89,6 +89,10 @@ void remove_bottom(ListNode* node) {
 }
 
 void remove_rec(ListNode* currentNode, int index) {
+    if (currentNode == nullptr) {
+        return;
+    }
+
     if (index - 1 == 0) {
         ListNode* tempNode = currentNode->next;
         currentNode->next = tempNode->next;
@@ -117,24 +121,4 @@ ListNode* create_list(const int value) {
     node->value = value;
     node->next = nullptr;
     return node;
-}
-
-int main(void) {
-    ListNode* list = create_list(1);
-    ListNode* n2 = create_list(2);
-    ListNode* n3 = create_list(3);
-    ListNode* n4 = create_list(4);
-    ListNode* n5 = create_list(5);
-
-    insert_to_list(&list, n2, 1);
-    insert_to_list(&list, n3, 2);
-    insert_to_list(&list, n4, 3);
-    insert_to_list(&list, n5, 4);
-
-    free(list);
-    free(n2);
-    free(n3);
-    free(n4);
-    free(n5);
-    return 0;
 }
